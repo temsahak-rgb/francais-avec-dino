@@ -1,114 +1,498 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Français avec Dino</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
+      background: #ffffff;
+      color: #111111;
       font-family: Arial, sans-serif;
-      background: #f8f5ff;
-      color: #2d2342;
-      text-align: center;
+      overflow: hidden;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 50px 20px;
+    /* =========================
+       SPLASH SCREEN
+    ========================= */
+
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      animation: hideSplash 0.5s ease forwards;
+      animation-delay: 2.7s;
     }
+
+    .splash-content {
+      text-align: center;
+      direction: ltr;
+    }
+
+    /* =========================
+       EGG
+    ========================= */
+
+    .egg {
+      width: 150px;
+      height: 190px;
+      background: #f4efd8;
+      border-radius: 50% 50% 45% 45%;
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+      animation:
+        eggShake 0.45s ease-in-out 0.35s,
+        eggCrack 0.3s ease forwards 0.9s;
+    }
+
+    /* لکه‌های تخم */
+
+    .spot {
+      position: absolute;
+      background: #a8c878;
+      border-radius: 50%;
+    }
+
+    .spot.one {
+      width: 25px;
+      height: 25px;
+      top: 40px;
+      left: 30px;
+    }
+
+    .spot.two {
+      width: 18px;
+      height: 18px;
+      top: 90px;
+      right: 25px;
+    }
+
+    .spot.three {
+      width: 30px;
+      height: 30px;
+      bottom: 35px;
+      left: 55px;
+    }
+
+    .spot.four {
+      width: 12px;
+      height: 12px;
+      bottom: 65px;
+      right: 40px;
+    }
+
+    /* ترک تخم */
+
+    .crack {
+      position: absolute;
+      top: 72px;
+      left: 50%;
+      width: 4px;
+      height: 65px;
+      background: #6f6a50;
+      transform: translateX(-50%) rotate(8deg);
+      opacity: 0;
+
+      animation: showCrack 0.2s ease forwards 0.85s;
+    }
+
+    /* =========================
+       DINO
+    ========================= */
 
     .dino {
-      font-size: 80px;
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+
+      width: 120px;
+      height: 105px;
+
+      transform: translateX(-50%) translateY(100px);
+      opacity: 0;
+
+      animation:
+        dinoAppear 0.5s ease-out forwards 1.05s;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+    .dino-head {
+      position: absolute;
+      width: 105px;
+      height: 90px;
+      background: #78b943;
+      border-radius: 50% 50% 45% 45%;
+      left: 8px;
+      top: 0;
+
+      box-shadow:
+        inset -5px -5px 0 rgba(0,0,0,0.05);
     }
 
-    .subtitle {
-      font-size: 18px;
-      margin-bottom: 35px;
-    }
+    /* چشم‌ها */
 
-    .start-button {
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 15px;
-      cursor: pointer;
-      background: #6c4ab6;
-      color: white;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 40px;
-    }
-
-    .card {
+    .eye {
+      position: absolute;
+      width: 25px;
+      height: 30px;
       background: white;
-      padding: 20px;
-      border-radius: 20px;
+      border-radius: 50%;
+      top: 28px;
     }
 
-    .card-icon {
-      font-size: 35px;
+    .eye.left {
+      left: 22px;
     }
+
+    .eye.right {
+      right: 22px;
+    }
+
+    .pupil {
+      position: absolute;
+      width: 12px;
+      height: 16px;
+      background: #111;
+      border-radius: 50%;
+      top: 7px;
+      left: 7px;
+    }
+
+    /* بینی */
+
+    .nose {
+      position: absolute;
+      width: 6px;
+      height: 4px;
+      background: #376b25;
+      border-radius: 50%;
+      top: 55px;
+    }
+
+    .nose.left {
+      left: 45px;
+    }
+
+    .nose.right {
+      right: 45px;
+    }
+
+    /* دهان */
+
+    .mouth {
+      position: absolute;
+      width: 35px;
+      height: 18px;
+      border-bottom: 4px solid #24551b;
+      border-radius: 0 0 50% 50%;
+      bottom: 12px;
+      left: 35px;
+    }
+
+    /* دست‌ها */
+
+    .hand {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background: #78b943;
+      border-radius: 50%;
+      bottom: -20px;
+    }
+
+    .hand.left {
+      left: -5px;
+      transform: rotate(25deg);
+    }
+
+    .hand.right {
+      right: -5px;
+      transform: rotate(-25deg);
+    }
+
+    /* پوسته روی سر */
+
+    .shell {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: #f4efd8;
+      top: -10px;
+      left: 10px;
+      border-radius: 50% 50% 20% 20%;
+      transform: rotate(-4deg);
+      z-index: 5;
+    }
+
+    /* =========================
+       GREETING
+    ========================= */
+
+    .greeting {
+      margin-top: 25px;
+      font-size: 24px;
+      font-weight: bold;
+      opacity: 0;
+
+      animation:
+        greetingAppear 0.4s ease forwards 1.55s;
+    }
+
+    .brand {
+      margin-top: 15px;
+      font-size: 18px;
+      opacity: 0;
+
+      animation:
+        greetingAppear 0.4s ease forwards 1.8s;
+    }
+
+    /* =========================
+       HOME
+    ========================= */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+
+      animation:
+        showHome 0.5s ease forwards 2.7s;
+    }
+
+    .home-content {
+      text-align: center;
+      direction: ltr;
+    }
+
+    .home-dino {
+      font-size: 60px;
+    }
+
+    .home-title {
+      font-size: 30px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .home-subtitle {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    @keyframes eggShake {
+
+      0% {
+        transform: rotate(0);
+      }
+
+      25% {
+        transform: rotate(-5deg);
+      }
+
+      50% {
+        transform: rotate(5deg);
+      }
+
+      75% {
+        transform: rotate(-4deg);
+      }
+
+      100% {
+        transform: rotate(0);
+      }
+
+    }
+
+    @keyframes showCrack {
+
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+    @keyframes eggCrack {
+
+      to {
+        transform: scale(0.97);
+      }
+
+    }
+
+    @keyframes dinoAppear {
+
+      from {
+        transform: translateX(-50%) translateY(100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+
+    }
+
+    @keyframes greetingAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    @keyframes hideSplash {
+
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+    }
+
+    @keyframes showHome {
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- =========================
+       SPLASH
+  ========================== -->
 
-    <div class="dino">🦖</div>
+  <div id="splash">
 
-    <h1>Français avec Dino</h1>
+    <div class="splash-content">
 
-    <p class="subtitle">
-      یادگیری زبان فرانسه، قدم به قدم 🇫🇷
-    </p>
+      <div class="egg">
 
-    <button class="start-button">
-      🚀 شروع یادگیری
-    </button>
+        <div class="spot one"></div>
+        <div class="spot two"></div>
+        <div class="spot three"></div>
+        <div class="spot four"></div>
 
-    <div class="features">
+        <div class="crack"></div>
 
-      <div class="card">
-        <div class="card-icon">📚</div>
-        <h3>لغات</h3>
-        <p>لغات جدید یاد بگیر و مرور کن</p>
       </div>
 
-      <div class="card">
-        <div class="card-icon">✍️</div>
-        <h3>گرامر</h3>
-        <p>گرامر فرانسه را مرحله‌به‌مرحله یاد بگیر</p>
+      <!-- Dino -->
+
+      <div class="dino">
+
+        <div class="dino-head">
+
+          <div class="shell"></div>
+
+          <div class="eye left">
+            <div class="pupil"></div>
+          </div>
+
+          <div class="eye right">
+            <div class="pupil"></div>
+          </div>
+
+          <div class="nose left"></div>
+          <div class="nose right"></div>
+
+          <div class="mouth"></div>
+
+        </div>
+
+        <div class="hand left"></div>
+        <div class="hand right"></div>
+
       </div>
 
-      <div class="card">
-        <div class="card-icon">🔄</div>
-        <h3>Conjugaison</h3>
-        <p>صرف فعل‌های فرانسوی را تمرین کن</p>
+      <!-- Greeting -->
+
+      <div class="greeting">
+        Coucou, <span id="userName">...</span> !
       </div>
 
-      <div class="card">
-        <div class="card-icon">🎧</div>
-        <h3>Listening</h3>
-        <p>مهارت شنیداری‌ات را تقویت کن</p>
+      <div class="brand">
+        Français avec Dino
       </div>
 
     </div>
 
   </div>
+
+
+  <!-- =========================
+       HOME
+  ========================== -->
+
+  <main id="home">
+
+    <div class="home-content">
+
+      <div class="home-dino">
+        🦖
+      </div>
+
+      <div class="home-title">
+        Français avec Dino
+      </div>
+
+      <div class="home-subtitle">
+        Apprenons le français ensemble !
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /*
+      فعلاً برای تست، اسم را اینجا تغییر بده.
+
+      بعداً وقتی Mini App تلگرام شد،
+      این قسمت را به نام واقعی کاربر تلگرام وصل می‌کنیم.
+    */
+
+    const userName = "Ghazal";
+
+    document.getElementById("userName").textContent = userName;
+
+  </script>
 
 </body>
 </html>
