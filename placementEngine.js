@@ -1,26 +1,6 @@
 // placementEngine.js
 
-// ===============================
-// داده‌ها
-// ===============================
 let placementQuestions = [];
-
-async function loadPlacementQuestions() {
-    try {
-        const response = await fetch("./data/placement.json");
-        placementQuestions = await response.json();
-    } catch (error) {
-        console.error("خطا در بارگذاری سوالات:", error);
-    }
-}
-
-function getPlacementQuestions() {
-    return placementQuestions;
-}
-
-// ===============================
-// وضعیت آزمون (State)
-// ===============================
 let currentQuestion = null;
 
 let placementState = {
@@ -32,37 +12,40 @@ let placementState = {
     finished: false
 };
 
-// ===============================
-// انتخاب سؤال بعدی
-// ===============================
-function getNextQuestion() {
+async function loadPlacementQuestions() {
+    try {
+        const response = await fetch("./data/placement.json");
+        placementQuestions = await response.json();
+        console.log("سوالات بارگذاری شدند:", placementQuestions.length);
+    } catch (error) {
+        console.error("خطا در بارگذاری:", error);
+        alert("خطا در خواندن فایل سوالات. مطمئن شوید پوشه data و فایل placement.json وجود دارند.");
+    }
+}
 
-    const candidates = placementQuestions.filter(q =>
-        !placementState.asked.includes(q.id)
-    );
+function getPlacementQuestions() {
+    return placementQuestions;
+}
+
+function getNextQuestion() {
+    const candidates = placementQuestions.filter(q => !placementState.asked.includes(q.id));
 
     if (candidates.length === 0) {
         placementState.finished = true;
         return null;
     }
 
-    candidates.sort((a, b) =>
-        Math.abs(a.difficulty - placementState.currentDifficulty) -
+    candidates.sort((a, b) => 
+        Math.abs(a.difficulty - placementState.currentDifficulty) - 
         Math.abs(b.difficulty - placementState.currentDifficulty)
     );
 
     currentQuestion = candidates[0];
-
     placementState.asked.push(currentQuestion.id);
-
     return currentQuestion;
 }
 
-// ===============================
-// پردازش جواب
-// ===============================
 function answerPlacement(correct) {
-
     if (correct) {
         placementState.correctStreak++;
         placementState.wrongStreak = 0;
@@ -72,14 +55,9 @@ function answerPlacement(correct) {
         placementState.correctStreak = 0;
         placementState.currentDifficulty -= 8;
     }
-
-    placementState.currentDifficulty =
-        Math.max(8, Math.min(95, placementState.currentDifficulty));
+    placementState.currentDifficulty = Math.max(8, Math.min(95, placementState.currentDifficulty));
 }
 
-// ===============================
-// توابع دسترسی (Getters)
-// ===============================
 function getPlacementState() {
     return placementState;
 }
