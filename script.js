@@ -105,7 +105,7 @@ function showPlacementChoice() {
 
   document.getElementById("back").onclick = showPath;
 
-document.getElementById("yes").onclick = () => {
+  document.getElementById("yes").onclick = () => {
     // گرفتن اولین سوال از موتور
     const question = getNextQuestion();
     
