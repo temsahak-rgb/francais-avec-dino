@@ -2,6 +2,10 @@
 
 const app = document.getElementById("app");
 
+// ===============================
+// Texts
+// ===============================
+
 const texts = {
   fr: {
     title: "Français avec Dino",
@@ -16,7 +20,16 @@ const texts = {
     yes: "Passer le test",
     later: "Plus tard",
     home: "Accueil (temporaire)",
-    back: "Retour"
+    back: "Retour",
+    question: "Question",
+    of: "sur",
+    stopTest: "Arrêter le test",
+    finalResult: "Résultat du test",
+    yourLevel: "Votre niveau",
+    questionsAnswered: "Questions répondues",
+    finalDifficulty: "Difficulté finale",
+    correctStreak: "Bonnes réponses consécutives",
+    restart: "Recommencer"
   },
   fa: {
     title: "Français avec Dino",
@@ -31,26 +44,53 @@ const texts = {
     yes: "انجام تعیین سطح",
     later: "بعداً",
     home: "صفحه اصلی (موقت)",
-    back: "بازگشت"
+    back: "بازگشت",
+    question: "سوال",
+    of: "از",
+    stopTest: "توقف آزمون",
+    finalResult: "نتیجه تعیین سطح",
+    yourLevel: "سطح شما",
+    questionsAnswered: "تعداد سوالات پاسخ داده شده",
+    finalDifficulty: "سختی نهایی",
+    correctStreak: "جواب‌های درست متوالی",
+    restart: "شروع مجدد"
   }
 };
+
+// ===============================
+// Language
+// ===============================
 
 function showLanguage() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
+
   app.innerHTML = `
     <h1>${t.title}</h1>
     <p>${t.chooseLanguage}</p>
     <button id="fr">${t.french}</button>
     <button id="fa">${t.persian}</button>
   `;
-  document.getElementById("fr").onclick = () => { localStorage.setItem("language", "fr"); showPath(); };
-  document.getElementById("fa").onclick = () => { localStorage.setItem("language", "fa"); showPath(); };
+
+  document.getElementById("fr").onclick = () => {
+    localStorage.setItem("language", "fr");
+    showPath();
+  };
+
+  document.getElementById("fa").onclick = () => {
+    localStorage.setItem("language", "fa");
+    showPath();
+  };
 }
+
+// ===============================
+// Path
+// ===============================
 
 function showPath() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
+
   app.innerHTML = `
     <button id="back">${t.back}</button>
     <h1>${t.choosePath}</h1>
@@ -58,15 +98,21 @@ function showPath() {
     <button id="travel">${t.travel}</button>
     <button id="daily">${t.daily}</button>
   `;
+
   document.getElementById("back").onclick = showLanguage;
   document.getElementById("general").onclick = showPlacementChoice;
   document.getElementById("travel").onclick = showHome;
   document.getElementById("daily").onclick = showHome;
 }
 
+// ===============================
+// Placement Choice
+// ===============================
+
 function showPlacementChoice() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
+
   app.innerHTML = `
     <button id="back">${t.back}</button>
     <h1>${t.general}</h1>
@@ -74,62 +120,130 @@ function showPlacementChoice() {
     <button id="yes">${t.yes}</button>
     <button id="later">${t.later}</button>
   `;
-  
+
   document.getElementById("back").onclick = showPath;
   document.getElementById("later").onclick = showHome;
-
-  // 👇 این بخش حیاتی با تست Alert 👇
+  
+  // 👇 اتصال به موتور واقعی 👇
   document.getElementById("yes").onclick = () => {
-      alert("✅ دکمه کار می‌کند! در حال دریافت سوال...");
-      
-      try {
-          const question = getNextQuestion();
-          
-          if (!question) {
-              app.innerHTML = "<h2>سوالات تمام شدند!</h2><button onclick='location.reload()'>شروع مجدد</button>";
-              return;
-          }
-
-          let result = "<h2>🧪 تست موتور موفق!</h2>";
-          result += "<h3>🎯 سوال اول:</h3>";
-          result += "<p><b>ID:</b> " + question.id + "</p>";
-          result += "<p><b>سختی:</b> " + question.difficulty + "</p>";
-          result += "<p><b>سوال:</b> " + question.question + "</p>";
-          
-          const state1 = getPlacementState();
-          result += "<h3>📊 وضعیت موتور:</h3>";
-          result += "<p><b>سختی فعلی:</b> " + state1.currentDifficulty + "</p>";
-          
-          answerPlacement(true);
-          
-          const state2 = getPlacementState();
-          result += "<h3>✅ بعد از جواب درست:</h3>";
-          result += "<p><b>سختی جدید:</b> " + state2.currentDifficulty + "</p>";
-          
-          const question2 = getNextQuestion();
-          result += "<h3>🎯 سوال دوم:</h3>";
-          result += "<p><b>ID:</b> " + question2.id + "</p>";
-          result += "<p><b>سختی:</b> " + question2.difficulty + "</p>";
-          
-          result += "<br><button onclick='location.reload()'>بازگشت به شروع</button>";
-          
-          app.innerHTML = result;
-      } catch (error) {
-          alert("❌ خطا در اجرای موتور: " + error.message);
-      }
+    showQuestion();
   };
 }
+
+// ===============================
+// نمایش سوال واقعی
+// ===============================
+
+function showQuestion() {
+    const question = getNextQuestion();
+    
+    if (!question) {
+        showFinalResult();
+        return;
+    }
+    
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    
+    let html = `
+        <button id="back">${t.back}</button>
+        <h2>${t.question} ${placementState.asked.length} ${t.of} 25</h2>
+        <p style="font-size: 18px; margin: 20px 0; line-height: 1.6;">${question.question}</p>
+    `;
+    
+    question.options.forEach((option, index) => {
+        html += `<button class="option-btn" data-index="${index}" style="display: block; width: 100%; max-width: 400px; margin: 10px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #007bff; color: white; cursor: pointer;">${option}</button>`;
+    });
+    
+    html += `<br><button id="stop-test" style="display: block; width: 100%; max-width: 400px; margin: 20px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #dc3545; color: white; cursor: pointer;">${t.stopTest}</button>`;
+    
+    app.innerHTML = html;
+    
+    // اتصال دکمه‌ها
+    document.getElementById("back").onclick = showPlacementChoice;
+    document.getElementById("stop-test").onclick = showFinalResult;
+    
+    document.querySelectorAll(".option-btn").forEach(btn => {
+        btn.onclick = () => {
+            const selectedIndex = parseInt(btn.getAttribute("data-index"));
+            const isCorrect = selectedIndex === question.correctIndex;
+            
+            answerPlacement(isCorrect);
+            
+            // نمایش بازخورد کوتاه
+            if (isCorrect) {
+                btn.style.backgroundColor = "#28a745";
+            } else {
+                btn.style.backgroundColor = "#dc3545";
+                // نمایش جواب درست
+                document.querySelectorAll(".option-btn")[question.correctIndex].style.backgroundColor = "#28a745";
+            }
+            
+            // غیرفعال کردن همه دکمه‌ها
+            document.querySelectorAll(".option-btn").forEach(b => {
+                b.onclick = null;
+                b.style.cursor = "default";
+            });
+            
+            // رفتن به سوال بعدی بعد از ۱.۵ ثانیه
+            setTimeout(() => {
+                showQuestion();
+            }, 1500);
+        };
+    });
+}
+
+// ===============================
+// نمایش نتیجه نهایی
+// ===============================
+
+function showFinalResult() {
+    const state = getPlacementState();
+    
+    let finalLevel = "A1";
+    
+    if (state.currentDifficulty >= 81) finalLevel = "C1";
+    else if (state.currentDifficulty >= 61) finalLevel = "B2";
+    else if (state.currentDifficulty >= 41) finalLevel = "B1";
+    else if (state.currentDifficulty >= 21) finalLevel = "A2";
+    else finalLevel = "A1";
+    
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    
+    app.innerHTML = `
+        <h1>🎉 ${t.finalResult}</h1>
+        <h2>${t.yourLevel}: <span style="color: #007bff; font-size: 32px;">${finalLevel}</span></h2>
+        <p>${t.questionsAnswered}: ${state.asked.length}</p>
+        <p>${t.finalDifficulty}: ${state.currentDifficulty}</p>
+        <p>${t.correctStreak}: ${state.correctStreak}</p>
+        <br>
+        <button onclick="location.reload()" style="display: block; width: 100%; max-width: 400px; margin: 20px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #007bff; color: white; cursor: pointer;">${t.restart}</button>
+    `;
+}
+
+// ===============================
+// Temporary Home
+// ===============================
 
 function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-  app.innerHTML = `<h1>${t.home}</h1><p>Version 0.0.4</p>`;
+
+  app.innerHTML = `
+    <h1>${t.home}</h1>
+    <p>Version 0.0.4</p>
+  `;
 }
 
+// ===============================
 // شروع برنامه
+// ===============================
 showLanguage();
 
-// بارگذاری سوالات
+// ===============================
+// بارگذاری سوالات تعیین سطح
+// ===============================
 loadPlacementQuestions().then(() => {
     console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length);
 });
