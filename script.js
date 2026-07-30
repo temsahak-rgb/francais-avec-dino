@@ -2,10 +2,6 @@
 
 const app = document.getElementById("app");
 
-// ===============================
-// Texts
-// ===============================
-
 const texts = {
   fr: {
     title: "Français avec Dino",
@@ -39,40 +35,22 @@ const texts = {
   }
 };
 
-// ===============================
-// Language
-// ===============================
-
 function showLanguage() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-
   app.innerHTML = `
     <h1>${t.title}</h1>
     <p>${t.chooseLanguage}</p>
     <button id="fr">${t.french}</button>
     <button id="fa">${t.persian}</button>
   `;
-
-  document.getElementById("fr").onclick = () => {
-    localStorage.setItem("language", "fr");
-    showPath();
-  };
-
-  document.getElementById("fa").onclick = () => {
-    localStorage.setItem("language", "fa");
-    showPath();
-  };
+  document.getElementById("fr").onclick = () => { localStorage.setItem("language", "fr"); showPath(); };
+  document.getElementById("fa").onclick = () => { localStorage.setItem("language", "fa"); showPath(); };
 }
-
-// ===============================
-// Path
-// ===============================
 
 function showPath() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-
   app.innerHTML = `
     <button id="back">${t.back}</button>
     <h1>${t.choosePath}</h1>
@@ -80,25 +58,15 @@ function showPath() {
     <button id="travel">${t.travel}</button>
     <button id="daily">${t.daily}</button>
   `;
-
   document.getElementById("back").onclick = showLanguage;
   document.getElementById("general").onclick = showPlacementChoice;
   document.getElementById("travel").onclick = showHome;
   document.getElementById("daily").onclick = showHome;
 }
 
-// ===============================
-// Placement Choice
-// ===============================
-
-// ===============================
-// Placement Choice
-// ===============================
-
 function showPlacementChoice() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-
   app.innerHTML = `
     <button id="back">${t.back}</button>
     <h1>${t.general}</h1>
@@ -106,66 +74,62 @@ function showPlacementChoice() {
     <button id="yes">${t.yes}</button>
     <button id="later">${t.later}</button>
   `;
-
+  
   document.getElementById("back").onclick = showPath;
-
-  // 👇 این بخش حیاتی است که قبلاً پاک شده بود 👇
-  document.getElementById("yes").onclick = () => {
-      const question = getNextQuestion();
-      
-      let result = "<h2>🧪 تست موتور</h2>";
-      result += "<h3>🎯 سوال اول:</h3>";
-      result += "<p><b>ID:</b> " + question.id + "</p>";
-      result += "<p><b>سختی:</b> " + question.difficulty + "</p>";
-      result += "<p><b>سطح:</b> " + question.level + "</p>";
-      result += "<p><b>سوال:</b> " + question.question + "</p>";
-      
-      const state1 = getPlacementState();
-      result += "<h3>📊 وضعیت موتور:</h3>";
-      result += "<p><b>سختی فعلی:</b> " + state1.currentDifficulty + "</p>";
-      result += "<p><b>تعداد سوالات:</b> " + state1.asked.length + "</p>";
-      
-      answerPlacement(true);
-      
-      const state2 = getPlacementState();
-      result += "<h3>✅ بعد از جواب درست:</h3>";
-      result += "<p><b>سختی جدید:</b> " + state2.currentDifficulty + "</p>";
-      
-      const question2 = getNextQuestion();
-      result += "<h3>🎯 سوال دوم:</h3>";
-      result += "<p><b>ID:</b> " + question2.id + "</p>";
-      result += "<p><b>سختی:</b> " + question2.difficulty + "</p>";
-      
-      app.innerHTML = result;
-  };
-  // 👆 پایان بخش حیاتی 👆
-
   document.getElementById("later").onclick = showHome;
+
+  // 👇 این بخش حیاتی با تست Alert 👇
+  document.getElementById("yes").onclick = () => {
+      alert("✅ دکمه کار می‌کند! در حال دریافت سوال...");
+      
+      try {
+          const question = getNextQuestion();
+          
+          if (!question) {
+              app.innerHTML = "<h2>سوالات تمام شدند!</h2><button onclick='location.reload()'>شروع مجدد</button>";
+              return;
+          }
+
+          let result = "<h2>🧪 تست موتور موفق!</h2>";
+          result += "<h3>🎯 سوال اول:</h3>";
+          result += "<p><b>ID:</b> " + question.id + "</p>";
+          result += "<p><b>سختی:</b> " + question.difficulty + "</p>";
+          result += "<p><b>سوال:</b> " + question.question + "</p>";
+          
+          const state1 = getPlacementState();
+          result += "<h3>📊 وضعیت موتور:</h3>";
+          result += "<p><b>سختی فعلی:</b> " + state1.currentDifficulty + "</p>";
+          
+          answerPlacement(true);
+          
+          const state2 = getPlacementState();
+          result += "<h3>✅ بعد از جواب درست:</h3>";
+          result += "<p><b>سختی جدید:</b> " + state2.currentDifficulty + "</p>";
+          
+          const question2 = getNextQuestion();
+          result += "<h3>🎯 سوال دوم:</h3>";
+          result += "<p><b>ID:</b> " + question2.id + "</p>";
+          result += "<p><b>سختی:</b> " + question2.difficulty + "</p>";
+          
+          result += "<br><button onclick='location.reload()'>بازگشت به شروع</button>";
+          
+          app.innerHTML = result;
+      } catch (error) {
+          alert("❌ خطا در اجرای موتور: " + error.message);
+      }
+  };
 }
-
-
-// ===============================
-// Temporary Home
-// ===============================
 
 function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-
-  app.innerHTML = `
-    <h1>${t.home}</h1>
-    <p>Version 0.0.3</p>
-  `;
+  app.innerHTML = `<h1>${t.home}</h1><p>Version 0.0.4</p>`;
 }
 
-// ===============================
 // شروع برنامه
-// ===============================
 showLanguage();
 
-// ===============================
-// بارگذاری سوالات تعیین سطح (طبق دستورالعمل)
-// ===============================
+// بارگذاری سوالات
 loadPlacementQuestions().then(() => {
-    console.log("سوالات تعیین سطح با موفقیت بارگذاری شدند:", getPlacementQuestions());
+    console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length);
 });
