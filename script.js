@@ -7,6 +7,7 @@ const app = document.getElementById("app");
 const texts = {
   fr: {
     title: "Français avec Dino",
+
     chooseLanguage: "Choisissez la langue",
     choosePath: "Choisissez votre parcours",
 
@@ -17,11 +18,19 @@ const texts = {
     travel: "Français Voyage",
     daily: "Français Quotidien",
 
+    levelQuestion: "Souhaitez-vous passer un test de niveau ?",
+
+    yes: "Passer le test",
+    later: "Plus tard",
+
+    home: "Accueil (temporaire)",
+
     back: "Retour"
   },
 
   fa: {
     title: "Français avec Dino",
+
     chooseLanguage: "زبان خود را انتخاب کنید",
     choosePath: "مسیر یادگیری خود را انتخاب کنید",
 
@@ -32,18 +41,23 @@ const texts = {
     travel: "فرانسوی در سفر",
     daily: "فرانسوی در زندگی روزمره",
 
+    levelQuestion: "آیا می‌خواهید ابتدا تعیین سطح انجام دهید؟",
+
+    yes: "انجام تعیین سطح",
+    later: "بعداً",
+
+    home: "صفحه اصلی (موقت)",
+
     back: "بازگشت"
   }
 };
 
 // ===============================
-// Start
-// ===============================
 
 showLanguage();
 
 // ===============================
-// Language Page
+// Language
 // ===============================
 
 function showLanguage() {
@@ -73,7 +87,7 @@ function showLanguage() {
 }
 
 // ===============================
-// Path Page
+// Path
 // ===============================
 
 function showPath() {
@@ -94,4 +108,56 @@ function showPath() {
   `;
 
   document.getElementById("back").onclick = showLanguage;
+
+  document.getElementById("general").onclick = showPlacementChoice;
+
+  document.getElementById("travel").onclick = showHome;
+
+  document.getElementById("daily").onclick = showHome;
+}
+
+// ===============================
+// Placement Choice
+// ===============================
+
+function showPlacementChoice() {
+
+  const lang = localStorage.getItem("language") || "fr";
+  const t = texts[lang];
+
+  app.innerHTML = `
+    <button id="back">${t.back}</button>
+
+    <h1>${t.general}</h1>
+
+    <p>${t.levelQuestion}</p>
+
+    <button id="yes">${t.yes}</button>
+
+    <button id="later">${t.later}</button>
+  `;
+
+  document.getElementById("back").onclick = showPath;
+
+  document.getElementById("yes").onclick = () => {
+    alert("Le test arrivera dans la prochaine version.");
+  };
+
+  document.getElementById("later").onclick = showHome;
+}
+
+// ===============================
+// Temporary Home
+// ===============================
+
+function showHome() {
+
+  const lang = localStorage.getItem("language") || "fr";
+  const t = texts[lang];
+
+  app.innerHTML = `
+    <h1>${t.home}</h1>
+
+    <p>Version 0.0.3</p>
+  `;
 }
