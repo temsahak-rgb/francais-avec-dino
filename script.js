@@ -106,9 +106,21 @@ function showPlacementChoice() {
   document.getElementById("back").onclick = showPath;
 
   document.getElementById("yes").onclick = () => {
-    // در مرحله بعد این alert را با موتور واقعی تعیین سطح جایگزین می‌کنیم
-    alert("Le test arrivera dans la prochaine version.");
-  };
+    // گرفتن اولین سوال از موتور
+    const question = getNextQuestion();
+    
+    // نمایش در کنسول برای تست
+    console.log("🎯 سوال انتخاب شده:", question);
+    console.log("📊 وضعیت فعلی موتور:", getPlacementState());
+    
+    // تست جواب درست
+    answerPlacement(true);
+    console.log("✅ بعد از جواب درست:", getPlacementState());
+    
+    // گرفتن سوال دوم
+    const question2 = getNextQuestion();
+    console.log("🎯 سوال دوم:", question2);
+};
 
   document.getElementById("later").onclick = showHome;
 }
