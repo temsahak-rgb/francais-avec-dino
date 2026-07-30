@@ -91,6 +91,10 @@ function showPath() {
 // Placement Choice
 // ===============================
 
+// ===============================
+// Placement Choice
+// ===============================
+
 function showPlacementChoice() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
@@ -105,48 +109,40 @@ function showPlacementChoice() {
 
   document.getElementById("back").onclick = showPath;
 
+  // 👇 این بخش حیاتی است که قبلاً پاک شده بود 👇
   document.getElementById("yes").onclick = () => {
-    // گرفتن اولین سوال از موتور
-    const question = getNextQuestion();
-    
-    // ساختن متن برای نمایش روی صفحه
-    let result = "<h2>🧪 تست موتور</h2>";
-    
-    result += "<h3>🎯 سوال اول:</h3>";
-    result += "<p><b>ID:</b> " + question.id + "</p>";
-    result += "<p><b>سختی:</b> " + question.difficulty + "</p>";
-    result += "<p><b>سطح:</b> " + question.level + "</p>";
-    result += "<p><b>سوال:</b> " + question.question + "</p>";
-    
-    // وضعیت فعلی موتور
-    const state1 = getPlacementState();
-    result += "<h3>📊 وضعیت موتور بعد از سوال اول:</h3>";
-    result += "<p><b>سختی فعلی:</b> " + state1.currentDifficulty + "</p>";
-    result += "<p><b>تعداد سوالات پرسیده شده:</b> " + state1.asked.length + "</p>";
-    result += "<p><b>جواب‌های درست متوالی:</b> " + state1.correctStreak + "</p>";
-    
-    // تست جواب درست
-    answerPlacement(true);
-    
-    const state2 = getPlacementState();
-    result += "<h3>✅ بعد از جواب درست:</h3>";
-    result += "<p><b>سختی جدید:</b> " + state2.currentDifficulty + " (باید ۸ بیشتر شده باشد)</p>";
-    result += "<p><b>جواب‌های درست متوالی:</b> " + state2.correctStreak + " (باید ۱ شده باشد)</p>";
-    
-    // گرفتن سوال دوم
-    const question2 = getNextQuestion();
-    result += "<h3>🎯 سوال دوم:</h3>";
-    result += "<p><b>ID:</b> " + question2.id + "</p>";
-    result += "<p><b>سختی:</b> " + question2.difficulty + "</p>";
-    result += "<p><b>سطح:</b> " + question2.level + "</p>";
-    result += "<p><b>سوال:</b> " + question2.question + "</p>";
-    
-    // نمایش روی صفحه
-    app.innerHTML = result;
-};
+      const question = getNextQuestion();
+      
+      let result = "<h2>🧪 تست موتور</h2>";
+      result += "<h3>🎯 سوال اول:</h3>";
+      result += "<p><b>ID:</b> " + question.id + "</p>";
+      result += "<p><b>سختی:</b> " + question.difficulty + "</p>";
+      result += "<p><b>سطح:</b> " + question.level + "</p>";
+      result += "<p><b>سوال:</b> " + question.question + "</p>";
+      
+      const state1 = getPlacementState();
+      result += "<h3>📊 وضعیت موتور:</h3>";
+      result += "<p><b>سختی فعلی:</b> " + state1.currentDifficulty + "</p>";
+      result += "<p><b>تعداد سوالات:</b> " + state1.asked.length + "</p>";
+      
+      answerPlacement(true);
+      
+      const state2 = getPlacementState();
+      result += "<h3>✅ بعد از جواب درست:</h3>";
+      result += "<p><b>سختی جدید:</b> " + state2.currentDifficulty + "</p>";
+      
+      const question2 = getNextQuestion();
+      result += "<h3>🎯 سوال دوم:</h3>";
+      result += "<p><b>ID:</b> " + question2.id + "</p>";
+      result += "<p><b>سختی:</b> " + question2.difficulty + "</p>";
+      
+      app.innerHTML = result;
+  };
+  // 👆 پایان بخش حیاتی 👆
 
   document.getElementById("later").onclick = showHome;
 }
+
 
 // ===============================
 // Temporary Home
