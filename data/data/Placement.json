@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "A1-001",
+    "level": "A1",
+    "isPlacement": true,
+    "difficulty": 8,
+    "type": "mcq",
+    "skill": "grammar",
+    "topic": "préposition",
+    "question": "Je vais _____ boulangerie pour acheter du pain.",
+    "options": [
+      "au",
+      "à la",
+      "en",
+      "sur"
+    ],
+    "correctIndex": 1
+  }
+
+  // بقیه سؤال‌ها...
+]
