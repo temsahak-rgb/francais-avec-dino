@@ -8,7 +8,6 @@ let placementState = {
     currentDifficulty: 25,
     correctStreak: 0,
     wrongStreak: 0,
-    estimatedLevel: "A2",
     finished: false,
     finishReason: null
 };
@@ -29,12 +28,10 @@ function getPlacementQuestions() {
 }
 
 function getNextQuestion() {
-    // چک کردن شرایط پایان
     if (placementState.finished) {
         return null;
     }
     
-    // حداکثر ۱۵ سوال
     if (placementState.asked.length >= 15) {
         placementState.finished = true;
         placementState.finishReason = "max_questions";
@@ -60,7 +57,12 @@ function getNextQuestion() {
 }
 
 function answerPlacement(correct) {
-    if (correct) {
+    if (correct === null) {
+        // "Je ne sais pas" - مثل جواب غلط
+        placementState.wrongStreak++;
+        placementState.correctStreak = 0;
+        placementState.currentDifficulty -= 8;
+    } else if (correct) {
         placementState.correctStreak++;
         placementState.wrongStreak = 0;
         placementState.currentDifficulty += 8;
@@ -72,15 +74,11 @@ function answerPlacement(correct) {
     
     placementState.currentDifficulty = Math.max(8, Math.min(95, placementState.currentDifficulty));
     
-    // چک کردن شرایط پایان
-    
-    // ۱. اگر به پایین‌ترین سطح A1 رسیده و ۳ غلط پشت سر هم زده
     if (placementState.currentDifficulty <= 16 && placementState.wrongStreak >= 3) {
         placementState.finished = true;
         placementState.finishReason = "bottom_reached";
     }
     
-    // ۲. اگر به بالاترین سطح C1 رسیده و ۳ درست پشت سر هم زده
     if (placementState.currentDifficulty >= 90 && placementState.correctStreak >= 3) {
         placementState.finished = true;
         placementState.finishReason = "top_reached";
@@ -95,7 +93,6 @@ function getCurrentQuestion() {
     return currentQuestion;
 }
 
-// تابع جدید برای محاسبه بازه سطح
 function getEstimatedLevelRange() {
     const diff = placementState.currentDifficulty;
     
@@ -114,9 +111,17 @@ function resetPlacementState() {
         currentDifficulty: 25,
         correctStreak: 0,
         wrongStreak: 0,
-        estimatedLevel: "A2",
         finished: false,
         finishReason: null
     };
     currentQuestion = null;
+}
+
+function savePlacementResult(level) {
+    localStorage.setItem("placementResult", level);
+    localStorage.setItem("placementDate", new Date().toISOString());
+}
+
+function getPlacementResult() {
+    return localStorage.getItem("placementResult");
 }
