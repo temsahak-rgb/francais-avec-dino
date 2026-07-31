@@ -25,10 +25,9 @@ const texts = {
     of: "sur",
     stopTest: "Arrêter le test",
     finalResult: "Résultat du test",
-    yourLevel: "Votre niveau",
-    questionsAnswered: "Questions répondues",
-    finalDifficulty: "Difficulté finale",
-    correctStreak: "Bonnes réponses consécutives",
+    yourLevel: "Votre niveau estimé",
+    canStart: "Vous pouvez commencer votre parcours.",
+    startJourney: "Commencer le parcours",
     restart: "Recommencer"
   },
   fa: {
@@ -49,10 +48,9 @@ const texts = {
     of: "از",
     stopTest: "توقف آزمون",
     finalResult: "نتیجه تعیین سطح",
-    yourLevel: "سطح شما",
-    questionsAnswered: "تعداد سوالات پاسخ داده شده",
-    finalDifficulty: "سختی نهایی",
-    correctStreak: "جواب‌های درست متوالی",
+    yourLevel: "سطح تقریبی شما",
+    canStart: "می‌توانید مسیر یادگیری خود را شروع کنید.",
+    startJourney: "شروع مسیر",
     restart: "شروع مجدد"
   }
 };
@@ -124,8 +122,8 @@ function showPlacementChoice() {
   document.getElementById("back").onclick = showPath;
   document.getElementById("later").onclick = showHome;
   
-  // 👇 اتصال به موتور واقعی 👇
   document.getElementById("yes").onclick = () => {
+    resetPlacementState();
     showQuestion();
   };
 }
@@ -147,7 +145,7 @@ function showQuestion() {
     
     let html = `
         <button id="back">${t.back}</button>
-        <h2>${t.question} ${placementState.asked.length} ${t.of} 25</h2>
+        <h2>${t.question} ${placementState.asked.length} ${t.of} 15</h2>
         <p style="font-size: 18px; margin: 20px 0; line-height: 1.6;">${question.question}</p>
     `;
     
@@ -159,7 +157,6 @@ function showQuestion() {
     
     app.innerHTML = html;
     
-    // اتصال دکمه‌ها
     document.getElementById("back").onclick = showPlacementChoice;
     document.getElementById("stop-test").onclick = showFinalResult;
     
@@ -170,22 +167,18 @@ function showQuestion() {
             
             answerPlacement(isCorrect);
             
-            // نمایش بازخورد کوتاه
             if (isCorrect) {
                 btn.style.backgroundColor = "#28a745";
             } else {
                 btn.style.backgroundColor = "#dc3545";
-                // نمایش جواب درست
                 document.querySelectorAll(".option-btn")[question.correctIndex].style.backgroundColor = "#28a745";
             }
             
-            // غیرفعال کردن همه دکمه‌ها
             document.querySelectorAll(".option-btn").forEach(b => {
                 b.onclick = null;
                 b.style.cursor = "default";
             });
             
-            // رفتن به سوال بعدی بعد از ۱.۵ ثانیه
             setTimeout(() => {
                 showQuestion();
             }, 1500);
@@ -194,32 +187,30 @@ function showQuestion() {
 }
 
 // ===============================
-// نمایش نتیجه نهایی
+// نمایش نتیجه نهایی (ساده و زیبا)
 // ===============================
 
 function showFinalResult() {
-    const state = getPlacementState();
-    
-    let finalLevel = "A1";
-    
-    if (state.currentDifficulty >= 81) finalLevel = "C1";
-    else if (state.currentDifficulty >= 61) finalLevel = "B2";
-    else if (state.currentDifficulty >= 41) finalLevel = "B1";
-    else if (state.currentDifficulty >= 21) finalLevel = "A2";
-    else finalLevel = "A1";
+    const levelInfo = getEstimatedLevelRange();
     
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
     
     app.innerHTML = `
-        <h1>🎉 ${t.finalResult}</h1>
-        <h2>${t.yourLevel}: <span style="color: #007bff; font-size: 32px;">${finalLevel}</span></h2>
-        <p>${t.questionsAnswered}: ${state.asked.length}</p>
-        <p>${t.finalDifficulty}: ${state.currentDifficulty}</p>
-        <p>${t.correctStreak}: ${state.correctStreak}</p>
-        <br>
-        <button onclick="location.reload()" style="display: block; width: 100%; max-width: 400px; margin: 20px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #007bff; color: white; cursor: pointer;">${t.restart}</button>
+        <div style="text-align: center; padding: 40px 20px;">
+            <h1 style="font-size: 28px;">🎉 ${t.finalResult}</h1>
+            <p style="font-size: 18px; margin-top: 30px; color: #666;">${t.yourLevel} :</p>
+            <h2 style="font-size: 48px; color: #007bff; margin: 20px 0;">${levelInfo.range}</h2>
+            <p style="font-size: 16px; color: #666; margin-top: 30px; line-height: 1.6;">${t.canStart}</p>
+            <br>
+            <button id="start-journey" style="display: block; width: 100%; max-width: 300px; margin: 30px auto; padding: 18px; font-size: 18px; border: none; border-radius: 8px; background-color: #28a745; color: white; cursor: pointer; font-weight: bold;">${t.startJourney}</button>
+        </div>
     `;
+    
+    document.getElementById("start-journey").onclick = () => {
+        // اینجا بعداً مسیر اصلی اپ را باز می‌کنیم
+        alert("🚀 به زودی مسیر یادگیری شما شروع می‌شود!");
+    };
 }
 
 // ===============================
@@ -232,7 +223,7 @@ function showHome() {
 
   app.innerHTML = `
     <h1>${t.home}</h1>
-    <p>Version 0.0.4</p>
+    <p>Version 0.0.5</p>
   `;
 }
 
@@ -241,9 +232,6 @@ function showHome() {
 // ===============================
 showLanguage();
 
-// ===============================
-// بارگذاری سوالات تعیین سطح
-// ===============================
 loadPlacementQuestions().then(() => {
     console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length);
 });
