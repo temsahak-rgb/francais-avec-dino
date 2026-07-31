@@ -2,10 +2,6 @@
 
 const app = document.getElementById("app");
 
-// ===============================
-// Texts
-// ===============================
-
 const texts = {
   fr: {
     title: "Français avec Dino",
@@ -19,14 +15,15 @@ const texts = {
     levelQuestion: "Souhaitez-vous passer un test de niveau ?",
     yes: "Passer le test",
     later: "Plus tard",
-    home: "Accueil (temporaire)",
+    home: "Accueil",
     back: "Retour",
-    question: "Question",
-    of: "sur",
-    stopTest: "Arrêter le test",
+    dontKnow: "Je ne sais pas",
     finalResult: "Résultat du test",
     yourLevel: "Votre niveau estimé",
-    canStart: "Vous pouvez commencer votre parcours.",
+    canModify: "Vous pourrez toujours le modifier plus tard.",
+    acceptLevel: "Accepter ce niveau",
+    changeLevel: "Changer de niveau",
+    chooseYourLevel: "Choisissez votre niveau",
     startJourney: "Commencer le parcours",
     restart: "Recommencer"
   },
@@ -42,22 +39,19 @@ const texts = {
     levelQuestion: "آیا می‌خواهید ابتدا تعیین سطح انجام دهید؟",
     yes: "انجام تعیین سطح",
     later: "بعداً",
-    home: "صفحه اصلی (موقت)",
+    home: "صفحه اصلی",
     back: "بازگشت",
-    question: "سوال",
-    of: "از",
-    stopTest: "توقف آزمون",
+    dontKnow: "نمی‌دانم",
     finalResult: "نتیجه تعیین سطح",
     yourLevel: "سطح تقریبی شما",
-    canStart: "می‌توانید مسیر یادگیری خود را شروع کنید.",
+    canModify: "بعداً هم می‌توانید آن را تغییر دهید.",
+    acceptLevel: "قبول این سطح",
+    changeLevel: "تغییر سطح",
+    chooseYourLevel: "سطح خود را انتخاب کنید",
     startJourney: "شروع مسیر",
     restart: "شروع مجدد"
   }
 };
-
-// ===============================
-// Language
-// ===============================
 
 function showLanguage() {
   const lang = localStorage.getItem("language") || "fr";
@@ -81,10 +75,6 @@ function showLanguage() {
   };
 }
 
-// ===============================
-// Path
-// ===============================
-
 function showPath() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
@@ -102,10 +92,6 @@ function showPath() {
   document.getElementById("travel").onclick = showHome;
   document.getElementById("daily").onclick = showHome;
 }
-
-// ===============================
-// Placement Choice
-// ===============================
 
 function showPlacementChoice() {
   const lang = localStorage.getItem("language") || "fr";
@@ -128,10 +114,6 @@ function showPlacementChoice() {
   };
 }
 
-// ===============================
-// نمایش سوال واقعی
-// ===============================
-
 function showQuestion() {
     const question = getNextQuestion();
     
@@ -143,22 +125,58 @@ function showQuestion() {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
     
+    const progress = (placementState.asked.length / 15) * 100;
+    
     let html = `
-        <button id="back">${t.back}</button>
-        <h2>${t.question} ${placementState.asked.length} ${t.of} 15</h2>
-        <p style="font-size: 18px; margin: 20px 0; line-height: 1.6;">${question.question}</p>
+        <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+            <div style="background-color: #e0e0e0; height: 8px; border-radius: 4px; margin-bottom: 30px; overflow: hidden;">
+                <div style="background-color: #007bff; height: 100%; width: ${progress}%; transition: width 0.3s;"></div>
+            </div>
+            
+            <div style="background-color: white; border-radius: 12px; padding: 30px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 20px; margin: 0 0 30px 0; line-height: 1.6; color: #333;">${question.question}</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
     `;
     
     question.options.forEach((option, index) => {
-        html += `<button class="option-btn" data-index="${index}" style="display: block; width: 100%; max-width: 400px; margin: 10px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #007bff; color: white; cursor: pointer;">${option}</button>`;
+        html += `
+            <button class="option-btn" data-index="${index}" style="
+                display: block;
+                width: 100%;
+                padding: 16px;
+                font-size: 16px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                background-color: white;
+                color: #333;
+                cursor: pointer;
+                text-align: left;
+                transition: all 0.2s;
+            ">${option}</button>
+        `;
     });
     
-    html += `<br><button id="stop-test" style="display: block; width: 100%; max-width: 400px; margin: 20px auto; padding: 15px; font-size: 16px; border: none; border-radius: 8px; background-color: #dc3545; color: white; cursor: pointer;">${t.stopTest}</button>`;
+    html += `
+                </div>
+                
+                <button id="dont-know" style="
+                    display: block;
+                    width: 100%;
+                    margin-top: 20px;
+                    padding: 14px;
+                    font-size: 15px;
+                    border: 2px solid #dc3545;
+                    border-radius: 8px;
+                    background-color: white;
+                    color: #dc3545;
+                    cursor: pointer;
+                ">${t.dontKnow}</button>
+            </div>
+        </div>
+    `;
     
     app.innerHTML = html;
-    
-    document.getElementById("back").onclick = showPlacementChoice;
-    document.getElementById("stop-test").onclick = showFinalResult;
     
     document.querySelectorAll(".option-btn").forEach(btn => {
         btn.onclick = () => {
@@ -169,9 +187,15 @@ function showQuestion() {
             
             if (isCorrect) {
                 btn.style.backgroundColor = "#28a745";
+                btn.style.color = "white";
+                btn.style.borderColor = "#28a745";
             } else {
                 btn.style.backgroundColor = "#dc3545";
+                btn.style.color = "white";
+                btn.style.borderColor = "#dc3545";
                 document.querySelectorAll(".option-btn")[question.correctIndex].style.backgroundColor = "#28a745";
+                document.querySelectorAll(".option-btn")[question.correctIndex].style.color = "white";
+                document.querySelectorAll(".option-btn")[question.correctIndex].style.borderColor = "#28a745";
             }
             
             document.querySelectorAll(".option-btn").forEach(b => {
@@ -179,57 +203,151 @@ function showQuestion() {
                 b.style.cursor = "default";
             });
             
+            document.getElementById("dont-know").onclick = null;
+            document.getElementById("dont-know").style.cursor = "default";
+            
             setTimeout(() => {
                 showQuestion();
             }, 1500);
         };
     });
+    
+    document.getElementById("dont-know").onclick = () => {
+        answerPlacement(null);
+        
+        document.getElementById("dont-know").style.backgroundColor = "#dc3545";
+        document.getElementById("dont-know").style.color = "white";
+        document.querySelectorAll(".option-btn")[question.correctIndex].style.backgroundColor = "#28a745";
+        document.querySelectorAll(".option-btn")[question.correctIndex].style.color = "white";
+        document.querySelectorAll(".option-btn")[question.correctIndex].style.borderColor = "#28a745";
+        
+        document.querySelectorAll(".option-btn").forEach(b => {
+            b.onclick = null;
+            b.style.cursor = "default";
+        });
+        
+        document.getElementById("dont-know").onclick = null;
+        document.getElementById("dont-know").style.cursor = "default";
+        
+        setTimeout(() => {
+            showQuestion();
+        }, 1500);
+    };
 }
-
-// ===============================
-// نمایش نتیجه نهایی (ساده و زیبا)
-// ===============================
 
 function showFinalResult() {
     const levelInfo = getEstimatedLevelRange();
-    
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
     
     app.innerHTML = `
-        <div style="text-align: center; padding: 40px 20px;">
-            <h1 style="font-size: 28px;">🎉 ${t.finalResult}</h1>
-            <p style="font-size: 18px; margin-top: 30px; color: #666;">${t.yourLevel} :</p>
-            <h2 style="font-size: 48px; color: #007bff; margin: 20px 0;">${levelInfo.range}</h2>
-            <p style="font-size: 16px; color: #666; margin-top: 30px; line-height: 1.6;">${t.canStart}</p>
-            <br>
-            <button id="start-journey" style="display: block; width: 100%; max-width: 300px; margin: 30px auto; padding: 18px; font-size: 18px; border: none; border-radius: 8px; background-color: #28a745; color: white; cursor: pointer; font-weight: bold;">${t.startJourney}</button>
+        <div style="text-align: center; padding: 40px 20px; max-width: 500px; margin: 0 auto;">
+            <h1 style="font-size: 28px; margin-bottom: 30px;">🎉 ${t.finalResult}</h1>
+            
+            <p style="font-size: 18px; color: #666; margin-bottom: 10px;">${t.yourLevel} :</p>
+            <h2 style="font-size: 56px; color: #007bff; margin: 20px 0; font-weight: bold;">${levelInfo.range}</h2>
+            
+            <p style="font-size: 15px; color: #999; margin: 30px 0; line-height: 1.6;">${t.canModify}</p>
+            
+            <button id="accept-level" style="
+                display: block;
+                width: 100%;
+                padding: 18px;
+                font-size: 18px;
+                border: none;
+                border-radius: 8px;
+                background-color: #28a745;
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+                margin-bottom: 15px;
+            ">${t.acceptLevel}</button>
+            
+            <button id="change-level" style="
+                display: block;
+                width: 100%;
+                padding: 18px;
+                font-size: 18px;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                background-color: white;
+                color: #007bff;
+                cursor: pointer;
+                font-weight: bold;
+            ">${t.changeLevel}</button>
         </div>
     `;
     
-    document.getElementById("start-journey").onclick = () => {
-        // اینجا بعداً مسیر اصلی اپ را باز می‌کنیم
-        alert("🚀 به زودی مسیر یادگیری شما شروع می‌شود!");
+    document.getElementById("accept-level").onclick = () => {
+        savePlacementResult(levelInfo.level);
+        showHome();
+    };
+    
+    document.getElementById("change-level").onclick = () => {
+        showLevelSelection();
     };
 }
 
-// ===============================
-// Temporary Home
-// ===============================
+function showLevelSelection() {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    
+    const levels = ["A1", "A2", "B1", "B2", "C1"];
+    
+    let html = `
+        <div style="text-align: center; padding: 40px 20px; max-width: 500px; margin: 0 auto;">
+            <h1 style="font-size: 24px; margin-bottom: 30px;">${t.chooseYourLevel}</h1>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+    `;
+    
+    levels.forEach(level => {
+        html += `
+            <button class="level-btn" data-level="${level}" style="
+                display: block;
+                width: 100%;
+                padding: 20px;
+                font-size: 20px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                background-color: white;
+                color: #333;
+                cursor: pointer;
+                font-weight: bold;
+            ">${level}</button>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    app.innerHTML = html;
+    
+    document.querySelectorAll(".level-btn").forEach(btn => {
+        btn.onclick = () => {
+            const level = btn.getAttribute("data-level");
+            savePlacementResult(level);
+            showHome();
+        };
+    });
+}
 
 function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
+  const level = getPlacementResult() || "A2";
 
   app.innerHTML = `
-    <h1>${t.home}</h1>
-    <p>Version 0.0.5</p>
+    <div style="text-align: center; padding: 40px 20px;">
+        <h1 style="font-size: 28px; margin-bottom: 10px;">${t.home}</h1>
+        <p style="font-size: 18px; color: #007bff; font-weight: bold; margin-bottom: 30px;">Niveau : ${level}</p>
+        <p style="color: #999;">Version 0.0.6</p>
+    </div>
   `;
 }
 
-// ===============================
-// شروع برنامه
-// ===============================
 showLanguage();
 
 loadPlacementQuestions().then(() => {
