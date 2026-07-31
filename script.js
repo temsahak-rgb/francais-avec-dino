@@ -25,7 +25,15 @@ const texts = {
     changeLevel: "Changer de niveau",
     chooseYourLevel: "Choisissez votre niveau",
     startJourney: "Commencer le parcours",
-    restart: "Recommencer"
+    restart: "Recommencer",
+    hello: "Bonjour",
+    today: "Aujourd'hui",
+    vocabulary: "Vocabulaire",
+    grammar: "Grammaire",
+    listening: "Compréhension orale",
+    revision: "Révision",
+    continue: "Continuer",
+    level: "Niveau"
   },
   fa: {
     title: "Français avec Dino",
@@ -49,7 +57,15 @@ const texts = {
     changeLevel: "تغییر سطح",
     chooseYourLevel: "سطح خود را انتخاب کنید",
     startJourney: "شروع مسیر",
-    restart: "شروع مجدد"
+    restart: "شروع مجدد",
+    hello: "سلام",
+    today: "امروز",
+    vocabulary: "واژگان",
+    grammar: "گرامر",
+    listening: "درک شنیداری",
+    revision: "مرور",
+    continue: "ادامه",
+    level: "سطح"
   }
 };
 
@@ -334,18 +350,119 @@ function showLevelSelection() {
     });
 }
 
+// ===============================
+// Home واقعی
+// ===============================
 function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
   const level = getPlacementResult() || "A2";
 
   app.innerHTML = `
-    <div style="text-align: center; padding: 40px 20px;">
-        <h1 style="font-size: 28px; margin-bottom: 10px;">${t.home}</h1>
-        <p style="font-size: 18px; color: #007bff; font-weight: bold; margin-bottom: 30px;">Niveau : ${level}</p>
-        <p style="color: #999;">Version 0.0.6</p>
+    <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 32px; margin-bottom: 10px;">${t.hello} 👋</h1>
+            <p style="font-size: 18px; color: #007bff; font-weight: bold;">${t.level} : ${level}</p>
+        </div>
+        
+        <h2 style="font-size: 20px; margin-bottom: 20px; color: #666;">${t.today}</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <button class="home-card" data-section="vocabulary" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 12px;
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+                text-align: left;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            ">
+                <span style="font-size: 32px; margin-right: 15px;">📚</span>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 5px;">${t.vocabulary}</div>
+                    <div style="font-size: 14px; opacity: 0.9;">${t.continue} →</div>
+                </div>
+            </button>
+            
+            <button class="home-card" data-section="grammar" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 12px;
+                background-color: #28a745;
+                color: white;
+                cursor: pointer;
+                text-align: left;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            ">
+                <span style="font-size: 32px; margin-right: 15px;">📖</span>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 5px;">${t.grammar}</div>
+                    <div style="font-size: 14px; opacity: 0.9;">${t.continue} →</div>
+                </div>
+            </button>
+            
+            <button class="home-card" data-section="listening" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 12px;
+                background-color: #ffc107;
+                color: #333;
+                cursor: pointer;
+                text-align: left;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            ">
+                <span style="font-size: 32px; margin-right: 15px;">🎧</span>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 5px;">${t.listening}</div>
+                    <div style="font-size: 14px; opacity: 0.9;">${t.continue} →</div>
+                </div>
+            </button>
+            
+            <button class="home-card" data-section="revision" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 12px;
+                background-color: #6c757d;
+                color: white;
+                cursor: pointer;
+                text-align: left;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            ">
+                <span style="font-size: 32px; margin-right: 15px;">📝</span>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 5px;">${t.revision}</div>
+                    <div style="font-size: 14px; opacity: 0.9;">${t.continue} →</div>
+                </div>
+            </button>
+        </div>
+        
+        <p style="text-align: center; color: #999; margin-top: 40px; font-size: 14px;">Version 0.0.7</p>
     </div>
   `;
+  
+  document.querySelectorAll(".home-card").forEach(card => {
+      card.onclick = () => {
+          const section = card.getAttribute("data-section");
+          alert(`🚧 بخش ${section} به زودی فعال می‌شود!`);
+      };
+  });
 }
 
 showLanguage();
