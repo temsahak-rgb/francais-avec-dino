@@ -368,7 +368,7 @@ function showHome() {
 }
 
 // ===============================
-// صفحه گرامر (جدید)
+// صفحه لیست گرامرها
 // ===============================
 
 async function showGrammarPage() {
@@ -398,7 +398,8 @@ async function showGrammarPage() {
         
         recommended.slice(0, 5).forEach(item => {
             const title = lang === "fa" ? item.title_fa : item.title;
-            html += `<div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; cursor: pointer;" onclick="alert('🚧 درس ${title} به زودی!')">
+            // 👇 تغییر اینجا اعمال شد: به جای alert، تابع showGrammarLesson صدا زده می‌شود 👇
+            html += `<div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; cursor: pointer;" onclick="showGrammarLesson('${item.id}')">
                 <span style="font-size: 14px;">${"⭐".repeat(item.importance)}</span>
                 <p style="margin: 5px 0 0 0; font-size: 15px;">${title}</p>
             </div>`;
@@ -416,7 +417,8 @@ async function showGrammarPage() {
             const title = lang === "fa" ? item.title_fa : item.title;
             const badge = item.recommended ? '<span style="font-size: 12px; background: #28a745; color: white; padding: 2px 8px; border-radius: 4px; margin-left: 8px;">🦕</span>' : '';
             
-            html += `<div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="alert('🚧 درس ${title} به زودی!')">
+            // 👇 تغییر اینجا اعمال شد: به جای alert، تابع showGrammarLesson صدا زده می‌شود 👇
+            html += `<div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="showGrammarLesson('${item.id}')">
                 <div>
                     <p style="margin: 0; font-size: 15px; font-weight: 500;">${title}${badge}</p>
                     <p style="margin: 4px 0 0 0; font-size: 13px; color: #999;">⏱ ${item.estimatedTime} min · ${item.exercises} ${lang === "fa" ? "تمرین" : "exercices"}</p>
@@ -433,6 +435,95 @@ async function showGrammarPage() {
     document.getElementById("back").onclick = showHome;
 }
 
+// ===============================
+// صفحه تکی گرامر (Placeholder)
+// ===============================
+
+async function showGrammarLesson(lessonId) {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    
+    // پیدا کردن درس در داده‌های بارگذاری شده
+    const level = getPlacementResult() || "A2";
+    await loadGrammar(level); // اطمینان از بارگذاری
+    const allLessons = getGrammar(level);
+    const lesson = allLessons.find(l => l.id === lessonId);
+    
+    if (!lesson) {
+        app.innerHTML = `<p>خطا در یافتن درس.</p><button onclick="showGrammarPage()">بازگشت</button>`;
+        return;
+    }
+
+    const status = getLessonStatus(lessonId);
+    const bookmarked = isBookmarked(lessonId);
+    const title = lang === "fa" ? lesson.title_fa : lesson.title;
+
+    // اگر اولین بار است باز می‌کند، وضعیت را به "در حال مطالعه" تغییر بده
+    if (status === "not_started") {
+        setLessonStatus(lessonId, "in_progress");
+    }
+
+    let html = `
+        <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+            <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0; margin-bottom: 20px;">← ${t.back}</button>
+            
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+                <div>
+                    <span style="font-size: 12px; background: #e0e0e0; padding: 4px 8px; border-radius: 4px; color: #666;">${lesson.level} - ${lesson.module}</span>
+                    <h1 style="font-size: 24px; margin: 10px 0 5px 0;">${title}</h1>
+                    <p style="font-size: 14px; color: #666; margin: 0;">⏱ ${lesson.estimatedTime} min · ${lesson.exercises} ${lang === "fa" ? "تمرین" : "exercices"}</p>
+                </div>
+                <button id="bookmark-btn" style="background: none; border: none; font-size: 28px; cursor: pointer; padding: 0;">
+                    ${bookmarked ? "⭐" : "☆"}
+                </button>
+            </div>
+
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 20px;">${getStatusIcon(status)}</span>
+                <span style="font-size: 15px; font-weight: 500;">${getStatusText(status, lang)}</span>
+            </div>
+
+            <!-- تب‌های Placeholder -->
+            <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">
+                <div style="flex: 1; text-align: center; padding: 8px; background: #007bff; color: white; border-radius: 6px; font-weight: bold; cursor: pointer;">📖 ${lang === "fa" ? "درس" : "Leçon"}</div>
+                <div style="flex: 1; text-align: center; padding: 8px; background: #e0e0e0; color: #666; border-radius: 6px; cursor: pointer;">📝 ${lang === "fa" ? "تمرین" : "Exercice"}</div>
+                <div style="flex: 1; text-align: center; padding: 8px; background: #e0e0e0; color: #666; border-radius: 6px; cursor: pointer;">🏆 ${lang === "fa" ? "آزمون" : "Quiz"}</div>
+            </div>
+
+            <div style="background: white; border: 1px dashed #ccc; border-radius: 8px; padding: 40px 20px; text-align: center; color: #999; margin-bottom: 30px;">
+                <p style="font-size: 18px; margin-bottom: 10px;">🚧</p>
+                <p>${lang === "fa" ? "محتوای این درس به زودی اضافه می‌شود." : "Le contenu de cette leçon sera bientôt disponible."}</p>
+            </div>
+
+            <button id="complete-btn" style="
+                display: block; width: 100%; padding: 16px; font-size: 16px; font-weight: bold;
+                border: none; border-radius: 8px; cursor: pointer;
+                background-color: ${status === "completed" ? "#6c757d" : "#28a745"};
+                color: white;
+            ">
+                ${status === "completed" ? (lang === "fa" ? "✅ قبلاً تمام شده" : "✅ Déjà terminé") : (lang === "fa" ? "علامت‌گذاری به عنوان پایان" : "Marquer comme terminé")}
+            </button>
+        </div>
+    `;
+
+    app.innerHTML = html;
+
+    // اتصال رویدادها
+    document.getElementById("back").onclick = showGrammarPage;
+    
+    document.getElementById("bookmark-btn").onclick = () => {
+        const isNowBookmarked = toggleBookmark(lessonId);
+        document.getElementById("bookmark-btn").innerHTML = isNowBookmarked ? "⭐" : "☆";
+    };
+
+    document.getElementById("complete-btn").onclick = () => {
+        if (status !== "completed") {
+            setLessonStatus(lessonId, "completed");
+            // رفرش صفحه برای نمایش وضعیت جدید
+            showGrammarLesson(lessonId);
+        }
+    };
+}
 // ===============================
 // شروع برنامه
 // ===============================
