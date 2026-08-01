@@ -19,7 +19,6 @@ async function loadPlacementQuestions() {
         console.log("سوالات بارگذاری شدند:", placementQuestions.length);
     } catch (error) {
         console.error("خطا در بارگذاری:", error);
-        alert("خطا در خواندن فایل سوالات.");
     }
 }
 
@@ -28,9 +27,7 @@ function getPlacementQuestions() {
 }
 
 function getNextQuestion() {
-    if (placementState.finished) {
-        return null;
-    }
+    if (placementState.finished) return null;
     
     if (placementState.asked.length >= 15) {
         placementState.finished = true;
@@ -46,17 +43,19 @@ function getNextQuestion() {
         return null;
     }
 
-    // مرتب‌سازی بر اساس نزدیکی به difficulty فعلی
-    candidates.sort((a, b) => 
-        Math.abs(a.difficulty - placementState.currentDifficulty) - 
-        Math.abs(b.difficulty - placementState.currentDifficulty)
+    // ✅ منطق جدید: تعریف بازه تحمل (Tolerance Window)
+    const tolerance = 12; 
+    const validPool = candidates.filter(q => 
+        Math.abs(q.difficulty - placementState.currentDifficulty) <= tolerance
     );
 
-    // انتخاب تصادفی از بین ۳ سوال نزدیک
-    const topCandidates = candidates.slice(0, Math.min(3, candidates.length));
-    const randomIndex = Math.floor(Math.random() * topCandidates.length);
-    
-    currentQuestion = topCandidates[randomIndex];
+    // اگر تعداد سوالات در بازه کم بود، از کل سوالات باقی‌مانده استفاده کن
+    const poolToUse = validPool.length >= 3 ? validPool : candidates;
+
+    // ✅ بر زدن (Shuffle) سوالات برای جلوگیری از تکرار الگو
+    const shuffled = poolToUse.sort(() => 0.5 - Math.random());
+
+    currentQuestion = shuffled[0];
     placementState.asked.push(currentQuestion.id);
     return currentQuestion;
 }
@@ -89,17 +88,11 @@ function answerPlacement(correct) {
     }
 }
 
-function getPlacementState() {
-    return placementState;
-}
-
-function getCurrentQuestion() {
-    return currentQuestion;
-}
+function getPlacementState() { return placementState; }
+function getCurrentQuestion() { return currentQuestion; }
 
 function getEstimatedLevelRange() {
     const diff = placementState.currentDifficulty;
-    
     if (diff >= 90) return { level: "C1", range: "C1 - Autonome" };
     if (diff >= 75) return { level: "B2", range: "B2 - Avancé" };
     if (diff >= 60) return { level: "B2", range: "B1 - B2" };
@@ -110,14 +103,7 @@ function getEstimatedLevelRange() {
 }
 
 function resetPlacementState() {
-    placementState = {
-        asked: [],
-        currentDifficulty: 25,
-        correctStreak: 0,
-        wrongStreak: 0,
-        finished: false,
-        finishReason: null
-    };
+    placementState = { asked: [], currentDifficulty: 25, correctStreak: 0, wrongStreak: 0, finished: false, finishReason: null };
     currentQuestion = null;
 }
 
