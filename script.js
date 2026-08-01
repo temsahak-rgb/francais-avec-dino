@@ -304,9 +304,8 @@ function showLevelSelection() {
 }
 
 // ===============================
-// Home واقعی
+// Home واقعی (با دکمه تغییر سطح)
 // ===============================
-
 function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
@@ -317,6 +316,11 @@ function showHome() {
         <div style="text-align: center; margin-bottom: 40px;">
             <h1 style="font-size: 32px; margin-bottom: 10px;">${t.hello} 👋</h1>
             <p style="font-size: 18px; color: #007bff; font-weight: bold;">${t.level} : ${level}</p>
+            
+            <!-- ✅ دکمه جدید برای تغییر سطح -->
+            <button id="change-level-home" style="background: none; border: none; color: #666; text-decoration: underline; cursor: pointer; font-size: 14px; margin-top: 5px;">
+                ${t.changeLevel}
+            </button>
         </div>
         
         <h2 style="font-size: 20px; margin-bottom: 20px; color: #666;">${t.today}</h2>
@@ -343,11 +347,11 @@ function showHome() {
             </button>
         </div>
         
-        <p style="text-align: center; color: #999; margin-top: 40px; font-size: 14px;">Version 0.0.8</p>
+        <p style="text-align: center; color: #999; margin-top: 40px; font-size: 14px;">Version 0.0.9</p>
     </div>
   `;
   
-  // 👇 اینجا تغییر مهم اعمال شد 👇
+  // اتصال رویداد کلیک به کارت‌ها
   document.querySelectorAll(".home-card").forEach(card => {
       card.onclick = () => {
           const section = card.getAttribute("data-section");
@@ -358,6 +362,9 @@ function showHome() {
           }
       };
   });
+
+  // ✅ اتصال دکمه تغییر سطح به تابع انتخاب سطح
+  document.getElementById("change-level-home").onclick = showLevelSelection;
 }
 
 // ===============================
