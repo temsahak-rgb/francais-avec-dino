@@ -5,8 +5,8 @@
     "module": "Les temps du récit",
     "category": "temps",
     "icon": "⏳",
-    "title": "L'imparfait",
-    "title_fa": "گذشته استمراری",
+    "title": "Le futur simple",
+    "title_fa": "آینده ساده",
     "estimatedTime": 25,
     "importance": 5,
     "recommended": true,
@@ -20,17 +20,32 @@
     "module": "Les temps du récit",
     "category": "temps",
     "icon": "⏳",
+    "title": "L'imparfait",
+    "title_fa": "گذشته استمراری",
+    "estimatedTime": 25,
+    "importance": 5,
+    "recommended": true,
+    "prerequisites": [],
+    "lessons": 2,
+    "exercises": 20
+  },
+  {
+    "id": "B1-G-003",
+    "level": "B1",
+    "module": "Les temps du récit",
+    "category": "temps",
+    "icon": "⏳",
     "title": "Passé composé vs Imparfait",
     "title_fa": "گذشته مرکب در مقابل استمراری",
     "estimatedTime": 30,
     "importance": 5,
     "recommended": true,
-    "prerequisites": ["B1-G-001"],
+    "prerequisites": ["B1-G-002"],
     "lessons": 3,
     "exercises": 25
   },
   {
-    "id": "B1-G-003",
+    "id": "B1-G-004",
     "level": "B1",
     "module": "Les temps du récit",
     "category": "temps",
@@ -40,24 +55,9 @@
     "estimatedTime": 25,
     "importance": 4,
     "recommended": true,
-    "prerequisites": ["B1-G-002"],
+    "prerequisites": ["B1-G-003"],
     "lessons": 2,
     "exercises": 18
-  },
-  {
-    "id": "B1-G-004",
-    "level": "B1",
-    "module": "Les temps du récit",
-    "category": "temps",
-    "icon": "⏳",
-    "title": "Le futur simple",
-    "title_fa": "آینده ساده",
-    "estimatedTime": 25,
-    "importance": 5,
-    "recommended": true,
-    "prerequisites": [],
-    "lessons": 2,
-    "exercises": 20
   },
   {
     "id": "B1-G-005",
@@ -65,12 +65,12 @@
     "module": "Les temps du récit",
     "category": "temps",
     "icon": "⏳",
-    "title": "Futur proche, présent continu, passé récent",
-    "title_fa": "آینده نزدیک، حال استمراری، گذشته نزدیک",
+    "title": "Présent continu et passé récent",
+    "title_fa": "حال استمراری و گذشته نزدیک",
     "estimatedTime": 20,
     "importance": 3,
     "recommended": false,
-    "prerequisites": ["B1-G-004"],
+    "prerequisites": ["B1-G-001"],
     "lessons": 2,
     "exercises": 15
   },
@@ -85,7 +85,7 @@
     "estimatedTime": 30,
     "importance": 5,
     "recommended": true,
-    "prerequisites": ["B1-G-004"],
+    "prerequisites": ["B1-G-001"],
     "lessons": 3,
     "exercises": 25
   },
@@ -182,36 +182,6 @@
   {
     "id": "B1-G-013",
     "level": "B1",
-    "module": "Comparer",
-    "category": "comparaison",
-    "icon": "⚖️",
-    "title": "Le comparatif",
-    "title_fa": "صفت تفضیلی",
-    "estimatedTime": 20,
-    "importance": 4,
-    "recommended": true,
-    "prerequisites": [],
-    "lessons": 2,
-    "exercises": 18
-  },
-  {
-    "id": "B1-G-014",
-    "level": "B1",
-    "module": "Comparer",
-    "category": "comparaison",
-    "icon": "⚖️",
-    "title": "Le superlatif",
-    "title_fa": "صفت عالی",
-    "estimatedTime": 20,
-    "importance": 4,
-    "recommended": true,
-    "prerequisites": ["B1-G-013"],
-    "lessons": 2,
-    "exercises": 18
-  },
-  {
-    "id": "B1-G-015",
-    "level": "B1",
     "module": "Nuancer son discours",
     "category": "indéfini",
     "icon": "📝",
@@ -225,7 +195,7 @@
     "exercises": 15
   },
   {
-    "id": "B1-G-016",
+    "id": "B1-G-014",
     "level": "B1",
     "module": "Nuancer son discours",
     "category": "indéfini",
@@ -235,12 +205,12 @@
     "estimatedTime": 20,
     "importance": 3,
     "recommended": false,
-    "prerequisites": ["B1-G-015"],
+    "prerequisites": ["B1-G-013"],
     "lessons": 2,
     "exercises": 15
   },
   {
-    "id": "B1-G-017",
+    "id": "B1-G-015",
     "level": "B1",
     "module": "Nuancer son discours",
     "category": "interrogation",
@@ -255,7 +225,7 @@
     "exercises": 12
   },
   {
-    "id": "B1-G-018",
+    "id": "B1-G-016",
     "level": "B1",
     "module": "Nuancer son discours",
     "category": "pronoms",
@@ -270,7 +240,7 @@
     "exercises": 15
   },
   {
-    "id": "B1-G-019",
+    "id": "B1-G-017",
     "level": "B1",
     "module": "Les adverbes",
     "category": "adverbes",
@@ -285,7 +255,7 @@
     "exercises": 12
   },
   {
-    "id": "B1-G-020",
+    "id": "B1-G-018",
     "level": "B1",
     "module": "Les adverbes",
     "category": "adverbes",
@@ -300,7 +270,7 @@
     "exercises": 12
   },
   {
-    "id": "B1-G-021",
+    "id": "B1-G-019",
     "level": "B1",
     "module": "Les adverbes",
     "category": "adverbes",
@@ -310,14 +280,14 @@
     "estimatedTime": 15,
     "importance": 3,
     "recommended": false,
-    "prerequisites": ["B1-G-020"],
+    "prerequisites": ["B1-G-018"],
     "lessons": 1,
     "exercises": 12
   },
   {
-    "id": "B1-G-022",
+    "id": "B1-G-020",
     "level": "B1",
-    "module": "Structures avancées",
+    "module": "Le subjonctif",
     "category": "subjonctif",
     "icon": "🎓",
     "title": "Le subjonctif (1)",
@@ -330,9 +300,9 @@
     "exercises": 25
   },
   {
-    "id": "B1-G-023",
+    "id": "B1-G-021",
     "level": "B1",
-    "module": "Structures avancées",
+    "module": "Le subjonctif",
     "category": "subjonctif",
     "icon": "🎓",
     "title": "Le subjonctif (2)",
@@ -340,15 +310,15 @@
     "estimatedTime": 25,
     "importance": 4,
     "recommended": true,
-    "prerequisites": ["B1-G-022"],
+    "prerequisites": ["B1-G-020"],
     "lessons": 2,
     "exercises": 20
   },
   {
-    "id": "B1-G-024",
+    "id": "B1-G-022",
     "level": "B1",
-    "module": "Structures avancées",
-    "category": "infinitif",
+    "module": "Formes verbales",
+    "category": "participe",
     "icon": "🎓",
     "title": "L'infinitif",
     "title_fa": "مصدر",
@@ -360,9 +330,9 @@
     "exercises": 15
   },
   {
-    "id": "B1-G-025",
+    "id": "B1-G-023",
     "level": "B1",
-    "module": "Structures avancées",
+    "module": "Formes verbales",
     "category": "participe",
     "icon": "🎓",
     "title": "Participe présent",
@@ -375,9 +345,9 @@
     "exercises": 15
   },
   {
-    "id": "B1-G-026",
+    "id": "B1-G-024",
     "level": "B1",
-    "module": "Structures avancées",
+    "module": "Formes verbales",
     "category": "gérondif",
     "icon": "🎓",
     "title": "Gérondif",
@@ -385,14 +355,14 @@
     "estimatedTime": 20,
     "importance": 3,
     "recommended": false,
-    "prerequisites": ["B1-G-025"],
+    "prerequisites": ["B1-G-023"],
     "lessons": 2,
     "exercises": 15
   },
   {
-    "id": "B1-G-027",
+    "id": "B1-G-025",
     "level": "B1",
-    "module": "Structures avancées",
+    "module": "Formes verbales",
     "category": "adjectif",
     "icon": "🎓",
     "title": "Adjectif verbal",
@@ -400,12 +370,12 @@
     "estimatedTime": 15,
     "importance": 2,
     "recommended": false,
-    "prerequisites": ["B1-G-025"],
+    "prerequisites": ["B1-G-023"],
     "lessons": 1,
     "exercises": 10
   },
   {
-    "id": "B1-G-028",
+    "id": "B1-G-026",
     "level": "B1",
     "module": "Communication avancée",
     "category": "voix",
@@ -420,7 +390,7 @@
     "exercises": 18
   },
   {
-    "id": "B1-G-029",
+    "id": "B1-G-027",
     "level": "B1",
     "module": "Communication avancée",
     "category": "discours",
@@ -435,7 +405,7 @@
     "exercises": 20
   },
   {
-    "id": "B1-G-030",
+    "id": "B1-G-028",
     "level": "B1",
     "module": "Communication avancée",
     "category": "discours",
@@ -445,7 +415,7 @@
     "estimatedTime": 25,
     "importance": 4,
     "recommended": true,
-    "prerequisites": ["B1-G-029"],
+    "prerequisites": ["B1-G-027"],
     "lessons": 2,
     "exercises": 18
   }
