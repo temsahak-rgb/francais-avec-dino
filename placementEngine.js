@@ -16,9 +16,9 @@ async function loadPlacementQuestions() {
     try {
         const response = await fetch("./data/placement.json");
         placementQuestions = await response.json();
-        console.log("سوالات بارگذاری شدند:", placementQuestions.length);
+        console.log("✅ سوالات بارگذاری شدند:", placementQuestions.length);
     } catch (error) {
-        console.error("خطا در بارگذاری:", error);
+        console.error("❌ خطا در بارگذاری:", error);
     }
 }
 
@@ -28,35 +28,33 @@ function getPlacementQuestions() {
 
 function getNextQuestion() {
     if (placementState.finished) return null;
-    
     if (placementState.asked.length >= 15) {
         placementState.finished = true;
         placementState.finishReason = "max_questions";
         return null;
     }
 
+    // ۱. حذف سوالاتی که قبلاً پرسیده شده‌اند
     const candidates = placementQuestions.filter(q => !placementState.asked.includes(q.id));
-
     if (candidates.length === 0) {
         placementState.finished = true;
-        placementState.finishReason = "no_more_questions";
         return null;
     }
 
-    // ✅ منطق جدید: تعریف بازه تحمل (Tolerance Window)
-    const tolerance = 12; 
-    const validPool = candidates.filter(q => 
-        Math.abs(q.difficulty - placementState.currentDifficulty) <= tolerance
+    // ۲. مرتب‌سازی بر اساس نزدیکی به سختی فعلی
+    candidates.sort((a, b) => 
+        Math.abs(a.difficulty - placementState.currentDifficulty) - 
+        Math.abs(b.difficulty - placementState.currentDifficulty)
     );
 
-    // اگر تعداد سوالات در بازه کم بود، از کل سوالات باقی‌مانده استفاده کن
-    const poolToUse = validPool.length >= 3 ? validPool : candidates;
-
-    // ✅ بر زدن (Shuffle) سوالات برای جلوگیری از تکرار الگو
-    const shuffled = poolToUse.sort(() => 0.5 - Math.random());
-
-    currentQuestion = shuffled[0];
+    // ۳. انتخاب تصادفی از بین ۳ سوال نزدیک (اینجا کلید حل مشکل تکرار است)
+    const topCandidates = candidates.slice(0, Math.min(3, candidates.length));
+    const randomIndex = Math.floor(Math.random() * topCandidates.length);
+    
+    currentQuestion = topCandidates[randomIndex];
     placementState.asked.push(currentQuestion.id);
+    
+    console.log(`🎯 سوال بعدی: ${currentQuestion.id} (سختی: ${currentQuestion.difficulty})`);
     return currentQuestion;
 }
 
@@ -81,7 +79,6 @@ function answerPlacement(correct) {
         placementState.finished = true;
         placementState.finishReason = "bottom_reached";
     }
-    
     if (placementState.currentDifficulty >= 90 && placementState.correctStreak >= 3) {
         placementState.finished = true;
         placementState.finishReason = "top_reached";
