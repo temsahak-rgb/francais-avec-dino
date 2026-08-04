@@ -1,0 +1,32 @@
+{
+  "general": {
+    "id": "general",
+    "title": "Français général",
+    "title_fa": "فرانسوی عمومی",
+    "icon": "🇫🇷",
+    "description": "Apprentissage complet de A1 à C1",
+    "description_fa": "یادگیری کامل از A1 تا C1",
+    "hasLevels": true,
+    "levels": ["A1", "A2", "B1", "B2", "C1"]
+  },
+  "travel": {
+    "id": "travel",
+    "title": "Français Voyage",
+    "title_fa": "فرانسوی در سفر",
+    "icon": "✈️",
+    "description": "Vocabulaire et phrases pour voyager",
+    "description_fa": "واژگان و جملات برای سفر",
+    "hasLevels": false,
+    "modules": ["hotel", "restaurant", "metro", "shopping", "urgences", "phrases"]
+  },
+  "daily": {
+    "id": "daily",
+    "title": "Français Quotidien",
+    "title_fa": "فرانسوی روزمره",
+    "icon": "📅",
+    "description": "Grammaire essentielle pour la vie quotidienne",
+    "description_fa": "گرامر ضروری برای زندگی روزمره",
+    "hasLevels": true,
+    "levels": ["A2", "B1"]
+  }
+}
