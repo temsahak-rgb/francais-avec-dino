@@ -1,0 +1,87 @@
+[
+  {
+    "id": "TR-H-001",
+    "path": "travel",
+    "module": "hotel",
+    "icon": "🏨",
+    "title": "Réserver une chambre",
+    "title_fa": "رزرو اتاق",
+    "estimatedTime": 15,
+    "relatedGrammar": ["A1-G-002", "A1-G-007", "A1-G-008"],
+    "sections": [
+      {
+        "id": "TR-H-001-1",
+        "title": "Vocabulaire de l'hôtel",
+        "title_fa": "واژگان هتل",
+        "type": "vocabulary",
+        "content": "la chambre - اتاق\nla réception - پذیرش\nle lit - تخت\nla clé - کلید",
+        "examples": ["Je voudrais une chambre.", "Avez-vous une chambre libre?"]
+      },
+      {
+        "id": "TR-H-001-2",
+        "title": "Dialogue: à la réception",
+        "title_fa": "مکالمه: در پذیرش",
+        "type": "dialogue",
+        "content": "Client: Bonjour, je voudrais réserver une chambre.\nRéceptionniste: Bien sûr. Pour combien de nuits?\nClient: Pour trois nuits.\nRéceptionniste: D'accord. Une chambre simple ou double?",
+        "examples": []
+      },
+      {
+        "id": "TR-H-001-3",
+        "title": "Exercices",
+        "title_fa": "تمرینات",
+        "type": "exercise",
+        "questions": [
+          {
+            "type": "mcq",
+            "question": "Je voudrais _____ une chambre.",
+            "options": ["réserver", "manger", "dormir", "aller"],
+            "correct": 0,
+            "explanation": "réserver = رزرو کردن"
+          },
+          {
+            "type": "mcq",
+            "question": "Pour combien de _____?",
+            "options": ["nuits", "jours", "heures", "minutes"],
+            "correct": 0,
+            "explanation": "nuits = شب‌ها"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TR-H-002",
+    "path": "travel",
+    "module": "hotel",
+    "icon": "🏨",
+    "title": "Demander des informations",
+    "title_fa": "پرسیدن اطلاعات",
+    "estimatedTime": 12,
+    "relatedGrammar": ["A1-G-008", "A1-G-003"],
+    "sections": [
+      {
+        "id": "TR-H-002-1",
+        "title": "Phrases utiles",
+        "title_fa": "جملات کاربردی",
+        "type": "vocabulary",
+        "content": "À quelle heure est le petit-déjeuner? - صبحانه ساعت چند است؟\nOù est l'ascenseur? - آسانسور کجاست؟\nJe cherche la salle de bain. - دنبال حمام می‌گردم.",
+        "examples": []
+      },
+      {
+        "id": "TR-H-002-2",
+        "title": "Exercices",
+        "title_fa": "تمرینات",
+        "type": "exercise",
+        "questions": [
+          {
+            "type": "mcq",
+            "question": "_____ est l'ascenseur?",
+            "options": ["Où", "Quand", "Comment", "Pourquoi"],
+            "correct": 0,
+            "explanation": "Où = کجا"
+          }
+        ]
+      }
+    ]
+  }
+]
