@@ -1,0 +1,49 @@
+{
+  "id": "A1-G-004",
+  "level": "A1",
+  "title": "Les articles définis",
+  "title_fa": "حروف تعریف معین",
+  "icon": "📘",
+  "estimatedTime": 10,
+  "sections": [
+    {
+      "id": "A1-G-004-1",
+      "type": "lesson",
+      "title": "Les articles définis",
+      "title_fa": "حروف تعریف معین",
+      "content": "Les articles définis servent à parler d'un nom spécifique, connu, ou déjà mentionné. Ils varient selon le genre, le nombre, et parfois la première lettre du mot.",
+      "table": {
+        "headers": ["Type de nom", "Article", "Exemple"],
+        "rows": [
+          ["Masculin singulier", "le", "le livre"],
+          ["Féminin singulier", "la", "la maison"],
+          ["Pluriel", "les", "les enfants"],
+          ["Devant voyelle ou h muet", "l'", "l'ami"]
+        ]
+      }
+    },
+    {
+      "id": "A1-G-004-2",
+      "type": "lesson",
+      "title": "La règle de l'",
+      "title_fa": "قانون l'",
+      "content": "On utilise l' devant un nom qui commence par une voyelle (a, e, i, o, u) ou par un h muet. Cela permet d'éviter une pause dans la prononciation.",
+      "examples": [
+        {"fr": "L'ami arrive.", "fa": "دوست می‌رسد."},
+        {"fr": "L'hôtel est grand.", "fa": "هتل بزرگ است."}
+      ]
+    },
+    {
+      "id": "A1-G-004-3",
+      "type": "lesson",
+      "title": "h muet vs h aspiré",
+      "title_fa": "h بی‌صدا در مقابل h صدادار",
+      "content": "Le h muet se comporte comme une voyelle : on utilise l'. Le h aspiré se comporte comme une consonne : on n'utilise pas l'.",
+      "examples": [
+        {"fr": "l'homme, l'habitude, l'hôpital", "fa": "h muet → با l' می‌آید"},
+        {"fr": "le héros, la haine, le hamburger", "fa": "h aspiré → با le/la می‌آید"}
+      ],
+      "note_fa": "در فارسی همهٔ «ه»ها یکسان هستند، اما در فرانسه دو نوع h وجود دارد. این تفاوت باعث اشتباه می‌شود، پس باید لیست h aspiré را حفظ کرد."
+    }
+  ]
+}
