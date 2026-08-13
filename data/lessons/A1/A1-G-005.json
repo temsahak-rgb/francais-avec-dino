@@ -1,0 +1,30 @@
+{
+  "id": "A1-G-005",
+  "level": "A1",
+  "title": "Les articles indéfinis",
+  "title_fa": "حروف تعریف نکره",
+  "icon": "📘",
+  "estimatedTime": 5,
+  "sections": [
+    {
+      "id": "A1-G-005-1",
+      "type": "lesson",
+      "title": "Les articles indéfinis",
+      "title_fa": "حروف تعریف نکره",
+      "content": "Les articles indéfinis servent à parler d'un nom non spécifique. Ils expriment une quantité vague.",
+      "table": {
+        "headers": ["Type de nom", "Article", "Exemple"],
+        "rows": [
+          ["Masculin singulier", "un", "un chien"],
+          ["Féminin singulier", "une", "une voiture"],
+          ["Pluriel", "des", "des fleurs"]
+        ]
+      },
+      "examples": [
+        {"fr": "J'ai un stylo.", "fa": "من یک خودکار دارم."},
+        {"fr": "Elle veut des pommes.", "fa": "او چند سیب می‌خواهد."}
+      ],
+      "note_fa": "در فرانسه برای جمع نامعین همیشه des می‌آید. مثال: J'ai des livres. (من چند کتاب دارم.)"
+    }
+  ]
+}
