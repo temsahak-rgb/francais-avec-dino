@@ -246,160 +246,245 @@ async function showGrammarPage() {
 }
 
 // ===============================
-// صفحه تکی گرامر (با تب‌بندی و طراحی کارت‌های بهتر)
+// 🆕 موتور جنریک نمایش درس و تمرین
 // ===============================
+
 async function showGrammarLesson(lessonId) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const level = getPlacementResult() || "A1";
+    const level = lessonId.split("-")[0]; // استخراج سطح از ID (مثلاً A1)
     
-    await loadGrammar(level);
-    const allLessons = getGrammar(level);
-    const lesson = allLessons.find(l => l.id === lessonId);
+    // استفاده از تابع جدید موتور که درسنامه + تمرین‌ها را با هم می‌آورد
+    const lessonData = await loadLessonWithExercises(level, lessonId);
     
-    if (!lesson) { app.innerHTML = `<p>خطا در یافتن درس.</p><button onclick="showGrammarPage()">بازگشت</button>`; return; }
-
-    const status = getLessonStatus(lessonId);
-    const bookmarked = isBookmarked(lessonId);
-    const title = lang === "fa" ? lesson.title_fa : lesson.title;
-
-    if (status === "not_started") setLessonStatus(lessonId, "in_progress");
-
-    if (lessonId === "A1-G-003") {
-        let html = `
-            <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
-                <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0; margin-bottom: 20px;">← ${t.back}</button>
-                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
-                    <div>
-                        <span style="font-size: 12px; background: #e0e0e0; padding: 4px 8px; border-radius: 4px; color: #666;">${lesson.level} - ${lesson.module}</span>
-                        <h1 style="font-size: 24px; margin: 10px 0 5px 0;">${title}</h1>
-                    </div>
-                    <button id="bookmark-btn" style="background: none; border: none; font-size: 28px; cursor: pointer; padding: 0;">${bookmarked ? "⭐" : "☆"}</button>
-                </div>
-
-                <!-- تب‌های واقعی -->
-                <div style="display: flex; gap: 0; margin-bottom: 20px; border-bottom: 2px solid #e0e0e0;">
-                    <button id="tab-lesson" class="grammar-tab" data-target="content-lesson" style="flex: 1; padding: 14px; background: #007bff; color: white; border: none; border-radius: 8px 8px 0 0; font-weight: bold; cursor: pointer; font-size: 15px; transition: all 0.2s;">📖 ${lang === "fa" ? "درس" : "Leçon"}</button>
-                    <button id="tab-exercise" class="grammar-tab" data-target="content-exercise" style="flex: 1; padding: 14px; background: #f1f3f5; color: #495057; border: none; border-radius: 8px 8px 0 0; font-weight: bold; cursor: pointer; font-size: 15px; transition: all 0.2s;">📝 ${lang === "fa" ? "تمرین" : "Exercice"}</button>
-                </div>
-
-                <!-- محتوای درس -->
-                <div id="content-lesson" class="tab-content" style="display: block;">
-                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                        <h3 style="margin-top: 0; color: #007bff;">📖 توضیح درس</h3>
-                        <p style="line-height: 1.8; color: #333;">دو فعل <b>Être</b> (بودن) و <b>Avoir</b> (داشتن) مهم‌ترین افعال زبان فرانسه هستند:</p>
-                        <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                            <div style="flex: 1; min-width: 140px; background: #e3f2fd; padding: 15px; border-radius: 8px;">
-                                <h4 style="margin-top: 0; text-align: center; color: #1565c0;">Être</h4>
-                                <p style="margin: 5px 0;">Je <b>suis</b></p><p style="margin: 5px 0;">Tu <b>es</b></p><p style="margin: 5px 0;">Il/Elle <b>est</b></p>
-                                <p style="margin: 5px 0;">Nous <b>sommes</b></p><p style="margin: 5px 0;">Vous <b>êtes</b></p><p style="margin: 5px 0;">Ils/Elles <b>sont</b></p>
-                            </div>
-                            <div style="flex: 1; min-width: 140px; background: #fce4ec; padding: 15px; border-radius: 8px;">
-                                <h4 style="margin-top: 0; text-align: center; color: #c2185b;">Avoir</h4>
-                                <p style="margin: 5px 0;">J'<b>ai</b></p><p style="margin: 5px 0;">Tu <b>as</b></p><p style="margin: 5px 0;">Il/Elle <b>a</b></p>
-                                <p style="margin: 5px 0;">Nous <b>avons</b></p><p style="margin: 5px 0;">Vous <b>avez</b></p><p style="margin: 5px 0;">Ils/Elles <b>ont</b></p>
-                            </div>
-                        </div>
-                        <button onclick="document.getElementById('tab-exercise').click()" style="width: 100%; padding: 14px; background: #28a745; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; font-size: 16px;">🚀 ${lang === "fa" ? "برو به تمرین" : "Aller à l'exercice"}</button>
-                    </div>
-                </div>
-
-                <!-- محتوای تمرین (قابل دسترسی مستقیم) -->
-                <div id="content-exercise" class="tab-content" style="display: none;">
-                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                        <h3 style="margin-top: 0; color: #007bff;">📝 تمرین سریع</h3>
-                        <p style="line-height: 1.6; color: #333; margin-bottom: 25px; font-size: 16px;">جای خالی را پر کنید:<br><b style="font-size: 18px; color: #007bff;">"Nous _____ étudiants."</b></p>
-                        
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            <button class="mini-quiz-btn" data-correct="false" style="width: 100%; padding: 16px; border: 2px solid #dee2e6; border-radius: 10px; background: #f8f9fa; color: #495057; cursor: pointer; font-size: 16px; font-weight: 500; text-align: left; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center;">
-                                <span>avons</span> <span style="font-size: 22px; color: #adb5bd;">○</span>
-                            </button>
-                            <button class="mini-quiz-btn" data-correct="true" style="width: 100%; padding: 16px; border: 2px solid #dee2e6; border-radius: 10px; background: #f8f9fa; color: #495057; cursor: pointer; font-size: 16px; font-weight: 500; text-align: left; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center;">
-                                <span>sommes</span> <span style="font-size: 22px; color: #adb5bd;">○</span>
-                            </button>
-                            <button class="mini-quiz-btn" data-correct="false" style="width: 100%; padding: 16px; border: 2px solid #dee2e6; border-radius: 10px; background: #f8f9fa; color: #495057; cursor: pointer; font-size: 16px; font-weight: 500; text-align: left; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center;">
-                                <span>êtes</span> <span style="font-size: 22px; color: #adb5bd;">○</span>
-                            </button>
-                        </div>
-                        <p id="quiz-feedback" style="margin-top: 20px; font-weight: bold; min-height: 24px; text-align: center; padding: 12px; border-radius: 8px; font-size: 15px;"></p>
-                    </div>
-                </div>
-
-                <button id="complete-btn" style="display: block; width: 100%; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; background-color: ${status === "completed" ? "#6c757d" : "#28a745"}; color: white;">
-                    ${status === "completed" ? "✅ قبلاً تمام شده" : "علامت‌گذاری به عنوان پایان"}
+    if (!lessonData) {
+        app.innerHTML = `
+            <div style="max-width: 500px; margin: 0 auto; padding: 20px; text-align: center;">
+                <p style="font-size: 40px;">🚧</p>
+                <p style="font-size: 18px; color: #666; margin: 20px 0;">
+                    ${lang === "fa" ? "محتوای این درس به زودی اضافه می‌شود." : "Le contenu de cette leçon sera bientôt disponible."}
+                </p>
+                <button onclick="showGrammarPage()" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px;">
+                    ${t.back}
                 </button>
             </div>
         `;
-        app.innerHTML = html;
-
-        // منطق تب‌ها
-        document.querySelectorAll(".grammar-tab").forEach(tab => {
-            tab.onclick = () => {
-                document.querySelectorAll(".grammar-tab").forEach(t => { t.style.background = "#f1f3f5"; t.style.color = "#495057"; });
-                tab.style.background = "#007bff"; tab.style.color = "white";
-                document.querySelectorAll(".tab-content").forEach(c => c.style.display = "none");
-                document.getElementById(tab.getAttribute("data-target")).style.display = "block";
-            };
-        });
-
-        // منطق تمرین با طراحی جدید
-        document.querySelectorAll(".mini-quiz-btn").forEach(btn => {
-            btn.onclick = () => {
-                const isCorrect = btn.getAttribute("data-correct") === "true";
-                const feedback = document.getElementById("quiz-feedback");
-                
-                document.querySelectorAll(".mini-quiz-btn").forEach(b => {
-                    b.style.background = "#f8f9fa"; b.style.borderColor = "#dee2e6"; b.style.color = "#495057";
-                    b.querySelector("span:last-child").innerText = "○"; b.querySelector("span:last-child").style.color = "#adb5bd";
-                });
-
-                if (isCorrect) {
-                    btn.style.background = "#d4edda"; btn.style.borderColor = "#28a745"; btn.style.color = "#155724";
-                    btn.querySelector("span:last-child").innerText = "●"; btn.querySelector("span:last-child").style.color = "#28a745";
-                    feedback.style.background = "#d4edda"; feedback.style.color = "#155724";
-                    feedback.innerText = lang === "fa" ? "آفرین! کاملاً درست است. 🎉" : "Bravo ! C'est tout à fait correct. 🎉";
-                } else {
-                    btn.style.background = "#f8d7da"; btn.style.borderColor = "#dc3545"; btn.style.color = "#721c24";
-                    btn.querySelector("span:last-child").innerText = "✕"; btn.querySelector("span:last-child").style.color = "#dc3545";
-                    feedback.style.background = "#f8d7da"; feedback.style.color = "#721c24";
-                    feedback.innerText = lang === "fa" ? "اشتباه است. دوباره تلاش کن." : "Incorrect. Essayez encore.";
-                }
-            };
-        });
-
-    } else {
-        let html = `
-            <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
-                <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0; margin-bottom: 20px;">← ${t.back}</button>
-                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
-                    <div>
-                        <span style="font-size: 12px; background: #e0e0e0; padding: 4px 8px; border-radius: 4px; color: #666;">${lesson.level} - ${lesson.module}</span>
-                        <h1 style="font-size: 24px; margin: 10px 0 5px 0;">${title}</h1>
-                    </div>
-                    <button id="bookmark-btn" style="background: none; border: none; font-size: 28px; cursor: pointer; padding: 0;">${bookmarked ? "⭐" : "☆"}</button>
-                </div>
-                <div style="background: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 20px;">${getStatusIcon(status)}</span>
-                    <span style="font-size: 15px; font-weight: 500;">${getStatusText(status, lang)}</span>
-                </div>
-                <div style="background: white; border: 1px dashed #ccc; border-radius: 8px; padding: 40px 20px; text-align: center; color: #999; margin-bottom: 30px;">
-                    <p style="font-size: 40px; margin-bottom: 10px;">🚧</p>
-                    <p style="font-size: 16px;">${lang === "fa" ? "محتوای این درس به زودی اضافه می‌شود." : "Le contenu de cette leçon sera bientôt disponible."}</p>
-                </div>
-                <button id="complete-btn" style="display: block; width: 100%; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; background-color: ${status === "completed" ? "#6c757d" : "#28a745"}; color: white;">
-                    ${status === "completed" ? "✅ قبلاً تمام شده" : "علامت‌گذاری به عنوان پایان"}
-                </button>
-            </div>
-        `;
-        app.innerHTML = html;
+        return;
     }
-
+    
+    const progress = getLessonProgress(lessonId);
+    const title = lang === "fa" ? lessonData.title_fa : lessonData.title;
+    
+    let html = `
+        <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+            <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0; margin-bottom: 20px;">← ${t.back}</button>
+            <h1 style="font-size: 24px; margin-bottom: 10px;">${title}</h1>
+            <p style="font-size: 14px; color: #666; margin-bottom: 30px;">⏱ ${lessonData.estimatedTime} min</p>
+            
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 14px; color: #666;">${lang === "fa" ? "پیشرفت:" : "Progression:"}</span>
+                    <span style="font-size: 14px; font-weight: bold; color: #007bff;">
+                        ${progress.completedSections.length} / ${lessonData.sections.length}
+                    </span>
+                </div>
+                <div style="background: #e0e0e0; height: 6px; border-radius: 3px; margin-top: 8px; overflow: hidden;">
+                    <div style="background: #007bff; height: 100%; width: ${(progress.completedSections.length / lessonData.sections.length) * 100}%; transition: width 0.3s;"></div>
+                </div>
+            </div>
+    `;
+    
+    lessonData.sections.forEach((section) => {
+        const isCompleted = progress.completedSections.includes(section.id);
+        const statusIcon = isCompleted ? "✅" : (section.type === "lesson" ? "📖" : section.type === "exercise" ? "✏️" : "🏆");
+        const sectionTitle = lang === "fa" ? section.title_fa : section.title;
+        
+        html += `
+            <div onclick="showLessonSection('${lessonId}', '${section.id}')" style="
+                background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 10px;
+                cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s;
+            ">
+                <span style="font-size: 24px;">${statusIcon}</span>
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 16px; font-weight: 500;">${sectionTitle}</p>
+                    <p style="margin: 4px 0 0 0; font-size: 13px; color: #999;">
+                        ${section.type === "lesson" ? (lang === "fa" ? "درسنامه" : "Leçon") : 
+                          section.type === "exercise" ? (lang === "fa" ? "تمرین" : "Exercice") : 
+                          (lang === "fa" ? "آزمون" : "Quiz")}
+                        ${section.questions ? ` · ${section.questions.length} ${lang === "fa" ? "سوال" : "questions"}` : ""}
+                    </p>
+                </div>
+                <span style="color: #ccc; font-size: 20px;">›</span>
+            </div>
+        `;
+    });
+    
+    html += `</div>`;
+    app.innerHTML = html;
     document.getElementById("back").onclick = showGrammarPage;
-    document.getElementById("bookmark-btn").onclick = () => { document.getElementById("bookmark-btn").innerHTML = toggleBookmark(lessonId) ? "⭐" : "☆"; };
+}
+
+async function showLessonSection(lessonId, sectionId) {
+    const level = lessonId.split("-")[0];
+    const lessonData = await loadLessonWithExercises(level, lessonId);
+    const section = getSection(lessonData, sectionId);
+    
+    if (!section) { alert("خطا در یافتن بخش"); return; }
+    
+    if (section.type === "lesson") {
+        showLessonContent(lessonId, section);
+    } else if (section.type === "exercise" || section.type === "quiz") {
+        showExerciseContent(lessonId, section);
+    }
+}
+
+function showLessonContent(lessonId, section) {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    const title = lang === "fa" ? section.title_fa : section.title;
+    
+    let html = `
+        <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+            <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0; margin-bottom: 20px;">← ${t.back}</button>
+            <h1 style="font-size: 24px; margin-bottom: 20px;">${title}</h1>
+            <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                <p style="line-height: 1.8; color: #333; white-space: pre-line;">${section.content}</p>
+    `;
+    
+    if (section.table) {
+        html += `<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px;">`;
+        html += `<tr>`;
+        section.table.headers.forEach(header => { html += `<th style="border: 1px solid #ddd; padding: 10px; background: #f8f9fa; text-align: left;">${header}</th>`; });
+        html += `</tr>`;
+        section.table.rows.forEach(row => {
+            html += `<tr>`;
+            row.forEach(cell => { html += `<td style="border: 1px solid #ddd; padding: 10px;">${cell}</td>`; });
+            html += `</tr>`;
+        });
+        html += `</table>`;
+    }
+    
+    if (section.examples && section.examples.length > 0) {
+        html += `<h3 style="margin-top: 20px; color: #007bff;">${lang === "fa" ? "مثال‌ها" : "Exemples"}</h3>`;
+        section.examples.forEach(example => {
+            html += `<div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 8px 0;"><p style="margin: 0; font-weight: 500;">${example.fr}</p><p style="margin: 4px 0 0 0; font-size: 14px; color: #666;">${example.fa}</p></div>`;
+        });
+    }
+    
+    html += `
+            </div>
+            <button id="complete-btn" style="display: block; width: 100%; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; background-color: #28a745; color: white;">
+                ${lang === "fa" ? "ادامه به بخش بعدی" : "Continuer"}
+            </button>
+        </div>
+    `;
+    
+    app.innerHTML = html;
+    document.getElementById("back").onclick = () => showGrammarLesson(lessonId);
     document.getElementById("complete-btn").onclick = () => {
-        if (status !== "completed") { setLessonStatus(lessonId, "completed"); showGrammarLesson(lessonId); }
+        markSectionCompleted(lessonId, section.id);
+        showGrammarLesson(lessonId);
     };
 }
+
+function showExerciseContent(lessonId, section) {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    const title = lang === "fa" ? section.title_fa : section.title;
+    
+    const questions = getRandomQuestions(section, section.displayCount);
+    let currentQuestionIndex = 0;
+    let correctCount = 0;
+    
+    function showCurrentQuestion() {
+        if (currentQuestionIndex >= questions.length) {
+            showExerciseResult(lessonId, section, correctCount, questions.length);
+            return;
+        }
+        
+        const question = prepareQuestion(questions[currentQuestionIndex]);
+        
+        let html = `
+            <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <button id="back" style="background: none; border: none; color: #007bff; font-size: 16px; cursor: pointer; padding: 0;">← ${t.back}</button>
+                    <span style="font-size: 14px; color: #666;">${currentQuestionIndex + 1} / ${questions.length}</span>
+                </div>
+                <div style="background: #e0e0e0; height: 6px; border-radius: 3px; margin-bottom: 30px; overflow: hidden;">
+                    <div style="background: #007bff; height: 100%; width: ${((currentQuestionIndex + 1) / questions.length) * 100}%; transition: width 0.3s;"></div>
+                </div>
+                <h2 style="font-size: 18px; margin-bottom: 10px;">${title}</h2>
+                <p style="font-size: 18px; line-height: 1.6; color: #333; margin-bottom: 30px;">${question.question}</p>
+                <div id="options-container" style="display: flex; flex-direction: column; gap: 12px;">
+        `;
+        
+        if (question.type === "mcq" || question.type === "binary") {
+            question.options.forEach((option, index) => {
+                html += `<button class="option-btn" data-index="${index}" style="width: 100%; padding: 16px; font-size: 16px; border: 2px solid #dee2e6; border-radius: 10px; background: #f8f9fa; color: #495057; cursor: pointer; text-align: left; transition: all 0.2s;">${option}</button>`;
+            });
+        }
+        
+        html += `</div><div id="feedback" style="margin-top: 20px; min-height: 60px;"></div></div>`;
+        app.innerHTML = html;
+        
+        document.getElementById("back").onclick = () => showGrammarLesson(lessonId);
+        
+        document.querySelectorAll(".option-btn").forEach(btn => {
+            btn.onclick = () => {
+                const selectedIndex = parseInt(btn.getAttribute("data-index"));
+                const isCorrect = checkAnswer(question, selectedIndex);
+                
+                if (isCorrect) correctCount++;
+                else saveMistake(lessonId, section.id, currentQuestionIndex, selectedIndex, question.correct);
+                
+                const feedback = document.getElementById("feedback");
+                if (isCorrect) {
+                    btn.style.background = "#d4edda"; btn.style.borderColor = "#28a745";
+                    feedback.innerHTML = `<div style="background: #d4edda; padding: 12px; border-radius: 8px; color: #155724;"><p style="margin: 0; font-weight: bold;">✅ ${lang === "fa" ? "آفرین!" : "Bravo!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${question.explanation}</p></div>`;
+                } else {
+                    btn.style.background = "#f8d7da"; btn.style.borderColor = "#dc3545";
+                    document.querySelectorAll(".option-btn")[question.correct].style.background = "#d4edda";
+                    document.querySelectorAll(".option-btn")[question.correct].style.borderColor = "#28a745";
+                    feedback.innerHTML = `<div style="background: #f8d7da; padding: 12px; border-radius: 8px; color: #721c24;"><p style="margin: 0; font-weight: bold;">❌ ${lang === "fa" ? "اشتباه!" : "Incorrect!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${question.explanation}</p></div>`;
+                }
+                
+                document.querySelectorAll(".option-btn").forEach(b => { b.onclick = null; b.style.cursor = "default"; });
+                
+                feedback.innerHTML += `<button id="next-btn" style="display: block; width: 100%; margin-top: 15px; padding: 14px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; background: #007bff; color: white; cursor: pointer;">${lang === "fa" ? "سوال بعدی" : "Question suivante"}</button>`;
+                document.getElementById("next-btn").onclick = () => { currentQuestionIndex++; showCurrentQuestion(); };
+            };
+        });
+    }
+    showCurrentQuestion();
+}
+
+function showExerciseResult(lessonId, section, correctCount, totalCount) {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = texts[lang];
+    const percentage = Math.round((correctCount / totalCount) * 100);
+    
+    markSectionCompleted(lessonId, section.id);
+    
+    let emoji = "🎉", message = lang === "fa" ? "عالی بود!" : "Excellent!";
+    if (percentage < 50) { emoji = "💪"; message = lang === "fa" ? "تلاش بیشتری لازم است!" : "Il faut plus d'effort!"; }
+    else if (percentage < 80) { emoji = "👍"; message = lang === "fa" ? "خوب بود!" : "Bien!"; }
+    
+    app.innerHTML = `
+        <div style="max-width: 500px; margin: 0 auto; padding: 20px; text-align: center;">
+            <p style="font-size: 60px; margin-bottom: 20px;">${emoji}</p>
+            <h1 style="font-size: 28px; margin-bottom: 10px;">${message}</h1>
+            <p style="font-size: 48px; font-weight: bold; color: #007bff; margin: 20px 0;">${correctCount} / ${totalCount}</p>
+            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">${percentage}%</p>
+            <button onclick="showGrammarLesson('${lessonId}')" style="display: block; width: 100%; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; background: #007bff; color: white; cursor: pointer; margin-bottom: 10px;">${lang === "fa" ? "بازگشت به درس" : "Retour à la leçon"}</button>
+        </div>
+    `;
+}
+
+// ===============================
+// شروع برنامه
+// ===============================
+showLanguage();
+loadPlacementQuestions().then(() => { console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length); });
 
 showLanguage();
 loadPlacementQuestions().then(() => { console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length); });
