@@ -1,0 +1,51 @@
+{
+  "id": "A1-G-009",
+  "level": "A1",
+  "title": "Les articles contractés",
+  "title_fa": "حروف تعریف ادغامی",
+  "icon": "📘",
+  "estimatedTime": 10,
+  "sections": [
+    {
+      "id": "A1-G-009-1",
+      "type": "lesson",
+      "title": "Définition et formation",
+      "title_fa": "تعریف و ساختار",
+      "content": "Les articles contractés sont formés par la fusion de la préposition à ou de avec les articles définis le et les. Cette contraction est obligatoire en français.",
+      "table": {
+        "headers": ["Préposition + Article", "Forme contractée", "Exemple"],
+        "rows": [
+          ["à + le", "au", "Je vais au cinéma."],
+          ["à + les", "aux", "Il parle aux enfants."],
+          ["de + le", "du", "Je reviens du marché."],
+          ["de + les", "des", "C'est la maison des voisins."]
+        ]
+      }
+    },
+    {
+      "id": "A1-G-009-2",
+      "type": "lesson",
+      "title": "Règles importantes",
+      "title_fa": "قوانین مهم",
+      "content": "On ne peut jamais dire à le ou de les. La forme contractée doit être utilisée. En revanche, il n'y a pas de contraction avec la ou l' : à la, à l', de la, de l'.",
+      "examples": [
+        {"fr": "Je parle à la femme.", "fa": "من با آن زن صحبت می‌کنم."},
+        {"fr": "Il arrive à l'école.", "fa": "او به مدرسه می‌رسد."},
+        {"fr": "Je viens de la banque.", "fa": "من از بانک می‌آیم."},
+        {"fr": "Elle sort de l'hôpital.", "fa": "او از بیمارستان خارج می‌شود."}
+      ]
+    },
+    {
+      "id": "A1-G-009-3",
+      "type": "lesson",
+      "title": "h muet vs h aspiré",
+      "title_fa": "h بی‌صدا در مقابل h صدادار",
+      "content": "Le h muet se comporte comme une voyelle : pas de contraction. Le h aspiré se comporte comme une consonne : contraction possible avec le et les.",
+      "examples": [
+        {"fr": "à l'homme, de l'habitude", "fa": "h muet → بدون contraction"},
+        {"fr": "au héros, du hamburger", "fa": "h aspiré → با contraction"}
+      ],
+      "note_fa": "در فارسی همهٔ «ه»ها یکسان هستند، اما در فرانسه h muet و h aspiré دو رفتار متفاوت دارند."
+    }
+  ]
+}
