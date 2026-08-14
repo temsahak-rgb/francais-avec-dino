@@ -1,0 +1,84 @@
+{
+  "id": "A2-G-017",
+  "level": "A2",
+  "title": "Les adverbes de quantité (avancé)",
+  "icon": "⚖️",
+  "estimatedTime": 15,
+  "sections": [
+    {
+      "id": "A2-G-017-1",
+      "type": "lesson",
+      "title": "Les adverbes de comparaison avancés",
+      "content": "Ces adverbes servent à comparer des quantités ou des intensités de manière plus précise.",
+      "table": {
+        "headers": ["Adverbe", "Sens", "Avec nom (+ de)", "Exemple"],
+        "rows": [
+          ["**autant**", "به اندازهٔ (égalité)", "**autant de**", "Il gagne **autant que** moi. / Cet hôtel a **autant de** chambres."],
+          ["**davantage**", "بیشتر (formel)", "**davantage de**", "Tu dois étudier **davantage**. / Il y a eu **davantage de** touristes."],
+          ["**si**", "آنقدر (avec adj/adv)", "—", "Elle est **si** sympa. / Il parle **si** vite !"],
+          ["**tant**", "آنقدر (avec verbes/noms)", "**tant de**", "Ils ont **tant** voyagé. / J'ai **tant de** travail."]
+        ]
+      },
+      "examples": [
+        {"fr": "Il gagne **autant que** moi."},
+        {"fr": "Cet hôtel a **autant de** chambres que l'autre."},
+        {"fr": "Tu dois étudier **davantage** pour réussir."},
+        {"fr": "Il y a eu **davantage de** touristes cet été."},
+        {"fr": "Elle est **si** sympa que tout le monde l'adore."},
+        {"fr": "Il parle **si** vite que je ne comprends rien."},
+        {"fr": "Ils ont **tant** voyagé qu'ils connaissent toute l'Europe."},
+        {"fr": "J'ai **tant de** travail cette semaine."}
+      ],
+      "note": "✅ **Différence entre plus et davantage** :\n\n- **plus** → courant, utilisé dans tous les contextes\n- **davantage** → plus formel, souvent à l'écrit\n\n✅ Il faut travailler **plus**.\n✅ Il faut travailler **davantage**. (plus soutenu)\n\n⚠️ **autant** exprime une **égalité** de quantité :\n\n✅ Il gagne **autant que** moi. (= la même quantité)"
+    },
+    {
+      "id": "A2-G-017-2",
+      "type": "lesson",
+      "title": "Autres adverbes de quantité",
+      "content": "Voici d'autres adverbes utiles pour exprimer des quantités approximatives ou emphatiques.",
+      "table": {
+        "headers": ["Adverbe", "Sens", "Exemple"],
+        "rows": [
+          ["**environ**", "تقریباً (quantité)", "Il y a **environ** 600 élèves."],
+          ["**presque**", "تقریباً", "Elle a **presque** fini."],
+          ["**que de**", "چه مقدار! (exclamation)", "**Que de** gens sur la plage !"],
+          ["**quelque**", "تقریباً (devant nombre)", "Il habite à **quelque** 200 mètres."]
+        ]
+      },
+      "examples": [
+        {"fr": "Il y a **environ** 600 élèves dans cette école."},
+        {"fr": "Elle a **presque** fini ses devoirs."},
+        {"fr": "Il a fait **presque** quarante voyages."},
+        {"fr": "**Que de** gens sur la plage aujourd'hui !"},
+        {"fr": "**Que de** travail cette semaine !"},
+        {"fr": "Il habite à **quelque** 200 mètres de la plage."},
+        {"fr": "Le projet a coûté **quelque** 5000 euros."}
+      ],
+      "note": "✅ **Différence entre environ et presque** :\n\n- **environ** → avant un **nombre** (quantité approximative)\n  ✅ Il y a **environ** 600 personnes.\n\n- **presque** → avant un **verbe** ou **adjectif** (action presque terminée)\n  ✅ Elle a **presque** fini.\n  ✅ Il est **presque** midi."
+    },
+    {
+      "id": "A2-G-017-3",
+      "type": "lesson",
+      "title": "Position dans les temps composés",
+      "content": "⚠️ **Règle importante** : certains adverbes se placent **entre l'auxiliaire et le participe passé** dans les temps composés.",
+      "table": {
+        "headers": ["Adverbe", "Position", "Exemple"],
+        "rows": [
+          ["**beaucoup**", "entre auxiliaire + participe", "Il a **beaucoup** travaillé."],
+          ["**peu**", "entre auxiliaire + participe", "Elle a **peu** dormi."],
+          ["**trop**", "entre auxiliaire + participe", "Il a **trop** mangé."],
+          ["**assez**", "entre auxiliaire + participe", "Il n'a pas **assez** étudié."],
+          ["**tant**", "entre auxiliaire + participe", "Ils ont **tant** voyagé."]
+        ]
+      },
+      "examples": [
+        {"fr": "Il a **beaucoup** travaillé cette semaine."},
+        {"fr": "Elle a **peu** dormi cette nuit."},
+        {"fr": "Il a **trop** mangé au restaurant."},
+        {"fr": "Il n'a pas **assez** étudié pour l'examen."},
+        {"fr": "Ils ont **tant** voyagé qu'ils connaissent toute l'Europe."}
+      ],
+      "note": "⚠️ **Très important** :\n\nCes adverbes se placent **entre l'auxiliaire et le participe passé** :\n- **beaucoup**, **peu**, **trop**, **assez**, **tant**\n\n✅ Il a **trop** marché.\n✅ Elle a **beaucoup** travaillé.\n\nMais **très** ne s'utilise **pas** avec les participes passés :\n❌ ~~Il est très fatigué~~ → ✅ Il est **très** fatigué (avec adjectif, pas participe passé)"
+    }
+  ]
+}
