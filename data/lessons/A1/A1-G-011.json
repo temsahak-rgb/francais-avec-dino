@@ -32,11 +32,12 @@
           ["-eur", "-euse", "vendeur", "vendeuse"],
           ["-teur", "-trice", "acteur", "actrice"],
           ["-teur", "-trice", "directeur", "directrice"],
-          ["-ien", "-ienne", "musicien", "musicienne"],
-          ["-ien", "-ienne", "pharmacien", "pharmacienne"],
-          ["-on / -en / -et", "double consonne + e", "patron", "patronne"],
-          ["-on / -en / -et", "double consonne + e", "chaton", "chatonne"],
-          ["-on / -en / -et", "double consonne + e", "cadet", "cadette"]
+          ["-en", "-enne", "musicien", "musicienne"],
+          ["-en", "-enne", "pharmacien", "pharmacienne"],
+          ["-on / -en / -et / -el", "double consonne + e", "patron", "patronne"],
+          ["-on / -en / -et / -el", "double consonne + e", "chaton", "chatonne"],
+          ["-on / -en / -et / -el", "double consonne + e", "cadet", "cadette"],
+          ["-on / -en / -et / -el", "double consonne + e", "Daniel", "Danielle"]
         ]
       }
     },
