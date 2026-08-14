@@ -51,23 +51,6 @@ button:hover {
 }
 
 /* =============================== */
-/* RTL/LTR برای متن‌های مختلط فارسی-فرانسوی */
-/* =============================== */
-
-.fa-mixed-text {
-    direction: rtl;
-    unicode-bidi: plaintext;
-    text-align: right;
-    display: inline-block;
-}
-
-.fr-text {
-    direction: ltr;
-    unicode-bidi: plaintext;
-    text-align: left;
-}
-
-/* =============================== */
 /* استایل‌های جدول (برای درس‌های گرامر) */
 /* =============================== */
 
