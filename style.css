@@ -13,7 +13,6 @@ body {
     background: white;
     color: black;
     min-height: 100vh;
-    direction: rtl;
 }
 
 #app {
