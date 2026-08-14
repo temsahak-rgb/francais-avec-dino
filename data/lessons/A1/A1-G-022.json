@@ -9,16 +9,16 @@
       "id": "A1-G-022-1",
       "type": "lesson",
       "title": "La conjugaison des verbes en -ir (2e groupe)",
-      "content": "Les verbes en -ir du deuxième groupe sont réguliers. Pour les conjuguer au présent, on enlève la terminaison -ir de l'infinitif et on ajoute les terminaisons suivantes.",
+      "content": "Les verbes en **-ir** du **deuxième groupe** sont **réguliers**.\n\nPour les conjuguer au présent, on enlève la terminaison **-ir** de l'infinitif et on ajoute les terminaisons suivantes.",
       "table": {
         "headers": ["Pronom", "Terminaison", "Finir", "Choisir", "Réussir"],
         "rows": [
-          ["Je", "-is", "je finis", "je choisis", "je réussis"],
-          ["Tu", "-is", "tu finis", "tu choisis", "tu réussis"],
-          ["Il / Elle", "-it", "il/elle finit", "il/elle choisit", "il/elle réussit"],
-          ["Nous", "-issons", "nous finissons", "nous choisissons", "nous réussissons"],
-          ["Vous", "-issez", "vous finissez", "vous choisissez", "vous réussissez"],
-          ["Ils / Elles", "-issent", "ils/elles finissent", "ils/elles choisissent", "ils/elles réussissent"]
+          ["Je", "**-is**", "je fini**s**", "je choi**sis**", "je réus**sis**"],
+          ["Tu", "**-is**", "tu fini**s**", "tu choi**sis**", "tu réus**sis**"],
+          ["Il / Elle", "**-it**", "il/elle fini**t**", "il/elle choi**sit**", "il/elle réus**sit**"],
+          ["Nous", "**-issons**", "nous fin**issons**", "nous chois**issons**", "nous réuss**issons**"],
+          ["Vous", "**-issez**", "vous fin**issez**", "vous chois**issez**", "vous réuss**issez**"],
+          ["Ils / Elles", "**-issent**", "ils/elles fin**issent**", "ils/elles chois**issent**", "ils/elles réuss**issent**"]
         ]
       }
     },
@@ -26,16 +26,16 @@
       "id": "A1-G-022-2",
       "type": "lesson",
       "title": "Exemples et autres verbes",
-      "content": "Cette règle s'applique à tous les verbes réguliers en -ir du deuxième groupe : finir, choisir, réussir, grandir, grossir, maigrir, etc.",
+      "content": "Cette règle s'applique à **tous les verbes réguliers** en **-ir** du deuxième groupe : **finir**, **choisir**, **réussir**, **grandir**, **grossir**, **maigrir**, etc.",
       "examples": [
-        {"fr": "Je finis mes devoirs avant le dîner."},
-        {"fr": "Ils finissent leur travail à six heures."},
-        {"fr": "Elle choisit un livre à la bibliothèque."},
-        {"fr": "Nous choisissons un film pour ce soir."},
-        {"fr": "Il réussit toujours ses examens."},
-        {"fr": "Vous réussissez à convaincre tout le monde."}
+        {"fr": "Je **finis** mes devoirs avant le dîner."},
+        {"fr": "Ils **finissent** leur travail à six heures."},
+        {"fr": "Elle **choisit** un livre à la bibliothèque."},
+        {"fr": "Nous **choisissons** un film pour ce soir."},
+        {"fr": "Il **réussit** toujours ses examens."},
+        {"fr": "Vous **réussissez** à convaincre tout le monde."}
       ],
-      "note": "Astuce : si le verbe se termine par -issons avec nous, il appartient généralement au deuxième groupe. Exemple : nous finissons, nous choisissons."
+      "note": "✅ **Astuce** : si le verbe se termine par **-issons** avec **nous**, il appartient généralement au **deuxième groupe**.\n\nExemple : nous **finissons**, nous **choisissons**."
     }
   ]
 }
