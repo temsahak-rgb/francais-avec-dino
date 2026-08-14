@@ -1,77 +1,58 @@
 {
   "id": "A1-G-022-B",
   "level": "A1",
-  "title": "Les verbes en -ir du 3e groupe au présent",
-  "icon": "🚀",
-  "estimatedTime": 12,
+  "title": "Les verbes en -ir (3e groupe) : Partir et sortir",
+  "icon": "🟪",
+  "estimatedTime": 8,
   "sections": [
     {
       "id": "A1-G-022-B-1",
       "type": "lesson",
-      "title": "Le modèle partir / sortir",
-      "content": "Certains verbes en -ir appartiennent au troisième groupe et sont irréguliers. Au singulier, le radical se raccourcit. Au pluriel, le radical reste complet.",
+      "title": "La conjugaison de partir et sortir",
+      "content": "Les verbes **partir** et **sortir** appartiennent au **troisième groupe**. Ils sont **irréguliers** car leur radical change au singulier.\n\n⚠️ **Caractéristiques principales** :\n- Au **singulier** : le radical devient **par-** / **sor-**\n- Au **pluriel** : le radical complet **part-** / **sort-** revient",
       "table": {
         "headers": ["Pronom", "Partir", "Sortir"],
         "rows": [
-          ["Je", "je pars", "je sors"],
-          ["Tu", "tu pars", "tu sors"],
-          ["Il / Elle", "il/elle part", "il/elle sort"],
-          ["Nous", "nous partons", "nous sortons"],
-          ["Vous", "vous partez", "vous sortez"],
-          ["Ils / Elles", "ils/elles partent", "ils/elles sortent"]
+          ["Je", "je **pars**", "je **sors**"],
+          ["Tu", "tu **pars**", "tu **sors**"],
+          ["Il / Elle", "il/elle **part**", "il/elle **sort**"],
+          ["Nous", "nous **partons**", "nous **sortons**"],
+          ["Vous", "vous **partez**", "vous **sortez**"],
+          ["Ils / Elles", "ils/elles **partent**", "ils/elles **sortent**"]
         ]
       },
       "examples": [
-        {"fr": "Je pars maintenant, il est tard."},
-        {"fr": "Ils partent en vacances demain matin."},
-        {"fr": "Elle sort avec ses amis le samedi soir."},
-        {"fr": "Nous sortons du bureau à cinq heures."}
+        {"fr": "Je **pars** maintenant, il est tard."},
+        {"fr": "Ils **partent** en vacances demain matin."},
+        {"fr": "Elle **sort** avec ses amis le samedi soir."},
+        {"fr": "Nous **sortons** du bureau à cinq heures."}
       ]
     },
     {
       "id": "A1-G-022-B-2",
       "type": "lesson",
-      "title": "Le modèle dormir",
-      "content": "Le verbe dormir suit le même modèle que partir : au singulier, on enlève une partie du radical.",
+      "title": "La structure du radical",
+      "content": "⚠️ **Point clé** : au singulier, le verbe **perd une lettre** dans son radical. Au pluriel, le radical **complet** revient.",
       "table": {
-        "headers": ["Pronom", "Dormir"],
+        "headers": ["Verbe", "Radical singulier", "Radical pluriel"],
         "rows": [
-          ["Je", "je dors"],
-          ["Tu", "tu dors"],
-          ["Il / Elle", "il/elle dort"],
-          ["Nous", "nous dormons"],
-          ["Vous", "vous dormez"],
-          ["Ils / Elles", "ils/elles dorment"]
+          ["Partir", "**par-**", "**part-**"],
+          ["Sortir", "**sor-**", "**sort-**"]
         ]
       },
-      "examples": [
-        {"fr": "Je dors bien quand il pleut."},
-        {"fr": "Nous dormons tôt pendant la semaine."},
-        {"fr": "Les enfants dorment jusqu'à dix heures le dimanche."}
-      ]
+      "note": "⚠️ Cette modification est une caractéristique des verbes en **-ir** du **troisième groupe**. Il n'y a **pas de règle générale**, il faut **mémoriser** chaque verbe."
     },
     {
       "id": "A1-G-022-B-3",
       "type": "lesson",
-      "title": "Le modèle servir / sentir / mentir",
-      "content": "Ces verbes suivent le même modèle que partir : au singulier, le radical se raccourcit, au pluriel il reste complet.",
-      "table": {
-        "headers": ["Pronom", "Servir", "Sentir", "Mentir"],
-        "rows": [
-          ["Je", "je sers", "je sens", "je mens"],
-          ["Tu", "tu sers", "tu sens", "tu mens"],
-          ["Il / Elle", "il/elle sert", "il/elle sent", "il/elle ment"],
-          ["Nous", "nous servons", "nous sentons", "nous mentons"],
-          ["Vous", "vous servez", "vous sentez", "vous mentez"],
-          ["Ils / Elles", "ils/elles servent", "ils/elles sentent", "ils/elles mentent"]
-        ]
-      },
+      "title": "Sens et usage",
+      "content": "**Partir** signifie « quitter un lieu ».\n**Sortir** signifie « aller dehors, quitter l'intérieur ».",
       "examples": [
-        {"fr": "Elle sert le café aux invités."},
-        {"fr": "Je sens le parfum des fleurs dans le jardin."},
-        {"fr": "Il ment toujours quand il est en retard."}
-      ],
-      "note": "Les verbes du troisième groupe n'ont pas de règle unique. Il faut mémoriser la conjugaison de chaque verbe. La différence principale : au singulier, le radical se raccourcit ; au pluriel, il reste complet."
+        {"fr": "Je **pars** au travail à huit heures."},
+        {"fr": "Le train **part** dans dix minutes."},
+        {"fr": "Elle **sort** faire les courses."},
+        {"fr": "Vous **sortez** ce soir ?"}
+      ]
     }
   ]
 }
