@@ -12,6 +12,7 @@
       "title": "Les articles définis",
       "title_fa": "حروف تعریف معین",
       "content": "Les articles définis désignent un nom précis, déjà connu ou mentionné. Ils changent selon le genre et le nombre du nom.",
+      "content_fa": "وقتی می‌خواهیم درباره یک چیز مشخص و شناخته‌شده حرف بزنیم، از حروف تعریف معین استفاده می‌کنیم. مثل وقتی که در فارسی می‌گیم «اون کتاب» یا «همون معلم». این حرف‌ها بسته به جنسیت و تعداد اسم تغییر می‌کنن.",
       "table": {
         "headers": ["Type de nom", "Article", "Exemple"],
         "rows": [
@@ -26,8 +27,9 @@
       "id": "A1-G-004-2",
       "type": "lesson",
       "title": "L'élision",
-      "title_fa": "حذف حرف صدادار",
+      "title_fa": "حذف صدادار",
       "content": "Devant un nom commençant par une voyelle ou un h muet, le ou la devient l'. Cela rend la prononciation plus fluide et naturelle.",
+      "content_fa": "اگه کلمه‌ای با حرف صدادار یا h بی‌صدا شروع بشه، le و la تبدیل به l' می‌شن. این کار باعث می‌شه تلفظ روان‌تر و طبیعی‌تر بشه. درست مثل وقتی که در فارسی می‌گیم «به اون» به جای «به آن».",
       "examples": [
         {"fr": "L'école ouvre à huit heures.", "fa": "مدرسه ساعت هشت باز می‌شود."},
         {"fr": "L'hiver est froid cette année.", "fa": "زمستان امسال سرد است."},
@@ -38,13 +40,14 @@
       "id": "A1-G-004-3",
       "type": "lesson",
       "title": "h muet et h aspiré",
-      "title_fa": "H دو نوع حرف ",
+      "title_fa": "H دو شکل مختلف",
       "content": "Le h muet permet l'élision et la liaison. Le h aspiré bloque l'élision : on garde le ou la.",
+      "content_fa": "توی فرانسوی حرف h دو شکل داره: یکی بی‌صدا که مثل حرف صدادار رفتار می‌کنه و اجازه حذف می‌ده، و یکی صدادار که مثل حرف بی‌صداست و جلوی حذف رو می‌گیره. تشخیص این دو تا از روی نوشتن ممکن نیست، فقط باید با تمرین یاد بگیری.",
       "examples": [
         {"fr": "l'homme, l'hôpital, l'habitude", "fa": "h بی‌صدا: حذف انجام می‌شود"},
         {"fr": "le héros, le hockey, le hamburger", "fa": "h صدادار: حذف انجام نمی‌شود"}
       ],
-      "note_fa": "توی فارسی ما فقط یک «H» داریم، ولی تو فرانسوی دو نوع h داریم. یکی مثل حرف صدادار رفتار می‌کنه و اجازه حذف می‌ده، یکی مثل حرف بی‌صداست و نمی‌ذاره حذف انجام بشه. متأسفانه لیست ثابتی نداره، ولی نگران نباش! با تمرین کم‌کم حفظ می‌شن. فعلاً پرکاربردها رو یاد بگیر."
+      "note_fa": "خوشبختانه بیشتر کلمه‌های پرکاربرد h بی‌صدا دارن، مثل homme و hôpital. لیست h صدادار کوتاه‌تره و با تمرین زود حفظ می‌شه. کافیه چند تا از پرکاربردها رو اول یاد بگیری."
     }
   ]
 }
