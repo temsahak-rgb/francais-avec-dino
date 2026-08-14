@@ -11,39 +11,40 @@
       "type": "lesson",
       "title": "Les articles définis",
       "title_fa": "حروف تعریف معین",
-      "content": "Les articles définis servent à parler d'un nom spécifique, connu, ou déjà mentionné. Ils varient selon le genre, le nombre, et parfois la première lettre du mot.",
+      "content": "Les articles définis désignent un nom précis, déjà connu ou mentionné. Ils changent selon le genre et le nombre du nom.",
       "table": {
         "headers": ["Type de nom", "Article", "Exemple"],
         "rows": [
-          ["Masculin singulier", "le", "le livre"],
-          ["Féminin singulier", "la", "la maison"],
-          ["Pluriel", "les", "les enfants"],
-          ["Devant voyelle ou h muet", "l'", "l'ami"]
+          ["Masculin singulier", "le", "le travail"],
+          ["Féminin singulier", "la", "la bibliothèque"],
+          ["Pluriel", "les", "les étudiants"],
+          ["Devant voyelle ou h muet", "l'", "l'école"]
         ]
       }
     },
     {
       "id": "A1-G-004-2",
       "type": "lesson",
-      "title": "La règle de l'",
-      "title_fa": "قانون l'",
-      "content": "On utilise l' devant un nom qui commence par une voyelle (a, e, i, o, u) ou par un h muet. Cela permet d'éviter une pause dans la prononciation.",
+      "title": "L'élision",
+      "title_fa": "حذف حرف صدادار",
+      "content": "Devant un nom commençant par une voyelle ou un h muet, le ou la devient l'. Cela rend la prononciation plus fluide et naturelle.",
       "examples": [
-        {"fr": "L'ami arrive.", "fa": "دوست می‌رسد."},
-        {"fr": "L'hôtel est grand.", "fa": "هتل بزرگ است."}
+        {"fr": "L'école ouvre à huit heures.", "fa": "مدرسه ساعت هشت باز می‌شود."},
+        {"fr": "L'hiver est froid cette année.", "fa": "زمستان امسال سرد است."},
+        {"fr": "L'université est près du centre-ville.", "fa": "دانشگاه نزدیک مرکز شهر است."}
       ]
     },
     {
       "id": "A1-G-004-3",
       "type": "lesson",
-      "title": "h muet vs h aspiré",
-      "title_fa": "h بی‌صدا در مقابل h صدادار",
-      "content": "Le h muet se comporte comme une voyelle : on utilise l'. Le h aspiré se comporte comme une consonne : on n'utilise pas l'.",
+      "title": "h muet et h aspiré",
+      "title_fa": "H دو نوع حرف ",
+      "content": "Le h muet permet l'élision et la liaison. Le h aspiré bloque l'élision : on garde le ou la.",
       "examples": [
-        {"fr": "l'homme, l'habitude, l'hôpital", "fa": "h muet → با l' می‌آید"},
-        {"fr": "le héros, la haine, le hamburger", "fa": "h aspiré → با le/la می‌آید"}
+        {"fr": "l'homme, l'hôpital, l'habitude", "fa": "h بی‌صدا: حذف انجام می‌شود"},
+        {"fr": "le héros, le hockey, le hamburger", "fa": "h صدادار: حذف انجام نمی‌شود"}
       ],
-      "note_fa": "در فارسی همهٔ «ه»ها یکسان هستند، اما در فرانسه دو نوع h وجود دارد. این تفاوت باعث اشتباه می‌شود، پس باید لیست h aspiré را حفظ کرد."
+      "note_fa": "توی فارسی ما فقط یک «H» داریم، ولی تو فرانسوی دو نوع h داریم. یکی مثل حرف صدادار رفتار می‌کنه و اجازه حذف می‌ده، یکی مثل حرف بی‌صداست و نمی‌ذاره حذف انجام بشه. متأسفانه لیست ثابتی نداره، ولی نگران نباش! با تمرین کم‌کم حفظ می‌شن. فعلاً پرکاربردها رو یاد بگیر."
     }
   ]
 }
