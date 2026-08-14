@@ -9,57 +9,43 @@
     {
       "id": "A1-G-009-1",
       "type": "lesson",
-      "title": "Définition et formation",
-      "title_fa": "تعریف و ساختار",
-      "content": "Les articles contractés sont formés par la fusion de la préposition à ou de avec les articles définis le et les. Cette contraction est obligatoire en français.",
+      "title": "Formation des articles contractés",
+      "title_fa": "ساخت حروف تعریف ادغامی",
+      "content": "Quand les prépositions à ou de sont suivies de le ou les, elles fusionnent obligatoirement. Cette contraction est obligatoire.",
       "table": {
-        "headers": ["Préposition + Article", "Forme contractée", "Exemple"],
+        "headers": ["Combinaison", "Résultat", "Exemple"],
         "rows": [
-          ["à + le", "au", "Je vais au cinéma."],
-          ["à + les", "aux", "Il parle aux enfants."],
-          ["de + le", "du", "Je reviens du marché."],
-          ["de + les", "des", "C'est la maison des voisins."]
+          ["à + le", "au", "Je vais au travail."],
+          ["à + les", "aux", "Elle parle aux collègues."],
+          ["de + le", "du", "Il revient du bureau."],
+          ["de + les", "des", "C'est la voiture des voisins."]
         ]
       }
     },
     {
       "id": "A1-G-009-2",
       "type": "lesson",
-      "title": "Règles importantes",
-      "title_fa": "قوانین مهم",
-      "content": "On ne peut jamais dire à le ou de les. La forme contractée doit être utilisée. En revanche, il n'y a pas de contraction avec la ou l' : à la, à l', de la, de l'.",
+      "title": "Cas sans contraction",
+      "title_fa": "موارد بدون ادغام",
+      "content": "Avec la ou l', il n'y a pas de contraction. On garde la préposition et l'article séparés.",
       "examples": [
-        "Je vais à la boulangerie.",
-        "Il va à l'université.",
-        "Je viens de la piscine.",
-        "Elle revient de l'école."
-      ],
-      "examples_fa": [
-        "من به نانوایی می‌روم.",
-        "او به دانشگاه می‌رود.",
-        "من از استخر می‌آیم.",
-        "او از مدرسه برمی‌گردد."
+        {"fr": "Je vais à la bibliothèque.", "fa": "به کتابخانه می‌روم."},
+        {"fr": "Il arrive à l'aéroport.", "fa": "او به فرودگاه می‌رسد."},
+        {"fr": "Je reviens de la gare.", "fa": "از ایستگاه برمی‌گردم."},
+        {"fr": "Elle sort de l'université.", "fa": "او از دانشگاه خارج می‌شود."}
       ]
     },
     {
       "id": "A1-G-009-3",
       "type": "lesson",
-      "title": "h muet vs h aspiré",
-      "title_fa": "h بی‌صدا در مقابل h صدادار",
-      "content": "Le h muet se comporte comme une voyelle : pas de contraction. Le h aspiré se comporte comme une consonne : contraction possible avec le et les.",
+      "title": "Avec h muet et h aspiré",
+      "title_fa": "با دو نوع حرف ه",
+      "content": "Avec un h muet, on fait l'élision. Avec un h aspiré, on utilise la contraction normale.",
       "examples": [
-        "Il va à l'hôpital.",
-        "Je reviens de l'hôtel.",
-        "Je pense au héros.",
-        "Il parle du hamburger."
+        {"fr": "à l'hôpital, de l'hôtel", "fa": "ه بی‌صدا: حذف انجام می‌شود"},
+        {"fr": "au hockey, du hamburger", "fa": "ه صدادار: ادغام معمولی انجام می‌شود"}
       ],
-      "examples_fa": [
-        "او به بیمارستان می‌رود. (h muet → بدون contraction)",
-        "من از هتل برمی‌گردم. (h muet → بدون contraction)",
-        "من به قهرمان فکر می‌کنم. (h aspiré → با contraction)",
-        "او درباره همبرگر صحبت می‌کند. (h aspiré → با contraction)"
-      ],
-      "note_fa": "در فارسی همهٔ «ه»ها یکسان هستند، اما در فرانسه h muet و h aspiré دو رفتار متفاوت دارند."
+      "note_fa": "یادت باشه که دو نوع «ه» توی فرانسوی داریم. اگه ه بی‌صدا باشه، حرف تعریف کوتاه می‌شه. ولی اگه ه صدادار باشه، ادغام معمولی انجام می‌شه. با تمرین کم‌کم یاد می‌گیری کدوم ه صداداره و کدوم بی‌صدا. فعلاً پرکاربردها رو حفظ کن."
     }
   ]
 }
