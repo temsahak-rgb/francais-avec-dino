@@ -1,0 +1,66 @@
+{
+  "id": "A1-G-012",
+  "level": "A1",
+  "title": "Le féminin des adjectifs",
+  "icon": "🎀",
+  "estimatedTime": 12,
+  "sections": [
+    {
+      "id": "A1-G-012-1",
+      "type": "lesson",
+      "title": "La règle générale : ajouter -e",
+      "content": "Pour la majorité des adjectifs, on forme le féminin en ajoutant simplement un -e au masculin. Si l'adjectif se termine déjà par -e, la forme féminine reste identique.",
+      "table": {
+        "headers": ["Masculin", "Féminin", "Exemple"],
+        "rows": [
+          ["petit", "petite", "Une petite maison"],
+          ["grand", "grande", "Une grande ville"],
+          ["joli", "jolie", "Une jolie robe"],
+          ["riche", "riche", "Une femme riche"],
+          ["jeune", "jeune", "Une jeune étudiante"]
+        ]
+      }
+    },
+    {
+      "id": "A1-G-012-2",
+      "type": "lesson",
+      "title": "Les terminaisons particulières",
+      "content": "Certains adjectifs changent de terminaison au féminin. Voici les cas les plus fréquents.",
+      "table": {
+        "headers": ["Terminaison", "Féminin", "Masculin", "Féminin"],
+        "rows": [
+          ["-eux", "-euse", "heureux", "heureuse"],
+          ["-eux", "-euse", "paresseux", "paresseuse"],
+          ["-eur", "-euse", "travailleur", "travailleuse"],
+          ["-f", "-ve", "actif", "active"],
+          ["-f", "-ve", "sportif", "sportive"],
+          ["-er", "-ère", "cher", "chère"],
+          ["-er", "-ère", "premier", "première"],
+          ["-on / -en / -et", "double consonne + e", "bon", "bonne"],
+          ["-on / -en / -et", "double consonne + e", "ancien", "ancienne"],
+          ["-on / -en / -et", "double consonne + e", "net", "nette"]
+        ]
+      }
+    },
+    {
+      "id": "A1-G-012-3",
+      "type": "lesson",
+      "title": "Formes irrégulières",
+      "content": "Quelques adjectifs très fréquents ont un féminin totalement irrégulier. Il faut les apprendre par cœur.",
+      "table": {
+        "headers": ["Masculin", "Féminin"],
+        "rows": [
+          ["beau", "belle"],
+          ["nouveau", "nouvelle"],
+          ["vieux", "vieille"]
+        ]
+      },
+      "examples": [
+        {"fr": "Elle porte une belle robe."},
+        {"fr": "J'ai une nouvelle adresse."},
+        {"fr": "C'est une vieille maison."}
+      ],
+      "note": "Ces adjectifs irréguliers sont très fréquents. Il est important de les maîtriser dès le niveau A1."
+    }
+  ]
+}
