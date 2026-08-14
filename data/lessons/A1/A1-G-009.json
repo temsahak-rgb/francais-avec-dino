@@ -10,8 +10,9 @@
       "id": "A1-G-009-1",
       "type": "lesson",
       "title": "Formation des articles contractés",
-      "title_fa": "ساخت حروف تعریف ادغامی",
+      "title_fa": "ساخت حروف ادغامی",
       "content": "Quand les prépositions à ou de sont suivies de le ou les, elles fusionnent obligatoirement. Cette contraction est obligatoire.",
+      "content_fa": "وقتی حروف اضافه à یا de قبل از le یا les بیان، حتماً با هم ادغام می‌شن و یک کلمه جدید می‌سازن. این ادغام اجباریه و هیچ‌وقت نمی‌شه گفت à le یا de les.",
       "table": {
         "headers": ["Combinaison", "Résultat", "Exemple"],
         "rows": [
@@ -28,6 +29,7 @@
       "title": "Cas sans contraction",
       "title_fa": "موارد بدون ادغام",
       "content": "Avec la ou l', il n'y a pas de contraction. On garde la préposition et l'article séparés.",
+      "content_fa": "فقط با le و les ادغام انجام می‌شه. با la و l' هیچ ادغامی نداریم و حرف اضافه و حرف تعریف جدا می‌مونن. این یکی از راحت‌ترین قواعد فرانسویه!",
       "examples": [
         {"fr": "Je vais à la bibliothèque.", "fa": "به کتابخانه می‌روم."},
         {"fr": "Il arrive à l'aéroport.", "fa": "او به فرودگاه می‌رسد."},
@@ -39,13 +41,14 @@
       "id": "A1-G-009-3",
       "type": "lesson",
       "title": "Avec h muet et h aspiré",
-      "title_fa": "با دو نوع حرف ه",
+      "title_fa": "H در دو حالت مختلف",
       "content": "Avec un h muet, on fait l'élision. Avec un h aspiré, on utilise la contraction normale.",
+      "content_fa": "وقتی h بی‌صدا داریم، حرف تعریف حذف می‌شه (مثل à l'hôpital). وقتی h صدادار داریم، ادغام معمولی انجام می‌شه (مثل au hockey). پس باید بدونی کلمه h بی‌صدا داره یا صدادار.",
       "examples": [
-        {"fr": "à l'hôpital, de l'hôtel", "fa": "ه بی‌صدا: حذف انجام می‌شود"},
-        {"fr": "au hockey, du hamburger", "fa": "ه صدادار: ادغام معمولی انجام می‌شود"}
+        {"fr": "à l'hôpital, de l'hôtel", "fa": "h بی‌صدا: حذف انجام می‌شود"},
+        {"fr": "au hockey, du hamburger", "fa": "h صدادار: ادغام معمولی انجام می‌شود"}
       ],
-      "note_fa": "یادت باشه که دو نوع «ه» توی فرانسوی داریم. اگه ه بی‌صدا باشه، حرف تعریف کوتاه می‌شه. ولی اگه ه صدادار باشه، ادغام معمولی انجام می‌شه. با تمرین کم‌کم یاد می‌گیری کدوم ه صداداره و کدوم بی‌صدا. فعلاً پرکاربردها رو حفظ کن."
+      "note_fa": "این درس خیلی توی مکالمه روزمره استفاده می‌شه. هر جا که می‌گی «به خونه»، «از مدرسه»، «برای معلم»، داری از همین حروف ادغامی استفاده می‌کنی. تمرین کن و کم‌کم برات عادی می‌شه."
     }
   ]
 }
