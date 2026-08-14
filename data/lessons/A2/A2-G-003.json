@@ -36,6 +36,8 @@
       "title": "Les verbes avec l'auxiliaire être",
       "content": "تعدادی از افعال فرانسوی با فعل کمکی **être** صرف می‌شوند.\n\n⚠️ **نکته بسیار مهم** : با **être**، اسم مفعول از نظر **جنسیت** و **تعداد** با فاعل تطابق پیدا می‌کند.",
       "table": {
+    "direction": "rtl"
+  }
         "headers": ["Pronom", "Être (présent)", "Exemple"],
         "rows": [
           ["Je", "**suis**", "Je **suis** all**é**(e)"],
