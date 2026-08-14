@@ -11,43 +11,40 @@
       "type": "lesson",
       "title": "Les articles définis",
       "title_fa": "حروف تعریف معین",
-      "content": "Les articles définis désignent un nom précis, déjà connu ou mentionné. Ils changent selon le genre et le nombre du nom.",
-      "content_fa": "وقتی می‌خواهیم درباره یک چیز مشخص و شناخته‌شده حرف بزنیم، از حروف تعریف معین استفاده می‌کنیم. مثل وقتی که در فارسی می‌گیم «اون کتاب» یا «همون معلم». این حرف‌ها بسته به جنسیت و تعداد اسم تغییر می‌کنن.",
+      "content": "حروف تعریف معین در فرانسه تقریباً مثل «این» یا «آن» در فارسی عمل می‌کنند. وقتی می‌خواهید درباره یک چیز مشخص و شناخته‌شده صحبت کنید، از این حروف استفاده می‌کنید. برخلاف فارسی، در فرانسه نمی‌توانید اسم را بدون حرف تعریف بیاورید. انتخاب بین le، la و les به جنسیت و تعداد اسم بستگی دارد.",
       "table": {
         "headers": ["Type de nom", "Article", "Exemple"],
         "rows": [
-          ["Masculin singulier", "le", "le travail"],
+          ["Masculin singulier", "le", "le restaurant"],
           ["Féminin singulier", "la", "la bibliothèque"],
           ["Pluriel", "les", "les étudiants"],
-          ["Devant voyelle ou h muet", "l'", "l'école"]
+          ["Devant voyelle ou h muet", "l'", "l'ordinateur"]
         ]
       }
     },
     {
       "id": "A1-G-004-2",
       "type": "lesson",
-      "title": "L'élision",
-      "title_fa": "حذف صدادار",
-      "content": "Devant un nom commençant par une voyelle ou un h muet, le ou la devient l'. Cela rend la prononciation plus fluide et naturelle.",
-      "content_fa": "اگه کلمه‌ای با حرف صدادار یا h بی‌صدا شروع بشه، le و la تبدیل به l' می‌شن. این کار باعث می‌شه تلفظ روان‌تر و طبیعی‌تر بشه. درست مثل وقتی که در فارسی می‌گیم «به اون» به جای «به آن».",
+      "title": "La règle de l'",
+      "title_fa": "قانون l'",
+      "content": "وقتی اسمی با حرف صدادار (a، e، i، o، u) یا با h بی‌صدا شروع شود، به جای le یا la از l' استفاده می‌کنیم. این کار برای روان‌تر شدن تلفظ است تا بین دو حرف صدادار مکث ایجاد نشود.",
       "examples": [
-        {"fr": "L'école ouvre à huit heures.", "fa": "مدرسه ساعت هشت باز می‌شود."},
-        {"fr": "L'hiver est froid cette année.", "fa": "زمستان امسال سرد است."},
-        {"fr": "L'université est près du centre-ville.", "fa": "دانشگاه نزدیک مرکز شهر است."}
+        {"fr": "L'étudiant est dans la classe.", "fa": "دانشجو در کلاس است."},
+        {"fr": "L'école est fermée aujourd'hui.", "fa": "مدرسه امروز تعطیل است."},
+        {"fr": "L'hôtel est à côté de la gare.", "fa": "هتل کنار ایستگاه قطار است."}
       ]
     },
     {
       "id": "A1-G-004-3",
       "type": "lesson",
       "title": "h muet et h aspiré",
-      "title_fa": "H دو شکل مختلف",
-      "content": "Le h muet permet l'élision et la liaison. Le h aspiré bloque l'élision : on garde le ou la.",
-      "content_fa": "توی فرانسوی حرف h دو شکل داره: یکی بی‌صدا که مثل حرف صدادار رفتار می‌کنه و اجازه حذف می‌ده، و یکی صدادار که مثل حرف بی‌صداست و جلوی حذف رو می‌گیره. تشخیص این دو تا از روی نوشتن ممکن نیست، فقط باید با تمرین یاد بگیری.",
+      "title_fa": "h بی‌صدا و h صدادار",
+      "content": "در فرانسه دو نوع حرف h وجود دارد. h بی‌صدا (muet) مثل یک حرف صدادار رفتار می‌کند و با l' می‌آید. اما h صدادار (aspiré) مثل یک حرف بی‌صدا رفتار می‌کند و باید با le یا la بیاید. متأسفانه قانون مشخصی برای تشخیص آن‌ها وجود ندارد و باید آن‌ها را با مرور کلمات یاد بگیرید.",
       "examples": [
-        {"fr": "l'homme, l'hôpital, l'habitude", "fa": "h بی‌صدا: حذف انجام می‌شود"},
-        {"fr": "le héros, le hockey, le hamburger", "fa": "h صدادار: حذف انجام نمی‌شود"}
+        {"fr": "l'homme, l'histoire, l'hôpital", "fa": "h muet → با l' می‌آید"},
+        {"fr": "le héros, le hamburger, la haine", "fa": "h aspiré → با le یا la می‌آید"}
       ],
-      "note_fa": "خوشبختانه بیشتر کلمه‌های پرکاربرد h بی‌صدا دارن، مثل homme و hôpital. لیست h صدادار کوتاه‌تره و با تمرین زود حفظ می‌شه. کافیه چند تا از پرکاربردها رو اول یاد بگیری."
+      "note_fa": "در زبان فارسی همه «ه»ها یکسان تلفظ می‌شوند، اما در فرانسه این دو نوع h رفتار کاملاً متفاوتی دارند. پیشنهاد می‌کنیم کلماتی که با h شروع می‌شوند را با حرف تعریفشان یاد بگیرید (مثلاً le héros، نه فقط héros)."
     }
   ]
 }
