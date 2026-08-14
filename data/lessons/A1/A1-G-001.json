@@ -9,25 +9,20 @@
       "id": "A1-G-001-1",
       "type": "lesson",
       "title": "Les pronoms personnels sujets",
-      "content": "Les pronoms personnels sujets remplacent un nom et indiquent qui fait l'action. Ils sont obligatoires en français : contrairement à certaines langues, on ne peut pas les supprimer.",
+      "content": "Les pronoms personnels sujets remplacent un nom et indiquent qui fait l'action.\n\n⚠️ **Très important** : Ils sont **obligatoires** en français. Contrairement à certaines langues, on ne peut **pas** les supprimer.",
       "table": {
         "headers": ["Personne", "Pronom", "Exemple"],
         "rows": [
-          ["1re personne singulier", "je", "Je m'appelle Marie."],
-          ["2e personne singulier", "tu", "Tu habites où ?"],
-          ["3e personne singulier (masculin)", "il", "Il travaille à Paris."],
-          ["3e personne singulier (féminin)", "elle", "Elle parle trois langues."],
-          ["1re personne pluriel", "nous", "Nous voyageons en Italie."],
-          ["2e personne pluriel", "vous", "Vous venez d'où ?"],
-          ["3e personne pluriel (masculin/mixte)", "ils", "Ils sont étudiants."],
-          ["3e personne pluriel (féminin)", "elles", "Elles habitent à Lyon."]
+          ["1re personne singulier", "**je**", "Je m'appelle Marie."],
+          ["2e personne singulier", "**tu**", "Tu habites où ?"],
+          ["3e personne singulier (masculin)", "**il**", "Il travaille à Paris."],
+          ["3e personne singulier (féminin)", "**elle**", "Elle parle trois langues."],
+          ["1re personne pluriel", "**nous**", "Nous voyageons en Italie."],
+          ["2e personne pluriel", "**vous**", "Vous venez d'où ?"],
+          ["3e personne pluriel (masculin/mixte)", "**ils**", "Ils sont étudiants."],
+          ["3e personne pluriel (féminin)", "**elles**", "Elles habitent à Lyon."]
         ]
-      },
-      "examples": [
-        {"fr": "Je suis français et j'habite à Paris."},
-        {"fr": "Nous travaillons dans une grande entreprise."},
-        {"fr": "Ils ont deux enfants et un chien."}
-      ]
+      }
     },
     {
       "id": "A1-G-001-2",
@@ -45,13 +40,7 @@
           ["elles (groupe 100% féminin)", "Marie et Sophie dansent. Elles sont contentes."]
         ]
       },
-      "examples": [
-        {"fr": "Tu veux un café ? (à un ami)"},
-        {"fr": "Vous voulez un café, monsieur ? (à un client)"},
-        {"fr": "Il fait froid aujourd'hui. (impersonnel)"},
-        {"fr": "Il y a un problème. (impersonnel)"}
-      ],
-      "note": "En français, le pronom sujet est obligatoire. On ne peut pas dire « parle français » comme en espagnol ou en italien. Il faut toujours dire « je parle français »."
+      "note": "⚠️ En français, le pronom sujet est **obligatoire**. On ne peut pas dire `parle français` comme en espagnol ou en italien. Il faut **toujours** dire `je parle français`."
     }
   ]
 }
