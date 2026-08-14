@@ -10,15 +10,14 @@
       "id": "A1-G-009-1",
       "type": "lesson",
       "title": "Formation des articles contractés",
-      "title_fa": "ساخت حروف ادغامی",
-      "content": "Quand les prépositions à ou de sont suivies de le ou les, elles fusionnent obligatoirement. Cette contraction est obligatoire.",
-      "content_fa": "وقتی حروف اضافه à یا de قبل از le یا les بیان، حتماً با هم ادغام می‌شن و یک کلمه جدید می‌سازن. این ادغام اجباریه و هیچ‌وقت نمی‌شه گفت à le یا de les.",
+      "title_fa": "ساختار حروف تعریف ادغامی",
+      "content": "در زبان فرانسه، وقتی حروف اضافه «à» (به) یا «de» (از) قبل از حروف تعریف «le» و «les» قرار می‌گیرند، این دو کلمه با هم ادغام می‌شوند و یک شکل جدید می‌سازند. این قانون اجباری است و نمی‌توانید آن‌ها را جدا بنویسید. برای مثال، نباید بگویید «à le cinéma»، بلکه باید بگویید «au cinéma».",
       "table": {
-        "headers": ["Combinaison", "Résultat", "Exemple"],
+        "headers": ["Combinaison", "Forme contractée", "Exemple"],
         "rows": [
-          ["à + le", "au", "Je vais au travail."],
-          ["à + les", "aux", "Elle parle aux collègues."],
-          ["de + le", "du", "Il revient du bureau."],
+          ["à + le", "au", "Je vais au cinéma."],
+          ["à + les", "aux", "Il parle aux étudiants."],
+          ["de + le", "du", "Je reviens du marché."],
           ["de + les", "des", "C'est la voiture des voisins."]
         ]
       }
@@ -26,29 +25,27 @@
     {
       "id": "A1-G-009-2",
       "type": "lesson",
-      "title": "Cas sans contraction",
-      "title_fa": "موارد بدون ادغام",
-      "content": "Avec la ou l', il n'y a pas de contraction. On garde la préposition et l'article séparés.",
-      "content_fa": "فقط با le و les ادغام انجام می‌شه. با la و l' هیچ ادغامی نداریم و حرف اضافه و حرف تعریف جدا می‌مونن. این یکی از راحت‌ترین قواعد فرانسویه!",
+      "title": "Quand il n'y a pas de contraction",
+      "title_fa": "چه زمانی ادغام نداریم؟",
+      "content": "ادغام فقط با «le» و «les» اتفاق می‌افتد. با «la» و «l'» (قبل از حروف صدادار) هیچ ادغامی رخ نمی‌دهد و باید کلمات را کاملاً جدا بنویسید. این یکی از اشتباهات رایج زبان‌آموزان مبتدی است.",
       "examples": [
-        {"fr": "Je vais à la bibliothèque.", "fa": "به کتابخانه می‌روم."},
-        {"fr": "Il arrive à l'aéroport.", "fa": "او به فرودگاه می‌رسد."},
-        {"fr": "Je reviens de la gare.", "fa": "از ایستگاه برمی‌گردم."},
-        {"fr": "Elle sort de l'université.", "fa": "او از دانشگاه خارج می‌شود."}
+        {"fr": "Je parle à la directrice.", "fa": "من با مدیر (زن) صحبت می‌کنم."},
+        {"fr": "Elle va à l'université.", "fa": "او به دانشگاه می‌رود."},
+        {"fr": "Je viens de la gare.", "fa": "من از ایستگاه قطار می‌آیم."},
+        {"fr": "Il sort de l'hôpital.", "fa": "او از بیمارستان بیرون می‌آید."}
       ]
     },
     {
       "id": "A1-G-009-3",
       "type": "lesson",
-      "title": "Avec h muet et h aspiré",
-      "title_fa": "H در دو حالت مختلف",
-      "content": "Avec un h muet, on fait l'élision. Avec un h aspiré, on utilise la contraction normale.",
-      "content_fa": "وقتی h بی‌صدا داریم، حرف تعریف حذف می‌شه (مثل à l'hôpital). وقتی h صدادار داریم، ادغام معمولی انجام می‌شه (مثل au hockey). پس باید بدونی کلمه h بی‌صدا داره یا صدادار.",
+      "title": "Cas particuliers avec h",
+      "title_fa": "موارد خاص با حرف h",
+      "content": "برای کلماتی که با «h» شروع می‌شوند، باید بدانید آن «h» از نوع بی‌صدا (muet) است یا صدادار (aspiré). اگر بی‌صدا باشد مثل یک حرف صدادار رفتار می‌کند و ادغامی رخ نمی‌دهد. اما اگر صدادار باشد، ادغام انجام می‌شود.",
       "examples": [
-        {"fr": "à l'hôpital, de l'hôtel", "fa": "h بی‌صدا: حذف انجام می‌شود"},
-        {"fr": "au hockey, du hamburger", "fa": "h صدادار: ادغام معمولی انجام می‌شود"}
+        {"fr": "Je vais à l'hôpital.", "fa": "من به بیمارستان می‌روم. (h muet - بدون ادغام)"},
+        {"fr": "Il parle au héros du film.", "fa": "او با قهرمان فیلم صحبت می‌کند. (h aspiré - با ادغام)"}
       ],
-      "note_fa": "این درس خیلی توی مکالمه روزمره استفاده می‌شه. هر جا که می‌گی «به خونه»، «از مدرسه»، «برای معلم»، داری از همین حروف ادغامی استفاده می‌کنی. تمرین کن و کم‌کم برات عادی می‌شه."
+      "note_fa": "در زبان فرانسه دو نوع «h» داریم. h muet مثل یک حرف صدادار رفتار می‌کند، اما h aspiré مثل یک حرف بی‌صدا. این تفاوت را باید با مرور بیشتر کلمات یاد بگیرید چون قانون مشخصی برای تشخیص آن وجود ندارد."
     }
   ]
 }
