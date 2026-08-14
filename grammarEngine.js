@@ -39,13 +39,14 @@ function getGrammarByModule(level) {
     
     return modules;
 }
+
 // ===============================
 // سیستم پیشرفت و بوک‌مارک (LocalStorage)
 // ===============================
 
 function getLessonStatus(lessonId) {
     const progress = JSON.parse(localStorage.getItem("dino_progress") || "{}");
-    return progress[lessonId] || "not_started"; // "not_started", "in_progress", "completed"
+    return progress[lessonId] || "not_started";
 }
 
 function setLessonStatus(lessonId, status) {
@@ -80,4 +81,38 @@ function getStatusText(status, lang) {
     if (status === "completed") return lang === "fa" ? "تمام شده" : "Terminé";
     if (status === "in_progress") return lang === "fa" ? "در حال مطالعه" : "En cours";
     return lang === "fa" ? "شروع نشده" : "Non commencé";
+}
+
+// ===============================
+// Markdown Parser (جدید)
+// ===============================
+
+function renderMarkdown(text) {
+    if (!text) return "";
+    
+    let html = text
+        // Escape HTML first
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        
+        // Bold: **text**
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        
+        // Italic: *text*
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        
+        // Code: `text`
+        .replace(/`(.*?)`/g, '<code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: monospace;">$1</code>')
+        
+        // Strikethrough: ~~text~~
+        .replace(/~~(.*?)~~/g, '<del style="color: #999;">$1</del>')
+        
+        // Red color: [text][red]
+        .replace(/\[(.*?)\]\[red\]/g, '<span style="color: #dc3545; font-weight: bold;">$1</span>')
+        
+        // Line breaks
+        .replace(/\n/g, '<br>');
+    
+    return html;
 }
