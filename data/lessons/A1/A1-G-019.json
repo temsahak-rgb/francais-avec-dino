@@ -9,41 +9,41 @@
       "id": "A1-G-019-1",
       "type": "lesson",
       "title": "La formation de l'impératif",
-      "content": "L'impératif sert à donner un ordre, un conseil, une instruction ou une invitation. Il n'existe qu'avec trois personnes : tu, nous et vous. Il n'y a pas de sujet écrit.",
+      "content": "L'impératif sert à donner un **ordre**, un **conseil**, une **instruction** ou une **invitation**.\n\n⚠️ Il n'existe qu'avec **trois personnes** : **tu**, **nous** et **vous**.\nIl n'y a **pas** de sujet écrit.",
       "table": {
         "headers": ["Personne", "Parler (-er)", "Finir (-ir)", "Attendre (-re)"],
         "rows": [
-          ["(tu)", "Parle !", "Finis !", "Attends !"],
-          ["(nous)", "Parlons !", "Finissons !", "Attendons !"],
-          ["(vous)", "Parlez !", "Finissez !", "Attendez !"]
+          ["(tu)", "Parl**e** !", "Fini**s** !", "Attend**s** !"],
+          ["(nous)", "Parl**ons** !", "Finiss**ons** !", "Attend**ons** !"],
+          ["(vous)", "Parl**ez** !", "Finiss**ez** !", "Attend**ez** !"]
         ]
       },
       "examples": [
-        {"fr": "Parle doucement, le bébé dort."},
-        {"fr": "Parlez plus fort, je ne vous entends pas !"},
-        {"fr": "Finis tes devoirs avant de sortir !"},
-        {"fr": "Attends ici, je reviens dans cinq minutes !"}
+        {"fr": "**Parle** doucement, le bébé dort."},
+        {"fr": "**Parlez** plus fort, je ne vous entends pas !"},
+        {"fr": "**Finis** tes devoirs avant de sortir !"},
+        {"fr": "**Attends** ici, je reviens dans cinq minutes !"}
       ],
-      "note": "Attention : pour les verbes en -er, la forme de tu ne prend pas de -s. On écrit « Parle ! » et non « Parles ! ». De même : « Regarde ! », « Écoute ! », « Mange ! »."
+      "note": "⚠️ **Très important** : pour les verbes en **-er**, la forme de **tu** ne prend **pas** de **-s**.\n\nOn écrit `Parle !` et **non** `Parles !`\nDe même : `Regarde !`, `Écoute !`, `Mange !`"
     },
     {
       "id": "A1-G-019-2",
       "type": "lesson",
       "title": "Les verbes irréguliers importants",
-      "content": "Trois verbes ont un impératif totalement irrégulier : être, avoir et savoir. Il faut les mémoriser.",
+      "content": "⚠️ Trois verbes ont un impératif **totalement irrégulier** : **être**, **avoir** et **savoir**.\n\nIl faut les **mémoriser**.",
       "table": {
         "headers": ["Personne", "Être", "Avoir", "Savoir"],
         "rows": [
-          ["(tu)", "Sois !", "Aie !", "Sache !"],
-          ["(nous)", "Soyons !", "Ayons !", "Sachons !"],
-          ["(vous)", "Soyez !", "Ayez !", "Sachez !"]
+          ["(tu)", "**Sois** !", "**Aie** !", "**Sache** !"],
+          ["(nous)", "**Soyons** !", "**Ayons** !", "**Sachons** !"],
+          ["(vous)", "**Soyez** !", "**Ayez** !", "**Sachez** !"]
         ]
       },
       "examples": [
-        {"fr": "Sois calme, tout va bien se passer !"},
-        {"fr": "Soyons patients, le bus arrive bientôt."},
-        {"fr": "Ayez confiance en vous !"},
-        {"fr": "Sachez que la porte est fermée à huit heures."}
+        {"fr": "**Sois** calme, tout va bien se passer !"},
+        {"fr": "**Soyons** patients, le bus arrive bientôt."},
+        {"fr": "**Ayez** confiance en vous !"},
+        {"fr": "**Sachez** que la porte est fermée à huit heures."}
       ]
     },
     {
@@ -54,16 +54,16 @@
       "table": {
         "headers": ["Personne", "Faire", "Prendre", "Dire", "Mettre"],
         "rows": [
-          ["(tu)", "Fais !", "Prends !", "Dis !", "Mets !"],
-          ["(nous)", "Faisons !", "Prenons !", "Disons !", "Mettons !"],
-          ["(vous)", "Faites !", "Prenez !", "Dites !", "Mettez !"]
+          ["(tu)", "**Fais** !", "**Prends** !", "**Dis** !", "**Mets** !"],
+          ["(nous)", "**Faisons** !", "**Prenons** !", "**Disons** !", "**Mettons** !"],
+          ["(vous)", "**Faites** !", "**Prenez** !", "**Dites** !", "**Mettez** !"]
         ]
       },
       "examples": [
-        {"fr": "Fais attention en traversant la rue !"},
-        {"fr": "Prenons un café ensemble !"},
-        {"fr": "Dites la vérité, c'est important."},
-        {"fr": "Mettez la table pour le dîner, s'il vous plaît."}
+        {"fr": "**Fais** attention en traversant la rue !"},
+        {"fr": "**Prenons** un café ensemble !"},
+        {"fr": "**Dites** la vérité, c'est important."},
+        {"fr": "**Mettez** la table pour le dîner, s'il vous plaît."}
       ]
     }
   ]
