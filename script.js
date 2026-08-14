@@ -2,6 +2,14 @@
 
 const app = document.getElementById("app");
 
+// ===============================
+// تابع تبدیل متن فارسی (روش بهتر)
+// ===============================
+function renderFaText(text) {
+  if (!text) return "";
+  return `<span class="fa-mixed-text">${text}</span>`;
+}
+
 const texts = {
   fr: {
     title: "Français avec Dino", chooseLanguage: "Choisissez la langue", choosePath: "Choisissez votre parcours",
