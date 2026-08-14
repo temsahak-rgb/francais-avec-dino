@@ -3,11 +3,11 @@
 const app = document.getElementById("app");
 
 // ===============================
-// تابع تبدیل متن فارسی (روش بهتر)
+// تابع تبدیل متن فارسی با کلمات لاتین
 // ===============================
 function renderFaText(text) {
   if (!text) return "";
-  return `<span class="fa-mixed-text">${text}</span>`;
+  return text.replace(/[a-zA-ZÀ-ÿœŒæÆ'''\-]+/g, '<bdi>$&</bdi>');
 }
 
 const texts = {
@@ -159,9 +159,6 @@ function showHome() {
   document.getElementById("change-level-home").onclick = showLevelSelection;
 }
 
-// ===============================
-// صفحه لیست گرامرها (با پاپ‌آپ هوشمند و ۳ پیشنهاد)
-// ===============================
 async function showGrammarPage() {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
@@ -174,7 +171,6 @@ async function showGrammarPage() {
     const recommended = getRecommendedGrammar(level);
     const levelNames = { "A1": "Débutant", "A2": "Élémentaire", "B1": "Intermédiaire", "B2": "Avancé", "C1": "Autonome" };
     
-    // بررسی نمایش پاپ‌آپ فقط برای بار اول
     const hasSeenPopup = localStorage.getItem("dino_seen_rec_popup") === "true";
     let popupHtml = "";
     if (!hasSeenPopup && recommended.length > 0) {
@@ -201,7 +197,6 @@ async function showGrammarPage() {
         <h1 style="font-size: 24px; margin-bottom: 5px;">📖 ${t.grammar}</h1>
         <p style="font-size: 16px; color: #666; margin-bottom: 30px;">${level} – ${levelNames[level] || ""}</p>`;
     
-    // بخش پیشنهاد داینو (با رنگ کمرنگ و خوانا)
     if (recommended.length > 0) {
         html += `<div style="background: #f0f4ff; border: 2px solid #d0d9ff; border-radius: 12px; padding: 20px; margin-bottom: 30px;">
             <h2 style="font-size: 16px; margin: 0 0 15px 0; color: #4a5568; display: flex; align-items: center; gap: 8px;">
@@ -210,7 +205,7 @@ async function showGrammarPage() {
             </h2>`;
         
         recommended.slice(0, 3).forEach(item => {
-            const title = lang === "fa" ? item.title_fa : item.title;
+            const title = lang === "fa" ? renderFaText(item.title_fa) : item.title;
             html += `<div style="background: white; border-radius: 8px; padding: 14px 15px; margin-bottom: 8px; cursor: pointer; border: 1px solid #e2e8f0; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05);" onclick="showGrammarLesson('${item.id}')">
                 <p style="margin: 0; font-size: 15px; font-weight: 500; color: #2d3748;">${title}</p>
                 <p style="margin: 4px 0 0 0; font-size: 13px; color: #718096;">⏱ ${item.estimatedTime} min</p>
@@ -219,11 +214,10 @@ async function showGrammarPage() {
         html += `</div>`;
     }
     
-    // لیست ساده همه درس‌ها (بدون ماژول‌بندی)
     html += `<h2 style="font-size: 18px; margin-bottom: 15px; color: #333;">${lang === "fa" ? "همه درس‌ها" : "Toutes les leçons"}</h2>`;
     
     allLessons.forEach(item => {
-        const title = lang === "fa" ? item.title_fa : item.title;
+        const title = lang === "fa" ? renderFaText(item.title_fa) : item.title;
         const status = getLessonStatus(item.id);
         const statusIcon = getStatusIcon(status);
         
@@ -243,7 +237,6 @@ async function showGrammarPage() {
     app.innerHTML = html;
     document.getElementById("back").onclick = showHome;
     
-    // منطق بستن پاپ‌آپ
     const closeBtn = document.getElementById("close-popup");
     if (closeBtn) {
         closeBtn.onclick = () => {
@@ -253,16 +246,11 @@ async function showGrammarPage() {
     }
 }
 
-// ===============================
-// 🆕 موتور جنریک نمایش درس و تمرین
-// ===============================
-
 async function showGrammarLesson(lessonId) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const level = lessonId.split("-")[0]; // استخراج سطح از ID (مثلاً A1)
+    const level = lessonId.split("-")[0];
     
-    // استفاده از تابع جدید موتور که درسنامه + تمرین‌ها را با هم می‌آورد
     const lessonData = await loadLessonWithExercises(level, lessonId);
     
     if (!lessonData) {
@@ -281,7 +269,7 @@ async function showGrammarLesson(lessonId) {
     }
     
     const progress = getLessonProgress(lessonId);
-    const title = lang === "fa" ? lessonData.title_fa : lessonData.title;
+    const title = lang === "fa" ? renderFaText(lessonData.title_fa) : lessonData.title;
     
     let html = `
         <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
@@ -305,7 +293,7 @@ async function showGrammarLesson(lessonId) {
     lessonData.sections.forEach((section) => {
         const isCompleted = progress.completedSections.includes(section.id);
         const statusIcon = isCompleted ? "✅" : (section.type === "lesson" ? "📖" : section.type === "exercise" ? "✏️" : "🏆");
-        const sectionTitle = lang === "fa" ? section.title_fa : section.title;
+        const sectionTitle = lang === "fa" ? renderFaText(section.title_fa) : section.title;
         
         html += `
             <div onclick="showLessonSection('${lessonId}', '${section.id}')" style="
@@ -349,7 +337,7 @@ async function showLessonSection(lessonId, sectionId) {
 function showLessonContent(lessonId, section) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const title = lang === "fa" ? section.title_fa : section.title;
+    const title = lang === "fa" ? renderFaText(section.title_fa) : section.title;
     
     let html = `
         <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
@@ -375,8 +363,16 @@ function showLessonContent(lessonId, section) {
     if (section.examples && section.examples.length > 0) {
         html += `<h3 style="margin-top: 20px; color: #007bff;">${lang === "fa" ? "مثال‌ها" : "Exemples"}</h3>`;
         section.examples.forEach(example => {
-            html += `<div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 8px 0;"><p style="margin: 0; font-weight: 500;">${example.fr}</p><p style="margin: 4px 0 0 0; font-size: 14px; color: #666;">${example.fa}</p></div>`;
+            html += `<div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 8px 0;"><p style="margin: 0; font-weight: 500;">${example.fr}</p><p style="margin: 4px 0 0 0; font-size: 14px; color: #666;">${renderFaText(example.fa)}</p></div>`;
         });
+    }
+    
+    if (section.note_fa) {
+        html += `
+            <div style="background: #fff3cd; border-radius: 8px; padding: 12px; margin-top: 15px;">
+                <p style="margin: 0;">💡 ${renderFaText(section.note_fa)}</p>
+            </div>
+        `;
     }
     
     html += `
@@ -398,7 +394,7 @@ function showLessonContent(lessonId, section) {
 function showExerciseContent(lessonId, section) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const title = lang === "fa" ? section.title_fa : section.title;
+    const title = lang === "fa" ? renderFaText(section.title_fa) : section.title;
     
     const questions = getRandomQuestions(section, section.displayCount);
     let currentQuestionIndex = 0;
@@ -422,7 +418,7 @@ function showExerciseContent(lessonId, section) {
                     <div style="background: #007bff; height: 100%; width: ${((currentQuestionIndex + 1) / questions.length) * 100}%; transition: width 0.3s;"></div>
                 </div>
                 <h2 style="font-size: 18px; margin-bottom: 10px;">${title}</h2>
-                <p style="font-size: 18px; line-height: 1.6; color: #333; margin-bottom: 30px;">${question.question}</p>
+                <p style="font-size: 18px; line-height: 1.6; color: #333; margin-bottom: 30px;">${renderFaText(question.question)}</p>
                 <div id="options-container" style="display: flex; flex-direction: column; gap: 12px;">
         `;
         
@@ -448,12 +444,12 @@ function showExerciseContent(lessonId, section) {
                 const feedback = document.getElementById("feedback");
                 if (isCorrect) {
                     btn.style.background = "#d4edda"; btn.style.borderColor = "#28a745";
-                    feedback.innerHTML = `<div style="background: #d4edda; padding: 12px; border-radius: 8px; color: #155724;"><p style="margin: 0; font-weight: bold;">✅ ${lang === "fa" ? "آفرین!" : "Bravo!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${question.explanation}</p></div>`;
+                    feedback.innerHTML = `<div style="background: #d4edda; padding: 12px; border-radius: 8px; color: #155724;"><p style="margin: 0; font-weight: bold;">✅ ${lang === "fa" ? "آفرین!" : "Bravo!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${renderFaText(question.explanation)}</p></div>`;
                 } else {
                     btn.style.background = "#f8d7da"; btn.style.borderColor = "#dc3545";
                     document.querySelectorAll(".option-btn")[question.correct].style.background = "#d4edda";
                     document.querySelectorAll(".option-btn")[question.correct].style.borderColor = "#28a745";
-                    feedback.innerHTML = `<div style="background: #f8d7da; padding: 12px; border-radius: 8px; color: #721c24;"><p style="margin: 0; font-weight: bold;">❌ ${lang === "fa" ? "اشتباه!" : "Incorrect!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${question.explanation}</p></div>`;
+                    feedback.innerHTML = `<div style="background: #f8d7da; padding: 12px; border-radius: 8px; color: #721c24;"><p style="margin: 0; font-weight: bold;">❌ ${lang === "fa" ? "اشتباه!" : "Incorrect!"}</p><p style="margin: 8px 0 0 0; font-size: 14px;">${renderFaText(question.explanation)}</p></div>`;
                 }
                 
                 document.querySelectorAll(".option-btn").forEach(b => { b.onclick = null; b.style.cursor = "default"; });
@@ -487,12 +483,6 @@ function showExerciseResult(lessonId, section, correctCount, totalCount) {
         </div>
     `;
 }
-
-// ===============================
-// شروع برنامه
-// ===============================
-showLanguage();
-loadPlacementQuestions().then(() => { console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length); });
 
 showLanguage();
 loadPlacementQuestions().then(() => { console.log("موتور آماده است. تعداد سوالات:", getPlacementQuestions().length); });
