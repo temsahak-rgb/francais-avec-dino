@@ -1,0 +1,82 @@
+{
+  "id": "A2-G-003",
+  "level": "A2",
+  "title": "Le passé composé",
+  "icon": "⏪",
+  "estimatedTime": 15,
+  "sections": [
+    {
+      "id": "A2-G-003-1",
+      "type": "lesson",
+      "title": "Formation avec l'auxiliaire avoir",
+      "content": "**گذشته ساده** (passé composé) پرکاربردترین زمان گذشته در زبان فرانسه است و برای بیان **عملی که در گذشته تمام شده** استفاده می‌شود.\n\n⚠️ **ساختار**: فعل کمکی **avoir** یا **être** در زمان حال + **اسم مفعول** (participe passé)\n\nبیشتر افعال فرانسوی با **avoir** صرف می‌شوند.",
+      "table": {
+        "headers": ["Pronom", "Avoir (présent)", "Exemple"],
+        "rows": [
+          ["Je", "**ai**", "J'**ai** parl**é**"],
+          ["Tu", "**as**", "Tu **as** parl**é**"],
+          ["Il / Elle", "**a**", "Il **a** parl**é**"],
+          ["Nous", "**avons**", "Nous **avons** parl**é**"],
+          ["Vous", "**avez**", "Vous **avez** parl**é**"],
+          ["Ils / Elles", "**ont**", "Ils **ont** parl**é**"]
+        ]
+      },
+      "examples": [
+        {"fr": "J'**ai** mang**é** une pizza hier soir.", "fa": "من دیشب یک پیتزا خوردم."},
+        {"fr": "Elle **a** travaill**é** toute la journée.", "fa": "او تمام روز کار کرد."},
+        {"fr": "Nous **avons** visit**é** Paris l'été dernier.", "fa": "ما تابستان گذشته از پاریس دیدن کردیم."},
+        {"fr": "Ils **ont** achet**é** une nouvelle voiture.", "fa": "آن‌ها یک ماشین نو خریدند."},
+        {"fr": "Tu **as** fin**i** tes devoirs ?", "fa": "تکالیفت را تمام کردی؟"}
+      ],
+      "note": "⚠️ **ساختار اسم مفعول (participe passé)** :\n\n- افعال **-er** → **-é** : `parler` → `parl**é**`\n- افعال **-ir** (گروه ۲) → **-i** : `finir` → `fin**i**`\n- افعال **-re** → **-u** : `vendre` → `vend**u**`\n- افعال بی‌قاعده : `faire` → `fait`, `prendre` → `pris`, `voir` → `vu`"
+    },
+    {
+      "id": "A2-G-003-2",
+      "type": "lesson",
+      "title": "Les verbes avec l'auxiliaire être",
+      "content": "تعدادی از افعال فرانسوی با فعل کمکی **être** صرف می‌شوند.\n\n⚠️ **نکته بسیار مهم** : با **être**، اسم مفعول از نظر **جنسیت** و **تعداد** با فاعل تطابق پیدا می‌کند.",
+      "table": {
+        "headers": ["Pronom", "Être (présent)", "Exemple"],
+        "rows": [
+          ["Je", "**suis**", "Je **suis** all**é**(e)"],
+          ["Tu", "**es**", "Tu **es** all**é**(e)"],
+          ["Il", "**est**", "Il **est** all**é**"],
+          ["Elle", "**est**", "Elle **est** all**ée**"],
+          ["Nous", "**sommes**", "Nous **sommes** all**é**(e)s"],
+          ["Ils", "**sont**", "Ils **sont** all**és**"],
+          ["Elles", "**sont**", "Elles **sont** all**ées**"]
+        ]
+      },
+      "examples": [
+        {"fr": "Marie **est** all**ée** au cinéma.", "fa": "ماری به سینما رفت."},
+        {"fr": "Les enfants **sont** arriv**és** à l'école.", "fa": "بچه‌ها به مدرسه رسیدند."},
+        {"fr": "Je **suis** né(e) en 1995.", "fa": "من در سال ۱۹۹۵ به دنیا آمدم."},
+        {"fr": "Elles **sont** parti**es** tôt ce matin.", "fa": "آن‌ها (دخترها) امروز صبح زود رفتند."}
+      ],
+      "note": "⚠️ **۱۴ فعل با être** (و مشتقات آن‌ها) :\n\n`aller`, `venir`, `arriver`, `partir`, `entrer`, `sortir`, `monter`, `descendre`, `naître`, `mourir`, `rester`, `tomber`, `retourner`, `passer` (به معنی حرکت)\n\n➕ همه **افعال انعکاسی** : `se laver`, `se lever`...\n\n✅ **تطابق** : `Elle est all**ée**` (مؤنث مفرد)\n✅ **تطابق** : `Ils sont arriv**és**` (مذکر جمع)\n✅ **تطابق** : `Elles sont parti**es**` (مؤنث جمع)"
+    },
+    {
+      "id": "A2-G-003-3",
+      "type": "lesson",
+      "title": "La négation et l'interrogation",
+      "content": "⚠️ **در حالت منفی** : **ne** و **pas** دور **فعل کمکی** قرار می‌گیرند (نه دور اسم مفعول).\n\n⚠️ **در حالت پرسشی** : فعل کمکی با فاعل **جا به جا** می‌شود.",
+      "table": {
+        "headers": ["Type", "Structure", "Exemple"],
+        "rows": [
+          ["**Négation**", "ne + auxiliaire + pas + participe", "Je **n'**ai **pas** mangé."],
+          ["**Interrogation**", "auxiliaire + sujet + participe", "**As**-tu mangé ?"],
+          ["**Nég. + interrog.**", "ne + auxiliaire + pas + sujet", "**N'**as-tu **pas** mangé ?"]
+        ]
+      },
+      "examples": [
+        {"fr": "Je **n'**ai **pas** fini mon travail.", "fa": "من کارم را تمام نکردم."},
+        {"fr": "Elle **n'**est **pas** venue à la fête.", "fa": "او به جشن نیامد."},
+        {"fr": "Nous **n'**avons **jamais** voyagé en avion.", "fa": "ما هرگز با هواپیما سفر نکرده‌ایم."},
+        {"fr": "**As**-tu visité le musée du Louvre ?", "fa": "آیا از موزه لوور دیدن کردی؟"},
+        {"fr": "**Est**-elle partie déjà ?", "fa": "آیا او قبلاً رفته است؟"},
+        {"fr": "**Ont**-ils acheté des cadeaux ?", "fa": "آیا آن‌ها هدیه خریدند؟"}
+      ],
+      "note": "⚠️ **با قیدها** (beaucoup, peu, déjà, souvent) :\n\nقید **بین فعل کمکی و اسم مفعول** قرار می‌گیرد :\n\n✅ J'ai **déjà** mangé.\n✅ Elle est **souvent** allée à Paris.\n✅ Ils ont **beaucoup** travaillé.\n\n❌ ~~J'ai mangé déjà.~~\n❌ ~~Elle est allée souvent à Paris.~~"
+    }
+  ]
+}
