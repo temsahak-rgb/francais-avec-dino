@@ -1,0 +1,77 @@
+{
+  "id": "A1-G-022-B",
+  "level": "A1",
+  "title": "Les verbes en -ir du 3e groupe au présent",
+  "icon": "🚀",
+  "estimatedTime": 12,
+  "sections": [
+    {
+      "id": "A1-G-022-B-1",
+      "type": "lesson",
+      "title": "Le modèle partir / sortir",
+      "content": "Certains verbes en -ir appartiennent au troisième groupe et sont irréguliers. Au singulier, le radical se raccourcit. Au pluriel, le radical reste complet.",
+      "table": {
+        "headers": ["Pronom", "Partir", "Sortir"],
+        "rows": [
+          ["Je", "je pars", "je sors"],
+          ["Tu", "tu pars", "tu sors"],
+          ["Il / Elle", "il/elle part", "il/elle sort"],
+          ["Nous", "nous partons", "nous sortons"],
+          ["Vous", "vous partez", "vous sortez"],
+          ["Ils / Elles", "ils/elles partent", "ils/elles sortent"]
+        ]
+      },
+      "examples": [
+        {"fr": "Je pars maintenant, il est tard."},
+        {"fr": "Ils partent en vacances demain matin."},
+        {"fr": "Elle sort avec ses amis le samedi soir."},
+        {"fr": "Nous sortons du bureau à cinq heures."}
+      ]
+    },
+    {
+      "id": "A1-G-022-B-2",
+      "type": "lesson",
+      "title": "Le modèle dormir",
+      "content": "Le verbe dormir suit le même modèle que partir : au singulier, on enlève une partie du radical.",
+      "table": {
+        "headers": ["Pronom", "Dormir"],
+        "rows": [
+          ["Je", "je dors"],
+          ["Tu", "tu dors"],
+          ["Il / Elle", "il/elle dort"],
+          ["Nous", "nous dormons"],
+          ["Vous", "vous dormez"],
+          ["Ils / Elles", "ils/elles dorment"]
+        ]
+      },
+      "examples": [
+        {"fr": "Je dors bien quand il pleut."},
+        {"fr": "Nous dormons tôt pendant la semaine."},
+        {"fr": "Les enfants dorment jusqu'à dix heures le dimanche."}
+      ]
+    },
+    {
+      "id": "A1-G-022-B-3",
+      "type": "lesson",
+      "title": "Le modèle servir / sentir / mentir",
+      "content": "Ces verbes suivent le même modèle que partir : au singulier, le radical se raccourcit, au pluriel il reste complet.",
+      "table": {
+        "headers": ["Pronom", "Servir", "Sentir", "Mentir"],
+        "rows": [
+          ["Je", "je sers", "je sens", "je mens"],
+          ["Tu", "tu sers", "tu sens", "tu mens"],
+          ["Il / Elle", "il/elle sert", "il/elle sent", "il/elle ment"],
+          ["Nous", "nous servons", "nous sentons", "nous mentons"],
+          ["Vous", "vous servez", "vous sentez", "vous mentez"],
+          ["Ils / Elles", "ils/elles servent", "ils/elles sentent", "ils/elles mentent"]
+        ]
+      },
+      "examples": [
+        {"fr": "Elle sert le café aux invités."},
+        {"fr": "Je sens le parfum des fleurs dans le jardin."},
+        {"fr": "Il ment toujours quand il est en retard."}
+      ],
+      "note": "Les verbes du troisième groupe n'ont pas de règle unique. Il faut mémoriser la conjugaison de chaque verbe. La différence principale : au singulier, le radical se raccourcit ; au pluriel, il reste complet."
+    }
+  ]
+}
