@@ -5,15 +5,13 @@
     "module": "Premiers pas",
     "category": "base",
     "icon": "👋",
-    "title": "Pronoms sujets",
-    "title_fa": "ضمایر فاعلی",
-    "paths": ["general", "daily"],
+    "title": "Les pronoms sujets",
     "estimatedTime": 10,
     "importance": 5,
     "recommended": true,
     "prerequisites": [],
     "lessons": 1,
-    "exercises": 10
+    "exercises": 8
   },
   {
     "id": "A1-G-002",
@@ -21,15 +19,13 @@
     "module": "Premiers pas",
     "category": "base",
     "icon": "👋",
-    "title": "Être et Avoir",
-    "title_fa": "افعال Être و Avoir",
-    "paths": ["general", "daily", "travel"],
-    "estimatedTime": 20,
+    "title": "Être et avoir",
+    "estimatedTime": 15,
     "importance": 5,
     "recommended": true,
     "prerequisites": ["A1-G-001"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 12
   },
   {
     "id": "A1-G-003",
@@ -38,14 +34,12 @@
     "category": "base",
     "icon": "👋",
     "title": "Les nombres",
-    "title_fa": "اعداد",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 15,
     "importance": 5,
     "recommended": true,
     "prerequisites": [],
-    "lessons": 2,
-    "exercises": 20
+    "lessons": 1,
+    "exercises": 10
   },
   {
     "id": "A1-G-004",
@@ -53,15 +47,13 @@
     "module": "Premiers pas",
     "category": "base",
     "icon": "👋",
-    "title": "Verbes en -ER au présent",
-    "title_fa": "افعال گروه اول در حال",
-    "paths": ["general", "daily"],
-    "estimatedTime": 25,
+    "title": "Les verbes en -er au présent",
+    "estimatedTime": 20,
     "importance": 5,
     "recommended": true,
-    "prerequisites": ["A1-G-001"],
-    "lessons": 3,
-    "exercises": 20
+    "prerequisites": ["A1-G-001", "A1-G-002"],
+    "lessons": 2,
+    "exercises": 15
   },
   {
     "id": "A1-G-005",
@@ -69,15 +61,13 @@
     "module": "Premiers pas",
     "category": "base",
     "icon": "👋",
-    "title": "Articles définis",
-    "title_fa": "حروف تعریف معرفه",
-    "paths": ["general", "daily"],
-    "estimatedTime": 15,
+    "title": "Les articles définis",
+    "estimatedTime": 10,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-001"],
-    "lessons": 1,
-    "exercises": 12
+    "lessons": 3,
+    "exercises": 10
   },
   {
     "id": "A1-G-006",
@@ -85,15 +75,13 @@
     "module": "Premiers pas",
     "category": "base",
     "icon": "👋",
-    "title": "Articles indéfinis",
-    "title_fa": "حروف تعریف نکره",
-    "paths": ["general", "daily"],
-    "estimatedTime": 15,
+    "title": "Les articles indéfinis",
+    "estimatedTime": 5,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-005"],
     "lessons": 1,
-    "exercises": 12
+    "exercises": 8
   },
   {
     "id": "A1-G-007",
@@ -102,14 +90,12 @@
     "category": "phrase",
     "icon": "🗣",
     "title": "La négation",
-    "title_fa": "ساختار منفی",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 15,
     "importance": 5,
     "recommended": true,
     "prerequisites": ["A1-G-004"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 12
   },
   {
     "id": "A1-G-008",
@@ -118,14 +104,12 @@
     "category": "phrase",
     "icon": "🗣",
     "title": "L'interrogation",
-    "title_fa": "سوال پرسیدن",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 20,
     "importance": 5,
     "recommended": true,
     "prerequisites": ["A1-G-004"],
     "lessons": 2,
-    "exercises": 18
+    "exercises": 15
   },
   {
     "id": "A1-G-009",
@@ -133,30 +117,26 @@
     "module": "Construire une phrase",
     "category": "phrase",
     "icon": "🗣",
-    "title": "Articles contractés",
-    "title_fa": "حروف تعریف ترکیبی",
-    "paths": ["general"],
-    "estimatedTime": 15,
+    "title": "Les articles contractés",
+    "estimatedTime": 10,
     "importance": 3,
     "recommended": false,
     "prerequisites": ["A1-G-005"],
-    "lessons": 1,
-    "exercises": 10
+    "lessons": 3,
+    "exercises": 12
   },
   {
     "id": "A1-G-010",
     "level": "A1",
     "module": "Construire une phrase",
     "category": "phrase",
-    "icon": "🗣",
-    "title": "Articles partitifs",
-    "title_fa": "حروف تعریف جزئی",
-    "paths": ["general", "daily"],
-    "estimatedTime": 15,
+    "icon": "🍞",
+    "title": "Les articles partitifs",
+    "estimatedTime": 10,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-005", "A1-G-006"],
-    "lessons": 1,
+    "lessons": 2,
     "exercises": 12
   },
   {
@@ -165,15 +145,13 @@
     "module": "Décrire",
     "category": "description",
     "icon": "👤",
-    "title": "Féminin des noms et adjectifs",
-    "title_fa": "مؤنث اسم‌ها و صفت‌ها",
-    "paths": ["general", "daily"],
-    "estimatedTime": 20,
+    "title": "Le féminin des noms et des adjectifs",
+    "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
-    "prerequisites": ["A1-G-004"],
+    "prerequisites": ["A1-G-005", "A1-G-006"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 12
   },
   {
     "id": "A1-G-012",
@@ -181,15 +159,13 @@
     "module": "Décrire",
     "category": "description",
     "icon": "👤",
-    "title": "Pluriel des noms",
-    "title_fa": "جمع اسم‌ها",
-    "paths": ["general", "daily"],
+    "title": "Le pluriel des noms",
     "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-011"],
-    "lessons": 1,
-    "exercises": 12
+    "lessons": 2,
+    "exercises": 10
   },
   {
     "id": "A1-G-013",
@@ -197,15 +173,13 @@
     "module": "Décrire",
     "category": "description",
     "icon": "👤",
-    "title": "Adjectifs qualificatifs",
-    "title_fa": "صفت‌های وصفی",
-    "paths": ["general", "daily"],
+    "title": "Les adjectifs qualificatifs",
     "estimatedTime": 20,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-011", "A1-G-012"],
     "lessons": 2,
-    "exercises": 18
+    "exercises": 15
   },
   {
     "id": "A1-G-014",
@@ -213,15 +187,13 @@
     "module": "Décrire",
     "category": "description",
     "icon": "👤",
-    "title": "Adjectifs possessifs",
-    "title_fa": "صفت‌های ملکی",
-    "paths": ["general", "daily"],
-    "estimatedTime": 20,
+    "title": "Les adjectifs possessifs",
+    "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-001", "A1-G-011"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 12
   },
   {
     "id": "A1-G-015",
@@ -229,15 +201,13 @@
     "module": "Décrire",
     "category": "description",
     "icon": "👤",
-    "title": "Adjectifs démonstratifs",
-    "title_fa": "صفت‌های اشاره",
-    "paths": ["general"],
-    "estimatedTime": 15,
+    "title": "Les adjectifs démonstratifs",
+    "estimatedTime": 10,
     "importance": 3,
     "recommended": false,
     "prerequisites": ["A1-G-011"],
     "lessons": 1,
-    "exercises": 10
+    "exercises": 8
   },
   {
     "id": "A1-G-016",
@@ -246,14 +216,12 @@
     "category": "quotidien",
     "icon": "📅",
     "title": "L'heure",
-    "title_fa": "ساعت",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-003"],
     "lessons": 1,
-    "exercises": 12
+    "exercises": 10
   },
   {
     "id": "A1-G-017",
@@ -262,14 +230,12 @@
     "category": "quotidien",
     "icon": "📅",
     "title": "La date et les jours",
-    "title_fa": "تاریخ و روزها",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-003"],
     "lessons": 1,
-    "exercises": 12
+    "exercises": 10
   },
   {
     "id": "A1-G-018",
@@ -278,8 +244,6 @@
     "category": "quotidien",
     "icon": "📅",
     "title": "L'impératif",
-    "title_fa": "فعل امری",
-    "paths": ["general", "daily", "travel"],
     "estimatedTime": 15,
     "importance": 3,
     "recommended": false,
@@ -293,15 +257,13 @@
     "module": "Verbes",
     "category": "verbes",
     "icon": "🔁",
-    "title": "Verbes irréguliers fréquents",
-    "title_fa": "افعال بی‌قاعده پرکاربرد",
-    "paths": ["general", "daily"],
+    "title": "Les verbes irréguliers fréquents",
     "estimatedTime": 25,
     "importance": 4,
     "recommended": true,
     "prerequisites": ["A1-G-004"],
     "lessons": 3,
-    "exercises": 20
+    "exercises": 18
   },
   {
     "id": "A1-G-020",
@@ -309,15 +271,13 @@
     "module": "Verbes",
     "category": "verbes",
     "icon": "🔁",
-    "title": "Futur proche",
-    "title_fa": "آینده نزدیک",
-    "paths": ["general", "daily"],
-    "estimatedTime": 20,
+    "title": "Le futur proche",
+    "estimatedTime": 15,
     "importance": 4,
     "recommended": true,
-    "prerequisites": ["A1-G-019"],
+    "prerequisites": ["A1-G-002", "A1-G-019"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 12
   },
   {
     "id": "A1-G-021",
@@ -325,15 +285,13 @@
     "module": "Verbes",
     "category": "verbes",
     "icon": "🔁",
-    "title": "Verbes en -IR",
-    "title_fa": "افعال گروه دوم",
-    "paths": ["general"],
-    "estimatedTime": 20,
+    "title": "Les verbes en -ir",
+    "estimatedTime": 15,
     "importance": 3,
     "recommended": false,
     "prerequisites": ["A1-G-004"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 10
   },
   {
     "id": "A1-G-022",
@@ -341,15 +299,13 @@
     "module": "Verbes",
     "category": "verbes",
     "icon": "🔁",
-    "title": "Verbes en -RE",
-    "title_fa": "افعال گروه سوم",
-    "paths": ["general"],
-    "estimatedTime": 20,
+    "title": "Les verbes en -re",
+    "estimatedTime": 15,
     "importance": 3,
     "recommended": false,
     "prerequisites": ["A1-G-004"],
     "lessons": 2,
-    "exercises": 15
+    "exercises": 10
   },
   {
     "id": "A1-G-023",
@@ -357,30 +313,12 @@
     "module": "Verbes",
     "category": "verbes",
     "icon": "🔁",
-    "title": "Passé récent",
-    "title_fa": "گذشته نزدیک",
-    "paths": ["general", "daily"],
-    "estimatedTime": 15,
+    "title": "Le passé récent",
+    "estimatedTime": 10,
     "importance": 3,
     "recommended": false,
-    "prerequisites": ["A1-G-019"],
+    "prerequisites": ["A1-G-002", "A1-G-019"],
     "lessons": 1,
-    "exercises": 12
-  },
-  {
-    "id": "A1-G-024",
-    "level": "A1",
-    "module": "Prononciation",
-    "category": "prononciation",
-    "icon": "🔊",
-    "title": "Alphabet et sons",
-    "title_fa": "الفبا و صداها",
-    "paths": ["general"],
-    "estimatedTime": 15,
-    "importance": 2,
-    "recommended": false,
-    "prerequisites": [],
-    "lessons": 2,
     "exercises": 8
   }
 ]
