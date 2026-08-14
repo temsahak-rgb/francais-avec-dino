@@ -9,14 +9,14 @@
       "id": "A1-G-011-1",
       "type": "lesson",
       "title": "La règle générale : ajouter -e",
-      "content": "Pour la majorité des noms, on forme le féminin en ajoutant simplement un -e au masculin. Cette règle s'applique aux personnes, aux animaux et à certains métiers.",
+      "content": "Pour la majorité des noms, on forme le féminin en ajoutant simplement un **-e** au masculin.\n\nCette règle s'applique aux personnes, aux animaux et à certains métiers.",
       "table": {
         "headers": ["Masculin", "Féminin", "Exemple"],
         "rows": [
-          ["ami", "amie", "C'est mon amie."],
-          ["voisin", "voisine", "La voisine est très gentille."],
-          ["étudiant", "étudiante", "Elle est étudiante à l'université."],
-          ["cousin", "cousine", "Ma cousine habite à Lyon."]
+          ["ami", "ami**e**", "C'est mon amie."],
+          ["voisin", "voisin**e**", "La voisine est très gentille."],
+          ["étudiant", "étudiant**e**", "Elle est étudiante à l'université."],
+          ["cousin", "cousin**e**", "Ma cousine habite à Lyon."]
         ]
       }
     },
@@ -28,16 +28,12 @@
       "table": {
         "headers": ["Terminaison", "Féminin", "Masculin", "Féminin"],
         "rows": [
-          ["-eur", "-euse", "chanteur", "chanteuse"],
-          ["-eur", "-euse", "vendeur", "vendeuse"],
-          ["-teur", "-trice", "acteur", "actrice"],
-          ["-teur", "-trice", "directeur", "directrice"],
-          ["-en", "-enne", "musicien", "musicienne"],
-          ["-en", "-enne", "pharmacien", "pharmacienne"],
-          ["-on / -en / -et / -el", "double consonne + e", "patron", "patronne"],
-          ["-on / -en / -et / -el", "double consonne + e", "chaton", "chatonne"],
-          ["-on / -en / -et / -el", "double consonne + e", "cadet", "cadette"],
-          ["-on / -en / -et / -el", "double consonne + e", "Daniel", "Danielle"]
+          ["-eur", "**-euse**", "chanteur", "chanteu**se**"],
+          ["-teur", "**-trice**", "acteur", "ac**trice**"],
+          ["-en", "**-enne**", "musicien", "musici**enne**"],
+          ["-on / -et / -el", "**double consonne + e**", "patron", "patro**nne**"],
+          ["-on / -et / -el", "**double consonne + e**", "cadet", "cade**tte**"],
+          ["-on / -et / -el", "**double consonne + e**", "Daniel", "Danie**lle**"]
         ]
       }
     },
@@ -45,14 +41,14 @@
       "id": "A1-G-011-3",
       "type": "lesson",
       "title": "Formes irrégulières et professions",
-      "content": "Certains noms ont un féminin totalement différent. Il faut les apprendre par cœur. Pour les professions, certains mots ont aujourd'hui une forme féminine, tandis que d'autres restent identiques.",
+      "content": "Certains noms ont un féminin **totalement différent**. Il faut les apprendre **par cœur**.",
       "table": {
         "headers": ["Masculin", "Féminin"],
         "rows": [
-          ["homme", "femme"],
-          ["garçon", "fille"],
-          ["père", "mère"],
-          ["fils", "fille"],
+          ["homme", "**femme**"],
+          ["garçon", "**fille**"],
+          ["père", "**mère**"],
+          ["fils", "**fille**"],
           ["professeur", "professeure"],
           ["auteur", "auteure"],
           ["médecin", "médecin"],
@@ -60,11 +56,11 @@
         ]
       },
       "examples": [
-        {"fr": "Mon père est médecin."},
-        {"fr": "Sa mère est professeure de français."},
+        {"fr": "Mon père est **médecin**."},
+        {"fr": "Sa mère est **professeure** de français."},
         {"fr": "Le juge arrive au tribunal."}
       ],
-      "note": "Certains métiers comme médecin, juge, professeur ont traditionnellement une seule forme. Aujourd'hui, on utilise de plus en plus professeure, docteure, juge (sans changement)."
+      "note": "✅ Certains métiers comme **médecin**, **juge**, **professeur** ont traditionnellement une seule forme.\n\nAujourd'hui, on utilise de plus en plus **professeure**, **docteure**, **juge** (sans changement)."
     }
   ]
 }
