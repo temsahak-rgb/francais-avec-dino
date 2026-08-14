@@ -11,22 +11,21 @@
       "type": "lesson",
       "title": "Les articles indéfinis",
       "title_fa": "حروف تعریف نکره",
-      "content": "Les articles indéfinis désignent un nom non précis ou mentionné pour la première fois. Ils expriment une quantité vague.",
-      "content_fa": "وقتی می‌خواهیم درباره چیزی نامشخص حرف بزنیم، یا برای اولین بار به چیزی اشاره می‌کنیم، از حروف تعریف نکره استفاده می‌کنیم. این حرف‌ها در فارسی معمولاً با «یک» یا «چند» ترجمه می‌شن، اما در فرانسوی کاملاً اجباری هستن.",
+      "content": "حروف تعریف نکره تقریباً مثل «یک» یا «چند» در فارسی هستند. وقتی می‌خواهید درباره یک چیز نامشخص یا کلی صحبت کنید، از این حروف استفاده می‌کنید. برخلاف فارسی که می‌توانید بگویید «کتاب دارم» (بدون «یک»)، در فرانسه حتماً باید حرف تعریف بیاورید.",
       "table": {
         "headers": ["Type de nom", "Article", "Exemple"],
         "rows": [
-          ["Masculin singulier", "un", "un café"],
-          ["Féminin singulier", "une", "une idée"],
-          ["Pluriel", "des", "des amis"]
+          ["Masculin singulier", "un", "un téléphone"],
+          ["Féminin singulier", "une", "une adresse"],
+          ["Pluriel", "des", "des photos"]
         ]
       },
       "examples": [
-        {"fr": "Je voudrais un café, s'il vous plaît.", "fa": "یک قهوه می‌خواهم، لطفاً."},
-        {"fr": "Elle a trouvé une solution.", "fa": "او یک راه‌حل پیدا کرد."},
-        {"fr": "Il y a des étudiants dans la salle.", "fa": "چند دانشجو در کلاس هستند."}
+        {"fr": "J'ai un problème avec mon ordinateur.", "fa": "من یک مشکل با کامپیوترم دارم."},
+        {"fr": "Elle cherche une pharmacie.", "fa": "او دنبال یک داروخانه می‌گردد."},
+        {"fr": "Nous avons des questions.", "fa": "ما چند سوال داریم."}
       ],
-      "note_fa": "بزرگ‌ترین اشتباه فارسی‌زبان‌ها اینه که بدون حرف تعریف جمله می‌سازن. مثلاً نمی‌شه گفت «قهوه می‌خوام»، حتماً باید بگی «یک قهوه می‌خوام». همین‌طور برای جمع، نمی‌شه گفت «دانشجو هست»، باید بگی «چند دانشجو هست». این رو از همین اول تمرین کن تا برات عادت بشه."
+      "note_fa": "در فارسی برای جمع معمولاً می‌گوییم «چند کتاب»، اما در فرانسه حتماً باید از des استفاده کنید. مثلاً نمی‌توانید بگویید «J'ai livres»، بلکه باید بگویید «J'ai des livres»."
     }
   ]
 }
