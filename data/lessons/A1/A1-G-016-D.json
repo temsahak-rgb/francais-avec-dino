@@ -11,15 +11,15 @@
       "title": "Les adverbes de lieu principaux",
       "content": "Les adverbes de lieu indiquent **où** l'on est ou **où** l'on va.\n\n⚠️ Ils se placent généralement **après le verbe**.",
       "table": {
-        "headers": ["Adverbe", "Sens", "Exemple"],
+        "headers": ["Adverbe", "Exemple"],
         "rows": [
-          ["**ici**", "اینجا", "Je travaille **ici**."],
-          ["**là**", "آنجا (proche)", "Regarde **là** !"],
-          ["**là-bas**", "آنجا (éloigné)", "Il y a une boulangerie **là-bas**."],
-          ["**où**", "کجا", "**Où** habites-tu ?"],
-          ["**partout**", "همه جا", "Il cherche **partout**."],
-          ["**près**", "نزدیک", "Il habite **près** de l'école."],
-          ["**loin**", "دور", "C'est **loin** d'ici ?"]
+          ["**ici**", "Je travaille **ici**."],
+          ["**là**", "Regarde **là** !"],
+          ["**là-bas**", "Il y a une boulangerie **là-bas**."],
+          ["**où**", "**Où** habites-tu ?"],
+          ["**partout**", "Il cherche **partout**."],
+          ["**près**", "Il habite **près** de l'école."],
+          ["**loin**", "C'est **loin** d'ici ?"]
         ]
       },
       "examples": [
@@ -31,7 +31,7 @@
         {"fr": "L'école est **près** de chez moi."},
         {"fr": "La gare est **loin** d'ici."}
       ],
-      "note": "⚠️ **Différence entre ici, là et là-bas** :\n\n- **ici** → très proche de la personne qui parle (اینجا)\n- **là** → proche ou désigné par le geste (آنجا نزدیک)\n- **là-bas** → éloigné, loin de la personne (آنجا دور)\n\n✅ Je suis **ici**. (où je suis maintenant)\n✅ Regarde **là** ! (un peu plus loin)\n✅ Il habite **là-bas**. (très loin)"
+      "note": "⚠️ **Différence entre ici, là et là-bas** :\n\n- **ici** → très proche de la personne qui parle\n- **là** → proche ou désigné par le geste\n- **là-bas** → éloigné, loin de la personne\n\n✅ Je suis **ici**. (où je suis maintenant)\n✅ Regarde **là** ! (un peu plus loin)\n✅ Il habite **là-bas**. (très loin)"
     },
     {
       "id": "A1-G-016-D-2",
@@ -39,14 +39,14 @@
       "title": "Les adverbes de position",
       "content": "Ces adverbes indiquent la **position** d'un objet par rapport à un autre.",
       "table": {
-        "headers": ["Adverbe", "Sens", "Exemple"],
+        "headers": ["Adverbe", "Exemple"],
         "rows": [
-          ["**dedans**", "داخل", "Le chat est **dedans**."],
-          ["**dehors**", "بیرون", "Les enfants jouent **dehors**."],
-          ["**devant**", "جلو", "Il est **devant** la porte."],
-          ["**derrière**", "پشت", "Le jardin est **derrière** la maison."],
-          ["**dessus**", "روی (سطح)", "Le livre est **dessus**."],
-          ["**dessous**", "زیر", "Le chat est **dessous** la table."]
+          ["**dedans**", "Le chat est **dedans**."],
+          ["**dehors**", "Les enfants jouent **dehors**."],
+          ["**devant**", "Il est **devant** la porte."],
+          ["**derrière**", "Le jardin est **derrière** la maison."],
+          ["**dessus**", "Le livre est **dessus**."],
+          ["**dessous**", "Le chat est **dessous** la table."]
         ]
       },
       "examples": [
@@ -57,7 +57,7 @@
         {"fr": "Le livre est **dessus** la table."},
         {"fr": "Le chat dort **dessous** la table."}
       ],
-      "note": "✅ **Astuce pour retenir** :\n\n- **de**dans = à l'intérieur (داخل)\n- **de**hors = à l'extérieur (بیرون)\n- **de**vant = avant (جلو)\n- **der**rière = après (پشت)\n- **des**sus = sur (روی)\n- **des**sous = sous (زیر)"
+      "note": "✅ **Astuce pour retenir** :\n\n- **de**dans = à l'intérieur\n- **de**hors = à l'extérieur\n- **de**vant = avant\n- **der**rière = après\n- **des**sus = sur\n- **des**sous = sous"
     },
     {
       "id": "A1-G-016-D-3",
@@ -65,14 +65,14 @@
       "title": "Les locutions adverbiales courantes",
       "content": "Ces expressions sont très utilisées dans la vie quotidienne pour indiquer une position.",
       "table": {
-        "headers": ["Locution", "Sens", "Exemple"],
+        "headers": ["Locution", "Exemple"],
         "rows": [
-          ["**à côté**", "کنار", "Il habite **à côté** de chez moi."],
-          ["**en face**", "روبرو", "La pharmacie est **en face**."],
-          ["**à droite**", "سمت راست", "Tournez **à droite**."],
-          ["**à gauche**", "سمت چپ", "La poste est **à gauche**."],
-          ["**en haut**", "بالا", "Il habite **en haut**."],
-          ["**en bas**", "پایین", "Le magasin est **en bas**."]
+          ["**à côté**", "Il habite **à côté** de chez moi."],
+          ["**en face**", "La pharmacie est **en face**."],
+          ["**à droite**", "Tournez **à droite**."],
+          ["**à gauche**", "La poste est **à gauche**."],
+          ["**en haut**", "Il habite **en haut**."],
+          ["**en bas**", "Le magasin est **en bas**."]
         ]
       },
       "examples": [
