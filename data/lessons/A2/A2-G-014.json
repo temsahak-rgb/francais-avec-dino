@@ -1,90 +1,54 @@
 {
   "id": "A2-G-014",
   "level": "A2",
-  "title": "Les pronoms adverbiaux en et y",
-  "icon": "🟢",
-  "estimatedTime": 15,
+  "title": "L'interrogation partielle : adverbes et adjectifs",
+  "icon": "❓",
+  "estimatedTime": 12,
   "sections": [
     {
       "id": "A2-G-014-1",
       "type": "lesson",
-      "title": "Le pronom en",
-      "content": "Le pronom **en** remplace un complément introduit par **de**.\n\nIl signifie généralement « de cela », « de là » ou une quantité indéterminée.",
+      "title": "Définition et adverbes interrogatifs",
+      "content": "L'**interrogation partielle** porte sur **un élément précis** de la phrase. On ne peut pas répondre par oui ou non.\n\n📌 Elle se construit avec un **adverbe**, un **adjectif** ou un **pronom interrogatif**.\n\nLes adverbes interrogatifs sont : **où**, **quand**, **comment**, **combien**, **pourquoi**.",
       "table": {
-        "headers": ["Usage", "Structure remplacée", "Exemple"],
+        "headers": ["Structure", "Exemple"],
         "rows": [
-          ["**Lieu (provenance)**", "de + lieu", "Vous venez de la poste ? → Oui, nous **en** venons."],
-          ["**COD avec article indéfini/partitif**", "des / du / de la", "Elle veut des biscuits ? → Oui, elle **en** veut."],
-          ["**COD avec adjectif numéral**", "un / deux / trois...", "Je veux un dictionnaire. → J'**en** veux un."],
-          ["**Adverbe de quantité**", "beaucoup de / trop de", "Elle a beaucoup de devoirs. → Elle **en** a beaucoup."],
-          ["**Complément du nom**", "nom + de + nom", "Elle boit une tasse de tisane. → Elle **en** boit une tasse."],
-          ["**COI introduit par de**", "verbe + de + chose", "Elle parle de son séjour. → Elle **en** parle."]
+          ["**Intonation**", "Où vous travaillez ? / Vous travaillez où ?"],
+          ["**Est-ce que**", "Où **est-ce que** vous travaillez ?"],
+          ["**Inversion**", "Où travaillez-vous ?"]
         ]
       },
       "examples": [
-        {"fr": "Vous venez de la poste ? → Oui, nous **en** venons."},
-        {"fr": "Tu prends du rôti ? → Oui, j'**en** prends."},
-        {"fr": "Je veux un dictionnaire. → J'**en** veux **un**."},
-        {"fr": "Elle a deux chiens. → Elle **en** a **deux**."},
-        {"fr": "Elle a beaucoup de devoirs. → Elle **en** a **beaucoup**."},
-        {"fr": "Elle a trop de travail. → Elle **en** a **trop**."},
-        {"fr": "Elle parle souvent de son séjour. → Elle **en** parle souvent."}
+        {"fr": "**Où** travaillez-vous ?"},
+        {"fr": "**Quand** partez-vous en vacances ?"},
+        {"fr": "**Comment** allez-vous au travail ?"},
+        {"fr": "**Combien** coûte ce livre ?"},
+        {"fr": "**Pourquoi** vous ne les invitez pas ?"},
+        {"fr": "**Parce que** nous ne les supportons pas."}
       ],
-      "note": "⚠️ **Règles importantes avec en** :\n\n- Avec un **adjectif numéral**, le nombre doit être **répété** : `J'en veux **un**.`\n- Avec un **adverbe de quantité**, l'adverbe doit être **répété** : `Elle en a **beaucoup**.`\n\n⚠️ **Exception avec les personnes** :\n\nSi **de** introduit une **personne**, on utilise les **pronoms toniques**, pas **en**.\n\n✅ Il parle de sa fiancée. → Il parle **d'elle**.\n❌ ~~Il en parle.~~ (si on parle d'une personne)"
+      "note": "⚠️ **Règles importantes** :\n\n- **Pourquoi** se place **toujours** en début de phrase :\n✅ **Pourquoi** tu pleures ?\n❌ ~~Tu pleures pourquoi ?~~ (très familier)\n\n- **Est-ce que** se place **toujours après** l'adverbe interrogatif :\n✅ Où **est-ce que** tu habites ?\n❌ ~~Est-ce que où tu habites ?~~\n\n📌 **Pourquoi** → réponse avec **parce que** :\n*Pourquoi tu ris ? → **Parce que** c'est drôle !*"
     },
     {
       "id": "A2-G-014-2",
       "type": "lesson",
-      "title": "Le pronom y",
-      "content": "Le pronom **y** remplace un complément introduit par **à** (non-personne) ou un **lieu**.\n\nIl signifie généralement « à cela » ou « là ».",
+      "title": "Les adjectifs interrogatifs : quel, quelle, quels, quelles",
+      "content": "L'adjectif interrogatif **quel** s'accorde en genre et en nombre avec le nom qu'il accompagne.\n\n📌 Il se place **toujours devant un nom**.",
       "table": {
-        "headers": ["Usage", "Structure remplacée", "Exemple"],
+        "headers": ["", "Masculin", "Féminin"],
         "rows": [
-          ["**Lieu (situation)**", "à / dans / sur + lieu", "Ils sont à la campagne ? → Oui, ils **y** sont."],
-          ["**Lieu (direction)**", "à + lieu", "Vous allez à la poste ? → Oui, nous **y** allons."],
-          ["**COI introduit par à (chose)**", "verbe + à + chose", "Ils pensent à cette affaire. → Ils **y** pensent."],
-          ["**COI introduit par à (chose)**", "verbe + au / à la", "Ils réfléchissent au projet. → Ils **y** réfléchissent."]
+          ["Singulier", "**quel**", "**quelle**"],
+          ["Pluriel", "**quels**", "**quelles**"]
         ]
       },
       "examples": [
-        {"fr": "Ils sont à la campagne ? → Oui, ils **y** sont."},
-        {"fr": "Vous allez à la poste ? → Oui, nous **y** allons."},
-        {"fr": "Ils pensent à cette affaire. → Ils **y** pensent."},
-        {"fr": "Ils réfléchissent au projet. → Ils **y** réfléchissent."},
-        {"fr": "Tu penses à tes vacances ? → Oui, j'**y** pense souvent."},
-        {"fr": "Vous participez à cette réunion ? → Oui, nous **y** participons."}
+        {"fr": "**Quel** modèle veux-tu acheter ?"},
+        {"fr": "**Quelle** chemise est-ce que tu préfères ?"},
+        {"fr": "**Quels** livres as-tu lus ?"},
+        {"fr": "**Quelles** lunettes est-ce que tu as perdues ?"},
+        {"fr": "**Quel** âge as-tu ?"},
+        {"fr": "**Quelle** heure est-il ?"}
       ],
-      "note": "⚠️ **Exception avec les personnes** :\n\nSi **à** introduit une **personne**, on utilise **lui / leur** ou les **pronoms toniques**, pas **y**.\n\n✅ Tu penses à Maxence ? → Je pense **à lui**.\n✅ Vous téléphonez à Ludivine ? → Nous **lui** téléphonons.\n❌ ~~J'y pense.~~ (si on pense à une personne)\n\n**Rappel** :\n- **y** → pour les **choses** et les **lieux**\n- **lui / leur** → pour les **personnes** (COI)\n- **pronoms toniques** → après certaines prépositions"
-    },
-    {
-      "id": "A2-G-014-3",
-      "type": "lesson",
-      "title": "La position des pronoms en et y",
-      "content": "⚠️ **Règle générale** : les pronoms **en** et **y** se placent **avant le verbe**.\n\nMais il y a des exceptions selon le type de phrase.",
-      "table": {
-        "headers": ["Type de phrase", "Règle", "Exemple"],
-        "rows": [
-          ["**Phrase déclarative**", "Pronom **avant** le verbe", "J'**en** veux. / Nous **y** allons."],
-          ["**Forme négative**", "**ne** + pronom + verbe + **pas**", "Il **n'**y pense **pas**."],
-          ["**Impératif affirmatif**", "Pronom **après** le verbe + trait d'union", "Parles-**en** ! / Vas-**y** !"],
-          ["**Impératif négatif**", "Pronom **avant** le verbe", "**N'**y pense **pas** !"],
-          ["**Avec infinitif**", "Pronom **avant** l'infinitif", "Je vais **y** aller."]
-        ]
-      },
-      "examples": [
-        {"fr": "J'**en** veux. (déclarative)"},
-        {"fr": "Nous **y** allons. (déclarative)"},
-        {"fr": "Il **n'**y pense **pas**. (négative)"},
-        {"fr": "Elle **n'**en parle **jamais**. (négative)"},
-        {"fr": "Parles-**en** à ton professeur ! (impératif affirmatif)"},
-        {"fr": "Vas-**y** ! (impératif affirmatif)"},
-        {"fr": "**N'**y pense **pas** ! (impératif négatif)"},
-        {"fr": "**N'**en parle **pas** ! (impératif négatif)"},
-        {"fr": "Je vais **y** aller demain. (futur proche)"},
-        {"fr": "Il faut **en** parler. (avec il faut)"},
-        {"fr": "Je veux **y** réfléchir. (avec vouloir)"}
-      ],
-      "note": "⚠️ **Résumé des positions** :\n\n- **Déclarative** : pronom **avant** le verbe → `J'en veux.`\n- **Négative** : **ne** + pronom + verbe → `Je n'en veux pas.`\n- **Impératif affirmatif** : pronom **après** le verbe → `Parles-en !`\n- **Impératif négatif** : pronom **avant** le verbe → `N'en parle pas !`\n- **Avec infinitif** : pronom **avant** l'infinitif → `Je vais en parler.`\n\n⚠️ **Différence entre en et y** :\n\n- **en** → remplace un complément avec **de**\n- **y** → remplace un complément avec **à** (chose) ou un **lieu**"
+      "note": "⚠️ **Quel** accompagne **toujours** un nom :\n\n✅ **Quel** livre lis-tu ? (quel + nom)\n\n📌 Différence avec **lequel** :\n- **quel** + nom → *Quel livre préfères-tu ?*\n- **lequel** (sans nom) → *Lequel préfères-tu ?*\n\n→ Voir la leçon **A2-G-014-B** pour les pronoms interrogatifs."
     }
   ]
 }
