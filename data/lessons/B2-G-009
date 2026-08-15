@@ -1,0 +1,90 @@
+{
+  "id": "B2-G-009",
+  "level": "B2",
+  "title": "L'emploi des modes",
+  "icon": "🧠",
+  "estimatedTime": 15,
+  "sections": [
+    {
+      "id": "B2-G-009-1",
+      "type": "lesson",
+      "title": "Verbes d'opinion : indicatif ou subjonctif ?",
+      "content": "Les verbes d’opinion (`croire`, `penser`, `estimer`, `supposer`, `soutenir`…) introduisent une proposition subordonnée dont le mode dépend de la **forme** de la phrase.\n\n- **Forme affirmative** → `indicatif`\n- **Forme négative** → `subjonctif`\n- **Interrogation avec inversion** → `subjonctif`\n- **Interro-négative, est-ce que, intonation** → `indicatif`\n\n⚠️ Quand le verbe d’opinion est au passé et doit être suivi du subjonctif, on utilise le **subjonctif présent**, jamais l’imparfait du subjonctif.\n\n⚠️ Les verbes d’opinion peuvent aussi être suivis directement d’un **infinitif**, sans préposition.",
+      "table": {
+        "headers": ["Forme", "Mode", "Exemple"],
+        "rows": [
+          ["**Affirmative**", "`indicatif`", "Je crois qu’il est sympa."],
+          ["**Interro-négative**", "`indicatif`", "Ne crois-tu pas qu’il est sympa ?"],
+          ["**Est-ce que… ?**", "`indicatif`", "Est-ce que tu crois qu’il est sympa ?"],
+          ["**Intonation**", "`indicatif`", "Tu crois qu’il est sympa ?"],
+          ["**Négative**", "`subjonctif`", "Je ne crois pas qu’il soit sympa."],
+          ["**Inversion**", "`subjonctif`", "Crois-tu qu’il soit sympa ?"],
+          ["**Passé + subjonctif**", "`subjonctif présent`", "Il ne pensait pas qu’il puisse faire ce travail."],
+          ["**Verbe d’opinion + infinitif**", "`infinitif`", "Je pense partir demain. / Il croit avoir raison."],
+          ["**espérer affirmatif**", "`indicatif`", "Nous espérons que vous êtes d’accord."],
+          ["**espérer négatif / inversion**", "`subjonctif`", "Espérez-vous qu’ils aillent les voir ?"]
+        ]
+      },
+      "examples": [
+        {"fr": "**Affirmation** : Je crois qu’il est sincère."},
+        {"fr": "**Négation** : Je ne crois pas qu’il soit sincère."},
+        {"fr": "**Inversion** : Crois-tu qu’il soit sincère ?"},
+        {"fr": "**Interro-négative** : Ne crois-tu pas qu’il est sincère ?"},
+        {"fr": "**Passé** : Il ne pensait pas qu’il puisse terminer à temps."},
+        {"fr": "**Infinitif** : Je pense partir demain. / Il croit avoir raison."},
+        {"fr": "**espérer** : Nous espérons que vous êtes d’accord. / Espérez-vous qu’ils aillent les voir ?"}
+      ],
+      "note": "✅ `Je crois qu’il est là.` — indicatif\n❌ `Je crois qu’il soit là.` — après une affirmation, on n’utilise normalement pas le subjonctif.\n\n✅ `Je ne crois pas qu’il soit là.` — subjonctif\n❌ `Je ne crois pas qu’il est là.` — la négation entraîne normalement le subjonctif."
+    },
+    {
+      "id": "B2-G-009-2",
+      "type": "lesson",
+      "title": "Interrogatives indirectes et futur dans le passé",
+      "content": "**1. Les propositions interrogatives indirectes**\n\nLes interrogatives indirectes sont **toujours à l’indicatif**.\n\nElles sont introduites par : `combien`, `comment`, `quand`, `où`, `qui`, `pourquoi`, `ce qui`, `ce que`, `ce dont`, `quoi`, `quel`, `lequel`.\n\nLe mode ne change jamais, même si le verbe principal est au passé.\n\n**2. Le futur dans le passé**\n\nLe futur dans le passé exprime une action future par rapport à une action passée.\n\nDans la subordonnée, on utilise le **conditionnel présent**, jamais le conditionnel passé.\n\n⚠️ Le conditionnel présent correspond ici à un **futur dans le passé**, pas à une hypothèse.",
+      "table": {
+        "headers": ["Règle", "Mode", "Exemple"],
+        "rows": [
+          ["**Interrogative indirecte**", "`indicatif`", "Nous nous demandons ce qu’ils ont l’intention de faire."],
+          ["**Interrogative indirecte au passé**", "`indicatif`", "Nous nous demandions ce qu’ils avaient l’intention de faire."],
+          ["**Futur dans le passé**", "`conditionnel présent`", "Elle a annoncé qu’elle changerait de travail."]
+        ]
+      },
+      "examples": [
+        {"fr": "Nous nous demandons ce qu’ils ont l’intention de faire."},
+        {"fr": "Nous nous demandions ce qu’ils avaient l’intention de faire."},
+        {"fr": "Je me demande pourquoi il est parti."},
+        {"fr": "**Discours direct** : Elle a annoncé : « Je changerai de travail. »"},
+        {"fr": "**Discours indirect** : Elle a annoncé qu’elle changerait de travail."}
+      ],
+      "note": "✅ `Je me demande ce qu’il fait.` — indicatif\n❌ `Je me demande ce qu’il fasse.` — l’interrogative indirecte reste toujours à l’indicatif.\n\n✅ `Elle a dit qu’elle viendrait.` — conditionnel présent (futur dans le passé)\n❌ `Elle a dit qu’elle serait venue.` — conditionnel passé ne convient pas ici."
+    },
+    {
+      "id": "B2-G-009-3",
+      "type": "lesson",
+      "title": "Tableau récapitulatif et points pratiques",
+      "content": "Voici un tableau récapitulatif pour choisir rapidement le bon mode selon la situation.\n\n🔑 **À retenir :**\n\n- `indicatif` = opinion positive, neutre, probable\n- `subjonctif` = opinion négative, doute, inversion\n- `espérer` = normalement `indicatif`, sauf dans les formes négative ou interrogative avec inversion\n- `interrogative indirecte` = toujours `indicatif`\n- `futur dans le passé` = `conditionnel présent`",
+      "table": {
+        "headers": ["Situation", "Mode", "Exemple"],
+        "rows": [
+          ["**Opinion affirmative**", "`indicatif`", "Je crois qu’il est sympa."],
+          ["**Opinion négative**", "`subjonctif`", "Je ne crois pas qu’il soit sympa."],
+          ["**Interrogation avec inversion**", "`subjonctif`", "Crois-tu qu’il soit sympa ?"],
+          ["**Interro-négative**", "`indicatif`", "Ne crois-tu pas qu’il est sympa ?"],
+          ["**Est-ce que / intonation**", "`indicatif`", "Est-ce que tu crois qu’il est sympa ?"],
+          ["**Interrogative indirecte**", "`indicatif`", "Je me demande ce qu’il fait."],
+          ["**Futur dans le passé**", "`conditionnel présent`", "Elle a dit qu’elle partirait."],
+          ["**espérer affirmatif**", "`indicatif`", "J’espère qu’il vient."],
+          ["**espérer négatif / inversion**", "`subjonctif`", "Espérez-vous qu’il aille mieux ?"],
+          ["**Verbe d’opinion + infinitif**", "`infinitif`", "Je pense partir demain."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Récapitulatif** : Je crois qu’il est compétent. / Je ne crois pas qu’il soit compétent. / Crois-tu qu’il soit compétent ?"},
+        {"fr": "**Interrogative indirecte** : Nous nous demandons comment ils ont résolu ce problème."},
+        {"fr": "**Futur dans le passé** : Il a promis qu’il reviendrait bientôt."},
+        {"fr": "**espérer** : Nous espérons que vous réussirez. / Espérez-vous qu’il vienne ?"}
+      ],
+      "note": "⚠️ En français, la forme de la phrase (affirmative, négative, interrogative) influence le mode, ce qui n’existe pas dans toutes les langues.\n\n✅ *Je crois qu’il est prêt.*\n✅ *Je ne crois pas qu’il soit prêt.*\n❌ ~~Je ne crois pas qu’il est prêt.~~"
+    }
+  ]
+}
