@@ -1,84 +1,86 @@
 {
   "id": "A2-G-017",
   "level": "A2",
-  "title": "Les adverbes de quantité (avancé)",
-  "icon": "⚖️",
-  "estimatedTime": 15,
+  "title": "Les nombres cardinaux (2)",
+  "icon": "🔊",
+  "estimatedTime": 12,
   "sections": [
     {
       "id": "A2-G-017-1",
       "type": "lesson",
-      "title": "Les adverbes de comparaison avancés",
-      "content": "Ces adverbes servent à comparer des quantités ou des intensités de manière plus précise.",
+      "title": "La prononciation de cinq, six et dix",
+      "content": "La prononciation des nombres **cinq**, **six** et **dix** change selon le mot qui suit.",
       "table": {
-        "headers": ["Adverbe", "Sens", "Avec nom (+ de)", "Exemple"],
+        "headers": ["Nombre", "Seul / devant voyelle", "Devant consonne"],
         "rows": [
-          ["**autant**", "به اندازهٔ (égalité)", "**autant de**", "Il gagne **autant que** moi. / Cet hôtel a **autant de** chambres."],
-          ["**davantage**", "بیشتر (formel)", "**davantage de**", "Tu dois étudier **davantage**. / Il y a eu **davantage de** touristes."],
-          ["**si**", "آنقدر (avec adj/adv)", "—", "Elle est **si** sympa. / Il parle **si** vite !"],
-          ["**tant**", "آنقدر (avec verbes/noms)", "**tant de**", "Ils ont **tant** voyagé. / J'ai **tant de** travail."]
+          ["**cinq**", "[sɛ̃k] → *cinq amis*", "[sɛ̃] → *cinq livres*"],
+          ["**six**", "[sis] seul / [siz] + voyelle", "[si] → *six mois*"],
+          ["**dix**", "[dis] seul / [diz] + voyelle", "[di] → *dix héros*"]
         ]
       },
       "examples": [
-        {"fr": "Il gagne **autant que** moi."},
-        {"fr": "Cet hôtel a **autant de** chambres que l'autre."},
-        {"fr": "Tu dois étudier **davantage** pour réussir."},
-        {"fr": "Il y a eu **davantage de** touristes cet été."},
-        {"fr": "Elle est **si** sympa que tout le monde l'adore."},
-        {"fr": "Il parle **si** vite que je ne comprends rien."},
-        {"fr": "Ils ont **tant** voyagé qu'ils connaissent toute l'Europe."},
-        {"fr": "J'ai **tant de** travail cette semaine."}
+        {"fr": "**cinq** livres → [sɛ̃ livʁ] (q ne se prononce pas)"},
+        {"fr": "**cinq** amis → [sɛ̃kami] (q se prononce)"},
+        {"fr": "Ils sont **cinq**. → [sɛ̃k]"},
+        {"fr": "**six** mois → [si mwa] (x ne se prononce pas)"},
+        {"fr": "**Six.** → [sis] (seul)"},
+        {"fr": "**six** enfants → [siz‿ɑ̃fɑ̃] (x = z)"},
+        {"fr": "**dix** hommes → [diz‿ɔm] (x = z)"},
+        {"fr": "**dix-huit** → [dizɥit]"},
+        {"fr": "**dix-neuf** → [diznœf]"}
       ],
-      "note": "✅ **Différence entre plus et davantage** :\n\n- **plus** → courant, utilisé dans tous les contextes\n- **davantage** → plus formel, souvent à l'écrit\n\n✅ Il faut travailler **plus**.\n✅ Il faut travailler **davantage**. (plus soutenu)\n\n⚠️ **autant** exprime une **égalité** de quantité :\n\n✅ Il gagne **autant que** moi. (= la même quantité)"
+      "note": "📌 **Règle pour six et dix** :\n\n- **Seul** → x se prononce [s] : *Six. [sis]* / *Dix. [dis]*\n- **Devant consonne** → x ne se prononce pas : *six mois [si]*\n- **Devant voyelle / h muet / huit / neuf** → x = [z] : *six amis [siz]*\n\n⚠️ **cinq** :\n- Devant consonne → q ne se prononce pas : *cinq livres [sɛ̃]*\n- Devant voyelle ou seul → q se prononce : *cinq amis [sɛ̃k]*"
     },
     {
       "id": "A2-G-017-2",
       "type": "lesson",
-      "title": "Autres adverbes de quantité",
-      "content": "Voici d'autres adverbes utiles pour exprimer des quantités approximatives ou emphatiques.",
+      "title": "La prononciation de sept, huit et neuf",
+      "content": "Les nombres **sept**, **huit** et **neuf** ont aussi des règles de prononciation spécifiques.",
       "table": {
-        "headers": ["Adverbe", "Sens", "Exemple"],
+        "headers": ["Nombre", "Règle", "Exemple"],
         "rows": [
-          ["**environ**", "تقریباً (quantité)", "Il y a **environ** 600 élèves."],
-          ["**presque**", "تقریباً", "Elle a **presque** fini."],
-          ["**que de**", "چه مقدار! (exclamation)", "**Que de** gens sur la plage !"],
-          ["**quelque**", "تقریباً (devant nombre)", "Il habite à **quelque** 200 mètres."]
+          ["**sept**", "p toujours muet, t toujours prononcé", "[sɛt] → *sept ans*"],
+          ["**huit**", "t prononcé seul / devant voyelle", "[ɥit] → *huit ans*"],
+          ["**huit**", "t muet devant consonne", "[ɥi] → *huit semaines*"],
+          ["**neuf**", "f → [v] devant ans, heures, hommes", "[nœv‿ɑ̃] → *neuf ans*"]
         ]
       },
       "examples": [
-        {"fr": "Il y a **environ** 600 élèves dans cette école."},
-        {"fr": "Elle a **presque** fini ses devoirs."},
-        {"fr": "Il a fait **presque** quarante voyages."},
-        {"fr": "**Que de** gens sur la plage aujourd'hui !"},
-        {"fr": "**Que de** travail cette semaine !"},
-        {"fr": "Il habite à **quelque** 200 mètres de la plage."},
-        {"fr": "Le projet a coûté **quelque** 5000 euros."}
+        {"fr": "**sept** → [sɛt] (p muet, t prononcé)"},
+        {"fr": "**sept** amis → [sɛt ami]"},
+        {"fr": "**sept** semaines → [sɛt səmɛn]"},
+        {"fr": "**huit** → [ɥit] (t prononcé)"},
+        {"fr": "**huit** ans → [ɥit‿ɑ̃]"},
+        {"fr": "**huit** semaines → [ɥi səmɛn] (t muet)"},
+        {"fr": "**neuf** → [nœf]"},
+        {"fr": "**neuf** ans → [nœv‿ɑ̃] (f → v)"},
+        {"fr": "**neuf** heures → [nœv‿œʁ] (f → v)"},
+        {"fr": "**neuf** hommes → [nœv‿ɔm] (f → v)"}
       ],
-      "note": "✅ **Différence entre environ et presque** :\n\n- **environ** → avant un **nombre** (quantité approximative)\n  ✅ Il y a **environ** 600 personnes.\n\n- **presque** → avant un **verbe** ou **adjectif** (action presque terminée)\n  ✅ Elle a **presque** fini.\n  ✅ Il est **presque** midi."
+      "note": "⚠️ **neuf** : le **f** devient **[v]** uniquement devant :\n- **ans** : *neuf ans [nœv‿ɑ̃]*\n- **heures** : *neuf heures [nœv‿œʁ]*\n- **hommes** : *neuf hommes [nœv‿ɔm]*\n\nDevant les autres mots, **f** reste [f] :\n✅ *neuf livres [nœf livʁ]*\n✅ *neuf amis [nœf ami]*"
     },
     {
       "id": "A2-G-017-3",
       "type": "lesson",
-      "title": "Position dans les temps composés",
-      "content": "⚠️ **Règle importante** : certains adverbes se placent **entre l'auxiliaire et le participe passé** dans les temps composés.",
+      "title": "La prononciation de vingt, soixante, mille, million",
+      "content": "Le nombre **vingt** a une prononciation particulière selon sa position dans le nombre.",
       "table": {
-        "headers": ["Adverbe", "Position", "Exemple"],
+        "headers": ["Contexte", "Prononciation", "Exemple"],
         "rows": [
-          ["**beaucoup**", "entre auxiliaire + participe", "Il a **beaucoup** travaillé."],
-          ["**peu**", "entre auxiliaire + participe", "Elle a **peu** dormi."],
-          ["**trop**", "entre auxiliaire + participe", "Il a **trop** mangé."],
-          ["**assez**", "entre auxiliaire + participe", "Il n'a pas **assez** étudié."],
-          ["**tant**", "entre auxiliaire + participe", "Ils ont **tant** voyagé."]
+          ["**vingt** seul", "t muet", "[vɛ̃]"],
+          ["**vingt-et-un** à **vingt-neuf**", "t prononcé", "[vɛ̃t dø] → *vingt-deux*"],
+          ["**quatre-vingt-un** à **quatre-vingt-neuf**", "t muet", "[katʁəvɛ̃ dø] → *quatre-vingt-deux*"]
         ]
       },
       "examples": [
-        {"fr": "Il a **beaucoup** travaillé cette semaine."},
-        {"fr": "Elle a **peu** dormi cette nuit."},
-        {"fr": "Il a **trop** mangé au restaurant."},
-        {"fr": "Il n'a pas **assez** étudié pour l'examen."},
-        {"fr": "Ils ont **tant** voyagé qu'ils connaissent toute l'Europe."}
+        {"fr": "**vingt-deux** → [vɛ̃t dø] (t prononcé)"},
+        {"fr": "**quatre-vingt-deux** → [katʁəvɛ̃ dø] (t muet)"},
+        {"fr": "**soixante** → [swasɑ̃t]"},
+        {"fr": "**mille** → [mil]"},
+        {"fr": "**million** → [miljɔ̃]"},
+        {"fr": "**milliard** → [miljaʁ]"}
       ],
-      "note": "⚠️ **Très important** :\n\nCes adverbes se placent **entre l'auxiliaire et le participe passé** :\n- **beaucoup**, **peu**, **trop**, **assez**, **tant**\n\n✅ Il a **trop** marché.\n✅ Elle a **beaucoup** travaillé.\n\nMais **très** ne s'utilise **pas** avec les participes passés :\n❌ ~~Il est très fatigué~~ → ✅ Il est **très** fatigué (avec adjectif, pas participe passé)"
+      "note": "⚠️ **vingt** :\n\n- Dans la série **21-29** → t se prononce :\n*vingt-deux [vɛ̃t dø]*\n\n- Dans la série **81-89** (quatre-vingt-…) → t **ne se prononce pas** :\n*quatre-vingt-deux [katʁəvɛ̃ dø]*\n\n📌 **mille** est toujours invariable :\n✅ *deux mille euros*\n❌ ~~deux milles euros~~"
     }
   ]
 }
