@@ -1,0 +1,99 @@
+{
+  "id": "B2-G-003",
+  "level": "B2",
+  "title": "Les formes impersonnelles (2)",
+  "icon": "🌫️",
+  "estimatedTime": 15,
+  "sections": [
+    {
+      "id": "B2-G-003-1",
+      "type": "lesson",
+      "title": "Principe général : être + adjectif impersonnel",
+      "content": "Beaucoup de formes impersonnelles sont suivies d’une proposition subordonnée au **subjonctif**, introduite par `que`.\n\nElles expriment :\n\n- **nécessité** / **obligation**\n- **possibilité** / **incertitude**\n- **appréciation** / **jugement**\n- **apparence**\n\n**Adjectifs qui exigent le subjonctif :**\n\n- `être (fort) possible`\n- `être préférable`\n- `être nécessaire`\n- `être indispensable`\n- `être interdit`\n- `être (peu) probable`\n- `être incertain`\n\n⚠️ **Cas particulier : `être probable`**\n\n- **Indicatif** si la probabilité est très forte (quasi-certitude)\n- **Subjonctif** si la phrase est négative ou interrogative",
+      "table": {
+        "headers": ["Forme impersonnelle", "Mode", "Exemple"],
+        "rows": [
+          ["**Il est possible que**", "`subjonctif`", "Il est fort possible que nous le fassions."],
+          ["**Il est préférable que**", "`subjonctif`", "Il est préférable que la décision soit prise."],
+          ["**Il est nécessaire que**", "`subjonctif`", "Il est nécessaire que vous vous inscriviez."],
+          ["**Il est indispensable que**", "`subjonctif`", "Il est indispensable que tu sois là."],
+          ["**Il est interdit que**", "`subjonctif`", "Il est interdit qu’on allume son portable."],
+          ["**Il est peu probable que**", "`subjonctif`", "Il est peu probable qu’il le fasse."],
+          ["**Il n’est pas certain que**", "`subjonctif`", "Il n’est pas certain qu’il vienne."],
+          ["**Il est probable que**", "`indicatif`", "Il est probable que le prix va augmenter."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Possibilité** : Il est fort possible que nous le fassions."},
+        {"fr": "**Préférence** : Il est préférable que la décision soit prise à l’unanimité."},
+        {"fr": "**Nécessité** : Il est nécessaire que vous vous inscriviez à l’avance."},
+        {"fr": "**Interdiction** : Il est interdit qu’on allume son portable ici."},
+        {"fr": "**Probabilité faible** : Il est peu probable qu’il le fasse."},
+        {"fr": "**Incertitude** : Il n’est pas certain qu’il vienne."},
+        {"fr": "**Probabilité forte (indicatif)** : Il est probable que le prix de l’essence va augmenter."}
+      ],
+      "note": "✅ `Il est possible qu’il vienne.` — subjonctif\n❌ `Il est possible qu’il vient.` — le subjonctif est obligatoire.\n\n✅ `Il est probable qu’il viendra.` — indicatif (quasi-certitude)\n✅ `Il n’est pas probable qu’il vienne.` — subjonctif (négation)\n\n⚠️ La négation ou l’interrogation change souvent le mode de l’indicatif au subjonctif."
+    },
+    {
+      "id": "B2-G-003-2",
+      "type": "lesson",
+      "title": "Verbes impersonnels spécifiques",
+      "content": "**1. `arriver` (sens : « se produire »)**\n\nToujours impersonnel dans ce sens.\n\n*Il arrive qu’elle se mette en colère.*\n(= parfois, il se produit qu’elle se mette en colère)\n\n**2. `falloir` (nécessité / obligation)**\n\nToujours impersonnel : `il faut`\n\n*Il faut que vous veniez nous voir.*\n\n**3. `sembler` et `paraître` (apparence)**\n\nCes verbes signifient « avoir l’air ».\n\n- **Affirmatif** → `indicatif` (opinion certaine)\n  *Il (me) semble que c’est trop compliqué.*\n  *Il paraît que c’est vrai.*\n\n- **Négatif / interrogatif avec inversion** → `subjonctif` (opinion incertaine)\n  *Il ne me semble pas qu’il soit satisfait.*\n  *Il ne paraît pas qu’il soit content.*\n\n**4. `suffire` (être suffisant)**\n\nToujours impersonnel dans ce sens.\n\n*Pour s’inscrire, il suffit qu’on remplisse ce formulaire.*\n\n**5. `valoir mieux` (préférence)**\n\nExprime une recommandation forte.\n\n*Il vaut mieux qu’il se taise.*",
+      "table": {
+        "headers": ["Verbe impersonnel", "Mode", "Exemple"],
+        "rows": [
+          ["**Il arrive que**", "`subjonctif`", "Il arrive qu’elle se fâche."],
+          ["**Il faut que**", "`subjonctif`", "Il faut que tu viennes."],
+          ["**Il (me) semble que**", "`indicatif`", "Il me semble que c’est vrai."],
+          ["**Il ne semble pas que**", "`subjonctif`", "Il ne semble pas qu’il soit content."],
+          ["**Il paraît que**", "`indicatif`", "Il paraît que c’est vrai."],
+          ["**Il suffit que**", "`subjonctif`", "Il suffit qu’on remplisse ce formulaire."],
+          ["**Il vaut mieux que**", "`subjonctif`", "Il vaut mieux qu’il se taise."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Événement occasionnel** : Il arrive qu’elle se mette en colère."},
+        {"fr": "**Obligation** : Il faut que vous veniez nous voir."},
+        {"fr": "**Apparence certaine** : Il me semble que c’est trop compliqué."},
+        {"fr": "**Apparence incertaine** : Il ne me semble pas qu’il soit satisfait."},
+        {"fr": "**Condition suffisante** : Il suffit qu’on remplisse ce formulaire."},
+        {"fr": "**Recommandation** : Il vaut mieux qu’il se taise."}
+      ],
+      "note": "⚠️ `sembler` et `paraître` suivent la même logique que les verbes d’opinion :\n\n✅ `Il semble que c’est vrai.` — indicatif (affirmation)\n✅ `Il ne semble pas que ce soit vrai.` — subjonctif (négation)\n\n⚠️ `arriver` au sens de « se produire » est toujours impersonnel et suivi du subjonctif.\n\n⚠️ `falloir` est toujours impersonnel et suivi du subjonctif quand il introduit une proposition."
+    },
+    {
+      "id": "B2-G-003-3",
+      "type": "lesson",
+      "title": "Tableau récapitulatif et résumé ultra-pratique",
+      "content": "🔑 **Résumé ultra-pratique :**\n\n- `il est nécessaire / indispensable / préférable que` → `subjonctif`\n- `il est possible / peu probable que` → `subjonctif`\n- `il est probable que` → `indicatif` (affirmatif)\n- `il faut que` → `subjonctif`\n- `il arrive que` → `subjonctif`\n- `il semble / paraît que` → `indicatif` (affirmatif)\n- `il ne semble / paraît pas que` → `subjonctif`\n- `il suffit que` → `subjonctif`\n- `il vaut mieux que` → `subjonctif`",
+      "table": {
+        "headers": ["Forme impersonnelle", "Mode", "Exemple"],
+        "rows": [
+          ["**Il arrive que**", "`subjonctif`", "Il arrive qu’elle se fâche."],
+          ["**Il est possible que**", "`subjonctif`", "Il est possible qu’il vienne."],
+          ["**Il est préférable que**", "`subjonctif`", "Il est préférable qu’elle parte."],
+          ["**Il est nécessaire que**", "`subjonctif`", "Il est nécessaire que vous veniez."],
+          ["**Il est indispensable que**", "`subjonctif`", "Il est indispensable que tu sois là."],
+          ["**Il est interdit que**", "`subjonctif`", "Il est interdit qu’on téléphone."],
+          ["**Il est peu probable que**", "`subjonctif`", "Il est peu probable qu’il réussisse."],
+          ["**Il est probable que**", "`indicatif`", "Il est probable qu’il viendra."],
+          ["**Il n’est pas certain que**", "`subjonctif`", "Il n’est pas certain qu’il soit là."],
+          ["**Il faut que**", "`subjonctif`", "Il faut que tu viennes."],
+          ["**Il semble que**", "`indicatif`", "Il semble que c’est vrai."],
+          ["**Il ne semble pas que**", "`subjonctif`", "Il ne semble pas qu’il soit content."],
+          ["**Il suffit que**", "`subjonctif`", "Il suffit qu’on remplisse ce formulaire."],
+          ["**Il vaut mieux que**", "`subjonctif`", "Il vaut mieux qu’il se taise."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Nécessité** : Il est nécessaire que vous veniez."},
+        {"fr": **"Possibilité** : Il est possible qu’il vienne."},
+        {"fr": "**Obligation** : Il faut que tu viennes."},
+        {"fr": "**Apparence certaine** : Il semble que c’est vrai."},
+        {"fr": "**Apparence incertaine** : Il ne semble pas qu’il soit content."},
+        {"fr": "**Recommandation** : Il vaut mieux qu’il se taise."}
+      ],
+      "note": "⚠️ En français, les formes impersonnelles qui expriment la **certitude** ou la **probabilité forte** sont suivies de l’**indicatif**.\n\nLes formes qui expriment la **nécessité**, la **possibilité**, l’**incertitude** ou la **préférence** sont suivies du **subjonctif**.\n\n✅ `Il est probable qu’il viendra.` — indicatif\n✅ `Il est possible qu’il vienne.` — subjonctif\n✅ `Il semble que c’est vrai.` — indicatif\n✅ `Il ne semble pas que ce soit vrai.` — subjonctif"
+    }
+  ]
+}
