@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-002",
+  "id": "A2-G-002-B",
   "level": "A2",
   "title": "L'accord du participe passé avec être et avoir",
   "icon": "🟫",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "A2-G-002-1",
+      "id": "A2-G-002-B-1",
       "type": "lesson",
       "title": "L'accord avec l'auxiliaire être",
       "content": "Avec l'auxiliaire **être**, le participe passé s'accorde **toujours** en genre et en nombre avec le **sujet**.\n\n📌 C'est la règle la plus simple : le participe passé fonctionne comme un **adjectif**.",
@@ -29,7 +29,7 @@
       "note": "⚠️ **Vous de politesse** :\n\nLe participe s'accorde avec la **personne réelle** :\n- À un homme : *Êtes-vous **parti** ?*\n- À une femme : *Êtes-vous **partie** ?*\n\n📌 **Verbes pronominaux** (se laver, se lever…) :\nLe participe s'accorde **généralement** avec le sujet :\n*Elle s'est **lavée**. Ils se sont **promenés**.*\n\n→ Voir la leçon **A2-G-004** pour les cas particuliers."
     },
     {
-      "id": "A2-G-002-2",
+      "id": "A2-G-002-B-2",
       "type": "lesson",
       "title": "L'accord avec l'auxiliaire avoir : la règle du COD",
       "content": "Avec l'auxiliaire **avoir**, le participe passé s'accorde **uniquement** avec le **COD** si celui-ci est placé **avant** le verbe.\n\n📌 **Règle d'or** :\n- COD **avant** → ✅ accord\n- COD **après** ou **absent** → ❌ pas d'accord",
@@ -51,7 +51,7 @@
       "note": "📌 **Quels mots déclenchent l'accord ?**\n\nLe COD placé avant peut être :\n\n1. **Pronom relatif** `que` :\n*Les livres **que** j'ai lu**s**.*\n\n2. **Pronom personnel COD** (me, te, le, la, nous, vous, les) :\n*Ses amis ? Je **les** ai connu**s**.*\n\n3. **Adjectif interrogatif** (quel, quelle, lesquels…) :\n*Quelle école as-tu choisi**e** ?*\n\n4. **Pronom interrogatif** (lequel, laquelle…) :\n*Laquelle as-tu choisi**e** ?*"
     },
     {
-      "id": "A2-G-002-3",
+      "id": "A2-G-002-B-3",
       "type": "lesson",
       "title": "Récapitulatif : être vs avoir",
       "content": "Voici un tableau récapitulatif pour mémoriser les règles d'accord :",
