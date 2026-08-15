@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-027",
+  "id": "B1-G-021",
   "level": "B1",
   "title": "Les adverbes de temps",
   "icon": "⏱",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-027-1",
+      "id": "B1-G-021-1",
       "type": "lesson",
       "title": "Définition et adverbes simples",
       "content": "Les adverbes de temps indiquent **quand** une action se déroule. Ils répondent aux questions : **Quand ? Depuis quand ? Pendant combien de temps ?**\n\n📌 On peut les classer en plusieurs catégories :\n\n- **Passé** : `hier`, `autrefois`, `jadis`, `auparavant`, `la veille`, `l'avant-veille`\n- **Présent** : `aujourd'hui`, `maintenant`, `désormais`, `actuellement`\n- **Futur** : `demain`, `bientôt`, `ensuite`, `puis`, `le lendemain`, `le surlendemain`\n- **Fréquence** : `souvent`, `rarement`, `toujours`, `jamais`, `parfois`, `quelquefois`, `fréquemment`\n- **Durée / Intensité** : `longtemps`, `tôt`, `tard`, `déjà`, `encore`, `soudain`, `immédiatement`\n- **Formes composées** : `avant-hier`, `après-demain`",
@@ -34,7 +34,7 @@
       "note": "⚠️ **Position des adverbes de temps** :\n\n- Les adverbes **courts** (`souvent`, `toujours`, `jamais`, `déjà`, `encore`) se placent généralement **après le verbe** :\n*Il mange **souvent** au restaurant.*\n\n- Les adverbes **longs** ou les locutions se placent souvent **au début ou à la fin** de la phrase :\n***Hier**, je suis parti tôt.* / *Je suis parti tôt **hier**.*\n\n📌 `jamais` et `toujours` peuvent aussi se placer au début pour insister :\n***Toujours** en retard !* / ***Jamais** je n'accepterai.*"
     },
     {
-      "id": "B1-G-027-2",
+      "id": "B1-G-021-2",
       "type": "lesson",
       "title": "Les locutions adverbiales de temps",
       "content": "Les locutions adverbiales de temps sont des **groupes de mots** qui fonctionnent comme un seul adverbe. Elles sont très fréquentes à l'oral et à l'écrit.\n\n📌 **Locutions courantes** :\n\n`de temps en temps`, `depuis peu`, `dès maintenant`, `en avance` / `en retard`, `jusqu'à présent`, `à jamais`, `à l'heure`, `à l'instant`, `à temps`, `à l'avenir`, `le jour même`, `par la suite`, `tout à coup`, `tout à l'heure`, `tout de suite`",
@@ -51,7 +51,7 @@
       "note": "⚠️ **`tout à l'heure`** a **deux significations** selon le contexte :\n\n- **Futur proche** : *On se voit **tout à l'heure**.* (= dans quelques minutes/heures)\n- **Passé proche** : *Je l'ai vu **tout à l'heure**.* (= il y a quelques minutes/heures)\n\n📌 **`tout de suite`** = immédiatement (toujours futur ou présent)\n📌 **`à l'instant`** = juste maintenant (passé très récent)\n\n✅ *J'arrive **tout de suite**.* (futur immédiat)\n✅ *Il est parti **à l'instant**.* (passé très récent)"
     },
     {
-      "id": "B1-G-027-3",
+      "id": "B1-G-021-3",
       "type": "lesson",
       "title": "Comparatif, superlatif et récapitulatif",
       "content": "Certains adverbes de temps peuvent être utilisés avec le **comparatif** ou le **superlatif** :\n\n- `plus tôt` / `plus tard` → comparatif\n- `le plus tôt` / `le plus tard` → superlatif\n- `plus souvent` / `moins souvent` → comparatif de fréquence\n- `de plus en plus` + adverbe → progression\n\n📌 Récapitulatif des principales formes :",
