@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-004",
+  "id": "A2-G-007",
   "level": "A2",
   "title": "Les verbes pronominaux : structure et types",
   "icon": "🔁",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "A2-G-004-1",
+      "id": "A2-G-007-1",
       "type": "lesson",
       "title": "Structure et conjugaison",
       "content": "Les verbes pronominaux ont **deux pronoms** :\n\n1. Le **pronom sujet** (je, tu, il…)\n2. Le **pronom réfléchi** (me, te, se, nous, vous, se)\n\n📌 Exemple : **se lever**",
@@ -32,7 +32,7 @@
       "note": "⚠️ **Impératif affirmatif** :\n\nLe pronom suit le verbe et **te → toi** :\n✅ **Lève-toi** !\n✅ **Habille-toi** !\n❌ ~~Lève-te !~~\n\n📌 **Impératif négatif** :\nLe pronom revient **avant** le verbe :\n✅ **Ne te lève pas** !\n✅ **Ne vous inquiétez pas** !"
     },
     {
-      "id": "A2-G-004-2",
+      "id": "A2-G-007-2",
       "type": "lesson",
       "title": "Les types de verbes pronominaux",
       "content": "Il existe **deux grandes catégories** de verbes pronominaux :\n\n1. **Essentiellement pronominaux** : ils n'existent que sous forme pronominale.\n2. **Accidentellement pronominaux** : ils existent aussi sans pronom (réfléchis ou réciproques).",
