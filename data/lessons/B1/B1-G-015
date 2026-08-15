@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-024-B",
+  "id": "B1-G-015",
   "level": "B1",
   "title": "Le superlatif absolu et le superlatif relatif",
   "icon": "🏆",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-024-B-1",
+      "id": "B1-G-015-1",
       "type": "lesson",
       "title": "Le superlatif absolu",
       "content": "Le superlatif absolu exprime le **plus haut degré** d'une qualité, **sans comparaison** avec d'autres éléments.\n\n📌 Il se forme avec un **adverbe d'intensité** + adjectif :\n\n- `très` + adjectif → registre courant\n- `bien` + adjectif → registre soutenu\n- `extrêmement` / `fort` + adjectif → intensité forte\n- `tout à fait` + adjectif → insistance\n- `super` / `extra` / `ultra` + adjectif → ⚠️ registre **familier**",
@@ -21,7 +21,7 @@
       "note": "⚠️ `super`, `extra`, `ultra` appartiennent au registre **familier**.\n\nÀ l'écrit ou dans un contexte formel, préférez : `très`, `extrêmement`, `particulièrement`, `absolument`.\n\n✅ *C'est **extrêmement** difficile.*\n❌ ~~C'est **super** difficile.~~ *(registre familier)*"
     },
     {
-      "id": "B1-G-024-B-2",
+      "id": "B1-G-015-2",
       "type": "lesson",
       "title": "Le superlatif relatif",
       "content": "Le superlatif relatif exprime le degré **supérieur** ou **inférieur** d'une qualité **par rapport à un groupe**.\n\n📌 **Structure courante** :\n\n**article défini** (`le` / `la` / `les`) + `plus` / `moins` + adjectif ou adverbe + `de` / `du` / `de la` / `des`\n\n📌 **Variante syntaxique** (registre soutenu) :\n\n(`le`) `plus` / (`le`) `moins` + adjectif + nom (+ `de`)\n\n📌 Le superlatif relatif peut aussi se construire avec un **verbe** :\n\nsujet + verbe + `le plus` / `le moins`",
@@ -36,7 +36,7 @@
       "note": "⚠️ L'article défini (`le`, `la`, `les`) est **obligatoire** dans le superlatif relatif.\n\n✅ *C'est **le** plus beau monument de Paris.*\n❌ ~~C'est plus beau monument de Paris.~~\n\n📌 **Deux structures possibles** :\n- *C'est le restaurant **le plus cher** de la ville.* (courant)\n- *C'est **le plus cher** restaurant de la ville.* (soutenu)\n\n📌 Avec un **verbe**, la structure est simple :\n*qui* + verbe + `le plus` / `le moins`\n→ Très fréquent à l'écrit formel."
     },
     {
-      "id": "B1-G-024-B-3",
+      "id": "B1-G-015-3",
       "type": "lesson",
       "title": "Formes irrégulières et récapitulatif",
       "content": "Certains mots ont des formes **irrégulières** au superlatif. Elles doivent être mémorisées :",
