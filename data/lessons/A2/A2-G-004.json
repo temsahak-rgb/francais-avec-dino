@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-004-B",
+  "id": "A2-G-004",
   "level": "A2",
   "title": "Les verbes pronominaux au passé composé : l'accord",
   "icon": "🔁",
   "estimatedTime": 12,
   "sections": [
     {
-      "id": "A2-G-004-B-1",
+      "id": "A2-G-004-1",
       "type": "lesson",
       "title": "Le passé composé des verbes pronominaux",
       "content": "Les verbes pronominaux utilisent **toujours** l'auxiliaire **être** au passé composé.\n\n📌 **Structure** :\n\nsujet + pronom réfléchi + **être** + participe passé\n\nLe participe passé s'accorde **généralement** avec le sujet.",
@@ -21,7 +21,7 @@
       "note": "📌 **Règle générale** :\n\nAvec **être**, le participe passé s'accorde avec le **sujet** :\n*Elle s'est levé**e**. Ils se sont habillé**s**.*\n\n⚠️ Mais il y a des **exceptions** importantes → voir la section suivante."
     },
     {
-      "id": "A2-G-004-B-2",
+      "id": "A2-G-004-2",
       "type": "lesson",
       "title": "L'accord : COD ou COI ?",
       "content": "Dans les verbes pronominaux, le pronom réfléchi peut être **COD** ou **COI**.\n\n📌 **Règle** :\n- Pronom **COD** → ✅ accord\n- Pronom **COI** → ❌ pas d'accord",
