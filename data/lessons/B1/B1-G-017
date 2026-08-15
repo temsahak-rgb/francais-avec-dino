@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-029",
+  "id": "B1-G-017",
   "level": "B1",
   "title": "Les pronoms indéfinis",
   "icon": "🌙",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-029-1",
+      "id": "B1-G-017-1",
       "type": "lesson",
       "title": "Définition et pronoms de quantité",
       "content": "Les pronoms indéfinis représentent des personnes ou des choses **sans préciser** leur quantité ou leur identité.\n\nIls expriment :\n- la **quantité vague**\n- l'**absence**\n- l'**identité indéterminée**\n- la **totalité**\n- l'**individualité**\n\n📌 **Négation totale** : `personne` / `rien` / `aucun(e)`\n\n⚠️ Ces pronoms se construisent avec **`ne`** mais **sans `pas`**.\n\n📌 **Totalité** : `tout(e)` / `tous` / `toutes`\n\n📌 **Individualité** : `chacun(e)`\n\n📌 **Quantité vague** : `quelques-uns` / `certain(e)s` / `plusieurs` / `beaucoup` / `peu` / `trop` / `assez`",
@@ -24,7 +24,7 @@
       "note": "⚠️ **Négation avec `personne` / `rien` / `aucun(e)`** :\n\n✅ *Personne **n'**est d'accord.* (pas de `pas`)\n✅ *Il **ne** mange **rien**.*\n❌ ~~Personne n'est pas d'accord.~~ ❌ ~~Il ne mange pas rien.~~\n\n📌 **Temps composés** : `rien` se place **avant** le participe passé :\n*Nous n'avons **rien** fait.*\n\n📌 **Prononciation de `tous`** :\n- `tous` (pronom) → /tus/ (le **s** se prononce)\n- `tous les jours` (adjectif) → /tu le ʒuʁ/ (le **s** ne se prononce pas)\n\n✅ *Ils sont **tous** partis.* /tus/"
     },
     {
-      "id": "B1-G-029-2",
+      "id": "B1-G-017-2",
       "type": "lesson",
       "title": "Pronoms d'identité : quelqu'un, on, n'importe qui, quiconque, même, autre",
       "content": "📌 **Identité indéterminée** : `quelqu'un` / `on`\n\n→ Verbe à la **3ᵉ personne du singulier**.\n\n📌 **Identité libre** : `n'importe qui`\n\n→ Sujet ou COD/COI d'un **seul verbe**. Exprime l'absence de choix.\n\n📌 **Identité générale** : `quiconque`\n\n→ Peut être sujet de **deux verbes** ou sujet + COD/COI. Registre plus soutenu.\n\n📌 **Similarité** : `même(s)`\n\n📌 **Différence** : `autre(s)`\n\n⚠️ Au pluriel, `autres` est souvent précédé de **`des`** après un verbe ou dans un complément du nom :",
@@ -44,7 +44,7 @@
       "note": "⚠️ **`n'importe qui` vs `quiconque`** :\n\n- `n'importe qui` → sujet ou COD/COI d'**un seul verbe** :\n*Il fait confiance à **n'importe qui**.*\n\n- `quiconque` → peut être sujet de **deux verbes** :\n***Quiconque** est intéressé **peut** participer.*\n(= Toute personne qui est intéressée peut participer.)\n\n📌 **`autre(s)` au pluriel** :\n\n✅ *Nous discutons **des autres**.* (après un verbe)\n✅ *La liste **des autres** participants.* (complément du nom)\n❌ ~~Nous discutons les autres.~~\n\n📌 `on` est toujours suivi d'un verbe à la **3ᵉ personne du singulier** :\n✅ *On **mange** bien.*\n❌ ~~On mangons bien.~~"
     },
     {
-      "id": "B1-G-029-3",
+      "id": "B1-G-017-3",
       "type": "lesson",
       "title": "Récapitulatif complet",
       "content": "Voici un récapitulatif de tous les pronoms indéfinis par catégorie :",
