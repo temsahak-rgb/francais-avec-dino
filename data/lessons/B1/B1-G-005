@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-030",
+  "id": "B1-G-005",
   "level": "B1",
   "title": "L'accord du participe passé (être / avoir / verbes pronominaux)",
   "icon": "🧩",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-030-1",
+      "id": "B1-G-005-1",
       "type": "lesson",
       "title": "Accord avec être et verbes pronominaux",
       "content": "📌 **Avec l'auxiliaire `être`** :\n\nLe participe passé s'accorde **toujours** avec le **sujet**.\n\n📌 **Avec les verbes pronominaux** (qui utilisent `être`) :\n\nRègle générale : le participe passé s'accorde avec le **sujet**.\n\n⚠️ **Exceptions** : le participe passé reste **invariable** dans deux cas :\n\n**1. Le verbe pronominal a un COD après le verbe**\n→ Dans ce cas, `se` = **COI**, donc pas d'accord.\n\n**2. Le verbe pronominal est essentiellement COI**\n→ `se` n'est jamais COD : `se parler`, `se sourire`, `se succéder`, `s'écrire`, `se rire (de)`",
@@ -33,7 +33,7 @@
       "note": "⚠️ **Comment savoir si `se` = COD ou COI ?**\n\nRemplacez le verbe pronominal par sa forme non pronominale :\n\n- *Elle s'est lavée.* → Elle a lavé **qui ?** → **elle-même** (= COD) → **accord** ✅\n- *Elle s'est lavé les mains.* → Elle a lavé **les mains** (= COD) à elle-même → `se` = COI → **pas d'accord** ❌\n\n📌 **Verbes pronominaux essentiellement COI** (jamais d'accord) :\n`se parler`, `se sourire`, `se succéder`, `s'écrire`, `se rire (de)`, `se téléphoner`\n\n✅ *Elles se sont **parlé**.*\n❌ ~~Elles se sont parlées.~~"
     },
     {
-      "id": "B1-G-030-2",
+      "id": "B1-G-005-2",
       "type": "lesson",
       "title": "Accord avec avoir et cas particuliers",
       "content": "📌 **Avec l'auxiliaire `avoir`** :\n\nLe participe passé s'accorde avec le **COD** uniquement si celui-ci est placé **avant** le verbe.\n\n- COD **après** le verbe → **pas d'accord**\n- COD **avant** le verbe (pronom, relatif) → **accord**\n\n⚠️ **Cas particuliers** :\n\n**1. Avec le pronom `en`** → **jamais d'accord**\n\n**2. Avec `fait` et `laissé` suivis d'un infinitif** → **invariables**",
@@ -60,7 +60,7 @@
       "note": "⚠️ **`en` ne permet jamais l'accord** :\n\n✅ *Des bananes ? Je n'en ai pas **acheté**.*\n❌ ~~Je n'en ai pas achetées.~~\n\n📌 **`fait` + infinitif** est **toujours invariable** :\n✅ *Je l'ai **fait** réparer.*\n❌ ~~Je l'ai faite réparer.~~\n\n📌 **`laissé` + infinitif** (orthographe moderne) est aussi **invariable** :\n✅ *Je les ai **laissé** sortir.*\n\n📌 **Position du COD** :\n- COD **avant** → accord : *Les fleurs ? Je les ai **prises**.*\n- COD **après** → pas d'accord : *J'ai pris **les fleurs**.*"
     },
     {
-      "id": "B1-G-030-3",
+      "id": "B1-G-005-3",
       "type": "lesson",
       "title": "Récapitulatif complet",
       "content": "Voici un récapitulatif de toutes les règles d'accord du participe passé :",
