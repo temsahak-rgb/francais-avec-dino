@@ -1,79 +1,63 @@
 {
   "id": "A2-G-015",
   "level": "A2",
-  "title": "Les numéraux ordinaux (avancé)",
-  "icon": "🔺",
+  "title": "Ce / Il est (1)",
+  "icon": "🟨",
   "estimatedTime": 12,
   "sections": [
     {
       "id": "A2-G-015-1",
       "type": "lesson",
-      "title": "Deuxième vs Second(e)",
-      "content": "⚠️ **Différence importante** entre **deuxième** et **second(e)** :",
+      "title": "C'est / Ce sont : les usages de base",
+      "content": "Le présentatif **ce + être** sert à **identifier**, **présenter** ou **désigner** quelque chose ou quelqu'un.\n\n📌 **Formes** :\n- Singulier : **c'est**\n- Pluriel : **ce sont**",
       "table": {
-        "headers": ["Adjectif", "Usage", "Exemple"],
+        "headers": ["Devant", "Exemple"],
         "rows": [
-          ["**deuxième**", "Quand il y a **plus de deux** éléments", "Le **deuxième** chapitre (sur dix)"],
-          ["**second(e)**", "Quand il y a **seulement deux** éléments", "La **seconde** guerre mondiale (il y en a eu deux)"]
+          ["**Nom + déterminant**", "C'est **un** taille-crayon. / C'est **le** portable de ma sœur."],
+          ["**Nom propre**", "C'est **Maxime**. / C'est **monsieur Zimmerlin**."],
+          ["**Pronom**", "C'est **lui** le copain de Lisa. / C'est **le sien**."],
+          ["**Pronom démonstratif**", "C'est **celle** que je préfère."]
         ]
       },
       "examples": [
-        {"fr": "Il a gagné la **deuxième** place sur vingt participants."},
-        {"fr": "Elle habite au **second** étage (l'immeuble n'a que deux étages)."},
-        {"fr": "La **seconde** moitié du film est meilleure."},
-        {"fr": "C'est mon **deuxième** emploi (j'en ai eu plusieurs)."}
+        {"fr": "C'est **le** portable de ma sœur."},
+        {"fr": "C'est **un** taille-crayon."},
+        {"fr": "C'est **du** cacao."},
+        {"fr": "C'est **mon** collègue."},
+        {"fr": "Ce sont **deux** jumeaux."},
+        {"fr": "C'est **ce** dictionnaire que je veux."},
+        {"fr": "C'est **Maxime**."},
+        {"fr": "C'est **lui** le copain de Lisa."},
+        {"fr": "C'est **celle** que je préfère."},
+        {"fr": "C'est **ce qu'**ils veulent."}
       ],
-      "note": "⚠️ **En pratique** : les deux formes sont souvent **interchangeables** dans la langue courante.\n\n✅ Le **deuxième** jour / Le **second** jour\n\nMais pour être précis :\n- **deuxième** → s'il y a **3+** éléments\n- **second** → s'il y a **exactement 2** éléments"
+      "note": "⚠️ **À la forme négative** :\n\nL'article partitif est **obligatoire** après *ce n'est pas* :\n✅ Ce n'est pas **de la** confiture de fraises, c'est **de la** confiture de framboises.\n\n📌 **Ce sont** s'utilise uniquement pour un **pluriel réel** :\n✅ Ce sont **deux** jumeaux.\n✅ Ce sont **mes** amis.\n\n⚠️ Dans la langue courante, **c'est** est souvent utilisé même au pluriel :\n*C'est mes parents.* (familier)\n*Ce sont mes parents.* (correct)"
     },
     {
       "id": "A2-G-015-2",
       "type": "lesson",
-      "title": "Règles de formation avancées",
-      "content": "⚠️ **Règles importantes** pour former les numéraux ordinaux complexes :",
+      "title": "C'est + adjectif, adverbe, infinitif",
+      "content": "**C'est** peut aussi être suivi d'un **adjectif** (commentaire général), d'un **adverbe**, d'une **préposition** ou d'un **infinitif**.",
       "table": {
-        "headers": ["Règle", "Exemple correct", "Explication"],
+        "headers": ["Devant", "Exemple"],
         "rows": [
-          ["**Trait d'union** (nombres < 100)", "**quarante-huitième**", "Comme les cardinaux"],
-          ["**Conjonction et**", "**cinquante et unième**", "Avec unième et onzième"],
-          ["**Pas de et** (81, 91)", "**quatre-vingt-unième**", "Comme quatre-vingt-un"],
-          ["**Pas d'élision**", "**le huitième** mois", "Le/la ne s'élide jamais"],
-          ["**Pas d'élision**", "**la onzième** fois", "Le/la ne s'élide jamais"]
+          ["**Adjectif** (commentaire)", "Les maths, c'est **difficile** !"],
+          ["**Adverbe**", "C'est **là-bas**."],
+          ["**Préposition**", "C'est **à gauche**."],
+          ["**Indicateur de temps**", "C'est **dimanche**."],
+          ["**Infinitif**", "Vouloir, c'est **pouvoir**."]
         ]
       },
       "examples": [
-        {"fr": "Le **trente-deuxième** jour du mois."},
-        {"fr": "La **cinquante et unième** page du livre."},
-        {"fr": "Le **soixante et onzième** anniversaire."},
-        {"fr": "Le **quatre-vingt-unième** épisode de la série."},
-        {"fr": "Août est le **huitième** mois de l'année."},
-        {"fr": "C'est la **onzième** fois que je te le répète !"}
+        {"fr": "Les maths, c'est **difficile** !"},
+        {"fr": "C'est **là-bas**."},
+        {"fr": "C'est **à gauche**."},
+        {"fr": "C'est **dimanche**."},
+        {"fr": "Vouloir, c'est **pouvoir**."},
+        {"fr": "C'est **ici** que j'habite."},
+        {"fr": "C'est **maintenant** qu'il faut agir."}
       ],
-      "note": "⚠️ **Règles de prononciation** :\n\n- **le / la** ne s'élident **jamais** devant **huitième** et **onzième**\n\n✅ **le huitième** mois (pas ~~l'huitième~~)\n✅ **la onzième** fois (pas ~~l'onzième~~)\n\nCes deux mots commencent par un **h aspiré** qui empêche l'élision."
-    },
-    {
-      "id": "A2-G-015-3",
-      "type": "lesson",
-      "title": "Usages spécifiques : siècles, rois et énième",
-      "content": "Les numéraux ordinaux ont des usages spécifiques dans certains contextes.",
-      "table": {
-        "headers": ["Contexte", "Règle", "Exemple"],
-        "rows": [
-          ["**Siècles**", "Numéral **ordinal**", "Le **XIIe** siècle = Le **douzième** siècle"],
-          ["**Rois et papes**", "Numéral **cardinal**", "Louis XIV = Louis **quatorze**"],
-          ["**Énième**", "Adjectif indéfini", "C'est la **énième** fois !"]
-        ]
-      },
-      "examples": [
-        {"fr": "Le **XIIe** siècle était une période importante."},
-        {"fr": "Le **XVIIIe** siècle est le siècle des Lumières."},
-        {"fr": "Nous sommes au **XXIe** siècle."},
-        {"fr": "**Charles VIII** se lit : Charles **huit**."},
-        {"fr": "**Louis XIV** se lit : Louis **quatorze**."},
-        {"fr": "**Jean-Paul II** se lit : Jean-Paul **deux**."},
-        {"fr": "C'est la **énième** fois que je te le répète !"},
-        {"fr": "Arrête de faire du bruit pour la **énième** fois !"}
-      ],
-      "note": "⚠️ **Exceptions célèbres pour les rois** :\n\n- **Charles V** → Charles **Quint** (et non « cinq »)\n- **François Ier** → François **Premier**\n- **Sixte V** → Sixte **Quint**\n\n⚠️ **L'adjectif énième** :\n\n**énième** signifie « un nombre indéterminé mais élevé de fois ». C'est un adjectif très utilisé dans la langue courante.\n\n✅ C'est la **énième** fois que je te le dis !\n✅ Il est arrivé en **énième** position.\n\n⚠️ **Pour les siècles** :\n\n- **XIIe** = **douzième** (ordinal)\n- **XVIIIe** = **dix-huitième** (ordinal)\n- **XXIe** = **vingt et unième** (ordinal)"
+      "note": "📌 **C'est + adjectif** = commentaire général :\n*Les maths, c'est difficile !*\n*Le français, c'est beau !*\n\n⚠️ Différence avec **il est + adjectif** :\n- **C'est** → commentaire **général** : *Les maths, c'est difficile.*\n- **Il est** → description d'une **personne/chose précise** : *Il est difficile, ce problème.*\n\n📌 Voir la leçon **A2-G-016** pour les différences complètes entre **c'est** et **il est**."
     }
   ]
 }
