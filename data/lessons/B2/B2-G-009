@@ -61,8 +61,8 @@
     {
       "id": "B2-G-009-3",
       "type": "lesson",
-      "title": "Tableau récapitulatif et points pratiques",
-      "content": "Voici un tableau récapitulatif pour choisir rapidement le bon mode selon la situation.\n\n🔑 **À retenir :**\n\n- `indicatif` = opinion positive, neutre, probable\n- `subjonctif` = opinion négative, doute, inversion\n- `espérer` = normalement `indicatif`, sauf dans les formes négative ou interrogative avec inversion\n- `interrogative indirecte` = toujours `indicatif`\n- `futur dans le passé` = `conditionnel présent`",
+      "title": "Tableau récapitulatif et résumé ultra-pratique",
+      "content": "🔑 **Résumé ultra-pratique :**\n\n- `indicatif` = opinion positive, neutre, probable\n- `subjonctif` = opinion négative, doute, inversion\n- `espérer` = normalement `indicatif`, sauf dans les formes négative ou interrogative avec inversion\n- `interrogative indirecte` = toujours `indicatif`\n- `futur dans le passé` = `conditionnel présent`\n- `verbes d’opinion + infinitif` = sans préposition\n\n⚠️ **Point important pour les persanophones :**\n\nEn persan, on utilise généralement une seule construction pour exprimer l’opinion, mais en français, la **forme** de la phrase (affirmative, négative, interrogative) change le mode.\n\nLa différence entre `Je crois qu’il est…` et `Je ne crois pas qu’il soit…` est très importante.\n\nL’interrogative indirecte n’est jamais suivie du subjonctif en français.\n\nLe futur dans le passé correspond exactement à une action future vue du passé.",
       "table": {
         "headers": ["Situation", "Mode", "Exemple"],
         "rows": [
