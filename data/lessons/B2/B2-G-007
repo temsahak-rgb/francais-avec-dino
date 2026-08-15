@@ -1,0 +1,96 @@
+{
+  "id": "B2-G-007",
+  "level": "B2",
+  "title": "L'opposition",
+  "icon": "⚖️",
+  "estimatedTime": 15,
+  "sections": [
+    {
+      "id": "B2-G-007-1",
+      "type": "lesson",
+      "title": "Coordination : conjonctions, adverbes et locutions prépositives",
+      "content": "Ces formes expriment une **opposition directe**, souvent simple, parfois familière.\n\nElles introduisent une proposition coordonnée à l’**indicatif**.\n\n**Points essentiels :**\n\n- `malgré` / `en dépit de` → opposition malgré un obstacle\n- `au lieu de` → remplacement d’une action par une autre\n- `loin de` → opposition forte, souvent littéraire\n- `en revanche` → contraste équilibré, neutre\n- `quand même` / `tout de même` → concession dans la langue courante",
+      "table": {
+        "headers": ["Expression", "Construction", "Exemple"],
+        "rows": [
+          ["**au contraire / par contre**", "`+ indicatif`", "Je croyais qu’il m’écouterait, au contraire il est parti."],
+          ["**cependant / pourtant / toutefois / mais / néanmoins**", "`+ indicatif`", "Elle aurait dû arroser les plantes, pourtant elle est sortie."],
+          ["**contrairement à**", "`+ nom`", "Contrairement à nos prévisions, il a gagné."],
+          ["**au lieu de**", "`+ infinitif`", "Étudie au lieu de surfer sur Internet !"],
+          ["**loin de**", "`+ infinitif`", "Loin de se laisser intimider, elle a répondu sèchement."],
+          ["**malgré / en dépit de**", "`+ nom`", "Malgré notre insistance, ils ont refusé."],
+          ["**en revanche**", "`+ indicatif`", "Notre hôtel est complet. En revanche, l’autre a des chambres."],
+          ["**sauf**", "`+ nom / infinitif`", "Tous sont présents, sauf monsieur Lambert."],
+          ["**quand même / tout de même**", "`après un verbe`", "Même si je suis fatigué, je vais quand même sortir."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Opposition simple** : Il est venu, mais il est reparti."},
+        {"fr": "**Opposition forte** : Au contraire, il a refusé."},
+        {"fr": "**Préposition + nom** : Malgré la pluie, ils sont sortis."},
+        {"fr": "**Préposition + infinitif** : Au lieu de dormir, il travaille."},
+        {"fr": "**Contraste neutre** : Notre hôtel est complet. En revanche, l’autre a des chambres."}
+      ],
+      "note": "✅ `Malgré la pluie` — suivi d’un nom\n❌ `Malgré il pleut` — malgré n’est jamais suivi d’une proposition.\n\n✅ `Au lieu de dormir` — suivi d’un infinitif\n❌ `Au lieu de il dort` — au lieu de n’est jamais suivi d’une proposition."
+    },
+    {
+      "id": "B2-G-007-2",
+      "type": "lesson",
+      "title": "Conjonctions de subordination : opposition et concession",
+      "content": "**1. Opposition / concession + subjonctif**\n\nCes conjonctions introduisent une proposition subordonnée au **subjonctif**.\n\n**2. Opposition + indicatif**\n\nCes conjonctions introduisent une proposition subordonnée à l’**indicatif**.\n\n**3. Concession forte + conditionnel**\n\n`quand bien même` introduit une concession extrême, souvent littéraire, suivie du **conditionnel**.\n\n⚠️ **Point important pour les persanophones :**\n\nEn persan, on utilise généralement « mais » ou « bien que », mais en français, il existe des structures précises et variées.\n\n- `bien que` est toujours suivi du **subjonctif**, tandis que `même si` est suivi de l’**indicatif**.\n- `au lieu de` signifie « à la place de » et est suivi d’un **infinitif**.\n- `malgré` / `en dépit de` sont toujours suivis d’un **nom**.\n- `quand bien même` est une structure littéraire et très forte.",
+      "table": {
+        "headers": ["Conjonction", "Mode", "Exemple"],
+        "rows": [
+          ["**bien que**", "`subjonctif`", "Bien qu’il fasse froid, ils sont sortis."],
+          ["**encore que** (littéraire)", "`subjonctif`", "Encore qu’il soit tard, il continue."],
+          ["**malgré que**", "`subjonctif`", "Malgré qu’il fasse froid, ils sont sortis."],
+          ["**quoi que**", "`subjonctif`", "Quoi qu’il dise, je ne suis pas convaincu."],
+          ["**sans que**", "`subjonctif`", "Je suis sorti sans qu’il s’en aperçoive."],
+          ["**alors que**", "`indicatif`", "Ces produits sont bon marché, alors que les autres sont chers."],
+          ["**tandis que**", "`indicatif`", "Je travaille tandis que lui, il dort."],
+          ["**même si**", "`indicatif`", "Je veux louer un studio, même si mon mari ne veut pas."],
+          ["**quand (bien) même**", "`conditionnel`", "Quand bien même il s’excuserait, je n’accepterais pas."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Subjonctif** : Bien qu’il fasse froid, ils sont sortis."},
+        {"fr": "**Subjonctif** : Quoi qu’il dise, je ne suis pas convaincu."},
+        {"fr": "**Subjonctif** : Je suis sorti sans qu’il s’en aperçoive."},
+        {"fr": "**Indicatif** : Alors que les autres sont chers, ces produits sont bon marché."},
+        {"fr": "**Indicatif** : Même si mon mari ne veut pas, je veux louer un studio."},
+        {"fr": "**Conditionnel** : Quand bien même il s’excuserait, je n’accepterais pas."}
+      ],
+      "note": "✅ `Bien qu’il soit tard` — subjonctif\n❌ `Bien qu’il est tard` — bien que est toujours suivi du subjonctif.\n\n✅ `Même si tu veux` — indicatif\n❌ `Même si tu veuilles` — même si est suivi de l’indicatif.\n\n✅ `Malgré la pluie` — suivi d’un nom\n❌ `Malgré qu’il pleuve` — malgré que est contesté, mais utilisé."
+    },
+    {
+      "id": "B2-G-007-3",
+      "type": "lesson",
+      "title": "Tableau récapitulatif",
+      "content": "🔑 **Résumé ultra-pratique :**\n\n- **Opposition simple** : `mais` / `pourtant` / `cependant`\n- **Opposition forte** : `au contraire` / `loin de` / `malgré`\n- **Concession réelle** : `même si`\n- **Concession hypothétique** : `bien que` / `quoi que` / `sans que`\n- **Concession extrême** : `quand bien même`\n- **Préposition + infinitif** : `au lieu de` / `loin de`\n- **Préposition + nom** : `malgré` / `en dépit de`\n- `indicatif` = fait réel\n- `subjonctif` = nuance, incertitude, concession",
+      "table": {
+        "headers": ["Type", "Expression", "Mode", "Exemple"],
+        "rows": [
+          ["**Coordination**", "`mais / pourtant / cependant`", "`indicatif`", "Il est venu, mais il est reparti."],
+          ["**Coordination**", "`au contraire / par contre`", "`indicatif`", "Au contraire, il a refusé."],
+          ["**Préposition**", "`malgré / en dépit de`", "`nom`", "Malgré la pluie."],
+          ["**Préposition**", "`au lieu de`", "`infinitif`", "Au lieu de dormir."],
+          ["**Subordination**", "`bien que`", "`subjonctif`", "Bien qu’il soit tard."],
+          ["**Subordination**", "`quoi que`", "`subjonctif`", "Quoi qu’il dise."],
+          ["**Subordination**", "`sans que`", "`subjonctif`", "Sans qu’il sache."],
+          ["**Subordination**", "`alors que / tandis que`", "`indicatif`", "Alors qu’il dort."],
+          ["**Subordination**", "`même si`", "`indicatif`", "Même si tu veux."],
+          ["**Concession forte**", "`quand bien même`", "`conditionnel`", "Quand bien même il viendrait."]
+        ]
+      },
+      "examples": [
+        {"fr": "**Coordination** : Il est venu, mais il est reparti."},
+        {"fr": "**Préposition + nom** : Malgré la pluie, ils sont sortis."},
+        {"fr": "**Préposition + infinitif** : Au lieu de dormir, il travaille."},
+        {"fr": "**Subjonctif** : Bien qu’il soit tard, il continue."},
+        {"fr": "**Indicatif** : Même si tu veux, je ne peux pas."},
+        {"fr": "**Conditionnel** : Quand bien même il viendrait, je ne l’accepterais pas."}
+      ],
+      "note": "⚠️ En français, la structure grammaticale dépend du **type** d’opposition ou de concession et du **mode** requis.\n\n✅ `Bien qu’il soit tard` — subjonctif\n✅ `Même si tu veux` — indicatif\n✅ `Malgré la pluie` — nom\n❌ ~~Malgré qu’il pleuve~~ — malgré que est contesté."
+    }
+  ]
+}
