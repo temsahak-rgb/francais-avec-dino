@@ -1,82 +1,70 @@
 {
   "id": "A2-G-003",
   "level": "A2",
-  "title": "Le passé composé",
-  "icon": "⏪",
+  "title": "Le passé composé : formation et auxiliaire",
+  "icon": "🕰️",
   "estimatedTime": 15,
   "sections": [
     {
       "id": "A2-G-003-1",
       "type": "lesson",
-      "title": "Formation avec l'auxiliaire avoir",
-      "content": "**گذشته ساده** (passé composé) پرکاربردترین زمان گذشته در زبان فرانسه است و برای بیان **عملی که در گذشته تمام شده** استفاده می‌شود.\n\n⚠️ **ساختار**: فعل کمکی **avoir** یا **être** در زمان حال + **اسم مفعول** (participe passé)\n\nبیشتر افعال فرانسوی با **avoir** صرف می‌شوند.",
-      "table": {
-        "headers": ["Pronom", "Avoir (présent)", "Exemple"],
-        "rows": [
-          ["Je", "**ai**", "J'**ai** parl**é**"],
-          ["Tu", "**as**", "Tu **as** parl**é**"],
-          ["Il / Elle", "**a**", "Il **a** parl**é**"],
-          ["Nous", "**avons**", "Nous **avons** parl**é**"],
-          ["Vous", "**avez**", "Vous **avez** parl**é**"],
-          ["Ils / Elles", "**ont**", "Ils **ont** parl**é**"]
-        ]
-      },
+      "title": "Définition et structure",
+      "content": "Le **passé composé** sert à raconter des **événements passés terminés**.\n\n📌 **Structure** :\n\n**auxiliaire** (être / avoir) au **présent** + **participe passé**\n\nC'est le temps du passé le plus utilisé à l'oral.",
       "examples": [
-        {"fr": "J'**ai** mang**é** une pizza hier soir.", "fa": "من دیشب یک پیتزا خوردم."},
-        {"fr": "Elle **a** travaill**é** toute la journée.", "fa": "او تمام روز کار کرد."},
-        {"fr": "Nous **avons** visit**é** Paris l'été dernier.", "fa": "ما تابستان گذشته از پاریس دیدن کردیم."},
-        {"fr": "Ils **ont** achet**é** une nouvelle voiture.", "fa": "آن‌ها یک ماشین نو خریدند."},
-        {"fr": "Tu **as** fin**i** tes devoirs ?", "fa": "تکالیفت را تمام کردی؟"}
+        {"fr": "J'**ai mangé** une pomme."},
+        {"fr": "Elle **est partie** à midi."},
+        {"fr": "Nous **avons fini** nos devoirs."},
+        {"fr": "Ils **sont arrivés** en retard."}
       ],
-      "note": "⚠️ **ساختار اسم مفعول (participe passé)** :\n\n- افعال **-er** → **-é** : `parler` → `parl**é**`\n- افعال **-ir** (گروه ۲) → **-i** : `finir` → `fin**i**`\n- افعال **-re** → **-u** : `vendre` → `vend**u**`\n- افعال بی‌قاعده : `faire` → `fait`, `prendre` → `pris`, `voir` → `vu`"
+      "note": "⚠️ **Cas particulier** : le verbe **être** utilise **avoir** comme auxiliaire.\n\nSon participe passé `été` est **toujours invariable** :\n✅ Ils ont **été** en Floride.\n❌ ~~Ils ont étés.~~\n\n📌 Voir la leçon **A2-G-002** pour les règles d'accord."
     },
     {
       "id": "A2-G-003-2",
       "type": "lesson",
-      "title": "Les verbes avec l'auxiliaire être",
-      "content": "تعدادی از افعال فرانسوی با فعل کمکی **être** صرف می‌شوند.\n\n⚠️ **نکته بسیار مهم** : با **être**، اسم مفعول از نظر **جنسیت** و **تعداد** با فاعل تطابق پیدا می‌کند.",
+      "title": "Conjugaison avec avoir et être",
+      "content": "La plupart des verbes se conjuguent avec **avoir**. Certains verbes de mouvement et les verbes pronominaux utilisent **être**.",
       "table": {
-        "headers": ["Pronom", "Être (présent)", "Exemple"],
+        "headers": ["Personne", "avec avoir (chanter)", "avec être (partir)"],
         "rows": [
-          ["Je", "**suis**", "Je **suis** all**é**(e)"],
-          ["Tu", "**es**", "Tu **es** all**é**(e)"],
-          ["Il", "**est**", "Il **est** all**é**"],
-          ["Elle", "**est**", "Elle **est** all**ée**"],
-          ["Nous", "**sommes**", "Nous **sommes** all**é**(e)s"],
-          ["Ils", "**sont**", "Ils **sont** all**és**"],
-          ["Elles", "**sont**", "Elles **sont** all**ées**"]
+          ["Je", "j'**ai** chanté", "je **suis** parti(e)"],
+          ["Tu", "tu **as** chanté", "tu **es** parti(e)"],
+          ["Il / Elle", "il **a** chanté", "elle **est** partie"],
+          ["Nous", "nous **avons** chanté", "nous **sommes** parti(e)s"],
+          ["Vous", "vous **avez** chanté", "vous **êtes** parti(e)(s)"],
+          ["Ils / Elles", "ils **ont** chanté", "elles **sont** parties"]
         ]
       },
       "examples": [
-        {"fr": "Marie **est** all**ée** au cinéma.", "fa": "ماری به سینما رفت."},
-        {"fr": "Les enfants **sont** arriv**és** à l'école.", "fa": "بچه‌ها به مدرسه رسیدند."},
-        {"fr": "Je **suis** né(e) en 1995.", "fa": "من در سال ۱۹۹۵ به دنیا آمدم."},
-        {"fr": "Elles **sont** parti**es** tôt ce matin.", "fa": "آن‌ها (دخترها) امروز صبح زود رفتند."}
+        {"fr": "J'ai **chanté** toute la soirée."},
+        {"fr": "Elle est **partie** à midi."},
+        {"fr": "Nous avons **fini** le projet."},
+        {"fr": "Ils sont **venus** nous voir."}
       ],
-      "note": "⚠️ **۱۴ فعل با être** (و مشتقات آن‌ها) :\n\n`aller`, `venir`, `arriver`, `partir`, `entrer`, `sortir`, `monter`, `descendre`, `naître`, `mourir`, `rester`, `tomber`, `retourner`, `passer` (به معنی حرکت)\n\n➕ همه **افعال انعکاسی** : `se laver`, `se lever`...\n\n✅ **تطابق** : `Elle est all**ée**` (مؤنث مفرد)\n✅ **تطابق** : `Ils sont arriv**és**` (مذکر جمع)\n✅ **تطابق** : `Elles sont parti**es**` (مؤنث جمع)"
+      "note": "📌 Avec **être**, le participe passé s'accorde avec le sujet :\n*Elle est parti**e**. Ils sont parti**s**.*\n\nAvec **avoir**, pas d'accord avec le sujet :\n*Elle a chanté. Ils ont chanté.*\n\n→ Voir **A2-G-002** pour les règles complètes d'accord."
     },
     {
       "id": "A2-G-003-3",
       "type": "lesson",
-      "title": "La négation et l'interrogation",
-      "content": "⚠️ **در حالت منفی** : **ne** و **pas** دور **فعل کمکی** قرار می‌گیرند (نه دور اسم مفعول).\n\n⚠️ **در حالت پرسشی** : فعل کمکی با فاعل **جا به جا** می‌شود.",
+      "title": "Le choix de l'auxiliaire : être ou avoir ?",
+      "content": "La majorité des verbes utilisent **avoir**. On utilise **être** dans trois cas :",
       "table": {
-        "headers": ["Type", "Structure", "Exemple"],
+        "headers": ["Auxiliaire", "Cas", "Exemple"],
         "rows": [
-          ["**Négation**", "ne + auxiliaire + pas + participe", "Je **n'**ai **pas** mangé."],
-          ["**Interrogation**", "auxiliaire + sujet + participe", "**As**-tu mangé ?"],
-          ["**Nég. + interrog.**", "ne + auxiliaire + pas + sujet", "**N'**as-tu **pas** mangé ?"]
+          ["**avoir**", "Verbes transitifs", "Il a lu un roman."],
+          ["**avoir**", "Verbes modaux", "Il a pu venir."],
+          ["**avoir**", "Verbes impersonnels", "Il a neigé."],
+          ["**être**", "Verbes pronominaux", "Elle s'est levée."],
+          ["**être**", "Forme passive", "Elle a été reconnue."],
+          ["**être**", "Mouvement / changement", "Il est venu."]
         ]
       },
       "examples": [
-        {"fr": "Je **n'**ai **pas** fini mon travail.", "fa": "من کارم را تمام نکردم."},
-        {"fr": "Elle **n'**est **pas** venue à la fête.", "fa": "او به جشن نیامد."},
-        {"fr": "Nous **n'**avons **jamais** voyagé en avion.", "fa": "ما هرگز با هواپیما سفر نکرده‌ایم."},
-        {"fr": "**As**-tu visité le musée du Louvre ?", "fa": "آیا از موزه لوور دیدن کردی؟"},
-        {"fr": "**Est**-elle partie déjà ?", "fa": "آیا او قبلاً رفته است؟"},
-        {"fr": "**Ont**-ils acheté des cadeaux ?", "fa": "آیا آن‌ها هدیه خریدند؟"}
+        {"fr": "Il a **lu** un roman. (avoir)"},
+        {"fr": "Elle s'est **levée** tard. (être + pronominal)"},
+        {"fr": "Il est **venu** avec nous. (être + mouvement)"},
+        {"fr": "Il a **neigé** hier. (avoir + impersonnel)"}
       ],
-      "note": "⚠️ **با قیدها** (beaucoup, peu, déjà, souvent) :\n\nقید **بین فعل کمکی و اسم مفعول** قرار می‌گیرد :\n\n✅ J'ai **déjà** mangé.\n✅ Elle est **souvent** allée à Paris.\n✅ Ils ont **beaucoup** travaillé.\n\n❌ ~~J'ai mangé déjà.~~\n❌ ~~Elle est allée souvent à Paris.~~"
+      "note": "📌 **Les 12 verbes de mouvement avec être** :\n\n`aller`, `arriver`, `descendre`, `entrer`, `monter`, `naître`, `partir`, `rester`, `retourner`, `sortir`, `tomber`, `venir`\n\n💡 **Astuce** : ces verbes expriment un **déplacement** ou un **changement d'état**.\n\n⚠️ Certains peuvent aussi utiliser **avoir** quand ils ont un COD :\n*Il a **monté** les valises.* (COD)\n*Il est **monté** dans sa chambre.* (pas de COD)"
     }
   ]
 }
