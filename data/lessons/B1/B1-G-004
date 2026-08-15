@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-001",
+  "id": "B1-G-004",
   "level": "B1",
   "title": "Le plus-que-parfait",
   "icon": "⏳",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-001-1",
+      "id": "B1-G-004-1",
       "type": "lesson",
       "title": "Formation du plus-que-parfait",
       "content": "Le plus-que-parfait exprime une action **antérieure** à une autre action passée.\n\n📌 **Formation** :\n\n**auxiliaire `avoir` ou `être` à l'imparfait** + **participe passé**\n\n⚠️ Les verbes qui utilisent **`être`** au passé composé utilisent aussi **`être`** au plus-que-parfait. Le participe passé s'accorde alors avec le **sujet**.",
@@ -30,7 +30,7 @@
       "note": "⚠️ **Auxiliaire `être` ou `avoir` ?**\n\n- Les verbes de la « maison d'être » et les verbes pronominaux utilisent **être** :\n*Elle **était** partie.* / *Ils **étaient** arrivés.*\n\n- Tous les autres verbes utilisent **avoir** :\n*Il **avait** mangé.* / *Nous **avions** fini.*\n\n📌 Le participe passé avec **être** s'accorde avec le **sujet** :\n✅ *Elle était **partie**.*\n✅ *Ils étaient **partis**.*"
     },
     {
-      "id": "B1-G-001-2",
+      "id": "B1-G-004-2",
       "type": "lesson",
       "title": "Emploi : l'antériorité et l'hypothèse irréelle",
       "content": "📌 **1. Action passée antérieure à une autre action passée**\n\nLe plus-que-parfait exprime un passé **avant** un autre passé.\n\nChronologie :\n1. Action la plus ancienne → **plus-que-parfait**\n2. Action plus récente → **passé composé** ou **imparfait**\n\n📌 **2. Après `si` dans les hypothèses irréelles du passé**\n\nStructure :\n- `si` + **plus-que-parfait** → **conditionnel passé**\n\n⚠️ Cette structure exprime une condition **non réalisée** dans le passé.",
@@ -45,7 +45,7 @@
       "note": "📌 **Chronologie** :\n\n*Quand nous sommes arrivés* (2) → *elle était déjà partie* (1)\n\n1. Elle **est partie** d'abord → **plus-que-parfait** : *elle **était partie***\n2. Nous **sommes arrivés** ensuite → **passé composé** : *nous **sommes arrivés***\n\n⚠️ **Hypothèse irréelle du passé** :\n\n✅ *Si tu **étais arrivé** à l'heure, tu **n'aurais pas manqué** le début.*\n(Réalité : tu n'es pas arrivé → tu as manqué le début)\n\n❌ ~~Si tu serais arrivé...~~ (jamais `conditionnel` après `si`)"
     },
     {
-      "id": "B1-G-001-3",
+      "id": "B1-G-004-3",
       "type": "lesson",
       "title": "Récapitulatif",
       "content": "Voici un récapitulatif des fonctions principales du plus-que-parfait :",
