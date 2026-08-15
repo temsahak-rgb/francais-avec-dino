@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-013",
+  "id": "A2-G-007",
   "level": "A2",
   "title": "Les pronoms personnels réfléchis",
   "icon": "🪞",
   "estimatedTime": 12,
   "sections": [
     {
-      "id": "A2-G-013-1",
+      "id": "A2-G-007-1",
       "type": "lesson",
       "title": "Les pronoms réfléchis : définition et formes",
       "content": "Les pronoms personnels réfléchis accompagnent les **verbes pronominaux**. Ils indiquent que le sujet fait l'action **sur lui-même**.\n\n⚠️ **Règle principale** : le pronom réfléchi se place **avant le verbe**.",
@@ -31,7 +31,7 @@
       "note": "⚠️ **Points essentiels** :\n\n- **me**, **te**, **se** deviennent **m'**, **t'**, **s'** devant une **voyelle** ou un **h muet**\n- Le pronom réfléchi s'accorde **toujours** avec le sujet : `Je **me** lave`, `Tu **te** laves`, `Il **se** lave`"
     },
     {
-      "id": "A2-G-013-2",
+      "id": "A2-G-007-2",
       "type": "lesson",
       "title": "Cas particuliers : impératif, infinitif et négation",
       "content": "⚠️ **À l'impératif affirmatif** : le pronom se place **après** le verbe avec un **trait d'union**.\n\n**te** devient **toi**.\n\n⚠️ **À l'impératif négatif** : le pronom suit la règle générale (avant le verbe).\n\n⚠️ **Avec un infinitif** : le pronom se place **avant l'infinitif**.",
@@ -61,7 +61,7 @@
       "note": "⚠️ **Le pronom on** :\n\nLe pronom **on** est **toujours** suivi de **se**.\n\n✅ **On** s'habille ?\n✅ **On** se voit demain ?\n\n❌ ~~On nous habille.~~ (incorrect)"
     },
     {
-      "id": "A2-G-013-3",
+      "id": "A2-G-007-3",
       "type": "lesson",
       "title": "Les temps composés : être et accord",
       "content": "⚠️ **Règle très importante** : les verbes pronominaux se conjuguent **toujours** avec **être** aux temps composés.\n\nLe participe passé s'accorde selon le rôle du pronom réfléchi (COD ou COI).",
