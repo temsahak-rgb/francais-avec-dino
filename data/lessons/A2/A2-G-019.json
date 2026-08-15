@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-016",
+  "id": "A2-G-019",
   "level": "A2",
   "title": "Exprimer les mesures (avancé)",
   "icon": "📏",
   "estimatedTime": 12,
   "sections": [
     {
-      "id": "A2-G-016-1",
+      "id": "A2-G-019-1",
       "type": "lesson",
       "title": "Les structures alternatives : être + de",
       "content": "En plus de **mesurer**, on peut utiliser **être** + adjectif + **de** + mesure.",
@@ -28,7 +28,7 @@
       "note": "✅ **Comparaison** :\n\n- La tour Eiffel **mesure** 320 mètres de haut.\n- La tour Eiffel **est haute de** 320 mètres.\n\nLes deux sont correctes, mais **mesurer** est plus fréquent."
     },
     {
-      "id": "A2-G-016-2",
+      "id": "A2-G-019-2",
       "type": "lesson",
       "title": "Les structures avec faire et avoir",
       "content": "On peut aussi utiliser **faire** ou **avoir** pour exprimer les mesures.",
@@ -52,7 +52,7 @@
       "note": "✅ **Quatre structures équivalentes** pour exprimer la même mesure :\n\n1. La tour Eiffel **mesure** 320 mètres de haut.\n2. La tour Eiffel **est haute de** 320 mètres.\n3. La tour Eiffel **fait** 320 mètres de haut.\n4. La tour Eiffel **a une hauteur de** 320 mètres.\n\n**mesurer** est la structure la plus fréquente et la plus simple."
     },
     {
-      "id": "A2-G-016-3",
+      "id": "A2-G-019-3",
       "type": "lesson",
       "title": "Questions et expressions courantes",
       "content": "Voici comment poser des questions sur les mesures et exprimer des dimensions complexes.",
