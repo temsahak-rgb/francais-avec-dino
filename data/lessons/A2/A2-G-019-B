@@ -1,12 +1,12 @@
 {
-  "id": "A2-G-019-B",
+  "id": "A2-G-010-B",
   "level": "A2",
   "title": "Les prépositions : avec, chez, dans, dès, avant, après",
   "icon": "📍",
   "estimatedTime": 12,
   "sections": [
     {
-      "id": "A2-G-019-B-1",
+      "id": "A2-G-010-B-1",
       "type": "lesson",
       "title": "avec, chez, dans, dès",
       "content": "**`avec`** exprime l'**accompagnement**, la **manière** ou le **moyen**.\n\n**`chez`** indique le lieu d'une **personne** ou d'un **professionnel**.\n\n**`dans`** indique une position **à l'intérieur**.\n\n**`dès`** signifie **« à partir de »** (moment précis).",
@@ -33,7 +33,7 @@
       "note": "⚠️ **`chez`** ne s'utilise **jamais** pour un lieu géographique ou un objet.\n\n✅ Je vais **chez** le médecin.\n✅ Je vais **chez** lui.\n❌ ~~Je vais chez Paris.~~ → Je vais **à** Paris.\n\n📌 Avec un pronom tonique :\nchez **moi**, chez **toi**, chez **lui**, chez **elle**, chez **nous**, chez **vous**, chez **eux**."
     },
     {
-      "id": "A2-G-019-B-2",
+      "id": "A2-G-010-B-2",
       "type": "lesson",
       "title": "devant, derrière, avant, après",
       "content": "**`devant`** / **`derrière`** indiquent une **position** par rapport à quelque chose.\n\n**`avant`** / **`après`** expriment l'**ordre dans le temps** ou dans l'**espace**.\n\n⚠️ La construction avec un **infinitif** est différente pour `avant` et `après`.",
