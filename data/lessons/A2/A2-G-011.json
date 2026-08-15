@@ -1,85 +1,58 @@
 {
-  "id": "A2-G-011",
+  "id": "A2-G-019-C",
   "level": "A2",
-  "title": "Les pronoms personnels compléments d'objet direct (COD)",
-  "icon": "🎯",
+  "title": "Les prépositions de lieu : en, entre, parmi, sur, sous, vers",
+  "icon": "🗺️",
   "estimatedTime": 12,
   "sections": [
     {
       "id": "A2-G-011-1",
       "type": "lesson",
-      "title": "Les pronoms COD : définition et formes",
-      "content": "Les pronoms personnels compléments d'objet direct remplacent un **complément d'objet direct** (qui répond aux questions **qui ?** et **quoi ?**).\n\n⚠️ **Règle principale** : les pronoms COD se placent **avant le verbe**.",
+      "title": "La préposition en",
+      "content": "La préposition **`en`** exprime le **lieu**, la **destination**, le **moyen de transport** et la **matière**.\n\n📌 Pour les **pays féminins** et les **pays masculins commençant par une voyelle**, on utilise toujours **`en`**.",
       "table": {
-        "headers": ["Personne", "Singulier", "Pluriel", "Exemple"],
+        "headers": ["Usage", "Exemple"],
         "rows": [
-          ["1re personne", "**me / m'***", "**nous**", "Tu **me** rencontres. / Il **nous** rencontre."],
-          ["2e personne", "**te / t'***", "**vous**", "Je **te** rencontre. / Je **vous** rencontre."],
-          ["3e personne", "**le / la / l'***", "**les**", "Je **le** rencontre. / Je **les** rencontre."]
+          ["Pays féminin", "Il habite **en** France."],
+          ["Pays masc. + voyelle", "Il vit **en** Iran."],
+          ["Lieu (situation)", "Elle est **en** classe."],
+          ["Moyen de transport", "Il vient **en** train."],
+          ["Matière", "Un pull **en** laine."]
         ]
       },
       "examples": [
-        {"fr": "Tu détestes **qui** ? → Jérôme. → Tu **le** détestes."},
-        {"fr": "Tu veux **quoi** ? → Des livres. → Tu **les** veux."},
-        {"fr": "Vous mangez **quoi** ? → Les tartelettes. → Vous **les** mangez."},
-        {"fr": "Philippe ? Je **le** vois tous les matins."},
-        {"fr": "Ma nouvelle collègue ? Je **la** connais peu."}
+        {"fr": "Il habite **en** France."},
+        {"fr": "Elle voyage **en** Italie."},
+        {"fr": "Il vit **en** Irak."},
+        {"fr": "Nous partons **en** train."},
+        {"fr": "C'est une bague **en** or."}
       ],
-      "note": "⚠️ **Règles importantes** :\n\n- **me**, **te**, **le**, **la** deviennent **m'**, **t'**, **l'** devant une **voyelle** ou un **h muet**\n- Il existe **deux pronoms** à la 3e personne du singulier :\n  - **le** (masculin) : `Je **le** vois.`\n  - **la** (féminin) : `Je **la** connais.`"
+      "note": "⚠️ **en vs dans vs à** :\n\n- **en** → pays, matière, transport fermé :\n*en France, en laine, en bus*\n\n- **dans** → intérieur d'un lieu précis :\n*dans la salle, dans mon sac*\n\n- **à** → ville, direction, heure :\n*à Paris, à la piscine, à 8h*\n\n✅ Je vais **en** Italie.\n✅ Je vais **à** Rome.\n❌ ~~Je vais à Italie.~~"
     },
     {
       "id": "A2-G-011-2",
       "type": "lesson",
-      "title": "La place du pronom COD",
-      "content": "⚠️ **Règle générale** : le pronom COD se place **avant le verbe**.\n\nMais il y a des exceptions selon le type de phrase.",
+      "title": "entre, parmi, sur, sous, vers",
+      "content": "**`entre`** → position entre **deux** éléments.\n\n**`parmi`** → position au milieu de **plusieurs** éléments.\n\n**`sur`** / **`sous`** → position **au-dessus** / **au-dessous**.\n\n**`vers`** → direction approximative ou temps approximatif.",
       "table": {
-        "headers": ["Type de phrase", "Règle", "Exemple"],
+        "headers": ["Préposition", "Sens", "Exemple"],
         "rows": [
-          ["**Phrase déclarative**", "Pronom **avant** le verbe", "Je **les** invite."],
-          ["**Forme négative**", "**ne** + pronom + verbe + **pas**", "Je **ne** les invite **pas**."],
-          ["**Temps composés**", "Pronom **avant** l'auxiliaire", "Je **l'**ai vue hier."],
-          ["**Avec infinitif**", "Pronom **avant** l'infinitif", "Je vais **les** finir."],
-          ["**Impératif affirmatif**", "Pronom **après** le verbe + trait d'union", "Prends-**les** !"],
-          ["**Impératif négatif**", "Pronom **avant** le verbe", "**Ne** les prends **pas** !"]
+          ["**entre**", "Entre 2 éléments", "**Entre** la porte et la fenêtre."],
+          ["**parmi**", "Parmi plusieurs", "**Parmi** ces élèves."],
+          ["**sur**", "Au-dessus", "Le livre est **sur** la table."],
+          ["**sous**", "Au-dessous", "Le chat est **sous** la table."],
+          ["**vers**", "Direction / temps approx.", "**Vers** la gare. **Vers** midi."]
         ]
       },
       "examples": [
-        {"fr": "Je **les** invite à la fête. (déclarative)"},
-        {"fr": "Je **ne** les invite **pas**. (négative)"},
-        {"fr": "Julie ? Je **l'**ai vue hier. (passé composé)"},
-        {"fr": "Je **ne l'**ai **pas** vue. (passé composé négatif)"},
-        {"fr": "Je viens de **les** finir. (passé récent)"},
-        {"fr": "Je suis en train de **les** lire. (présent continu)"},
-        {"fr": "Je vais **les** inviter. (futur proche)"},
-        {"fr": "Il faut **les** finir. (avec il faut)"},
-        {"fr": "Je dois **les** faire. (avec devoir)"},
-        {"fr": "Je peux **les** voir. (avec pouvoir)"},
-        {"fr": "Je veux **les** acheter. (avec vouloir)"}
+        {"fr": "La pharmacie est **entre** la banque et la boulangerie."},
+        {"fr": "**Entre** amis, on se dit tout."},
+        {"fr": "Il y a un problème **parmi** les étudiants."},
+        {"fr": "Le chat dort **sous** le lit."},
+        {"fr": "Il marche **vers** la gare."},
+        {"fr": "Il arrivera **vers** midi."}
       ],
-      "note": "⚠️ **Avec les verbes suivis d'un infinitif** (passé récent, présent continu, futur proche, **il faut**, **savoir**, **pouvoir**, **devoir**, **vouloir**), le pronom se place **avant l'infinitif**, pas avant le verbe conjugué.\n\n✅ Je vais **les** finir.\n❌ ~~Je les vais finir.~~"
-    },
-    {
-      "id": "A2-G-011-3",
-      "type": "lesson",
-      "title": "L'impératif et l'accord du participe passé",
-      "content": "⚠️ **À l'impératif affirmatif** : le pronom se place **après** le verbe avec un **trait d'union**.\n\n**me** et **te** deviennent **moi** et **toi**.\n\n⚠️ **À l'impératif négatif** : le pronom suit la règle générale (avant le verbe).",
-      "table": {
-        "headers": ["Impératif affirmatif", "Impératif négatif"],
-        "rows": [
-          ["Prends-**les** !", "**Ne** les prends **pas** !"],
-          ["Attends-**moi** !", "**Ne** m'attends **pas** !"],
-          ["Écoute-**le** !", "**Ne** l'écoute **pas** !"],
-          ["Aidez-**nous** !", "**Ne** nous aidez **pas** !"]
-        ]
-      },
-      "examples": [
-        {"fr": "Prends-**les** ! (et non ~~Prends-les~~ sans trait d'union)"},
-        {"fr": "Attends-**moi** ! (me → **moi**)"},
-        {"fr": "Dépêche-**toi** ! (te → **toi**)"},
-        {"fr": "**Ne** les prends **pas** ! (impératif négatif)"},
-        {"fr": "**Ne** m'attends **pas** ! (impératif négatif)"}
-      ],
-      "note": "⚠️ **Règle très importante : l'accord du participe passé avec le COD**\n\nAu **passé composé**, le participe passé s'accorde avec le **COD** quand celui-ci est placé **avant** le verbe.\n\n✅ Julie ? Je **l'ai vue** hier. (accord avec Julie = féminin)\n✅ Ces fleurs ? Je **les ai achetées** ce matin. (accord avec fleurs = féminin pluriel)\n\n❌ ~~Je l'ai vu hier.~~ (si Julie est une femme)\n\nCette règle est **essentielle** en français écrit."
+      "note": "⚠️ **entre vs parmi** :\n\n- **entre** → **2 éléments** seulement :\n*Entre toi et moi.*\n\n- **parmi** → **3 éléments ou plus** (ou un groupe) :\n*Parmi ces livres, lequel préfères-tu ?*\n*Parmi la foule.*\n\n❌ ~~Parmi toi et moi.~~\n❌ ~~Entre ces élèves.~~ (si > 2)"
     }
   ]
 }
