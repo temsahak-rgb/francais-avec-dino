@@ -1,81 +1,85 @@
 {
   "id": "A2-G-012",
   "level": "A2",
-  "title": "Les pronoms personnels compléments d'objet indirect (COI)",
-  "icon": "🟣",
-  "estimatedTime": 12,
+  "title": "Les adverbes de lieu",
+  "icon": "📍",
+  "estimatedTime": 15,
   "sections": [
     {
       "id": "A2-G-012-1",
       "type": "lesson",
-      "title": "Les pronoms COI : définition et formes",
-      "content": "Les pronoms personnels compléments d'objet indirect remplacent un complément introduit par **à** et répondent à la question **à qui ?**.\n\n⚠️ **Règle principale** : le pronom COI se place **avant le verbe**.",
+      "title": "Les adverbes de provenance et de passage",
+      "content": "Ces adverbes indiquent **d'où** l'on vient ou **par où** l'on passe.",
       "table": {
-        "headers": ["Personne", "Singulier", "Pluriel", "Exemple"],
+        "headers": ["Type", "Adverbe", "Exemple"],
         "rows": [
-          ["1re personne", "**me / m'***", "**nous**", "Il **me** téléphone. / Il **nous** téléphone."],
-          ["2e personne", "**te / t'***", "**vous**", "Je **te** parle. / Je **vous** parle."],
-          ["3e personne", "**lui**", "**leur**", "Je **lui** parle. / Je **leur** parle."]
+          ["**Provenance**", "**d'où**", "**D'où** viens-tu ?"],
+          ["**Provenance**", "**d'ici**", "Vous êtes **d'ici** ?"],
+          ["**Provenance**", "**de là**", "Je viens **de là**."],
+          ["**Provenance**", "**d'ailleurs**", "Il vient **d'ailleurs**."],
+          ["**Passage**", "**par ici**", "Passez **par ici**."],
+          ["**Passage**", "**par là**", "Il faut passer **par là**."]
         ]
       },
       "examples": [
-        {"fr": "À qui est-ce qu'il téléphone ? → À moi. → Il **me** téléphone."},
-        {"fr": "À qui parles-tu ? → À Marie. → Je **lui** parle."},
-        {"fr": "Elle **ne** nous fait **jamais** de cadeaux."},
-        {"fr": "Je **lui** parle souvent au bureau."},
-        {"fr": "Je **leur** envoie un texto tous les jours."}
+        {"fr": "**D'où** viens-tu ? → Je viens de Téhéran."},
+        {"fr": "Vous êtes **d'ici** ? → Non, je suis de Paris."},
+        {"fr": "Je viens **de là**, c'est à dix minutes."},
+        {"fr": "Il vient **d'ailleurs**, il n'est pas français."},
+        {"fr": "Passez **par ici**, c'est plus facile."},
+        {"fr": "Il faut passer **par là** pour aller à la gare."}
       ],
-      "note": "⚠️ **Points essentiels** :\n\n- **lui** est identique pour le masculin et le féminin : `Je lui parle.` (à Paul / à Marie)\n- **leur** est identique pour le masculin et le féminin pluriel : `Je leur parle.`\n- **me**, **te**, **se** deviennent **m'**, **t'**, **s'** devant une **voyelle** ou un **h muet**"
+      "note": "⚠️ **d'ailleurs** a deux sens :\n\n1. **Provenance** : il vient **d'ailleurs** (d'un autre endroit)\n2. **Connecteur logique** : **d'ailleurs**, je pense que... (par ailleurs, de plus)\n\n✅ Il vient **d'ailleurs**. (provenance)\n✅ Il est intelligent, **d'ailleurs** il a réussi. (connecteur)"
     },
     {
       "id": "A2-G-012-2",
       "type": "lesson",
-      "title": "Cas particuliers : impératif et infinitif",
-      "content": "⚠️ **À l'impératif affirmatif** : le pronom se place **après** le verbe avec un **trait d'union**.\n\n**me** et **te** deviennent **moi** et **toi**.\n\n⚠️ **À l'impératif négatif** : le pronom suit la règle générale (avant le verbe).\n\n⚠️ **Avec un infinitif** : le pronom se place **avant l'infinitif**.",
+      "title": "Les adverbes composés avancés",
+      "content": "Ces adverbes sont plus formels et souvent utilisés à l'écrit.",
       "table": {
-        "headers": ["Type", "Règle", "Exemple"],
+        "headers": ["Adverbe", "Exemple"],
         "rows": [
-          ["**Impératif affirmatif**", "Pronom **après** le verbe", "Passe-**moi** l'huile !"],
-          ["**Impératif négatif**", "Pronom **avant** le verbe", "**Ne** me répète **pas** ça !"],
-          ["**Avec infinitif**", "Pronom **avant** l'infinitif", "Je vais **leur** téléphoner."]
+          ["**au-delà**", "**Au-delà** de la rivière, il y a une forêt."],
+          ["**au-dehors**", "Il fait froid **au-dehors**."],
+          ["**au-dedans**", "**Au-dedans** de la maison, il fait chaud."],
+          ["**ci-dessus**", "Voir **ci-dessus**."],
+          ["**ci-dessous**", "Voir **ci-dessous**."],
+          ["**ci-joint**", "Veuillez trouver **ci-joint** mon CV."],
+          ["**ci-inclus**", "La facture est **ci-incluse**."]
         ]
       },
       "examples": [
-        {"fr": "Passe-**moi** l'huile ! (impératif affirmatif)"},
-        {"fr": "Donne-**leur** ce livre ! (impératif affirmatif)"},
-        {"fr": "**Ne** me répète **pas** ça ! (impératif négatif)"},
-        {"fr": "**Ne** leur parle **pas** ! (impératif négatif)"},
-        {"fr": "Je viens de **leur** parler. (passé récent)"},
-        {"fr": "Je suis en train de **leur** donner ces informations. (présent continu)"},
-        {"fr": "Je vais **leur** téléphoner. (futur proche)"},
-        {"fr": "Il faut **leur** expliquer la situation. (avec il faut)"},
-        {"fr": "Je dois **leur** répondre avant midi. (avec devoir)"},
-        {"fr": "Je veux **leur** écrire une lettre. (avec vouloir)"}
+        {"fr": "**Au-delà** de la rivière, il y a une belle forêt."},
+        {"fr": "Il fait très froid **au-dehors** en hiver."},
+        {"fr": "**Au-dedans** de la maison, il fait chaud et confortable."},
+        {"fr": "Voir les explications **ci-dessus**."},
+        {"fr": "Vous trouverez les détails **ci-dessous**."},
+        {"fr": "Veuillez trouver **ci-joint** mon CV et ma lettre de motivation."},
+        {"fr": "La facture est **ci-incluse** dans l'enveloppe."}
       ],
-      "note": "⚠️ **Verbes qui n'acceptent pas le COI** :\n\nAvec certains verbes, on ne peut **pas** utiliser le pronom COI. Il faut utiliser **à + pronom tonique**.\n\n✅ Je tiens beaucoup **à elle**.\n❌ ~~Je lui tiens beaucoup.~~\n\n✅ Il pense **à eux**.\n❌ ~~Il leur pense.~~\n\n✅ Nous faisons attention **à toi**.\n❌ ~~Nous te faisons attention.~~"
+      "note": "⚠️ **ci-joint** et **ci-inclus** :\n\n- Quand ils sont **avant le nom** → invariables\n  ✅ **Ci-joint** la facture.\n  \n- Quand ils sont **après le verbe** → s'accordent\n  ✅ La facture est **ci-jointe**.\n  ✅ Les documents sont **ci-inclus**."
     },
     {
       "id": "A2-G-012-3",
       "type": "lesson",
-      "title": "La négation et les temps composés",
-      "content": "⚠️ **À la forme négative** : **ne** précède le pronom COI.\n\n⚠️ **Aux temps composés** : le pronom COI se place **avant l'auxiliaire**.",
+      "title": "Quelque part et nulle part",
+      "content": "Ces expressions sont très utilisées pour parler de lieux indéterminés.",
       "table": {
-        "headers": ["Temps", "Affirmative", "Négative"],
+        "headers": ["Expression", "Exemple"],
         "rows": [
-          ["**Présent**", "Il **leur** téléphone.", "Il **ne** leur téléphone **pas**."],
-          ["**Passé composé**", "Je **leur** ai parlé.", "Je **ne** leur ai **pas** parlé."],
-          ["**Futur proche**", "Je vais **leur** écrire.", "Je **ne** vais **pas** leur écrire."]
+          ["**quelque part**", "Il habite **quelque part** en France."],
+          ["**nulle part**", "Je ne vais **nulle part** aujourd'hui."],
+          ["**ailleurs**", "Je veux aller **ailleurs**."]
         ]
       },
       "examples": [
-        {"fr": "Il **leur** téléphone tous les soirs."},
-        {"fr": "Il **ne** leur téléphone **pas** le week-end."},
-        {"fr": "Je **leur** ai parlé hier."},
-        {"fr": "Je **ne** leur ai **pas** parlé depuis une semaine."},
-        {"fr": "Nous **leur** avons envoyé une invitation."},
-        {"fr": "Nous **ne** leur avons **pas** encore répondu."}
+        {"fr": "Il habite **quelque part** en France, je ne sais pas où."},
+        {"fr": "J'ai perdu mes clés **quelque part** dans la maison."},
+        {"fr": "On se retrouvera **quelque part** en ville."},
+        {"fr": "Je ne vais **nulle part** aujourd'hui, je reste chez moi."},
+        {"fr": "Il est parti **ailleurs**, il ne reviendra pas."}
       ],
-      "note": "⚠️ **Différence importante entre COD et COI** :\n\n- **COD** : remplace un complément **sans préposition** → `Je **le** vois.`\n- **COI** : remplace un complément avec **à** → `Je **lui** parle.`\n\n✅ Je vois **Paul**. → Je **le** vois. (COD)\n✅ Je parle **à Paul**. → Je **lui** parle. (COI)\n\n❌ ~~Je lui vois.~~ (incorrect)\n❌ ~~Je le parle.~~ (incorrect)"
+      "note": "⚠️ **Négation avec nulle part** :\n\nÀ la forme négative, **nulle part** remplace les adverbes de lieu :\n\n✅ Je **ne** vais **nulle part**. (je ne vais nulle part)\n✅ Il **n'**est **nulle part**. (il n'est nulle part)\n\n📌 **quelque part** → lieu indéterminé (affirmatif)\n📌 **nulle part** → lieu indéterminé (négatif)"
     }
   ]
 }
