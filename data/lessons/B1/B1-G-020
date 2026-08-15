@@ -1,12 +1,12 @@
 {
-  "id": "B1-G-026",
+  "id": "B1-G-020",
   "level": "B1",
   "title": "Les adverbes de manière",
   "icon": "✨",
   "estimatedTime": 15,
   "sections": [
     {
-      "id": "B1-G-026-1",
+      "id": "B1-G-020-1",
       "type": "lesson",
       "title": "Définition, adverbes simples et locutions adverbiales",
       "content": "Les adverbes de manière modifient l'action du verbe et répondent à la question : **Comment ? De quelle manière ?**\n\nIls peuvent être :\n- des **adverbes simples** (un seul mot)\n- des **locutions adverbiales** (groupe de mots)\n- des **adverbes en `-ment`** (dérivés d'adjectifs)\n\n📌 **Adverbes simples courants** :\n`ainsi`, `bien`, `comme`, `comment`, `debout`, `ensemble`, `exprès`, `mal`, `mieux`, `plutôt`, `volontiers`\n\n📌 **Locutions adverbiales** :\n`à peu près`, `à voix haute`, `à propos`, `c'est-à-dire`, `à tort`, `en vain`",
@@ -22,7 +22,7 @@
       "note": "⚠️ **Ne pas confondre** :\n\n- `bien` / `mieux` → adverbes (modifient un verbe)\n- `bon` / `meilleur` → adjectifs (modifient un nom)\n\n✅ *Il travaille **bien**.* / *Il travaille **mieux**.*\n✅ *C'est un **bon** travail.* / *C'est un **meilleur** travail.*\n\n❌ ~~Il travaille bon.~~ ❌ ~~C'est un bien travail.~~"
     },
     {
-      "id": "B1-G-026-2",
+      "id": "B1-G-020-2",
       "type": "lesson",
       "title": "La formation des adverbes en -ment",
       "content": "La plupart des adverbes de manière se forment avec le suffixe **`-ment`**. Voici les règles principales :\n\n**1. Adjectif au féminin + `-ment`** (règle générale)\n`sérieux` → `sérieuse` → `sérieusement`\n\n**2. Adjectif masculin terminé par une voyelle + `-ment`**\n`résolu` → `résolument`\n\n**3. Adjectifs en `-ent` / `-ant` → `-emment` / `-amment`**\n`violent` → `violemment` | `constant` → `constamment`\n\n**4. Adjectifs en `-u` → accent circonflexe + `-ment`**\n`cru` → `crûment` | `assidu` → `assidûment`\n\n**5. Formes particulières en `-ément`**\n`énorme` → `énormément` | `précis` → `précisément`\n\n**6. Adverbes irréguliers**\n`bref` → `brièvement` | `gentil` → `gentiment`",
@@ -54,7 +54,7 @@
       "note": "⚠️ **Prononciation** :\n\n- `-emment` et `-amment` se prononcent tous les deux /amɑ̃/ (comme dans `constamment`)\n- `-ûment` garde la prononciation /ymɑ̃/ : `crûment` /kʁymɑ̃/\n\n📌 **Orthographe moderne** :\nL'accent circonflexe sur `-ûment` est parfois supprimé :\n`crûment` ou `crument`, `assidûment` ou `assidument`\n\nLes deux orthographes sont acceptées."
     },
     {
-      "id": "B1-G-026-3",
+      "id": "B1-G-020-3",
       "type": "lesson",
       "title": "Adjectifs employés comme adverbes et récapitulatif",
       "content": "Certains adjectifs peuvent fonctionner comme **adverbes** sans changer de forme. Ils restent **invariables** et sont souvent utilisés avec des verbes spécifiques.\n\n📌 Adjectifs adverbiaux courants :\n`cher`, `clair`, `faux`, `fort`, `bas`, `haut`, `juste`, `court`\n\n📌 Voici un récapitulatif complet des adverbes de manière :",
