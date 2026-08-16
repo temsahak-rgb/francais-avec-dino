@@ -1,0 +1,62 @@
+{
+  "id": "DL-001",
+  "path": "daily",
+  "title": "Trouver un logement",
+  "title_fa": "پیدا کردن خانه",
+  "icon": "🏠",
+  "estimatedTime": 25,
+  "sections": [
+    {
+      "type": "lesson",
+      "title": "Vocabulaire essentiel",
+      "title_fa": "واژگان ضروری",
+      "content": "کلماتی که در آگهی‌های خانه می‌بینید:",
+      "examples": [
+        {"fr": "T2 / F3 / Studio", "fa": "تعداد اتاق‌ها (T/F یکی هستند)"},
+        {"fr": "Charges comprises (CC)", "fa": "هزینه‌های ساختمان شامل اجاره است"},
+        {"fr": "Dépôt de garantie", "fa": "ودیعه (معمولاً یک ماه اجاره)"},
+        {"fr": "Garant / Caution", "fa": "ضامن"}
+      ]
+    },
+    {
+      "type": "lesson",
+      "title": "📞 Appeler une agence",
+      "title_fa": "تماس با آژانس املاک",
+      "content": "مکالمه واقعی برای رزرو بازدید:",
+      "examples": [
+        {"fr": "Bonjour, j'appelle concernant l'annonce du T2 rue Victor Hugo.", "fa": "سلام، درباره آگهی T2 خیابان ویکتور هوگو تماس گرفتم."},
+        {"fr": "Est-il toujours disponible ?", "fa": "آیا هنوز موجود است؟"},
+        {"fr": "Quand serait-il possible de le visiter ?", "fa": "چه زمانی امکان بازدید وجود دارد؟"}
+      ]
+    },
+    {
+      "type": "lesson",
+      "title": "📝 Documents nécessaires",
+      "title_fa": "مدارک لازم",
+      "content": "فایل معروف به 'Dossier de location' را آماده کنید:",
+      "examples": [
+        {"fr": "Pièce d'identité", "fa": "کارت شناسایی"},
+        {"fr": "3 dernières fiches de paie", "fa": "۳ فیش حقوقی آخر"},
+        {"fr": "Contrat de travail", "fa": "قرارداد کار"},
+        {"fr": "Avis d'imposition", "fa": "برگه مالیات"}
+      ]
+    },
+    {
+      "type": "lesson",
+      "title": "⚠️ Pièges à éviter",
+      "title_fa": "دام‌هایی که باید از آن‌ها اجتناب کنید",
+      "note_fa": "هرگز قبل از دیدن خانه، پولی به عنوان 'رزرو' پرداخت نکنید. این کلاهبرداری رایج است!",
+      "examples": [
+        {"fr": "Mandat cash / Western Union", "fa": "❌ هرگز! روش‌های کلاهبرداری"},
+        {"fr": "Visite avant paiement", "fa": "✅ اول بازدید، بعد پرداخت"}
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Quiz : Dossier de location",
+      "title_fa": "آزمون: پرونده اجاره",
+      "displayCount": 4,
+      "questions": [...]
+    }
+  ]
+}
