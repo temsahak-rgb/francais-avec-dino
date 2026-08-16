@@ -1,5 +1,5 @@
 /* =============================== */
-/* Reset و استایل‌های پایه وب‌سایت */
+/* Reset و استایل‌های پایه */
 /* =============================== */
 * {
     margin: 0;
@@ -9,26 +9,24 @@
 }
 
 body {
-    background: #f8f9fa; /* پس‌زمینه روشن و حرفه‌ای وب */
+    background: #f8f9fa;
     color: #212529;
     min-height: 100vh;
     line-height: 1.6;
 }
 
-/* =============================== */
-/* طراحی جادار و ریسپانسیو (مثل LingQ) */
-/* =============================== */
+/* کانتینر اصلی سایت (جادار و ریسپانسیو) */
 #app {
+    position: relative; /* برای قرارگیری دکمه بازگشت */
     width: 100%;
-    max-width: 900px; /* عرض مناسب برای دسکتاپ، نه موبایل */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 40px 30px; /* فضای تنفس زیاد */
+    padding: 40px 30px;
     background: #ffffff;
     min-height: 100vh;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* در موبایل، پدینگ کمتر شود */
 @media (max-width: 768px) {
     #app {
         padding: 20px 15px;
@@ -41,15 +39,64 @@ h1 {
     font-size: 32px;
     margin-bottom: 20px;
     color: #111;
+    text-align: left; /* پیش‌فرض چپ‌چین */
 }
 
 p {
     font-size: 18px;
     color: #495057;
     margin-bottom: 15px;
+    text-align: left;
 }
 
-button {
+/* =============================== */
+/* 🔙 دکمه بازگشت (کوچک، بالا سمت چپ) */
+/* =============================== */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: auto !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    background: #f1f3f5;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: #e9ecef;
+    color: #212529;
+}
+
+/* =============================== */
+/* 🔒 قفل کردن جهت متن‌ها */
+/* =============================== */
+
+/* متن‌های فرانسوی همیشه چپ‌چین */
+.ltr-lock {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: isolate !important;
+}
+
+/* متن‌های فارسی همیشه راست‌چین */
+.persian-text {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: isolate !important;
+}
+
+/* =============================== */
+/* استایل‌های عمومی دکمه‌ها و جدول */
+/* =============================== */
+button:not(.back-btn) {
     width: 100%;
     padding: 16px 24px;
     margin-top: 15px;
@@ -63,38 +110,11 @@ button {
     transition: all 0.2s ease;
 }
 
-button:hover {
+button:not(.back-btn):hover {
     background: #0056b3;
     transform: translateY(-1px);
 }
 
-/* =============================== */
-/* 🔒 قفل کردن جهت متن‌های فرانسوی (حیاتی) */
-/* =============================== */
-/* این کلاس تضمین می‌کند متن فرانسوی حتی در حالت فارسی، چپ‌چین بماند */
-.ltr-lock {
-    direction: ltr !important;
-    text-align: left !important;
-    unicode-bidi: isolate !important; /* جلوگیری از به هم ریختگی کلمات لاتین در متن فارسی */
-}
-
-/* تنظیمات جهت کلی بر اساس زبان */
-body[dir="rtl"] {
-    text-align: right;
-}
-
-body[dir="rtl"] h1, 
-body[dir="rtl"] > p {
-    text-align: right;
-}
-
-body[dir="ltr"] {
-    text-align: left;
-}
-
-/* =============================== */
-/* استایل‌های جدول (واسع و خوانا) */
-/* =============================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,26 +134,15 @@ th {
     background: #007bff;
     color: white;
     font-weight: 600;
-    text-align: left; /* هدر جدول همیشه چپ‌چین برای فرانسوی */
+    text-align: left;
 }
 
 tr:nth-child(even) {
     background-color: #f8f9fa;
 }
 
-/* =============================== */
 /* اسکرول‌بار زیبا */
-/* =============================== */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #cbd5e0;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #a0aec0;
-}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background-color: #cbd5e0; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background-color: #a0aec0; }
