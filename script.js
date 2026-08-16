@@ -491,16 +491,44 @@ async function showTravelHome() {
 }
 
 // ===============================
-// توابع نمایش درس برای روزمره و سفر
+// 🔄 توابع نمایش درس برای روزمره و سفر (نسخه هوشمند)
 // ===============================
 async function showDailyLesson(lessonId) {
-  // فعلاً یک placeholder - بعداً با lessonEngine یکپارچه می‌شود
-  alert(`🏘️ درس ${lessonId} به زودی فعال می‌شود!`);
+    app.innerHTML = `<div style="text-align: center; padding: 60px 20px;"><p style="font-size: 20px; color: #6c757d;">⏳ در حال بارگذاری درس...</p></div>`;
+    
+    // استفاده از تابع loadSpecificLesson که در pathEngine.js ساختیم
+    const lessonData = await loadSpecificLesson("daily", lessonId);
+    
+    if (!lessonData) {
+        app.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 40px;">🚧</p>
+                <p style="font-size: 18px; color: #6c757d; margin: 20px 0;">محتوای این درس به زودی اضافه می‌شود.</p>
+                <button onclick="showHome()" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px;">بازگشت به خانه</button>
+            </div>`;
+        return;
+    }
+    
+    // نمایش اولین بخش درس (با استفاده از تابع showLessonContent که قبلاً ساختیم)
+    showLessonContent(lessonId, lessonData.sections[0]);
 }
 
 async function showTravelLesson(lessonId) {
-  // فعلاً یک placeholder - بعداً با lessonEngine یکپارچه می‌شود
-  alert(`✈️ درس ${lessonId} به زودی فعال می‌شود!`);
+    app.innerHTML = `<div style="text-align: center; padding: 60px 20px;"><p style="font-size: 20px; color: #6c757d;">⏳ در حال بارگذاری درس...</p></div>`;
+    
+    const lessonData = await loadSpecificLesson("travel", lessonId);
+    
+    if (!lessonData) {
+        app.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 40px;">🚧</p>
+                <p style="font-size: 18px; color: #6c757d; margin: 20px 0;">محتوای این درس به زودی اضافه می‌شود.</p>
+                <button onclick="showHome()" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px;">بازگشت به خانه</button>
+            </div>`;
+        return;
+    }
+    
+    showLessonContent(lessonId, lessonData.sections[0]);
 }
 
 async function showGrammarPage() {
