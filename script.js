@@ -262,42 +262,43 @@ async function showGrammarLesson(lessonId) {
 
     const status = getLessonStatus(lessonId);
     const bookmarked = isBookmarked(lessonId);
+    const progress = getLessonProgress(lessonId);
 
     if (status === "not_started") setLessonStatus(lessonId, "in_progress");
 
-    let sectionsHtml = "";
+    // ساخت لیست کارت‌های بخش‌ها
+    let sectionsListHtml = "";
     
     if (lesson.sections && lesson.sections.length > 0) {
         lesson.sections.forEach((section, index) => {
-            sectionsHtml += `
-                <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px;">
-                    <h3 class="ltr-lock" style="margin-top: 0; color: #007bff; font-size: 22px; margin-bottom: 20px;">${section.title}</h3>
+            const isCompleted = progress.completedSections.includes(section.id);
+            const statusIcon = isCompleted ? "✅" : (section.type === "lesson" ? "📖" : section.type === "exercise" ? "✏️" : "🏆");
+            const sectionType = section.type === "lesson" ? (lang === "fa" ? "درسنامه" : "Leçon") : 
+                               section.type === "exercise" ? (lang === "fa" ? "تمرین" : "Exercice") : 
+                               (lang === "fa" ? "آزمون" : "Quiz");
+            
+            sectionsListHtml += `
+                <div onclick="showLessonSection('${lessonId}', '${section.id}')" style="
+                    background: white; 
+                    border: 1px solid #e9ecef; 
+                    border-radius: 12px; 
+                    padding: 20px 24px; 
+                    margin-bottom: 12px; 
+                    display: flex; 
+                    align-items: center; 
+                    gap: 16px; 
+                    cursor: pointer; 
+                    transition: all 0.2s;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+                " onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">
+                    <span style="font-size: 24px;">${statusIcon}</span>
+                    <div style="flex: 1;">
+                        <p class="ltr-lock" style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${section.title}</p>
+                        <p style="margin: 6px 0 0 0; font-size: 15px; color: #6c757d;">${sectionType}</p>
+                    </div>
+                    <span style="color: #ced4da; font-size: 24px;">›</span>
+                </div>
             `;
-            
-            if (section.content) {
-                sectionsHtml += `<div class="ltr-lock" style="line-height: 1.8; color: #212529; margin-bottom: 20px; font-size: 18px;">${renderMarkdown(section.content)}</div>`;
-            }
-            
-            if (section.table) {
-                sectionsHtml += renderTable(section.table);
-            }
-            
-            if (section.examples && section.examples.length > 0) {
-                sectionsHtml += `<div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 12px; border-left: 5px solid #007bff;">`;
-                section.examples.forEach(ex => {
-                    sectionsHtml += `<p class="ltr-lock" style="margin: 10px 0; font-size: 18px; font-weight: 500;">${renderMarkdown(ex.fr)}</p>`;
-                    if (ex.fa) {
-                        sectionsHtml += `<p class="persian-text" style="margin: 5px 0 0 0; font-size: 16px; color: #6c757d;">${ex.fa}</p>`;
-                    }
-                });
-                sectionsHtml += `</div>`;
-            }
-            
-            if (section.note) {
-                sectionsHtml += `<div class="persian-text" style="margin-top: 25px; padding: 20px; background: #fff3cd; border-radius: 12px; border-left: 5px solid #ffc107; color: #856404; font-size: 16px;">${renderMarkdown(section.note)}</div>`;
-            }
-            
-            sectionsHtml += `</div>`;
         });
     }
 
@@ -305,24 +306,21 @@ async function showGrammarLesson(lessonId) {
         <div style="margin: 0 auto; padding-top: 40px;">
             <button id="back" class="back-btn">← ${t.back}</button>
             
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
-                <div>
-                    <span class="ltr-lock" style="font-size: 14px; background: #e9ecef; padding: 6px 12px; border-radius: 6px; color: #6c757d; font-weight: 600;">${lesson.level} - ${lessonId}</span>
-                    <h1 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 36px; margin: 15px 0 5px 0;">${lesson.title}</h1>
-                </div>
-                <button id="bookmark-btn" style="background: none; border: none; font-size: 36px; cursor: pointer; padding: 0; width: auto; margin: 0;">${bookmarked ? "⭐" : "☆"}</button>
+            <div style="margin-bottom: 30px;">
+                <span class="ltr-lock" style="font-size: 14px; background: #e9ecef; padding: 6px 12px; border-radius: 6px; color: #6c757d; font-weight: 600;">${lesson.level} - ${lessonId}</span>
+                <h1 class="ltr-lock" style="font-size: 36px; margin: 15px 0 5px 0;">${lesson.title}</h1>
+                <p style="font-size: 18px; color: #6c757d; margin: 10px 0;">⏱ ${lesson.estimatedTime} min</p>
             </div>
 
             <div style="background: #f8f9fa; border-radius: 12px; padding: 16px 20px; margin-bottom: 35px; display: flex; align-items: center; gap: 15px;">
                 <span style="font-size: 28px;">${getStatusIcon(status)}</span>
                 <span class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 18px; font-weight: 600; color: #495057;">${getStatusText(status, lang)}</span>
+                <button id="bookmark-btn" style="background: none; border: none; font-size: 28px; cursor: pointer; padding: 0; width: auto; margin: 0 0 0 auto;">${bookmarked ? "⭐" : "☆"}</button>
             </div>
 
-            ${sectionsHtml}
-
-            <button id="complete-btn" style="display: block; width: 100%; padding: 20px; font-size: 20px; font-weight: bold; border: none; border-radius: 12px; cursor: pointer; background-color: ${status === "completed" ? "#6c757d" : "#28a745"}; color: white; margin-top: 20px;">
-                ${lang === "fa" ? "✅ قبلاً تمام شده" : "✅ Déjà terminé"}
-            </button>
+            <h2 style="font-size: 24px; margin-bottom: 20px; color: #212529;">${lang === "fa" ? "بخش‌های درس" : "Sections de la leçon"}</h2>
+            
+            ${sectionsListHtml}
         </div>
     `;
 
@@ -332,13 +330,6 @@ async function showGrammarLesson(lessonId) {
     
     document.getElementById("bookmark-btn").onclick = () => {
         document.getElementById("bookmark-btn").innerHTML = toggleBookmark(lessonId) ? "⭐" : "☆";
-    };
-
-    document.getElementById("complete-btn").onclick = () => {
-        if (status !== "completed") {
-            setLessonStatus(lessonId, "completed");
-            showGrammarLesson(lessonId);
-        }
     };
 }
 
