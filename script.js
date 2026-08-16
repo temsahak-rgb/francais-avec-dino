@@ -3,29 +3,11 @@
 const app = document.getElementById("app");
 
 // ===============================
-// تابع تغییر جهت صفحه (RTL/LTR)
-// ===============================
-function updateDirection() {
-    const lang = localStorage.getItem("language") || "fr";
-    const html = document.documentElement;
-    
-    if (lang === "fa") {
-        html.setAttribute("dir", "rtl");
-        html.setAttribute("lang", "fa");
-    } else {
-        html.setAttribute("dir", "ltr");
-        html.setAttribute("lang", "fr");
-    }
-}
-updateDirection();
-
-// ===============================
-// تابع تبدیل متن فارسی با کلمات لاتین
+// تابع رندر متن فارسی (با حفظ جهت کلمات لاتین)
 // ===============================
 function renderFaText(text) {
   if (!text) return "";
-  // کلمات لاتین را درون bdi می‌گذارد تا جهتشان به هم نریزد
-  return text.replace(/[a-zA-ZÀ-ÿœŒæÆ'''\-]+/g, '<bdi class="ltr-lock">$&</bdi>');
+  return `<span class="persian-text">${text}</span>`;
 }
 
 const texts = {
@@ -58,14 +40,14 @@ function showLanguage() {
   const t = texts[lang];
   app.innerHTML = `<h1>${t.title}</h1><p>${t.chooseLanguage}</p><button id="fr">${t.french}</button><button id="fa">${t.persian}</button>`;
   
-  document.getElementById("fr").onclick = () => { localStorage.setItem("language", "fr"); updateDirection(); showPath(); };
-  document.getElementById("fa").onclick = () => { localStorage.setItem("language", "fa"); updateDirection(); showPath(); };
+  document.getElementById("fr").onclick = () => { localStorage.setItem("language", "fr"); showPath(); };
+  document.getElementById("fa").onclick = () => { localStorage.setItem("language", "fa"); showPath(); };
 }
 
 function showPath() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-  app.innerHTML = `<button id="back">${t.back}</button><h1>${t.choosePath}</h1><button id="general">${t.general}</button><button id="travel">${t.travel}</button><button id="daily">${t.daily}</button>`;
+  app.innerHTML = `<button id="back" class="back-btn">← ${t.back}</button><h1 style="margin-top: 40px;">${t.choosePath}</h1><button id="general">${t.general}</button><button id="travel">${t.travel}</button><button id="daily">${t.daily}</button>`;
   document.getElementById("back").onclick = showLanguage;
   document.getElementById("general").onclick = showPlacementChoice;
   document.getElementById("travel").onclick = showHome;
@@ -75,7 +57,7 @@ function showPath() {
 function showPlacementChoice() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
-  app.innerHTML = `<button id="back">${t.back}</button><h1>${t.general}</h1><p>${t.levelQuestion}</p><button id="yes">${t.yes}</button><button id="later">${t.later}</button>`;
+  app.innerHTML = `<button id="back" class="back-btn">← ${t.back}</button><h1 style="margin-top: 40px;">${t.general}</h1><p>${t.levelQuestion}</p><button id="yes">${t.yes}</button><button id="later">${t.later}</button>`;
   document.getElementById("back").onclick = showPath;
   document.getElementById("later").onclick = showHome;
   document.getElementById("yes").onclick = () => { resetPlacementState(); showQuestion(); };
@@ -89,8 +71,7 @@ function showQuestion() {
     const t = texts[lang];
     const progress = (placementState.asked.length / 15) * 100;
     
-    // 🔒 اضافه کردن کلاس ltr-lock به سوال فرانسوی
-    let html = `<div style="margin: 0 auto;">
+    let html = `<div style="margin: 0 auto; padding-top: 40px;">
         <div style="background-color: #e9ecef; height: 8px; border-radius: 4px; margin-bottom: 30px; overflow: hidden;">
             <div style="background-color: #007bff; height: 100%; width: ${progress}%; transition: width 0.3s;"></div>
         </div>
@@ -99,7 +80,6 @@ function showQuestion() {
             <div style="display: flex; flex-direction: column; gap: 15px;">`;
     
     question.options.forEach((option, index) => {
-        // 🔒 گزینه‌ها هم چپ‌چین قفل می‌شوند
         html += `<button class="option-btn ltr-lock" data-index="${index}" style="display: block; width: 100%; padding: 18px; font-size: 18px; border: 2px solid #e9ecef; border-radius: 10px; background-color: white; color: #212529; cursor: pointer; text-align: left; transition: all 0.2s;">${option}</button>`;
     });
     
@@ -159,8 +139,8 @@ function showHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
   const level = getPlacementResult() || "A2";
-  app.innerHTML = `<div style="margin: 0 auto;">
-    <div style="text-align: center; margin-bottom: 50px;">
+  app.innerHTML = `<div style="margin: 0 auto; padding-top: 20px;">
+    <div style="text-align: left; margin-bottom: 50px;">
         <h1 style="font-size: 42px; margin-bottom: 15px;">${t.hello} 👋</h1>
         <p style="font-size: 22px; color: #007bff; font-weight: bold;">${t.level} : ${level}</p>
         <button id="change-level-home" style="background: none; border: none; color: #6c757d; text-decoration: underline; cursor: pointer; font-size: 16px; margin-top: 10px; width: auto; padding: 5px;">${t.changeLevel}</button>
@@ -172,7 +152,7 @@ function showHome() {
         <button class="home-card" data-section="listening" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #ffc107; color: #212529; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(255,193,7,0.2);"><span style="font-size: 40px; margin-right: 20px;">🎧</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.listening}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
         <button class="home-card" data-section="revision" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #6c757d; color: white; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(108,117,125,0.2);"><span style="font-size: 40px; margin-right: 20px;">📝</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.revision}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
     </div>
-    <p style="text-align: center; color: #adb5bd; margin-top: 60px; font-size: 16px;">Version 1.0.0 Web</p>
+    <p style="text-align: left; color: #adb5bd; margin-top: 60px; font-size: 16px;">Version 1.0.0 Web</p>
   </div>`;
   document.querySelectorAll(".home-card").forEach(card => {
       card.onclick = () => { const section = card.getAttribute("data-section"); if (section === "grammar") { showGrammarPage(); } else { alert("🚧 بخش " + section + " به زودی فعال می‌شود!"); } };
@@ -200,7 +180,7 @@ async function showGrammarPage() {
                 <div style="background: white; border-radius: 16px; padding: 40px; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                     <div style="font-size: 56px; margin-bottom: 20px;">🦖</div>
                     <h3 style="margin: 0 0 15px 0; color: #212529; font-size: 24px;">${lang === "fa" ? "پیشنهاد هوشمند داینو" : "Recommandation intelligente"}</h3>
-                    <p style="color: #6c757d; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
+                    <p class="persian-text" style="color: #6c757d; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
                         ${lang === "fa" ? "بر اساس نتیجه آزمون تعیین سطح شما، این مباحث برای شروع یادگیری بهینه‌ترین گزینه‌ها هستند." : "Basé sur votre test de niveau, ces sujets sont les meilleurs pour commencer."}
                     </p>
                     <button id="close-popup" style="width: 100%; padding: 16px; background: #007bff; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer;">
@@ -211,8 +191,8 @@ async function showGrammarPage() {
         `;
     }
 
-    let html = popupHtml + `<div style="margin: 0 auto;">
-        <button id="back" style="background: none; border: none; color: #007bff; font-size: 18px; cursor: pointer; padding: 0; margin-bottom: 20px; width: auto; display: inline-block;">← ${t.back}</button>
+    let html = popupHtml + `<div style="margin: 0 auto; padding-top: 40px;">
+        <button id="back" class="back-btn">← ${t.back}</button>
         <h1 style="font-size: 36px; margin-bottom: 10px;">📖 ${t.grammar}</h1>
         <p style="font-size: 20px; color: #6c757d; margin-bottom: 40px;">${level} – ${levelNames[level] || ""}</p>`;
     
@@ -224,9 +204,9 @@ async function showGrammarPage() {
             </h2>`;
         
         recommended.slice(0, 3).forEach(item => {
-            const title = lang === "fa" ? renderFaText(item.title_fa) : item.title;
+            const title = lang === "fa" ? item.title_fa : item.title;
             html += `<div style="background: white; border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; cursor: pointer; border: 1px solid #e2e8f0; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onclick="showGrammarLesson('${item.id}')">
-                <p style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
+                <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
                 <p style="margin: 6px 0 0 0; font-size: 15px; color: #6c757d;">⏱ ${item.estimatedTime} min</p>
             </div>`;
         });
@@ -236,7 +216,7 @@ async function showGrammarPage() {
     html += `<h2 style="font-size: 24px; margin-bottom: 20px; color: #212529;">${lang === "fa" ? "همه درس‌ها" : "Toutes les leçons"}</h2>`;
     
     allLessons.forEach(item => {
-        const title = lang === "fa" ? renderFaText(item.title_fa) : item.title;
+        const title = lang === "fa" ? item.title_fa : item.title;
         const status = getLessonStatus(item.id);
         const statusIcon = getStatusIcon(status);
         
@@ -244,7 +224,7 @@ async function showGrammarPage() {
             <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
                 <span style="font-size: 24px;">${statusIcon}</span>
                 <div style="flex: 1;">
-                    <p style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
+                    <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
                     <p style="margin: 6px 0 0 0; font-size: 15px; color: #6c757d;">⏱ ${item.estimatedTime} min · ${item.exercises} ${lang === "fa" ? "تمرین" : "exercices"}</p>
                 </div>
             </div>
@@ -291,11 +271,10 @@ async function showGrammarLesson(lessonId) {
         lesson.sections.forEach((section, index) => {
             sectionsHtml += `
                 <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px;">
-                    <h3 style="margin-top: 0; color: #007bff; font-size: 22px; margin-bottom: 20px;">${section.title}</h3>
+                    <h3 class="ltr-lock" style="margin-top: 0; color: #007bff; font-size: 22px; margin-bottom: 20px;">${section.title}</h3>
             `;
             
             if (section.content) {
-                // 🔒 محتوای درس اگر فرانسوی است، چپ‌چین می‌شود
                 sectionsHtml += `<div class="ltr-lock" style="line-height: 1.8; color: #212529; margin-bottom: 20px; font-size: 18px;">${renderMarkdown(section.content)}</div>`;
             }
             
@@ -306,14 +285,16 @@ async function showGrammarLesson(lessonId) {
             if (section.examples && section.examples.length > 0) {
                 sectionsHtml += `<div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 12px; border-left: 5px solid #007bff;">`;
                 section.examples.forEach(ex => {
-                    // 🔒 مثال‌های فرانسوی همیشه چپ‌چین
                     sectionsHtml += `<p class="ltr-lock" style="margin: 10px 0; font-size: 18px; font-weight: 500;">${renderMarkdown(ex.fr)}</p>`;
+                    if (ex.fa) {
+                        sectionsHtml += `<p class="persian-text" style="margin: 5px 0 0 0; font-size: 16px; color: #6c757d;">${ex.fa}</p>`;
+                    }
                 });
                 sectionsHtml += `</div>`;
             }
             
             if (section.note) {
-                sectionsHtml += `<div style="margin-top: 25px; padding: 20px; background: #fff3cd; border-radius: 12px; border-left: 5px solid #ffc107; color: #856404; font-size: 16px;">${renderMarkdown(section.note)}</div>`;
+                sectionsHtml += `<div class="persian-text" style="margin-top: 25px; padding: 20px; background: #fff3cd; border-radius: 12px; border-left: 5px solid #ffc107; color: #856404; font-size: 16px;">${renderMarkdown(section.note)}</div>`;
             }
             
             sectionsHtml += `</div>`;
@@ -321,26 +302,26 @@ async function showGrammarLesson(lessonId) {
     }
 
     let html = `
-        <div style="margin: 0 auto;">
-            <button id="back" style="background: none; border: none; color: #007bff; font-size: 18px; cursor: pointer; padding: 0; margin-bottom: 20px; width: auto; display: inline-block;">← ${t.back}</button>
+        <div style="margin: 0 auto; padding-top: 40px;">
+            <button id="back" class="back-btn">← ${t.back}</button>
             
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
                 <div>
-                    <span style="font-size: 14px; background: #e9ecef; padding: 6px 12px; border-radius: 6px; color: #6c757d; font-weight: 600;">${lesson.level} - ${lessonId}</span>
-                    <h1 style="font-size: 36px; margin: 15px 0 5px 0;">${lesson.title}</h1>
+                    <span class="ltr-lock" style="font-size: 14px; background: #e9ecef; padding: 6px 12px; border-radius: 6px; color: #6c757d; font-weight: 600;">${lesson.level} - ${lessonId}</span>
+                    <h1 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 36px; margin: 15px 0 5px 0;">${lesson.title}</h1>
                 </div>
                 <button id="bookmark-btn" style="background: none; border: none; font-size: 36px; cursor: pointer; padding: 0; width: auto; margin: 0;">${bookmarked ? "⭐" : "☆"}</button>
             </div>
 
             <div style="background: #f8f9fa; border-radius: 12px; padding: 16px 20px; margin-bottom: 35px; display: flex; align-items: center; gap: 15px;">
                 <span style="font-size: 28px;">${getStatusIcon(status)}</span>
-                <span style="font-size: 18px; font-weight: 600; color: #495057;">${getStatusText(status, lang)}</span>
+                <span class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 18px; font-weight: 600; color: #495057;">${getStatusText(status, lang)}</span>
             </div>
 
             ${sectionsHtml}
 
             <button id="complete-btn" style="display: block; width: 100%; padding: 20px; font-size: 20px; font-weight: bold; border: none; border-radius: 12px; cursor: pointer; background-color: ${status === "completed" ? "#6c757d" : "#28a745"}; color: white; margin-top: 20px;">
-                ${status === "completed" ? "✅ قبلاً تمام شده" : "علامت‌گذاری به عنوان پایان"}
+                ${lang === "fa" ? "✅ قبلاً تمام شده" : "✅ Déjà terminé"}
             </button>
         </div>
     `;
@@ -364,7 +345,6 @@ async function showGrammarLesson(lessonId) {
 function renderTable(table) {
     if (!table || !table.headers || !table.rows) return "";
     
-    // 🔒 جدول همیشه چپ‌چین (LTR) است
     let html = `<div style="overflow-x: auto; margin: 25px 0;"><table class="ltr-lock" style="width: 100%; border-collapse: collapse; font-size: 16px;">`;
     
     html += `<thead><tr>`;
@@ -409,12 +389,12 @@ async function showLessonSection(lessonId, sectionId) {
 function showLessonContent(lessonId, section) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const title = lang === "fa" ? renderFaText(section.title_fa) : section.title;
+    const title = lang === "fa" ? section.title_fa : section.title;
     
     let html = `
-        <div style="margin: 0 auto;">
-            <button id="back" style="background: none; border: none; color: #007bff; font-size: 18px; cursor: pointer; padding: 0; margin-bottom: 20px; width: auto; display: inline-block;">← ${t.back}</button>
-            <h1 style="font-size: 32px; margin-bottom: 25px;">${title}</h1>
+        <div style="margin: 0 auto; padding-top: 40px;">
+            <button id="back" class="back-btn">← ${t.back}</button>
+            <h1 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 32px; margin-bottom: 25px;">${title}</h1>
             <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px;">
                 <p class="ltr-lock" style="line-height: 1.8; color: #212529; white-space: pre-line; font-size: 18px;">${section.content}</p>
     `;
@@ -433,16 +413,16 @@ function showLessonContent(lessonId, section) {
     }
     
     if (section.examples && section.examples.length > 0) {
-        html += `<h3 style="margin-top: 30px; color: #007bff; font-size: 20px; margin-bottom: 15px;">${lang === "fa" ? "مثال‌ها" : "Exemples"}</h3>`;
+        html += `<h3 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin-top: 30px; color: #007bff; font-size: 20px; margin-bottom: 15px;">${lang === "fa" ? "مثال‌ها" : "Exemples"}</h3>`;
         section.examples.forEach(example => {
-            html += `<div style="background: #f8f9fa; padding: 16px; border-radius: 10px; margin: 12px 0;"><p class="ltr-lock" style="margin: 0; font-weight: 600; font-size: 18px;">${example.fr}</p><p style="margin: 8px 0 0 0; font-size: 16px; color: #6c757d;">${renderFaText(example.fa)}</p></div>`;
+            html += `<div style="background: #f8f9fa; padding: 16px; border-radius: 10px; margin: 12px 0;"><p class="ltr-lock" style="margin: 0; font-weight: 600; font-size: 18px;">${example.fr}</p><p class="persian-text" style="margin: 8px 0 0 0; font-size: 16px; color: #6c757d;">${example.fa}</p></div>`;
         });
     }
     
     if (section.note_fa) {
         html += `
-            <div style="background: #fff3cd; border-radius: 12px; padding: 20px; margin-top: 25px; border-left: 5px solid #ffc107;">
-                <p style="margin: 0; font-size: 16px;">💡 ${renderFaText(section.note_fa)}</p>
+            <div class="persian-text" style="background: #fff3cd; border-radius: 12px; padding: 20px; margin-top: 25px; border-left: 5px solid #ffc107;">
+                <p style="margin: 0; font-size: 16px;">💡 ${section.note_fa}</p>
             </div>
         `;
     }
@@ -466,7 +446,7 @@ function showLessonContent(lessonId, section) {
 function showExerciseContent(lessonId, section) {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
-    const title = lang === "fa" ? renderFaText(section.title_fa) : section.title;
+    const title = lang === "fa" ? section.title_fa : section.title;
     
     const questions = getRandomQuestions(section, section.displayCount);
     let currentQuestionIndex = 0;
@@ -481,16 +461,16 @@ function showExerciseContent(lessonId, section) {
         const question = prepareQuestion(questions[currentQuestionIndex]);
         
         let html = `
-            <div style="margin: 0 auto;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-                    <button id="back" style="background: none; border: none; color: #007bff; font-size: 18px; cursor: pointer; padding: 0; width: auto;">← ${t.back}</button>
-                    <span style="font-size: 18px; color: #6c757d; font-weight: 600;">${currentQuestionIndex + 1} / ${questions.length}</span>
+            <div style="margin: 0 auto; padding-top: 40px;">
+                <button id="back" class="back-btn">← ${t.back}</button>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; margin-top: 20px;">
+                    <span class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 18px; color: #6c757d; font-weight: 600;">${currentQuestionIndex + 1} / ${questions.length}</span>
                 </div>
                 <div style="background: #e9ecef; height: 8px; border-radius: 4px; margin-bottom: 40px; overflow: hidden;">
                     <div style="background: #007bff; height: 100%; width: ${((currentQuestionIndex + 1) / questions.length) * 100}%; transition: width 0.3s;"></div>
                 </div>
-                <h2 style="font-size: 24px; margin-bottom: 15px;">${title}</h2>
-                <p class="ltr-lock" style="font-size: 22px; line-height: 1.6; color: #212529; margin-bottom: 40px;">${renderFaText(question.question)}</p>
+                <h2 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 24px; margin-bottom: 15px;">${title}</h2>
+                <p class="ltr-lock" style="font-size: 22px; line-height: 1.6; color: #212529; margin-bottom: 40px;">${question.question}</p>
                 <div id="options-container" style="display: flex; flex-direction: column; gap: 15px;">
         `;
         
@@ -516,13 +496,13 @@ function showExerciseContent(lessonId, section) {
                 const feedback = document.getElementById("feedback");
                 if (isCorrect) {
                     btn.style.background = "#d4edda"; btn.style.borderColor = "#28a745"; btn.style.color = "#155724";
-                    feedback.innerHTML = `<div style="background: #d4edda; padding: 20px; border-radius: 12px; color: #155724; border: 1px solid #c3e6cb;"><p style="margin: 0; font-weight: bold; font-size: 20px;">✅ ${lang === "fa" ? "آفرین!" : "Bravo!"}</p><p class="ltr-lock" style="margin: 10px 0 0 0; font-size: 16px;">${renderFaText(question.explanation)}</p></div>`;
+                    feedback.innerHTML = `<div style="background: #d4edda; padding: 20px; border-radius: 12px; color: #155724; border: 1px solid #c3e6cb;"><p class="persian-text" style="margin: 0; font-weight: bold; font-size: 20px;">✅ آفرین!</p><p class="persian-text" style="margin: 10px 0 0 0; font-size: 16px;">${question.explanation}</p></div>`;
                 } else {
                     btn.style.background = "#f8d7da"; btn.style.borderColor = "#dc3545"; btn.style.color = "#721c24";
                     document.querySelectorAll(".option-btn")[question.correct].style.background = "#d4edda";
                     document.querySelectorAll(".option-btn")[question.correct].style.borderColor = "#28a745";
                     document.querySelectorAll(".option-btn")[question.correct].style.color = "#155724";
-                    feedback.innerHTML = `<div style="background: #f8d7da; padding: 20px; border-radius: 12px; color: #721c24; border: 1px solid #f5c6cb;"><p style="margin: 0; font-weight: bold; font-size: 20px;">❌ ${lang === "fa" ? "اشتباه!" : "Incorrect!"}</p><p class="ltr-lock" style="margin: 10px 0 0 0; font-size: 16px;">${renderFaText(question.explanation)}</p></div>`;
+                    feedback.innerHTML = `<div style="background: #f8d7da; padding: 20px; border-radius: 12px; color: #721c24; border: 1px solid #f5c6cb;"><p class="persian-text" style="margin: 0; font-weight: bold; font-size: 20px;">❌ اشتباه!</p><p class="persian-text" style="margin: 10px 0 0 0; font-size: 16px;">${question.explanation}</p></div>`;
                 }
                 
                 document.querySelectorAll(".option-btn").forEach(b => { b.onclick = null; b.style.cursor = "default"; });
@@ -549,9 +529,9 @@ function showExerciseResult(lessonId, section, correctCount, totalCount) {
     app.innerHTML = `
         <div style="max-width: 600px; margin: 0 auto; padding: 60px 20px; text-align: center;">
             <p style="font-size: 80px; margin-bottom: 20px;">${emoji}</p>
-            <h1 style="font-size: 36px; margin-bottom: 15px;">${message}</h1>
+            <h1 class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="font-size: 36px; margin-bottom: 15px;">${message}</h1>
             <p style="font-size: 64px; font-weight: 800; color: #007bff; margin: 30px 0;">${correctCount} / ${totalCount}</p>
-            <p style="font-size: 24px; color: #6c757d; margin-bottom: 40px;">${percentage}%</p>
+            <p class="persian-text" style="font-size: 24px; color: #6c757d; margin-bottom: 40px;">${percentage}%</p>
             <button onclick="showGrammarLesson('${lessonId}')" style="display: block; width: 100%; padding: 20px; font-size: 20px; font-weight: bold; border: none; border-radius: 12px; background: #007bff; color: white; cursor: pointer; margin-bottom: 15px;">${lang === "fa" ? "بازگشت به درس" : "Retour à la leçon"}</button>
         </div>
     `;
