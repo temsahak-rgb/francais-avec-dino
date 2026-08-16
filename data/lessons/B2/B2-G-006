@@ -8,82 +8,78 @@
     {
       "id": "B2-G-006-1",
       "type": "lesson",
-      "title": "Coordination : adverbes et locutions adverbiales",
-      "content": "Ces formes introduisent une proposition coordonnée à l’**indicatif**.\n\nElles expriment une conséquence **directe**, **logique**, **visible**.\n\n**Expression spéciale : `d’où`**\n\n`d’où` peut introduire une proposition ou un nom.\n\n- *Il a peu étudié, d’où il résulte qu’il a eu une mauvaise note.*\n- *Elle va passer son bac, d’où la nécessité d’étudier beaucoup.*",
+      "title": "La coordination : exprimer un résultat logique",
+      "content": "Les connecteurs de coordination introduisent une proposition indépendante qui exprime le **résultat** ou la **conséquence** d'une action précédente.\n\nIls se placent généralement après une virgule ou en début de phrase.\n\n**Registres de langue :**\n\n- **Soutenu / écrit** : `c'est pourquoi`, `par conséquent`, `aussi` (en tête de phrase avec inversion)\n- **Courant** : `donc`, `alors`, `ainsi`\n- **Familier** : `du coup`, `comme ça`\n\n⚠️ **Cas particulier : `d'où`**\n\n`d'où` introduit un nom ou une proposition et souligne l'origine du résultat.\n\n*Ses parents sont absents, d'où son inquiétude.*",
       "table": {
-        "headers": ["Expression", "Construction", "Exemple"],
+        "headers": ["Connecteur", "Registre", "Exemple"],
         "rows": [
-          ["**ainsi**", "`+ proposition`", "Elle doit beaucoup étudier, ainsi elle réussira."],
-          ["**aussi**", "`+ proposition`", "Il est fatigué, aussi il se repose."],
-          ["**alors**", "`+ proposition`", "Il pleut, alors nous restons ici."],
-          ["**c’est pourquoi**", "`+ proposition`", "Elle va passer son bac, c’est pourquoi elle étudie beaucoup."],
-          ["**comme ça**", "`+ proposition`", "Il a raté son train, comme ça il est arrivé en retard."],
-          ["**donc**", "`+ proposition`", "Il n’a pas travaillé, donc il a échoué."],
-          ["**du coup** (familier)", "`+ proposition`", "Il a oublié son réveil, du coup il a manqué le bus."],
-          ["**par conséquent**", "`+ proposition`", "Il a beaucoup travaillé, par conséquent il a réussi."],
-          ["**voilà pourquoi**", "`+ proposition`", "Elle est malade, voilà pourquoi elle ne vient pas."],
-          ["**d’où**", "`+ proposition / nom`", "Il a peu étudié, d’où sa mauvaise note."]
+          ["**c'est pourquoi**", "`courant / écrit`", "Il pleut, c'est pourquoi je reste chez moi."],
+          ["**par conséquent**", "`soutenu`", "Il a échoué, par conséquent il doit recommencer."],
+          ["**donc**", "`courant`", "Tu es malade, donc tu dois te reposer."],
+          ["**alors**", "`courant`", "Il était tard, alors nous sommes partis."],
+          ["**aussi** (inversion)", "`soutenu`", "Il pleuvait, aussi sommes-nous restés."],
+          ["**ainsi**", "`écrit`", "Elle a beaucoup travaillé, ainsi elle a réussi."],
+          ["**du coup**", "`familier`", "J'ai raté le bus, du coup je suis en retard."],
+          ["**d'où**", "`courant`", "Il est malade, d'où son absence."]
         ]
       },
       "examples": [
-        {"fr": "**Conséquence logique** : Il pleut, donc je reste."},
-        {"fr": "**Conséquence familière** : Il a oublié son réveil, du coup il a manqué le bus."},
-        {"fr": "**Conséquence formelle** : Il a beaucoup travaillé, par conséquent il a réussi."},
-        {"fr": "**Résultat avec `d’où`** : Elle va passer son bac, d’où la nécessité d’étudier beaucoup."},
-        {"fr": "**Explication** : Elle est malade, voilà pourquoi elle ne vient pas."}
+        {"fr": "**Écrit** : Le projet a été annulé, par conséquent nous devons revoir nos plans."},
+        {"fr": "**Courant** : Tu n'as pas étudié, donc tu as échoué."},
+        {"fr": "**Soutenu** : Il faisait nuit, aussi avons-nous décidé de rentrer."},
+        {"fr": "**Familier** : J'ai oublié mes clés, du coup j'ai dû sonner chez le voisin."},
+        {"fr": "**Avec nom** : La grève continue, d'où les retards importants."}
       ],
-      "note": "⚠️ `du coup` est familier et doit être évité dans un registre soutenu.\n\n✅ `Par conséquent, il a réussi.` — registre formel\n✅ `Donc, il est parti.` — registre courant\n⚠️ `Du coup, il est parti.` — registre familier"
+      "note": "💡 **Astuce :** `aussi` en tête de phrase entraîne l'**inversion du sujet** dans un registre soutenu.\n\n✅ `Il était fatigué, aussi est-il parti tôt.` — avec inversion\n✅ `Il était fatigué, aussi il est parti tôt.` — sans inversion, plus courant\n\n⚠️ Évite `du coup` à l'écrit formel : préfère `donc` ou `par conséquent`."
     },
     {
       "id": "B2-G-006-2",
       "type": "lesson",
-      "title": "Conjonctions de subordination : conséquence + indicatif",
-      "content": "Ces conjonctions introduisent une proposition subordonnée à l’**indicatif**.\n\nElles expriment une conséquence qui découle directement de l’action principale.\n\n⚠️ Toutes ces conjonctions sont suivies de l’**indicatif**, jamais du subjonctif, car la conséquence est un **fait réel**.",
+      "title": "La subordination et les structures intensives",
+      "content": "**1. Conjonctions de subordination**\n\nCes conjonctions introduisent une subordonnée à l'**indicatif** car la conséquence est un fait réel.\n\n- `de sorte que`, `de façon que`, `de manière que`\n- `si bien que`\n- `c'est pour cela que` / `c'est pour ça que`\n\n⚠️ Ne pas confondre avec le **but** (`de sorte que` + subjonctif).\n\n**2. Structures intensives**\n\nCes structures expriment une conséquence provoquée par une **intensité**.\n\n- `si` / `tellement` + adjectif + `que`\n- `tant de` / `tellement de` + nom + `que`\n- `tel` / `telle` + nom + `que`\n- `verbe` + `tant` / `tellement` + `que`",
       "table": {
-        "headers": ["Conjonction", "Construction", "Exemple"],
+        "headers": ["Structure", "Construction", "Exemple"],
         "rows": [
-          ["**de façon que**", "`+ indicatif`", "Elle s’est cassé un bras, de façon qu’elle a dû porter un plâtre."],
-          ["**de manière que**", "`+ indicatif`", "Il range sa chambre de manière que sa mère ne se fâche pas."],
-          ["**de sorte que**", "`+ indicatif`", "Il a beaucoup travaillé, de sorte qu’il a réussi."],
-          ["**c’est pour cela que / c’est pour ça que**", "`+ indicatif`", "Il est malade, c’est pour ça qu’il reste chez lui."],
-          ["**si bien que**", "`+ indicatif`", "Il a couru très vite, si bien qu’il est arrivé le premier."]
+          ["**de sorte que**", "`+ indicatif`", "Il a plu, de sorte que le match a été annulé."],
+          ["**si bien que**", "`+ indicatif`", "Il a couru, si bien qu'il est arrivé premier."],
+          ["**si + adj + que**", "`intensité qualitative`", "Il est si fatigué qu'il s'endort."],
+          ["**tellement + adj + que**", "`intensité qualitative`", "Elle est tellement contente qu'elle pleure."],
+          ["**tant de + nom + que**", "`intensité quantitative`", "Il y a tant de monde que je ne peux pas entrer."],
+          ["**tel + nom + que**", "`intensité nominale`", "Il fait un tel bruit que je ne peux pas dormir."]
         ]
       },
       "examples": [
-        {"fr": "**Résultat** : Il a beaucoup travaillé, de sorte qu’il a réussi."},
-        {"fr": "**Conséquence visible** : Il a couru très vite, si bien qu’il est arrivé le premier."},
-        {"fr": "**Explication** : Il est malade, c’est pour ça qu’il reste chez lui."},
-        {"fr": "**Manière** : Elle s’est cassé un bras, de façon qu’elle a dû porter un plâtre."}
+        {"fr": "**Subordination** : Le train était en retard, si bien que nous avons manqué la correspondance."},
+        {"fr": "**Subordination** : Il a beaucoup travaillé, de sorte qu'il a obtenu une promotion."},
+        {"fr": "**Intensité adj** : Ce film est si ennuyeux que je me suis endormi."},
+        {"fr": "**Intensité adv** : Il parle tellement vite que personne ne le comprend."},
+        {"fr": "**Intensité nom** : Nous avons eu tellement de problèmes que nous avons abandonné."},
+        {"fr": "**Intensité verbale** : Il a tant travaillé qu'il est épuisé."}
       ],
-      "note": "✅ `Il a beaucoup travaillé, de sorte qu’il a réussi.` — indicatif\n❌ `Il a beaucoup travaillé, de sorte qu’il réussisse.` — la conséquence exprimée comme un fait réel est à l’indicatif.\n\n⚠️ Ne pas confondre : `de sorte que` + indicatif = conséquence réelle / `de sorte que` + subjonctif = but (voir B2-G-005)."
+      "note": "📝 **Rappel :** Après `de sorte que`, `si bien que`, etc., on utilise toujours l'**indicatif** quand la conséquence est réelle.\n\n✅ `Il a crié si fort que tout le monde l'a entendu.` — indicatif (fait réel)\n\n⚠️ Pour le **but**, on utilise le subjonctif :\n*Parle plus fort de sorte que tout le monde t'entende.* — subjonctif (but recherché)"
     },
     {
       "id": "B2-G-006-3",
       "type": "lesson",
-      "title": "Structures intensives et tableau récapitulatif",
-      "content": "Ces structures expriment une conséquence provoquée par une **intensité**.\n\n**1. `si` / `tellement` + adjectif + `que`**\n\nIntensité qualitative.\n\n*Elle est si triste qu’elle pleure.*\n*Elle est tellement triste qu’elle pleure.*\n\n**2. `tel` / `telle` / `tels` / `telles` + nom + `que`**\n\nIntensité nominale.\n\n*Il a un tel comportement que personne ne le supporte.*\n\n**3. `tellement de` / `tant de` + nom + `que`**\n\nIntensité quantitative.\n\n*Nous avons tellement de devoirs qu’on ne peut pas sortir.*\n*Il y a tant de bruit que je ne peux pas dormir.*\n\n🔑 **Résumé ultra-pratique :**\n\n- `donc` = conséquence logique\n- `du coup` = conséquence familière\n- `par conséquent` = conséquence formelle\n- `d’où` = résultat\n- `de sorte que` / `si bien que` = résultat\n- `si` / `tellement` + adj + `que` = intensité\n- `tel` + nom + `que` = intensité\n- `tellement de` / `tant de` + nom + `que` = quantité",
+      "title": "Choix stylistique : quel connecteur utiliser ?",
+      "content": "Le choix du connecteur dépend du **registre de langue** et de la **nuance** que vous voulez exprimer.\n\n**Pour un écrit formel (lettre, rapport, dissertation) :**\n\n- `par conséquent`, `c'est pourquoi`, `en conséquence`, `dès lors`\n\n**Pour un texte courant (journal, article) :**\n\n- `donc`, `ainsi`, `de sorte que`, `si bien que`\n\n**Pour l'oral familier :**\n\n- `alors`, `du coup`, `c'est pour ça que`\n\n**Pièges fréquents à éviter :**\n\n- Ne pas utiliser `du coup` dans un écrit soutenu\n- Ne pas confondre `aussi` (conséquence avec inversion) et `aussi` (comparaison)\n- Ne pas utiliser le subjonctif après `si bien que` (la conséquence est réelle)",
       "table": {
-        "headers": ["Type", "Structure", "Exemple"],
+        "headers": ["Contexte", "Connecteur recommandé", "À éviter"],
         "rows": [
-          ["**Coordination**", "`donc`", "Il pleut, donc je reste."],
-          ["**Coordination**", "`du coup`", "Du coup, il est parti."],
-          ["**Coordination**", "`par conséquent`", "Par conséquent, il a réussi."],
-          ["**Coordination**", "`d’où`", "D’où la nécessité d’étudier."],
-          ["**Subordination**", "`de sorte que`", "De sorte qu’il a gagné."],
-          ["**Subordination**", "`si bien que`", "Si bien qu’il est tombé."],
-          ["**Intensité adjectif**", "`si / tellement + adj + que`", "Si fatigué qu’il dort."],
-          ["**Intensité nom**", "`tel + nom + que`", "Un tel bruit que…"],
-          ["**Intensité quantité**", "`tellement de / tant de + nom + que`", "Tant de travail que…"]
+          ["**Dissertation**", "`par conséquent`, `c'est pourquoi`", "`du coup`, `comme ça`"],
+          ["**Email professionnel**", "`donc`, `de sorte que`", "`du coup`"],
+          ["**Conversation**", "`alors`, `du coup`", "`par conséquent`"],
+          ["**Rapport**", `"d'où`, `en conséquence`", "`comme ça`"]
         ]
       },
       "examples": [
-        {"fr": "**Intensité qualitative** : Elle est si triste qu’elle pleure."},
-        {"fr": "**Intensité qualitative** : Elle est tellement fatiguée qu’elle s’endort immédiatement."},
-        {"fr": "**Intensité nominale** : Il a un tel comportement que personne ne le supporte."},
-        {"fr": "**Intensité quantitative** : Nous avons tellement de devoirs qu’on ne peut pas sortir."},
-        {"fr": "**Intensité quantitative** : Il y a tant de bruit que je ne peux pas dormir."}
+        {"fr": "**Dissertation** : La pollution augmente, par conséquent les maladies respiratoires se multiplient."},
+        {"fr": "**Email** : Le serveur est en panne, donc le site est inaccessible."},
+        {"fr": "**Conversation** : J'ai perdu mon téléphone, du coup je ne peux pas t'appeler."},
+        {"fr": "**Rapport** : Les ventes ont baissé de 20 %, d'où la nécessité de revoir notre stratégie."},
+        {"fr": "**Oral** : Il était tard, c'est pour ça que je suis parti."}
       ],
-      "note": "✅ `Si fatigué qu’il dort.` — intensité + conséquence\n✅ `Tellement de travail qu’il ne dort plus.` — quantité + conséquence\n\n⚠️ Ne pas confondre `tel` (adjectif) et `tellement` (adverbe) :\n- `tel` + nom → *un tel bruit*\n- `tellement` + adjectif → *tellement fatigué*\n- `tellement de` + nom → *tellement de bruit*"
+      "note": "🎯 **Objectif :** Adapter le connecteur au contexte.\n\n✅ **Formel** : *Il a échoué, par conséquent il doit recommencer.*\n✅ **Courant** : *Il a échoué, donc il doit recommencer.*\n✅ **Familier** : *Il a échoué, du coup il doit recommencer.*\n\n❌ ~~Il a échoué, par conséquent il doit recommencer.~~ (à l'oral entre amis — trop formel)\n❌ ~~Dans cette dissertation, le PIB a baissé, du coup le chômage augmente.~~ (trop familier pour l'écrit)"
     }
   ]
 }
