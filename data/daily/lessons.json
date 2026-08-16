@@ -1,62 +1,20 @@
-{
-  "id": "DL-001",
-  "path": "daily",
-  "title": "Trouver un logement",
-  "title_fa": "پیدا کردن خانه",
-  "icon": "🏠",
-  "estimatedTime": 25,
-  "sections": [
-    {
-      "type": "lesson",
-      "title": "Vocabulaire essentiel",
-      "title_fa": "واژگان ضروری",
-      "content": "کلماتی که در آگهی‌های خانه می‌بینید:",
-      "examples": [
-        {"fr": "T2 / F3 / Studio", "fa": "تعداد اتاق‌ها (T/F یکی هستند)"},
-        {"fr": "Charges comprises (CC)", "fa": "هزینه‌های ساختمان شامل اجاره است"},
-        {"fr": "Dépôt de garantie", "fa": "ودیعه (معمولاً یک ماه اجاره)"},
-        {"fr": "Garant / Caution", "fa": "ضامن"}
-      ]
-    },
-    {
-      "type": "lesson",
-      "title": "📞 Appeler une agence",
-      "title_fa": "تماس با آژانس املاک",
-      "content": "مکالمه واقعی برای رزرو بازدید:",
-      "examples": [
-        {"fr": "Bonjour, j'appelle concernant l'annonce du T2 rue Victor Hugo.", "fa": "سلام، درباره آگهی T2 خیابان ویکتور هوگو تماس گرفتم."},
-        {"fr": "Est-il toujours disponible ?", "fa": "آیا هنوز موجود است؟"},
-        {"fr": "Quand serait-il possible de le visiter ?", "fa": "چه زمانی امکان بازدید وجود دارد؟"}
-      ]
-    },
-    {
-      "type": "lesson",
-      "title": "📝 Documents nécessaires",
-      "title_fa": "مدارک لازم",
-      "content": "فایل معروف به 'Dossier de location' را آماده کنید:",
-      "examples": [
-        {"fr": "Pièce d'identité", "fa": "کارت شناسایی"},
-        {"fr": "3 dernières fiches de paie", "fa": "۳ فیش حقوقی آخر"},
-        {"fr": "Contrat de travail", "fa": "قرارداد کار"},
-        {"fr": "Avis d'imposition", "fa": "برگه مالیات"}
-      ]
-    },
-    {
-      "type": "lesson",
-      "title": "⚠️ Pièges à éviter",
-      "title_fa": "دام‌هایی که باید از آن‌ها اجتناب کنید",
-      "note_fa": "هرگز قبل از دیدن خانه، پولی به عنوان 'رزرو' پرداخت نکنید. این کلاهبرداری رایج است!",
-      "examples": [
-        {"fr": "Mandat cash / Western Union", "fa": "❌ هرگز! روش‌های کلاهبرداری"},
-        {"fr": "Visite avant paiement", "fa": "✅ اول بازدید، بعد پرداخت"}
-      ]
-    },
-    {
-      "type": "exercise",
-      "title": "Quiz : Dossier de location",
-      "title_fa": "آزمون: پرونده اجاره",
-      "displayCount": 4,
-      "questions": [...]
-    }
-  ]
-}
+[
+  { "id": "DL-001", "title": "Trouver un logement", "title_fa": "پیدا کردن خانه", "icon": "🏠", "estimatedTime": 25 },
+  { "id": "DL-002", "title": "Banque & Compte", "title_fa": "بانک و حساب بانکی", "icon": "🏦", "estimatedTime": 20 },
+  { "id": "DL-003", "title": "Administration & Préfecture", "title_fa": "امور اداری و پرفکتور", "icon": "📄", "estimatedTime": 30 },
+  { "id": "DL-004", "title": "Sécurité sociale & Mutuelle", "title_fa": "بیمه درمانی و بیمه تکمیلی", "icon": "🏥", "estimatedTime": 25 },
+  { "id": "DL-005", "title": "Supermarché & Courses", "title_fa": "سوپرمارکت و خرید روزانه", "icon": "🛒", "estimatedTime": 15 },
+  { "id": "DL-006", "title": "Transports en commun", "title_fa": "حمل و نقل عمومی شهری", "icon": "🚇", "estimatedTime": 15 },
+  { "id": "DL-007", "title": "Factures & Services", "title_fa": "قبض‌ها و خدمات (آب، برق، اینترنت)", "icon": "💡", "estimatedTime": 15 },
+  { "id": "DL-008", "title": "École des enfants", "title_fa": "مدرسه فرزندان", "icon": "🏫", "estimatedTime": 20 },
+  { "id": "DL-009", "title": "Pharmacie & Santé", "title_fa": "داروخانه و سلامت", "icon": "💊", "estimatedTime": 15 },
+  { "id": "DL-010", "title": "Relations de voisinage", "title_fa": "ارتباط با همسایه‌ها", "icon": "🤝", "estimatedTime": 15 },
+  { "id": "DL-011", "title": "Monde du travail", "title_fa": "محیط کار", "icon": "💼", "estimatedTime": 25 },
+  { "id": "DL-012", "title": "Réparations & Services", "title_fa": "تعمیرات و خدمات فنی", "icon": "🔧", "estimatedTime": 15 },
+  { "id": "DL-013", "title": "Coiffeur & Esthétique", "title_fa": "آرایشگاه و زیبایی", "icon": "💈", "estimatedTime": 15 },
+  { "id": "DL-014", "title": "Animaux domestiques", "title_fa": "حیوانات خانگی", "icon": "🐾", "estimatedTime": 15 },
+  { "id": "DL-015", "title": "Sport & Loisirs", "title_fa": "باشگاه و سرگرمی", "icon": "🏋️", "estimatedTime": 15 },
+  { "id": "DL-016", "title": "Appels administratifs", "title_fa": "تماس با ادارات", "icon": "📞", "estimatedTime": 15 },
+  { "id": "DL-017", "title": "Université & Études", "title_fa": "دانشگاه و تحصیل", "icon": "🎓", "estimatedTime": 20 },
+  { "id": "DL-018", "title": "Droits & Citoyenneté", "title_fa": "حقوق و شهروندی", "icon": "🗳️", "estimatedTime": 20 }
+]
