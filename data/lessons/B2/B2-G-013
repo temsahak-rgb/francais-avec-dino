@@ -8,89 +8,82 @@
     {
       "id": "B2-G-013-1",
       "type": "lesson",
-      "title": "L'intonation et l'adjectif exclamatif",
-      "content": "**1. L'intonation**\n\nUne phrase affirmative peut devenir exclamative uniquement grâce à l'intonation.\n\nÀ l'écrit, cela se marque par `!`\n\n*Elle n'est jamais à l'heure !*\n*C'est incroyable !*\n\n→ Pas de changement grammatical : seule l'intonation change.\n\n**2. L'adjectif exclamatif `quel`**\n\nLes formes : `quel`, `quelle`, `quels`, `quelles`\n\n→ s'accordent en **genre** et en **nombre** avec le nom.\n→ Toujours placé **devant** le nom.",
+      "title": "L'intonation et l'adjectif exclamatif `quel`",
+      "content": "**1. L'intonation seule**\n\nUne phrase affirmative ou négative peut devenir exclamative uniquement grâce à l'intonation montante.\n\nÀ l'écrit, cela se marque par `!`\n\n*Elle n'est jamais à l'heure !*\n*C'est incroyable !*\n\n→ Pas de changement grammatical : seule la ponctuation et l'intonation changent.\n\n**2. L'adjectif exclamatif `quel`**\n\n`quel` introduit une exclamation sur un **nom** et s'accorde en genre et en nombre avec ce nom.\n\n**Règles d'accord :**\n\n- `quel` → masculin singulier\n- `quelle` → féminin singulier\n- `quels` → masculin pluriel\n- `quelles` → féminin pluriel\n\n⚠️ `quel` est toujours placé **devant** le nom, sans article.",
       "table": {
-        "headers": ["Forme", "Genre / Nombre", "Exemple"],
+        "headers": ["Forme", "Accord", "Exemple"],
         "rows": [
-          ["**quel**", "`masculin singulier`", "Quel mystère !"],
-          ["**quelle**", "`féminin singulier`", "Quelle chance !"],
-          ["**quels**", "`masculin pluriel`", "Quels idiots !"],
-          ["**quelles**", "`féminin pluriel`", "Quelles idées !"]
+          ["**quel**", "`masculin singulier`", "Quel paysage magnifique !"],
+          ["**quelle**", "`féminin singulier`", "Quelle belle surprise !"],
+          ["**quels**", "`masculin pluriel`", "Quels idiots ils font !"],
+          ["**quelles**", "`féminin pluriel`", "Quelles idées géniales !"]
         ]
       },
       "examples": [
-        {"fr": "**Intonation seule** : Elle n'est jamais à l'heure !"},
-        {"fr": "**Intonation seule** : C'est incroyable !"},
-        {"fr": "**Adjectif exclamatif** : Quelle chance !"},
-        {"fr": "**Adjectif exclamatif** : Quel mystère !"},
-        {"fr": "**Adjectif exclamatif** : Quels idiots !"},
-        {"fr": "**Adjectif exclamatif** : Quelles idées !"}
+        {"fr": "**Intonation seule** : Tu as gagné le concours !"},
+        {"fr": "**Intonation seule** : Je n'aurais jamais imaginé ça !"},
+        {"fr": "**Masculin singulier** : Quel courage il a montré !"},
+        {"fr": "**Féminin singulier** : Quelle patience il faut avoir !"},
+        {"fr": "**Masculin pluriel** : Quels efforts ils ont fournis !"},
+        {"fr": "**Féminin pluriel** : Quelles couleurs éclatantes !"}
       ],
-      "note": "✅ `Quelle chance !` — accord féminin singulier\n✅ `Quels idiots !` — accord masculin pluriel\n❌ ~~Quel chance !~~ — l'adjectif exclamatif doit s'accorder avec le nom.\n\n⚠️ L'adjectif exclamatif `quel` est toujours placé **devant** le nom."
+      "note": "📝 **Rappel :** `quel` s'accorde toujours avec le nom qu'il précède.\n\n✅ `Quelle chance !` — féminin singulier\n✅ `Quels enfants turbulents !` — masculin pluriel\n\n❌ ~~Quel chance !~~ — faute d'accord\n❌ ~~Quelle les belles fleurs !~~ — on ne met pas d'article après `quel`"
     },
     {
       "id": "B2-G-013-2",
       "type": "lesson",
-      "title": "Les adverbes exclamatifs et d'intensité",
-      "content": "**1. `que` / `que de`**\n\nPlacés devant le sujet ou devant un nom.\n\n- `que` + sujet → exprime une **qualité** / **intensité**\n  *Que vous êtes paresseux !*\n\n- `que de` + nom → exprime une **quantité**\n  *Que de fautes ! / Que d'erreurs !*\n\n**2. `combien` / `combien de`**\n\n- `combien` + sujet → **intensité**\n  *Combien tu étudies !*\n\n- `combien de` + nom → **quantité**\n  *Combien de personnes l'ont cru !*\n\n**3. `comme`**\n\nExprime une intensité **qualitative**.\n\n*Comme il est gentil ! / Comme elle est belle !*\n\n**4. Formes familières : `ce que` / `qu'est-ce que`**\n\nRemplacent `combien` ou `comme` dans le français parlé.\n\n*Ce qu'il est fatigué ! / Qu'est-ce qu'il est insupportable !*\n\n**5. Adverbes d'intensité : `si` / `tellement` / `tant`**\n\n- `si` / `tellement` → précèdent un **adjectif** ou un **adverbe**\n  *Elle est si belle ! / Tu t'habilles tellement bien !*\n\n- `tant` / `tellement` → s'utilisent avec un **verbe**\n  *Vous avez tant marché ! / Elle souffre tellement en ce moment.*",
+      "title": "Adverbes exclamatifs et structures d'intensité",
+      "content": "**1. `que` et `que de`**\n\n- `que` + sujet/verbe → exprime une **intensité**\n  *Que tu es grand !*\n\n- `que de` + nom → exprime une **quantité**\n  *Que de travail !*\n\n**2. `combien` et `combien de`**\n\n- `combien` + sujet/verbe → **intensité**\n  *Combien je t'aime !*\n\n- `combien de` + nom → **quantité**\n  *Combien de fois je te l'ai dit !*\n\n**3. `comme`**\n\n`comme` exprime une intensité **qualitative**, placé en début de phrase.\n\n*Comme il a grandi !*\n*Comme cette musique est douce !*\n\n**4. `si` et `tellement`**\n\n- `si` / `tellement` + adjectif ou adverbe\n  *Elle est si intelligente !*\n  *Il court tellement vite !*\n\n**5. `tant` et `tellement` avec un verbe**\n\n- verbe + `tant` / `tellement`\n  *Il a tant pleuré !*\n  *Elle travaille tellement !*\n\n**6. Formes familières : `ce que` et `qu'est-ce que`**\n\nÀ l'oral, ces formes remplacent `comme` ou `combien`.\n\n*Ce qu'il est drôle !*\n*Qu'est-ce qu'elle chante bien !*",
       "table": {
         "headers": ["Expression", "Valeur", "Exemple"],
         "rows": [
-          ["**que** + sujet", "`intensité / qualité`", "Que vous êtes paresseux !"],
-          ["**que de** + nom", "`quantité`", "Que de fautes !"],
-          ["**combien** + sujet", "`intensité`", "Combien tu étudies !"],
-          ["**combien de** + nom", "`quantité`", "Combien de personnes l'ont cru !"],
-          ["**comme**", "`intensité qualitative`", "Comme il est gentil !"],
-          ["**ce que / qu'est-ce que**", "`familier : intensité`", "Ce qu'il est beau !"],
-          ["**si / tellement** + adj/adv", "`intensité`", "Elle est si belle !"],
-          ["**tant / tellement** + verbe", "`intensité verbale`", "Vous avez tant marché !"]
+          ["**que**", "`intensité`", "Que vous êtes élégante !"],
+          ["**que de**", "`quantité`", "Que de monde dans cette salle !"],
+          ["**combien**", "`intensité`", "Combien je regrette !"],
+          ["**combien de**", "`quantité`", "Combien de livres il a lus !"],
+          ["**comme**", "`qualité`", "Comme ce gâteau est bon !"],
+          ["**si / tellement** + adj/adv", "`intensité`", "Il est si gentil !"],
+          ["**verbe + tant / tellement**", "`intensité verbale`", "Elle a tant souffert !"],
+          ["**ce que / qu'est-ce que**", "`familier`", "Ce qu'il fait chaud !"]
         ]
       },
       "examples": [
-        {"fr": "**Intensité** : Que vous êtes paresseux !"},
-        {"fr": "**Quantité** : Que de fautes !"},
-        {"fr": "**Intensité** : Combien tu étudies !"},
-        {"fr": "**Quantité** : Combien de personnes l'ont cru !"},
-        {"fr": "**Qualité** : Comme il est gentil !"},
-        {"fr": "**Familier** : Ce qu'il est fatigué !"},
-        {"fr": "**Familier** : Qu'est-ce qu'il est insupportable !"},
-        {"fr": "**Adjectif** : Elle est si belle !"},
-        {"fr": "**Adverbe** : Tu t'habilles tellement bien !"},
-        {"fr": "**Verbe** : Vous avez tant marché !"},
-        {"fr": "**Verbe** : Elle souffre tellement en ce moment."}
+        {"fr": "**Intensité** : Que cette ville est animée !"},
+        {"fr": "**Quantité** : Que de problèmes à résoudre !"},
+        {"fr": "**Intensité** : Combien je suis heureux de te voir !"},
+        {"fr": "**Quantité** : Combien d'années se sont écoulées !"},
+        {"fr": "**Qualité** : Comme tu as changé !"},
+        {"fr": "**Adjectif** : Ce tableau est tellement beau !"},
+        {"fr": "**Verbe** : Il a tant voyagé dans sa vie !"},
+        {"fr": "**Familier** : Qu'est-ce que c'est bon !"}
       ],
-      "note": "⚠️ Ne pas confondre :\n\n✅ `que` + sujet = intensité → *Que vous êtes paresseux !*\n✅ `que de` + nom = quantité → *Que de fautes !*\n\n✅ `si` / `tellement` + adjectif ou adverbe → *Elle est si belle !*\n✅ `tant` / `tellement` + verbe → *Vous avez tant marché !*\n\n⚠️ `ce que` et `qu'est-ce que` sont des formes **familières** et ne conviennent pas à l'écrit formel."
+      "note": "💡 **Astuce :** Pour choisir entre `que` et `que de`, regardez ce qui suit :\n\n- **Verbe ou adjectif** → `que` : *Que tu es beau !*\n- **Nom** → `que de` : *Que de beauté !*\n\n⚠️ Ne confondez pas :\n- `si` (exclamation) : *Elle est si belle !*\n- `si` (condition) : *Si tu venais, je serais content.*\n\n⚠️ `ce que` et `qu'est-ce que` sont réservés à l'**oral familier**, à éviter à l'écrit formel."
     },
     {
       "id": "B2-G-013-3",
       "type": "lesson",
-      "title": "Tableau récapitulatif et points pratiques",
-      "content": "🔑 **Résumé ultra-pratique :**\n\n- `quel` = exclamation sur un **nom** (accord obligatoire)\n- `que` / `que de` = **intensité** ou **quantité**\n- `combien` / `combien de` = **intensité** ou **quantité**\n- `comme` = **intensité qualitative**\n- `ce que` / `qu'est-ce que` = formes **familières**\n- `si` / `tellement` = intensité avant **adjectif** ou **adverbe**\n- `tant` / `tellement` = intensité avant **verbe**\n- La **position** de ces mots dans la phrase est essentielle (devant le sujet ou devant le nom)\n\n⚠️ **Points importants :**\n\nEn français, il existe des structures précises et variées pour l'exclamation, contrairement à d'autres langues qui utilisent une seule forme.\n\nLa différence entre `que` (intensité) et `que de` (quantité) est très importante.\n\nLes formes familières comme `ce que` et `qu'est-ce que` sont très fréquentes à l'oral.\n\n`si` / `tellement` / `tant` doivent être adaptés au type de mot qui suit (adjectif, adverbe, verbe).",
+      "title": "Situations de la vie quotidienne",
+      "content": "**Situation 1 : Au restaurant**\n\nVous découvrez un plat délicieux :\n- *Quel délice !*\n- *Comme c'est savoureux !*\n- *Que c'est bon !*\n- *Ce que c'est bon !* (familier)\n\n**Situation 2 : Face à un paysage**\n\nVous admirez une vue magnifique :\n- *Quelle vue splendide !*\n- *Que de beauté !*\n- *Comme c'est magnifique !*\n\n**Situation 3 : Devant une foule**\n\nVous êtes surpris par le nombre de personnes :\n- *Que de monde !*\n- *Combien de gens ici !*\n- *Quelle affluence !*\n\n**Situation 4 : En réaction à une nouvelle**\n\nVous apprenez quelque chose d'inattendu :\n- *Quelle surprise !*\n- *Comme c'est inattendu !*\n- *Qu'est-ce que c'est surprenant !* (familier)\n\n**Situation 5 : Devant un effort remarquable**\n\nVous êtes impressionné par le travail accompli :\n- *Quels efforts ils ont fournis !*\n- *Ils ont tant travaillé !*\n- *Comme ils ont bien travaillé !*\n\n**Registres adaptés :**\n\n- **Écrit formel** : `quel`, `comme`, `que de`\n- **Oral courant** : `si`, `tellement`, `combien`\n- **Oral familier** : `ce que`, `qu'est-ce que`",
       "table": {
-        "headers": ["Catégorie", "Expression", "Exemple"],
+        "headers": ["Contexte", "Expression recommandée", "À éviter"],
         "rows": [
-          ["**Adjectif exclamatif**", "`quel / quelle / quels / quelles`", "Quelle chance !"],
-          ["**Adverbe exclamatif**", "`que`", "Que vous êtes paresseux !"],
-          ["**Adverbe exclamatif**", "`que de`", "Que de fautes !"],
-          ["**Intensité**", "`combien`", "Combien tu étudies !"],
-          ["**Quantité**", "`combien de`", "Combien de personnes…"],
-          ["**Intensité qualitative**", "`comme`", "Comme il est gentil !"],
-          ["**Familier**", "`ce que / qu'est-ce que`", "Ce qu'il est beau !"],
-          ["**Intensité adj/adv**", "`si / tellement`", "Elle est si belle !"],
-          ["**Intensité verbale**", "`tant / tellement`", "Vous avez tant marché !"]
+          ["**Email professionnel**", "`Quel plaisir de vous rencontrer !`", "`Ce que c'est bien !`"],
+          ["**Conversation amicale**", "`Comme c'est cool !`", "`Quel délice paradisiaque !`"],
+          ["**Littérature**", "`Que de splendeurs offertes à mes yeux !`", "`Qu'est-ce que c'est beau !`"],
+          ["**Réseaux sociaux**", "`Tellement beau !`", "`Que d'élégance incomparable !`"]
         ]
       },
       "examples": [
-        {"fr": "**Nom** : Quelle chance !"},
-        {"fr": "**Intensité** : Que vous êtes paresseux !"},
-        {"fr": "**Quantité** : Que de fautes !"},
-        {"fr": "**Qualité** : Comme il est gentil !"},
-        {"fr": "**Familier** : Ce qu'il est fatigué !"},
-        {"fr": "**Adjectif** : Elle est si belle !"},
-        {"fr": "**Verbe** : Vous avez tant marché !"}
+        {"fr": "**Restaurant (formel)** : Quelle cuisine raffinée !"},
+        {"fr": "**Restaurant (familier)** : Qu'est-ce que c'est délicieux !"},
+        {"fr": "**Paysage** : Quelle vue à couper le souffle !"},
+        {"fr": "**Foule** : Combien de personnes sont venues !"},
+        {"fr": "**Nouvelle** : Comme cette nouvelle est réjouissante !"},
+        {"fr": "**Effort** : Ils ont tellement travaillé pour réussir !"},
+        {"fr": "**Réseaux sociaux** : Tellement fière de toi !"},
+        {"fr": "**Littérature** : Que de merveilles ce monde recèle !"}
       ],
-      "note": "⚠️ Le choix de l'adverbe exclamatif dépend du **type de mot** qui suit :\n\n- **Nom** → `quel` / `que de` / `combien de`\n- **Adjectif / adverbe** → `comme` / `si` / `tellement` / `que`\n- **Verbe** → `tant` / `tellement` / `combien`\n\n✅ `Quelle belle journée !` — adjectif exclamatif + nom\n✅ `Comme il est gentil !` — adverbe exclamatif + adjectif\n✅ `Vous avez tant travaillé !` — adverbe d'intensité + verbe\n\n❌ ~~Si il est gentil !~~ — `si` précède directement l'adjectif, pas le sujet."
+      "note": "🎯 **Objectif :** Adapter l'exclamation au contexte et au registre.\n\n**Pour un écrit soutenu (lettre, littérature) :**\n✅ *Quelle émotion m'a saisi en vous retrouvant !*\n✅ *Que de souvenirs reviennent à ma mémoire !*\n\n**Pour l'oral courant :**\n✅ *Comme je suis content !*\n✅ *C'est tellement bien !*\n\n**Pour l'oral familier :**\n✅ *Ce que c'est drôle !*\n✅ *Qu'est-ce qu'il fait chaud !*\n\n⚠️ À l'écrit formel, évitez absolument `ce que` et `qu'est-ce que` comme exclamatifs : ils sont réservés au langage parlé."
     }
   ]
 }
