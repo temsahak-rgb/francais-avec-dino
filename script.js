@@ -163,29 +163,344 @@ function showLevelSelection() {
     document.querySelectorAll(".level-btn").forEach(btn => { btn.onclick = () => { savePlacementResult(btn.getAttribute("data-level")); showHome(); }; });
 }
 
-function showHome() {
+// ===============================
+// صفحه اصلی (تغییر مسیر بر اساس currentPath)
+// ===============================
+async function showHome() {
+  const currentPath = getCurrentPath();
+  
+  if (currentPath === "daily") {
+    showDailyHome();
+  } else if (currentPath === "travel") {
+    showTravelHome();
+  } else {
+    showGeneralHome();
+  }
+}
+
+// ===============================
+// 🇫🇷 صفحه اصلی - فرانسوی عمومی (همان UI قبلی)
+// ===============================
+function showGeneralHome() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
   const level = getPlacementResult() || "A2";
-  app.innerHTML = `<div style="margin: 0 auto; padding-top: 20px;">
-    <div style="text-align: left; margin-bottom: 50px;">
-        <h1 style="font-size: 42px; margin-bottom: 15px;">${t.hello} 👋</h1>
-        <p style="font-size: 22px; color: #007bff; font-weight: bold;">${t.level} : ${level}</p>
-        <button id="change-level-home" style="background: none; border: none; color: #6c757d; text-decoration: underline; cursor: pointer; font-size: 16px; margin-top: 10px; width: auto; padding: 5px;">${t.changeLevel}</button>
-    </div>
-    <h2 style="font-size: 24px; margin-bottom: 25px; color: #495057;">${t.today}</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+  
+  app.innerHTML = `
+    <div style="margin: 0 auto; padding-top: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+        <div>
+          <h1 style="font-size: 42px; margin-bottom: 10px;">${t.hello} 👋</h1>
+          <p style="font-size: 18px; color: #6c757d;">${t.level} : <strong style="color: #007bff;">${level}</strong></p>
+        </div>
+        <button id="profile-btn" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); border: none; cursor: pointer; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 12px rgba(102,126,234,0.3);">🦖</button>
+      </div>
+      
+      <!-- دکمه تغییر مسیر -->
+      <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 20px; margin-bottom: 30px; display: flex; gap: 10px;">
+        <button onclick="switchPath('general')" style="flex: 1; padding: 12px; background: #007bff; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer;">🇫🇷 ${lang === "fa" ? "عمومی" : "Général"}</button>
+        <button onclick="switchPath('daily')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🏘️ ${lang === "fa" ? "روزمره" : "Quotidien"}</button>
+        <button onclick="switchPath('travel')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">✈️ ${lang === "fa" ? "سفر" : "Voyage"}</button>
+      </div>
+      
+      <h2 style="font-size: 24px; margin-bottom: 25px; color: #212529;">${t.today}</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
         <button class="home-card" data-section="vocabulary" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #007bff; color: white; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(0,123,255,0.2);"><span style="font-size: 40px; margin-right: 20px;">📚</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.vocabulary}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
         <button class="home-card" data-section="grammar" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #28a745; color: white; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(40,167,69,0.2);"><span style="font-size: 40px; margin-right: 20px;">📖</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.grammar}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
         <button class="home-card" data-section="listening" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #ffc107; color: #212529; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(255,193,7,0.2);"><span style="font-size: 40px; margin-right: 20px;">🎧</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.listening}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
-        <button class="home-card" data-section="revision" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #6c757d; color: white; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(108,117,125,0.2);"><span style="font-size: 40px; margin-right: 20px;">📝</span><div><div style="font-weight: bold; margin-bottom: 8px;">${t.revision}</div><div style="font-size: 16px; opacity: 0.9;">${t.continue} →</div></div></button>
+        <button class="home-card" data-section="revision" style="display: flex; align-items: center; padding: 30px; font-size: 20px; border: none; border-radius: 16px; background-color: #6c757d; color: white; cursor: pointer; text-align: left; box-shadow: 0 4px 12px rgba(108,117,125,0.2);"><span style="font-size: 40px; margin-right: 20px;">📝</span><div><div style="font-weight: bold; margin-bottom: 5px;">${t.revision}</div><div style="font-size: 14px; opacity: 0.9;">${t.continue} →</div></div></button>
+      </div>
+      <p style="text-align: left; color: #adb5bd; margin-top: 60px; font-size: 16px;">Version 1.0.0 Web</p>
     </div>
-    <p style="text-align: left; color: #adb5bd; margin-top: 60px; font-size: 16px;">Version 1.0.0 Web</p>
-  </div>`;
+  `;
+  
   document.querySelectorAll(".home-card").forEach(card => {
-      card.onclick = () => { const section = card.getAttribute("data-section"); if (section === "grammar") { showGrammarPage(); } else { alert("🚧 بخش " + section + " به زودی فعال می‌شود!"); } };
+    card.onclick = () => { 
+      const section = card.getAttribute("data-section"); 
+      if (section === "grammar") { showGrammarPage(); } 
+      else { alert("🚧 بخش " + section + " به زودی فعال می‌شود!"); } 
+    };
   });
-  document.getElementById("change-level-home").onclick = showLevelSelection;
+}
+
+// ===============================
+// 🏘️ صفحه اصلی - فرانسوی روزمره (طراحی کاملاً جدید)
+// ===============================
+async function showDailyHome() {
+  const lang = localStorage.getItem("language") || "fr";
+  
+  // بارگذاری لیست ماژول‌های روزمره
+  let modules = [];
+  try {
+    const response = await fetch("./data/daily/lessons.json");
+    modules = await response.json();
+  } catch (error) {
+    console.error("خطا در بارگذاری:", error);
+  }
+  
+  // دسته‌بندی ماژول‌ها
+  const categories = {
+    "installation": { 
+      "icon": "🏠", 
+      "title": lang === "fa" ? "نصب و راه‌اندازی زندگی" : "Installation",
+      "color": "#8b5cf6",
+      "ids": ["DL-001", "DL-002", "DL-003", "DL-007"]
+    },
+    "sante": { 
+      "icon": "🏥", 
+      "title": lang === "fa" ? "سلامت و بیمه" : "Santé & Assurance",
+      "color": "#ec4899",
+      "ids": ["DL-004", "DL-009"]
+    },
+    "quotidien": { 
+      "icon": "🛒", 
+      "title": lang === "fa" ? "زندگی روزمره" : "Vie Quotidienne",
+      "color": "#f59e0b",
+      "ids": ["DL-005", "DL-006", "DL-012"]
+    },
+    "travail": { 
+      "icon": "💼", 
+      "title": lang === "fa" ? "کار و تحصیل" : "Travail & Études",
+      "color": "#10b981",
+      "ids": ["DL-008", "DL-011", "DL-017"]
+    },
+    "social": { 
+      "icon": "🤝", 
+      "title": lang === "fa" ? "ارتباطات اجتماعی" : "Vie Sociale",
+      "color": "#06b6d4",
+      "ids": ["DL-010", "DL-013", "DL-014", "DL-015"]
+    },
+    "administratif": { 
+      "icon": "📋", 
+      "title": lang === "fa" ? "امور اداری" : "Administration",
+      "color": "#6366f1",
+      "ids": ["DL-016", "DL-018"]
+    }
+  };
+  
+  let html = `
+    <div style="margin: 0 auto; padding-top: 20px;">
+      <!-- هدر با گرادیان گرم -->
+      <div style="background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%); border-radius: 24px; padding: 35px; margin-bottom: 30px; color: white; box-shadow: 0 10px 30px rgba(245,158,11,0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div>
+            <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">🏘️ ${lang === "fa" ? "فرانسوی روزمره" : "Français Quotidien"}</p>
+            <h1 style="font-size: 36px; margin: 0; font-weight: 800; line-height: 1.2;">${lang === "fa" ? "راهنمای زندگی در فرانسه" : "Guide de vie en France"}</h1>
+            <p style="font-size: 16px; margin-top: 15px; opacity: 0.95;">${lang === "fa" ? "هر آنچه برای زندگی روزمره نیاز دارید" : "Tout ce dont vous avez besoin au quotidien"}</p>
+          </div>
+          <button id="profile-btn" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; backdrop-filter: blur(10px);">🦖</button>
+        </div>
+      </div>
+      
+      <!-- دکمه تغییر مسیر -->
+      <div style="background: #f8f9fa; border-radius: 16px; padding: 15px; margin-bottom: 30px; display: flex; gap: 10px;">
+        <button onclick="switchPath('general')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🇫🇷 ${lang === "fa" ? "عمومی" : "Général"}</button>
+        <button onclick="switchPath('daily')" style="flex: 1; padding: 12px; background: #f59e0b; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer;">🏘️ ${lang === "fa" ? "روزمره" : "Quotidien"}</button>
+        <button onclick="switchPath('travel')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">✈️ ${lang === "fa" ? "سفر" : "Voyage"}</button>
+      </div>
+      
+      <!-- شماره‌های مفید -->
+      <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #fbbf24; border-radius: 16px; padding: 20px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 15px 0; color: #78350f; font-size: 18px; display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 22px;">📞</span>
+          <span>${lang === "fa" ? "شماره‌های ضروری" : "Numéros utiles"}</span>
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div style="background: white; padding: 12px; border-radius: 10px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 800; color: #dc2626;">112</div>
+            <div style="font-size: 12px; color: #64748b;">${lang === "fa" ? "اورژانس" : "Urgences"}</div>
+          </div>
+          <div style="background: white; padding: 12px; border-radius: 10px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 800; color: #0284c7;">3646</div>
+            <div style="font-size: 12px; color: #64748b;">CAF</div>
+          </div>
+          <div style="background: white; padding: 12px; border-radius: 10px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 800; color: #059669;">15</div>
+            <div style="font-size: 12px; color: #64748b;">SAMU</div>
+          </div>
+        </div>
+      </div>
+  `;
+  
+  // نمایش دسته‌بندی‌ها
+  for (const [catKey, cat] of Object.entries(categories)) {
+    const catModules = modules.filter(m => cat.ids.includes(m.id));
+    if (catModules.length === 0) continue;
+    
+    html += `
+      <div style="margin-bottom: 35px;">
+        <h2 style="font-size: 22px; margin-bottom: 15px; color: #1a202c; display: flex; align-items: center; gap: 10px;">
+          <span style="background: ${cat.color}; width: 40px; height: 40px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 22px;">${cat.icon}</span>
+          <span>${cat.title}</span>
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+    `;
+    
+    catModules.forEach(mod => {
+      const title = lang === "fa" ? mod.title_fa : mod.title;
+      html += `
+        <div onclick="showDailyLesson('${mod.id}')" style="
+          background: white; 
+          border: 2px solid #e9ecef; 
+          border-radius: 16px; 
+          padding: 20px; 
+          cursor: pointer; 
+          transition: all 0.2s;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        " onmouseover="this.style.borderColor='${cat.color}'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='#e9ecef'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'">
+          <div style="font-size: 36px; margin-bottom: 10px;">${mod.icon}</div>
+          <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 16px; font-weight: 700; color: #1a202c; line-height: 1.4;">${title}</p>
+          <p style="margin: 8px 0 0 0; font-size: 13px; color: #64748b;">⏱ ${mod.estimatedTime} min</p>
+        </div>
+      `;
+    });
+    
+    html += `</div></div>`;
+  }
+  
+  html += `</div>`;
+  app.innerHTML = html;
+}
+
+// ===============================
+// ✈️ صفحه اصلی - فرانسوی در سفر (طراحی ماجراجویانه)
+// ===============================
+async function showTravelHome() {
+  const lang = localStorage.getItem("language") || "fr";
+  
+  let lessons = [];
+  try {
+    const response = await fetch("./data/travel/lessons.json");
+    lessons = await response.json();
+  } catch (error) {
+    console.error("خطا در بارگذاری:", error);
+  }
+  
+  // دسته‌بندی بر اساس مرحله سفر
+  const phases = {
+    "preparation": {
+      "title": lang === "fa" ? "🎒 قبل از سفر" : "🎒 Avant le voyage",
+      "color": "#10b981",
+      "ids": ["TR-001", "TR-002", "TR-003", "TR-009"]
+    },
+    "arrival": {
+      "title": lang === "fa" ? "✈️ ورود به فرانسه" : "✈️ Arrivée en France",
+      "color": "#3b82f6",
+      "ids": ["TR-004", "TR-005", "TR-006"]
+    },
+    "city": {
+      "title": lang === "fa" ? "🏙️ در شهر" : "🏙️ Dans la ville",
+      "color": "#8b5cf6",
+      "ids": ["TR-007", "TR-008", "TR-010", "TR-011", "TR-012"]
+    },
+    "activities": {
+      "title": lang === "fa" ? "🎨 فعالیت‌ها" : "🎨 Activités",
+      "color": "#f59e0b",
+      "ids": ["TR-013", "TR-014", "TR-015"]
+    },
+    "emergencies": {
+      "title": lang === "fa" ? "🚨 مواقع اضطراری" : "🚨 Urgences",
+      "color": "#dc2626",
+      "ids": ["TR-016", "TR-017"]
+    },
+    "departure": {
+      "title": lang === "fa" ? "👋 بازگشت" : "👋 Départ",
+      "color": "#6366f1",
+      "ids": ["TR-018"]
+    }
+  };
+  
+  let html = `
+    <div style="margin: 0 auto; padding-top: 20px;">
+      <!-- هدر ماجراجویانه -->
+      <div style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%); border-radius: 24px; padding: 40px; margin-bottom: 30px; color: white; box-shadow: 0 10px 30px rgba(99,102,241,0.4); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -20px; right: -20px; font-size: 150px; opacity: 0.15;">✈️</div>
+        <div style="position: relative; z-index: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">✈️ ${lang === "fa" ? "فرانسوی در سفر" : "Français Voyage"}</p>
+              <h1 style="font-size: 40px; margin: 0; font-weight: 800; line-height: 1.2;">${lang === "fa" ? "آماده‌ی ماجراجویی!" : "Prêt pour l'aventure !"}</h1>
+              <p style="font-size: 16px; margin-top: 15px; opacity: 0.95;">${lang === "fa" ? "۱۸ درس برای سفری بی‌نقص به فرانسه" : "18 leçons pour un voyage parfait en France"}</p>
+            </div>
+            <button id="profile-btn" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; backdrop-filter: blur(10px);">🦖</button>
+          </div>
+          
+          <!-- نوار پیشرفت سفر -->
+          <div style="margin-top: 25px; background: rgba(255,255,255,0.2); border-radius: 10px; padding: 15px; backdrop-filter: blur(10px);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
+              <span>${lang === "fa" ? "پیشرفت سفر شما" : "Progression du voyage"}</span>
+              <span style="font-weight: 700;">0 / 18</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.3); height: 8px; border-radius: 4px; overflow: hidden;">
+              <div style="background: white; height: 100%; width: 0%; border-radius: 4px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- دکمه تغییر مسیر -->
+      <div style="background: #f8f9fa; border-radius: 16px; padding: 15px; margin-bottom: 30px; display: flex; gap: 10px;">
+        <button onclick="switchPath('general')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🇫🇷 ${lang === "fa" ? "عمومی" : "Général"}</button>
+        <button onclick="switchPath('daily')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🏘️ ${lang === "fa" ? "روزمره" : "Quotidien"}</button>
+        <button onclick="switchPath('travel')" style="flex: 1; padding: 12px; background: #6366f1; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer;">✈️ ${lang === "fa" ? "سفر" : "Voyage"}</button>
+      </div>
+  `;
+  
+  // نمایش مراحل سفر
+  for (const [phaseKey, phase] of Object.entries(phases)) {
+    const phaseLessons = lessons.filter(l => phase.ids.includes(l.id));
+    if (phaseLessons.length === 0) continue;
+    
+    html += `
+      <div style="margin-bottom: 35px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px dashed ${phase.color}30;">
+          <div style="background: ${phase.color}; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">${phaseLessons.length}</div>
+          <h2 style="font-size: 22px; margin: 0; color: #1a202c; font-weight: 700;">${phase.title}</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+    `;
+    
+    phaseLessons.forEach(lesson => {
+      const title = lang === "fa" ? lesson.title_fa : lesson.title;
+      html += `
+        <div onclick="showTravelLesson('${lesson.id}')" style="
+          background: linear-gradient(135deg, ${phase.color}15 0%, ${phase.color}05 100%);
+          border: 2px solid ${phase.color}30;
+          border-radius: 18px; 
+          padding: 22px; 
+          cursor: pointer; 
+          transition: all 0.2s;
+          position: relative;
+          overflow: hidden;
+        " onmouseover="this.style.borderColor='${phase.color}'; this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px ${phase.color}30'" onmouseout="this.style.borderColor='${phase.color}30'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+          <div style="font-size: 42px; margin-bottom: 12px;">${lesson.icon}</div>
+          <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 17px; font-weight: 700; color: #1a202c; line-height: 1.4;">${title}</p>
+          <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 13px; color: #64748b;">⏱ ${lesson.estimatedTime} min</span>
+            <span style="color: ${phase.color}; font-size: 20px;">→</span>
+          </div>
+        </div>
+      `;
+    });
+    
+    html += `</div></div>`;
+  }
+  
+  html += `</div>`;
+  app.innerHTML = html;
+}
+
+// ===============================
+// توابع نمایش درس برای روزمره و سفر
+// ===============================
+async function showDailyLesson(lessonId) {
+  // فعلاً یک placeholder - بعداً با lessonEngine یکپارچه می‌شود
+  alert(`🏘️ درس ${lessonId} به زودی فعال می‌شود!`);
+}
+
+async function showTravelLesson(lessonId) {
+  // فعلاً یک placeholder - بعداً با lessonEngine یکپارچه می‌شود
+  alert(`✈️ درس ${lessonId} به زودی فعال می‌شود!`);
 }
 
 async function showGrammarPage() {
