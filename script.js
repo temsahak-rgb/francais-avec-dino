@@ -417,129 +417,34 @@ function showHome() {
 // ===============================
 // ✈️ صفحه اصلی - فرانسوی در سفر (طراحی ماجراجویانه)
 // ===============================
+// ===============================
+// ✈️ صفحه سفر (با نوار بالا)
+// ===============================
 async function showTravelHome() {
-  const lang = localStorage.getItem("language") || "fr";
-  
-  let lessons = [];
-  try {
-    const response = await fetch("./data/travel/lessons.json");
-    lessons = await response.json();
-  } catch (error) {
-    console.error("خطا در بارگذاری:", error);
-  }
-  
-  // دسته‌بندی بر اساس مرحله سفر
-  const phases = {
-    "preparation": {
-      "title": lang === "fa" ? "🎒 قبل از سفر" : "🎒 Avant le voyage",
-      "color": "#10b981",
-      "ids": ["TR-001", "TR-002", "TR-003", "TR-009"]
-    },
-    "arrival": {
-      "title": lang === "fa" ? "✈️ ورود به فرانسه" : "✈️ Arrivée en France",
-      "color": "#3b82f6",
-      "ids": ["TR-004", "TR-005", "TR-006"]
-    },
-    "city": {
-      "title": lang === "fa" ? "🏙️ در شهر" : "🏙️ Dans la ville",
-      "color": "#8b5cf6",
-      "ids": ["TR-007", "TR-008", "TR-010", "TR-011", "TR-012"]
-    },
-    "activities": {
-      "title": lang === "fa" ? "🎨 فعالیت‌ها" : "🎨 Activités",
-      "color": "#f59e0b",
-      "ids": ["TR-013", "TR-014", "TR-015"]
-    },
-    "emergencies": {
-      "title": lang === "fa" ? "🚨 مواقع اضطراری" : "🚨 Urgences",
-      "color": "#dc2626",
-      "ids": ["TR-016", "TR-017"]
-    },
-    "departure": {
-      "title": lang === "fa" ? "👋 بازگشت" : "👋 Départ",
-      "color": "#6366f1",
-      "ids": ["TR-018"]
-    }
-  };
-  
-  let html = `
-    <div style="margin: 0 auto; padding-top: 20px;">
-      <!-- هدر ماجراجویانه -->
-      <div style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%); border-radius: 24px; padding: 40px; margin-bottom: 30px; color: white; box-shadow: 0 10px 30px rgba(99,102,241,0.4); position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -20px; right: -20px; font-size: 150px; opacity: 0.15;">✈️</div>
-        <div style="position: relative; z-index: 1;">
-          <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
-              <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">✈️ ${lang === "fa" ? "فرانسوی در سفر" : "Français Voyage"}</p>
-              <h1 style="font-size: 40px; margin: 0; font-weight: 800; line-height: 1.2;">${lang === "fa" ? "آماده‌ی ماجراجویی!" : "Prêt pour l'aventure !"}</h1>
-              <p style="font-size: 16px; margin-top: 15px; opacity: 0.95;">${lang === "fa" ? "۱۸ درس برای سفری بی‌نقص به فرانسه" : "18 leçons pour un voyage parfait en France"}</p>
-            </div>
-            <button id="profile-btn" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; backdrop-filter: blur(10px);">🦖</button>
-          </div>
-          
-          <!-- نوار پیشرفت سفر -->
-          <div style="margin-top: 25px; background: rgba(255,255,255,0.2); border-radius: 10px; padding: 15px; backdrop-filter: blur(10px);">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
-              <span>${lang === "fa" ? "پیشرفت سفر شما" : "Progression du voyage"}</span>
-              <span style="font-weight: 700;">0 / 18</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.3); height: 8px; border-radius: 4px; overflow: hidden;">
-              <div style="background: white; height: 100%; width: 0%; border-radius: 4px;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- دکمه تغییر مسیر -->
-      <div style="background: #f8f9fa; border-radius: 16px; padding: 15px; margin-bottom: 30px; display: flex; gap: 10px;">
-        <button onclick="switchPath('general')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🇫🇷 ${lang === "fa" ? "عمومی" : "Général"}</button>
-        <button onclick="switchPath('daily')" style="flex: 1; padding: 12px; background: white; color: #495057; border: 1px solid #dee2e6; border-radius: 10px; font-weight: 600; cursor: pointer;">🏘️ ${lang === "fa" ? "روزمره" : "Quotidien"}</button>
-        <button onclick="switchPath('travel')" style="flex: 1; padding: 12px; background: #6366f1; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer;">✈️ ${lang === "fa" ? "سفر" : "Voyage"}</button>
-      </div>
-  `;
-  
-  // نمایش مراحل سفر
-  for (const [phaseKey, phase] of Object.entries(phases)) {
-    const phaseLessons = lessons.filter(l => phase.ids.includes(l.id));
-    if (phaseLessons.length === 0) continue;
+    const lang = localStorage.getItem("language") || "fr";
+    
+    let html = renderNavbar();
     
     html += `
-      <div style="margin-bottom: 35px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px dashed ${phase.color}30;">
-          <div style="background: ${phase.color}; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">${phaseLessons.length}</div>
-          <h2 style="font-size: 22px; margin: 0; color: #1a202c; font-weight: 700;">${phase.title}</h2>
+        <div style="background: #f8f9fa; min-height: calc(100vh - 65px);">
+            <div style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%); padding: 50px 20px; color: white; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -30px; right: -30px; font-size: 200px; opacity: 0.1;">✈️</div>
+                <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+                    <p style="font-size: 14px; opacity: 0.9; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 2px;">✈️ ${lang === "fa" ? "فرانسوی در سفر" : "Français Voyage"}</p>
+                    <h1 style="font-size: 42px; margin: 0 0 10px 0; font-weight: 800;">${lang === "fa" ? "آماده‌ی ماجراجویی!" : "Prêt pour l'aventure !"}</h1>
+                    <p style="font-size: 18px; opacity: 0.95; margin: 0;">${lang === "fa" ? "۱۸ درس برای سفری بی‌نقص به فرانسه" : "18 leçons pour un voyage parfait en France"}</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+                <p style="text-align: center; font-size: 20px; color: #6c757d; padding: 40px;">
+                    ${lang === "fa" ? "🏗️ محتوای این بخش در حال آماده‌سازی است..." : "🏗️ Contenu en cours de préparation..."}
+                </p>
+            </div>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
     `;
     
-    phaseLessons.forEach(lesson => {
-      const title = lang === "fa" ? lesson.title_fa : lesson.title;
-      html += `
-        <div onclick="showTravelLesson('${lesson.id}')" style="
-          background: linear-gradient(135deg, ${phase.color}15 0%, ${phase.color}05 100%);
-          border: 2px solid ${phase.color}30;
-          border-radius: 18px; 
-          padding: 22px; 
-          cursor: pointer; 
-          transition: all 0.2s;
-          position: relative;
-          overflow: hidden;
-        " onmouseover="this.style.borderColor='${phase.color}'; this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px ${phase.color}30'" onmouseout="this.style.borderColor='${phase.color}30'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-          <div style="font-size: 42px; margin-bottom: 12px;">${lesson.icon}</div>
-          <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 17px; font-weight: 700; color: #1a202c; line-height: 1.4;">${title}</p>
-          <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 13px; color: #64748b;">⏱ ${lesson.estimatedTime} min</span>
-            <span style="color: ${phase.color}; font-size: 20px;">→</span>
-          </div>
-        </div>
-      `;
-    });
-    
-    html += `</div></div>`;
-  }
-  
-  html += `</div>`;
-  app.innerHTML = html;
+    app.innerHTML = html;
 }
 
 // ===============================
@@ -583,89 +488,85 @@ async function showTravelLesson(lessonId) {
     showLessonContent(lessonId, lessonData.sections[0]);
 }
 
+// ===============================
+// 📚 صفحه گرامر (با نوار بالا)
+// ===============================
 async function showGrammarPage() {
     const lang = localStorage.getItem("language") || "fr";
     const t = texts[lang];
     const level = getPlacementResult() || "A1";
     
-    app.innerHTML = `<div style="text-align: center; padding: 60px 20px;"><p style="font-size: 20px; color: #6c757d;">⏳ در حال بارگذاری...</p></div>`;
-    await loadGrammar(level);
+    let html = renderNavbar();
     
+    html += `<div style="text-align: center; padding: 60px 20px; background: #f8f9fa;"><p style="font-size: 20px; color: #6c757d;">⏳ در حال بارگذاری...</p></div>`;
+    app.innerHTML = html;
+    
+    await loadGrammar(level);
     const allLessons = getGrammar(level);
     const recommended = getRecommendedGrammar(level);
     const levelNames = { "A1": "Débutant", "A2": "Élémentaire", "B1": "Intermédiaire", "B2": "Avancé", "C1": "Autonome" };
     
-    const hasSeenPopup = localStorage.getItem("dino_seen_rec_popup") === "true";
-    let popupHtml = "";
-    if (!hasSeenPopup && recommended.length > 0) {
-        popupHtml = `
-            <div id="rec-popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px);">
-                <div style="background: white; border-radius: 16px; padding: 40px; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="font-size: 56px; margin-bottom: 20px;">🦖</div>
-                    <h3 style="margin: 0 0 15px 0; color: #212529; font-size: 24px;">${lang === "fa" ? "پیشنهاد هوشمند داینو" : "Recommandation intelligente"}</h3>
-                    <p class="persian-text" style="color: #6c757d; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-                        ${lang === "fa" ? "بر اساس نتیجه آزمون تعیین سطح شما، این مباحث برای شروع یادگیری بهینه‌ترین گزینه‌ها هستند." : "Basé sur votre test de niveau, ces sujets sont les meilleurs pour commencer."}
-                    </p>
-                    <button id="close-popup" style="width: 100%; padding: 16px; background: #007bff; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer;">
-                        ${lang === "fa" ? "متوجه شدم، بزن بریم!" : "Compris, c'est parti !"}
-                    </button>
+    html = renderNavbar();
+    html += `
+        <div style="background: #f8f9fa; min-height: calc(100vh - 65px);">
+            <div style="background: linear-gradient(135deg, #087F5B 0%, #20c997 100%); padding: 50px 20px; color: white;">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <p style="font-size: 14px; opacity: 0.9; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 2px;">📚 ${lang === "fa" ? "گرامر" : "Grammaire"}</p>
+                    <h1 style="font-size: 42px; margin: 0 0 10px 0; font-weight: 800;">${t.grammar}</h1>
+                    <p style="font-size: 18px; opacity: 0.95; margin: 0;">${level} – ${levelNames[level] || ""}</p>
                 </div>
             </div>
-        `;
-    }
-
-    let html = popupHtml + `<div style="margin: 0 auto; padding-top: 40px;">
-        <button id="back" class="back-btn">← ${t.back}</button>
-        <h1 style="font-size: 36px; margin-bottom: 10px;">📖 ${t.grammar}</h1>
-        <p style="font-size: 20px; color: #6c757d; margin-bottom: 40px;">${level} – ${levelNames[level] || ""}</p>`;
+            
+            <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    `;
     
     if (recommended.length > 0) {
-        html += `<div style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); border: 2px solid #bae6fd; border-radius: 16px; padding: 30px; margin-bottom: 40px;">
-            <h2 style="font-size: 20px; margin: 0 0 20px 0; color: #0369a1; display: flex; align-items: center; gap: 10px;">
-                <span style="font-size: 28px;">🦖</span>
-                <span>${lang === "fa" ? "پیشنهاد داینو" : "Recommandé pour vous"}</span>
-            </h2>`;
+        html += `
+            <div style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); border: 2px solid #bae6fd; border-radius: 20px; padding: 35px; margin-bottom: 40px;">
+                <h2 style="font-size: 22px; margin: 0 0 20px 0; color: #0369a1; display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 32px;">🦖</span>
+                    <span>${lang === "fa" ? "پیشنهاد هوشمند داینو" : "Recommandé pour vous"}</span>
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+        `;
         
         recommended.slice(0, 3).forEach(item => {
             const title = lang === "fa" ? item.title_fa : item.title;
-            html += `<div style="background: white; border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; cursor: pointer; border: 1px solid #e2e8f0; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onclick="showGrammarLesson('${item.id}')">
-                <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
-                <p style="margin: 6px 0 0 0; font-size: 15px; color: #6c757d;">⏱ ${item.estimatedTime} min</p>
-            </div>`;
+            html += `
+                <div style="background: white; border-radius: 12px; padding: 20px; cursor: pointer; border: 1px solid #e2e8f0; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" onclick="showGrammarLesson('${item.id}')" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+                    <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 17px; font-weight: 700; color: #212529;">${title}</p>
+                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #64748b;">⏱ ${item.estimatedTime} min</p>
+                </div>
+            `;
         });
-        html += `</div>`;
+        html += `</div></div>`;
     }
     
-    html += `<h2 style="font-size: 24px; margin-bottom: 20px; color: #212529;">${lang === "fa" ? "همه درس‌ها" : "Toutes les leçons"}</h2>`;
+    html += `<h2 style="font-size: 26px; margin-bottom: 25px; color: #212529;">${lang === "fa" ? "همه درس‌های گرامر" : "Toutes les leçons de grammaire"}</h2>`;
+    
+    html += `<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px;">`;
     
     allLessons.forEach(item => {
         const title = lang === "fa" ? item.title_fa : item.title;
         const status = getLessonStatus(item.id);
         const statusIcon = getStatusIcon(status);
         
-        html += `<div style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: background 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.02);" onclick="showGrammarLesson('${item.id}')">
-            <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
-                <span style="font-size: 24px;">${statusIcon}</span>
-                <div style="flex: 1;">
-                    <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 18px; font-weight: 600; color: #212529;">${title}</p>
-                    <p style="margin: 6px 0 0 0; font-size: 15px; color: #6c757d;">⏱ ${item.estimatedTime} min · ${item.exercises} ${lang === "fa" ? "تمرین" : "exercices"}</p>
+        html += `
+            <div style="background: white; border: 1px solid #e9ecef; border-radius: 14px; padding: 22px; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.04);" onclick="showGrammarLesson('${item.id}')" onmouseover="this.style.borderColor='#087F5B'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(8,127,91,0.1)'" onmouseout="this.style.borderColor='#e9ecef'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <span style="font-size: 26px;">${statusIcon}</span>
+                    <div style="flex: 1;">
+                        <p class="${lang === 'fa' ? 'persian-text' : 'ltr-lock'}" style="margin: 0; font-size: 17px; font-weight: 700; color: #212529;">${title}</p>
+                        <p style="margin: 6px 0 0 0; font-size: 14px; color: #64748b;">⏱ ${item.estimatedTime} min · ${item.exercises} ${lang === "fa" ? "تمرین" : "exercices"}</p>
+                    </div>
+                    <span style="color: #087F5B; font-size: 22px;">→</span>
                 </div>
             </div>
-            <span style="color: #ced4da; font-size: 24px;">›</span>
-        </div>`;
+        `;
     });
     
-    html += `</div>`;
+    html += `</div></div></div>`;
     app.innerHTML = html;
-    document.getElementById("back").onclick = showHome;
-    
-    const closeBtn = document.getElementById("close-popup");
-    if (closeBtn) {
-        closeBtn.onclick = () => {
-            document.getElementById("rec-popup").style.display = "none";
-            localStorage.setItem("dino_seen_rec_popup", "true");
-        };
-    }
 }
 
 async function showGrammarLesson(lessonId) {
