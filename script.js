@@ -64,7 +64,59 @@ const texts = {
     continue: "ادامه", level: "سطح"
   }
 };
+// ===============================
+// توابع placeholder برای صفحات جدید
+// ===============================
+function showGamesPage() {
+    const lang = localStorage.getItem("language") || "fr";
+    let html = renderNavbar();
+    html += `
+        <div style="background: #f8f9fa; min-height: calc(100vh - 65px); padding: 60px 20px; text-align: center;">
+            <div style="font-size: 80px; margin-bottom: 20px;">🎮</div>
+            <h1 style="font-size: 36px; color: #212529; margin-bottom: 15px;">
+                ${lang === "fa" ? "بازی‌های آموزشی" : "Jeux éducatifs"}
+            </h1>
+            <p style="font-size: 18px; color: #6c757d;">
+                ${lang === "fa" ? "🏗️ این بخش به زودی فعال می‌شود!" : "🏗️ Cette section sera bientôt disponible!"}
+            </p>
+        </div>
+    `;
+    app.innerHTML = html;
+}
 
+function showExercisesPage() {
+    const lang = localStorage.getItem("language") || "fr";
+    let html = renderNavbar();
+    html += `
+        <div style="background: #f8f9fa; min-height: calc(100vh - 65px); padding: 60px 20px; text-align: center;">
+            <div style="font-size: 80px; margin-bottom: 20px;">📝</div>
+            <h1 style="font-size: 36px; color: #212529; margin-bottom: 15px;">
+                ${lang === "fa" ? "تمرین‌ها و آزمون‌ها" : "Exercices et tests"}
+            </h1>
+            <p style="font-size: 18px; color: #6c757d;">
+                ${lang === "fa" ? "🏗️ این بخش به زودی فعال می‌شود!" : "🏗️ Cette section sera bientôt disponible!"}
+            </p>
+        </div>
+    `;
+    app.innerHTML = html;
+}
+
+function showProfile() {
+    const lang = localStorage.getItem("language") || "fr";
+    let html = renderNavbar();
+    html += `
+        <div style="background: #f8f9fa; min-height: calc(100vh - 65px); padding: 60px 20px; text-align: center;">
+            <div style="font-size: 80px; margin-bottom: 20px;">👤</div>
+            <h1 style="font-size: 36px; color: #212529; margin-bottom: 15px;">
+                ${lang === "fa" ? "پروفایل من" : "Mon profil"}
+            </h1>
+            <p style="font-size: 18px; color: #6c757d;">
+                ${lang === "fa" ? "🏗️ این بخش به زودی فعال می‌شود!" : "🏗️ Cette section sera bientôt disponible!"}
+            </p>
+        </div>
+    `;
+    app.innerHTML = html;
+}
 function showLanguage() {
   const lang = localStorage.getItem("language") || "fr";
   const t = texts[lang];
